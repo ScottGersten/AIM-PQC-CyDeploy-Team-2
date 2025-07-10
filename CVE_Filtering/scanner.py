@@ -26,7 +26,7 @@ def run_cve_scan(scan_dir, output_file):
     
     # Verify directory exists
     if not os.path.exists(scan_dir):
-        print(f"⚠️ Directory not found: {scan_dir}")
+        print(f"Directory not found: {scan_dir}")
         return False
 
     # Command to run cve-bin-tool
@@ -34,12 +34,12 @@ def run_cve_scan(scan_dir, output_file):
     result = subprocess.run(cmd, capture_output=True, text=True)
 
     if result.returncode != 0:
-        print(f"❌ Scan failed for {scan_dir}")
+        print(f"Scan failed for {scan_dir}")
         print("STDERR:", result.stderr)
         print("STDOUT:", result.stdout)
         return False
     else:
-        print(f"✅ Scan successful for {scan_dir}")
+        print(f"Scan successful for {scan_dir}")
         print("STDOUT:", result.stdout)
         return True
 
@@ -65,17 +65,17 @@ def read_scan_output(output_file):
                         })
                 return found
         except Exception as e:
-            print(f"⚠️ Error reading scan output: {e}")
+            print(f"Error reading scan output: {e}")
     return []
 
 def send_results_to_server(payload, server_url):
     headers = {"Content-Type": "application/json"}
     try:
         response = requests.post(server_url, data=json.dumps(payload), headers=headers)
-        print(f"📡 Server response: HTTP {response.status_code}")
+        print(f"Server response: HTTP {response.status_code}")
         return response.status_code
     except Exception as e:
-        print(f"⚠️ Failed to send data to server: {e}")
+        print(f"Failed to send data to server: {e}")
         return None
 
 def threaded_scan(path, results_dict):
@@ -85,27 +85,27 @@ def threaded_scan(path, results_dict):
         results_dict[path] = read_scan_output(output_file)
 
 def grover_simulate(cve_list, target_cve):
-    print(f"\n🧪 Simulating Grover's Search for: {target_cve}")
+    print(f"\n Simulating Grover's Search for: {target_cve}")
     
     if not cve_list:
-        print("⚠️ No CVEs found to search through.")
+        print("No CVEs found to search through.")
         return None
 
     iterations = int(len(cve_list) ** 0.5) or 1
-    print(f"🔄 Estimated iterations: {iterations}")
+    print(f"Estimated iterations: {iterations}")
     
     for i in range(iterations):
         guess = random.choice(cve_list)
         print(f"  Try {i+1}: {guess}")
         if guess == target_cve:
-            print(f"✅ Found vulnerable CVE: {guess}")
+            print(f"Found vulnerable CVE: {guess}")
             return guess
 
-    print("❌ Target CVE not found.")
+    print("Target CVE not found.")
     return None
 
 def agent_main():
-    print("🛰️ Agent starting scan...\n")
+    print("Agent starting scan...\n")
 
     info = get_system_info()
     results_dict = {}
@@ -119,7 +119,7 @@ def agent_main():
     for t in threads:
         t.join()
 
-    print("\n✅ All scans completed.\n")
+    print("\n All scans completed.\n")
 
     payload = {
         "system_info": info,
@@ -130,7 +130,7 @@ def agent_main():
     
     with open("scan_results.json", "w") as f:
         json.dump(payload, f, indent=2)
-    print("📝 Results written to local file.")
+    print(" Results written to local file.")
 
 e_time = time.time()
 
