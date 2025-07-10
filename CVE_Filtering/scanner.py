@@ -22,7 +22,7 @@ def get_system_info():
     }
 
 def run_cve_scan(scan_dir, output_file):
-    print(f"🔍 Scanning {scan_dir}...")
+    print(f"Scanning {scan_dir}...")
     
     # Verify directory exists
     if not os.path.exists(scan_dir):
