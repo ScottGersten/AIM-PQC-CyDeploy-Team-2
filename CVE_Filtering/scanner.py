@@ -9,7 +9,7 @@ import random
 import time
 
 # Optional: Define multiple target directories to scan
-TARGET_PATHS = [r"C:\Windows"]
+TARGET_PATHS = [r"C:\Users\baseb\OneDrive\Documents\metasploitable_root\usr\bin"]
 
 s_time = time.time()
 
