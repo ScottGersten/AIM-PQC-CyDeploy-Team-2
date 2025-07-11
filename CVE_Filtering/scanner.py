@@ -68,15 +68,6 @@ def read_scan_output(output_file):
             print(f"Error reading scan output: {e}")
     return []
 
-def send_results_to_server(payload, server_url):
-    headers = {"Content-Type": "application/json"}
-    try:
-        response = requests.post(server_url, data=json.dumps(payload), headers=headers)
-        print(f"Server response: HTTP {response.status_code}")
-        return response.status_code
-    except Exception as e:
-        print(f"Failed to send data to server: {e}")
-        return None
 
 def threaded_scan(path, results_dict):
     safe_path = path.replace(':', '').replace('\\', '_').replace('/', '_')
