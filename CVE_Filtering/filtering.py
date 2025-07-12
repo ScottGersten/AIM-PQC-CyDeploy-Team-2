@@ -27,4 +27,11 @@ def scan_ip(target: str, start=1, end=1024):
 
     return services
 
+def load_cves(filename: str):
+    with open(filename, 'r') as file:
+        data = json.load(file)
+    return data['CVE_Items']
+
 print(scan_ip('scanme.nmap.org'))
+
+cve_data = load_cves('CVE_Filtering\nvdcve-1.1-recent.json')
