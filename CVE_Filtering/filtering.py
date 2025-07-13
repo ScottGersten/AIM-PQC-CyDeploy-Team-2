@@ -8,8 +8,12 @@ def scan_ip(target: str, start=1, end=1024):
     print(f"Target IP: {ip}")
     scanner = PortScanner()
     result = scanner.scan(ip, f"{start}-{end}", '-sV')
+    #result = scanner.scan(ip, f"{start}-{end}", '-sV --version-all --script=banner -T4')
     protocols = result['scan'][ip].all_protocols()
     services = []
+
+    with open('nm_result.json', 'w') as f:
+        f.write(json.dumps(result, indent=2))
 
     #rint(scanner[ip].all_protocols())
     #print(result)
@@ -28,10 +32,12 @@ def scan_ip(target: str, start=1, end=1024):
     return services
 
 def load_cves(filename: str):
-    with open(filename, 'r') as file:
+    with open(filename, 'r', encoding='utf-8') as file:
         data = json.load(file)
     return data['CVE_Items']
 
-print(scan_ip('scanme.nmap.org'))
+#print(scan_ip('scanme.nmap.org'))
+print(scan_ip('192.168.56.101'))
 
-cve_data = load_cves('CVE_Filtering\nvdcve-1.1-recent.json')
+cve_data = load_cves('nvdcve-1.1-recent.json')
+#print(cve_data)
