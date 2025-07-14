@@ -2,6 +2,9 @@ import paramiko
 import requests
 import json
 
+fails = 0
+successes = 0
+
 def get_debian_tracker():
     url = "https://security-tracker.debian.org/tracker/data/json"
     response = requests.get(url)
@@ -9,9 +12,13 @@ def get_debian_tracker():
     return response.json()
 
 def get_cves(data, pkg):
+    global fails, successes
+
     if pkg not in data:
+        fails += 1
         return None
     
+    successes += 1
     pkg_data = data[pkg]
     cves = []
     for cve in pkg_data.items():
@@ -53,10 +60,20 @@ output = get_installs(ip)
 installs = parse_installs(output)
 data = get_debian_tracker()
 
-for pkg in installs[30:40]:
+for pkg in installs:
     cves = get_cves(data, pkg['name'])
     pkg['cves'] = cves
-    print(cves)
 
-print(installs[30:40])
+# for pkg in installs[30:40]:
+#     cves = get_cves(data, pkg['name'])
+#     pkg['cves'] = cves
+#     print(cves)
+
+# print(installs[30:40])
+
+with open('results.json', 'w', encoding='utf-8') as file:
+    json.dump(installs, file, indent=2)
+
+print(f"Number of successful matches in DB: {successes}")
+print(f"Number of failed matches in DB: {fails}")
 
