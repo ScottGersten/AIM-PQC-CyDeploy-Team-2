@@ -56,7 +56,11 @@ def parse_installs(installs):
     return packages
 
 ip = '192.168.56.101'
-output = get_installs(ip)
+#output = get_installs(ip)
+
+with open ('installed.txt', 'r') as f:
+    output = f.read()
+
 installs = parse_installs(output)
 data = get_debian_tracker()
 
