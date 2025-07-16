@@ -147,10 +147,12 @@ def parse_installs(installs):
     return packages
 
 def main():
-    ip = '192.168.56.101'
-    #output = get_installs(ip)
-    with open ('installed.txt', 'r') as f:
-        output = f.read()
+    with open('ip.txt', 'r') as f:
+        ip = f.read()
+    #ip = '192.168.56.101'
+    output = get_installs(ip)
+    # with open ('installed.txt', 'r') as f:
+    #     output = f.read()
     installs = parse_installs(output)
 
     debian_method(installs)
