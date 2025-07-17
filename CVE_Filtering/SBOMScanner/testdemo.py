@@ -9,6 +9,25 @@ debian_successes = 0
 osv_fails = 0
 osv_successes = 0
 
+def fetch_cve_descriptions_circl_parallel(cve_list, max_workers=20):
+    base = "https://cve.circl.lu/api/cve/"
+    def lookup(cve):
+        try:
+            r = requests.get(base + cve, timeout=3)
+            if r.ok and isinstance(r.json(), dict):
+                return {"id": cve, "description": r.json().get("summary")}
+        except:
+            pass
+        return {"id": cve, "description": None}
+
+    results = []
+    with ThreadPoolExecutor(max_workers=max_workers) as ex:
+        futures = {ex.submit(lookup, cve): cve for cve in cve_list}
+        for fut in as_completed(futures):
+            results.append(fut.result())
+    return results
+
+
 def get_debian_tracker():
     url = "https://security-tracker.debian.org/tracker/data/json"
     response = requests.get(url)
@@ -31,20 +50,18 @@ def get_debian_cves(data, pkg):
     return cves
 
 def debian_method(installs):
-    # Debian Tracker Method
     data = get_debian_tracker()
 
     for pkg in installs:
+        # fetch raw CVE IDs
         cves = get_debian_cves(data, pkg['name'])
         pkg['cves'] = cves
 
-    # for pkg in installs[30:40]:
-    #     cves = get_cves(data, pkg['name'])
-    #     pkg['cves'] = cves
-    #     print(cves)
+        # if we found any, annotate them with descriptions
+        if cves:
+            pkg['cve_details'] = fetch_cve_descriptions_circl_parallel(cves)
 
-    # print(installs[30:40])
-
+    # write out everything, now with pkg['cve_details']
     with open('results.json', 'w', encoding='utf-8') as file:
         json.dump(installs, file, indent=2)
 
@@ -147,38 +164,13 @@ def parse_installs(installs):
     return packages
 
 #testing:
-def fetch_cve_descriptions(cve_list, api_key=None):
-    
-    base_url = "https://services.nvd.nist.gov/rest/json/cve/2.0"
-    headers = {"apiKey": api_key} if api_key else {}
-    results = []
 
-    for cve in cve_list:
-        # Query NVD for this CVE
-        resp = requests.get(base_url, headers=headers, params={"cveId": cve})
-        description = None
-
-        if resp.ok:
-            data = resp.json().get("vulnerabilities", [])
-            if data:
-                descs = data[0]["cve"]["descriptions"]
-                # pick the English description if present
-                for d in descs:
-                    if d.get("lang") == "en":
-                        description = d.get("value")
-                        break
-                # fallback to first entry
-                if description is None and descs:
-                    description = descs[0].get("value")
-
-        results.append({"id": cve, "description": description})
-
-    return results
 
 
 def main():
-    ip = '192.168.1.4'
-    #output = get_installs(ip)
+    with open('ip.txt', 'r') as f:
+        ip = f.read()
+    output = get_installs(ip)
     with open ('installed.txt', 'r') as f:
         output = f.read()
     installs = parse_installs(output)
