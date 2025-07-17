@@ -53,15 +53,15 @@ def debian_method(installs):
     data = get_debian_tracker()
 
     for pkg in installs:
-        # fetch raw CVE IDs
+        
         cves = get_debian_cves(data, pkg['name'])
         pkg['cves'] = cves
 
-        # if we found any, annotate them with descriptions
+        
         if cves:
             pkg['cve_details'] = fetch_cve_descriptions_circl_parallel(cves)
 
-    # write out everything, now with pkg['cve_details']
+    
     with open('results.json', 'w', encoding='utf-8') as file:
         json.dump(installs, file, indent=2)
 
@@ -162,9 +162,6 @@ def parse_installs(installs):
                 'cves': None
             })
     return packages
-
-#testing:
-
 
 
 def main():
