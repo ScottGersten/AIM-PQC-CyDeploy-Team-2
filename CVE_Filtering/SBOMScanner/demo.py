@@ -9,6 +9,9 @@ debian_successes = 0
 osv_fails = 0
 osv_successes = 0
 
+vulners_fails = 0
+vulners_successes = 0
+
 def get_debian_tracker():
     url = "https://security-tracker.debian.org/tracker/data/json"
     response = requests.get(url)
@@ -117,6 +120,62 @@ def osv_method(installs):
     print(f"Number of successful matches in OSV: {osv_successes}")
     print(f"Number of failed matches in OSV: {osv_fails}")
 
+def vulners_threading(pkgs, api_key, max_threads=100):
+    with ThreadPoolExecutor(max_workers=max_threads) as executor:
+        futures = {executor.submit(get_vulners_cves, pkg['name'], pkg['version'], api_key): pkg for pkg in pkgs}
+        for future in as_completed(futures):
+            pkg = futures[future]
+            cves = future.result()
+            pkg['cves'] = cves
+
+def get_vulners_cves(pkg, version, api_key):
+    #url = 'https://vulners.com/api/v3/burp/software/'
+    url = 'https://vulners.com/api/v3/search/lucene/'
+    headers = {'Content-Type': 'application/json'}
+    query = f"{pkg} {version}"
+    payload = {
+        'query': query,
+        'apiKey': api_key
+    }
+
+    try:
+        response = requests.post(url, json=payload, headers=headers)
+        response.raise_for_status()
+        result = response.json()
+
+        cves = []
+        for item in result['data']['search']:
+            source = item.get('_source', {})
+            cvelist = source.get('cvelist', [])
+            cves.extend(cvelist)
+        cves = sorted(list(set(cves)))
+        return cves
+
+    except Exception as e:
+        print(f"{e}")
+        return None
+
+def vulners_method(installs):
+    global vulners_successes, vulners_fails
+
+    with open('vulners_api_key.txt', 'r') as file:
+        api_key = file.read()
+
+    vulners_threading(installs, api_key)
+
+    with open('results.json', 'w', encoding='utf-8') as file:
+        json.dump(installs, file, indent=2)
+
+    for pkg in installs:
+        if pkg['cves'] == None:
+            vulners_fails += 1
+        else:
+            vulners_successes += 1
+
+    print(f"Number of successful matches in Vulners: {vulners_successes}")
+    print(f"Number of failed matches in Vulners: {vulners_fails}")
+    
+
 def get_installs(ip, username='msfadmin', password='msfadmin'):
     ssh = paramiko.SSHClient()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
@@ -149,15 +208,16 @@ def parse_installs(installs):
 def main():
     with open('ip.txt', 'r') as f:
         ip = f.read()
-    #ip = '192.168.56.101'
-    output = get_installs(ip)
-    # with open ('installed.txt', 'r') as f:
-    #     output = f.read()
+    #output = get_installs(ip)
+    with open ('installed.txt', 'r') as f:
+        output = f.read()
     installs = parse_installs(output)
 
-    debian_method(installs)
+    #debian_method(installs)
 
     #osv_method(installs)
+
+    vulners_method(installs)
 
 if __name__ == '__main__':
     main()

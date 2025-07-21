@@ -3,6 +3,9 @@ import requests
 import json
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import time
+import threading
+
+thread_lock = threading.Lock()
 
 def get_debian_tracker():
     url = "https://security-tracker.debian.org/tracker/data/json"
@@ -48,11 +51,11 @@ def get_osv_cves(pkg, ecosystem='Debian'):
         vulns = results.get('vulns', [])
         cves = []
         for vuln in vulns:
-            # if 'aliases' in vuln:
-            #     cves.extend(vuln['aliases'])
-            # else:
-            #     cves.append(vuln.get('id'))
-            cves.append(vuln.get('id'))
+            if 'aliases' in vuln:
+                cves.extend(vuln['aliases'])
+            else:
+                cves.append(vuln.get('id'))
+            #cves.append(vuln.get('id'))
         if cves:
             return sorted(list(set(cves)))
         else:
@@ -69,7 +72,47 @@ def osv_method(pkgs, max_threads=100):
             pkg = futures[future]
             cves = future.result()
             if cves is not None:
-                pkg['cves'].append(cves)
+                with thread_lock:
+                    pkg['cves'].append(cves)
+
+def get_vulners_cves(pkg, version, api_key):
+    #url = 'https://vulners.com/api/v3/burp/software/'
+    url = 'https://vulners.com/api/v3/search/lucene/'
+    headers = {'Content-Type': 'application/json'}
+    query = f"{pkg} {version}"
+    payload = {
+        'query': query,
+        'apiKey': api_key
+    }
+
+    try:
+        response = requests.post(url, json=payload, headers=headers)
+        response.raise_for_status()
+        result = response.json()
+
+        cves = []
+        for item in result['data']['search']:
+            source = item.get('_source', {})
+            cvelist = source.get('cvelist', [])
+            cves.extend(cvelist)
+        cves = sorted(list(set(cves)))
+        return cves
+
+    except Exception as e:
+        print(f"{e}")
+        return None
+
+def vulners_method(pkgs, max_threads=100):
+    with open('vulners_api_key.txt', 'r') as file:
+        api_key = file.read()
+    with ThreadPoolExecutor(max_workers=max_threads) as executor:
+        futures = {executor.submit(get_vulners_cves, pkg['name'], pkg['version'], api_key): pkg for pkg in pkgs}
+        for future in as_completed(futures):
+            pkg = futures[future]
+            cves = future.result()
+            if cves is not None:
+                with thread_lock:
+                    pkg['cves'].append(cves)
 
 def get_installs(ip, username='msfadmin', password='msfadmin'):
     ssh = paramiko.SSHClient()
@@ -100,6 +143,12 @@ def parse_installs(installs):
             })
     return packages
 
+def flatten_results(installs):
+    for pkg in installs:
+        flattened_results = [item for sublist in pkg['cves'] for item in sublist]
+        flattened_results = sorted(list(flattened_results))
+        pkg['cves'] = flattened_results
+
 def main():
     start_time = time.time()
 
@@ -116,6 +165,10 @@ def main():
     debian_method(installs)
 
     osv_method(installs)
+
+    #vulners_method(installs)
+
+    flatten_results(installs)
 
     full_fails = full_successes = 0
     found_installs = []
