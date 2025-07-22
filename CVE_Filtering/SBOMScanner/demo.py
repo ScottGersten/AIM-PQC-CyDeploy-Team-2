@@ -213,11 +213,11 @@ def main():
         output = f.read()
     installs = parse_installs(output)
 
-    #debian_method(installs)
+    debian_method(installs)
 
     #osv_method(installs)
 
-    vulners_method(installs)
+    #vulners_method(installs)
 
 if __name__ == '__main__':
     main()
