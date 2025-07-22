@@ -2,6 +2,7 @@ import paramiko
 import requests
 import json
 from concurrent.futures import ThreadPoolExecutor, as_completed
+import time
 
 debian_fails = 0
 debian_successes = 0
@@ -87,9 +88,13 @@ def debian_method(installs):
         all_described.extend(pkg["cve_details"])
 
     # write everything into a single JSON
+    # output = {
+    #     "described_cves": all_described,
+    #     "packages": installs
+    # }
     output = {
-        "described_cves": all_described,
-        "packages": installs
+        "packages": installs,
+        "described_cves": all_described
     }
     with open("results.json", "w", encoding="utf-8") as f:
         json.dump(output, f, indent=2)
@@ -130,17 +135,22 @@ def parse_installs(installs):
 
 
 def main():
+    start_time = time.time()
+
     with open("ip.txt", "r") as f:
         ip = f.read().strip()
 
     # fetch & parse
-    get_installs(ip)
+    #get_installs(ip)
     with open("installed.txt", "r") as f:
         text = f.read()
     installs = parse_installs(text)
 
     # run Debian CVE‐lookup + description pull
     debian_method(installs)
+
+    end_time = time.time() - start_time
+    print(f"Execution Time: {end_time:.4f}")
 
 
 if __name__ == "__main__":
