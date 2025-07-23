@@ -2,7 +2,6 @@ import paramiko
 import requests
 import json
 from concurrent.futures import ThreadPoolExecutor, as_completed
-import time
 
 debian_fails = 0
 debian_successes = 0
@@ -17,10 +16,10 @@ def fetch_cve_descriptions_circl_parallel(cve_list, max_workers=20):
             r.raise_for_status()
             data = r.json()
 
-            # 1) top‐level summary?
+            
             desc = data.get("summary")
 
-            # 2) nested English descriptions?
+            
             if not desc:
                 for d in (
                     data
@@ -63,44 +62,46 @@ def get_debian_cves(data, pkg):
     debian_successes += 1
     pkg_data = data[pkg]
 
-    # pkg_data is a dict { "CVE‑ID": {...}, ... }
+    
     return list(pkg_data.keys())
 
 
 def debian_method(installs):
     data = get_debian_tracker()
 
-    # for each package, attach .cves and .cve_details
+    
     for pkg in installs:
         raw = get_debian_cves(data, pkg["name"])
         pkg["cves"] = raw or []
 
         if raw:
             details = fetch_cve_descriptions_circl_parallel(raw)
-            # drop any with no description
+            
             pkg["cve_details"] = [d for d in details if d["description"]]
         else:
             pkg["cve_details"] = []
 
-    # collect a flat list of every described CVE
+    
     all_described = []
     for pkg in installs:
         all_described.extend(pkg["cve_details"])
 
-    # write everything into a single JSON
-    # output = {
-    #     "described_cves": all_described,
-    #     "packages": installs
-    # }
+    
     output = {
-        "packages": installs,
-        "described_cves": all_described
+        "described_cves": all_described,
+        "packages": installs
     }
     with open("results.json", "w", encoding="utf-8") as f:
         json.dump(output, f, indent=2)
 
+    
     print(f"Number of successful matches in Debian: {debian_successes}")
     print(f"Number of failed matches in Debian: {debian_fails}")
+
+    
+    print("\nCVE Descriptions for this VM:")
+    for entry in all_described:
+        print(f"{entry['id']}: {entry['description']}")
 
 
 def get_installs(ip, username="msfadmin", password="msfadmin"):
@@ -127,7 +128,6 @@ def parse_installs(installs):
                 "name": parts[1],
                 "version": parts[2],
                 "description": " ".join(parts[3:]),
-                # these get filled in debian_method
                 "cves": [],
                 "cve_details": []
             })
@@ -135,22 +135,15 @@ def parse_installs(installs):
 
 
 def main():
-    start_time = time.time()
-
     with open("ip.txt", "r") as f:
         ip = f.read().strip()
 
-    # fetch & parse
-    #get_installs(ip)
+    get_installs(ip)
     with open("installed.txt", "r") as f:
         text = f.read()
     installs = parse_installs(text)
 
-    # run Debian CVE‐lookup + description pull
     debian_method(installs)
-
-    end_time = time.time() - start_time
-    print(f"Execution Time: {end_time:.4f}")
 
 
 if __name__ == "__main__":
