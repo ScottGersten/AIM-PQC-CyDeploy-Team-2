@@ -58,7 +58,7 @@ def main():
         installs = json.load(file)
     #print(installs[0:2])
 
-    get_vulnerabilities(installs)
+    get_vulnerabilities(installs[0:10])
     
     end_time = time.time() - start_time
     print(f"Execution Time: {end_time:.4f}")
