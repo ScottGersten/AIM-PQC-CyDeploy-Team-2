@@ -2,60 +2,65 @@ import paramiko
 import json
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import time
+from datetime import datetime
+import re
 import threading
 
-def match_cves(installs, data):
-    matched_cves = []
-
-    for item in data:
-        cve_id = item.get('id')
-        description = item.get('description', '')
-        raw = item.get('raw', {})
-
-        for pkg in installs:
-            name = pkg['name']
-            version = pkg['version']
-            if name.lower() in description.lower():
-                matched_cves.append((cve_id, name, version, description))
-                pkg['cves'].append(cve_id)
-
-    return matched_cves
+found_cve_ids = 0
 
 # def match_cves(installs, data):
+#     global found_cve_ids
+
 #     matched_cves = []
 
-#     for pkg in installs:
-#         pkg_name = pkg['name'].lower()
-#         pkg_version = pkg['version']
+#     for item in data:
+#         cve_id = item.get('id')
+#         description = item.get('description', '')
+#         raw = item.get('raw', {})
 
-#         for item in data['CVE_Items']:
-#             cve_id = item['cve']['CVE_data-meta']['ID']
-#             nodes = item.get('configurations', {}).get('nodes', [])
-
-#             for node in nodes:
-#                 for cpe_match in node.get('cpe_match', []):
-#                     cpe23uri = cpe_match.get('cpe23uri', '')
-#                     vulnerable = cpe_match.get('vulnerable', False)
-
-#                     if not vulnerable:
-#                         continue
-                        
-#                     parts = cpe23uri.split(':')
-#                     if len(parts) < 6:
-#                         continue
-
-#                     cpe_vendor = parts[3].lower()
-#                     cpe_product = parts[4].lower()
-#                     cpe_version = parts[5]
-
-#                     if pkg_name in (cpe_vendor, cpe_product):
-#                         if pkg_version.startswith(cpe_version):
-#                             pkg['cves'].append(cve_id)
-
-#         if pkg['cves']:
-#             matched_cves.append(pkg)
+#         for pkg in installs:
+#             name = pkg['name']
+#             version = pkg['version']
+#             if name.lower() in description.lower():
+#                 matched_cves.append((cve_id, name, version, description))
+#                 pkg['cves'].append(cve_id)
+#                 found_cve_ids += 1
 
 #     return matched_cves
+
+def match_cves(installs, data, year_offset=3):
+    global found_cve_ids
+
+    for pkg in installs:
+        name = pkg['name']
+        release_year = pkg['release_year']
+        if release_year is None:
+            continue
+        
+        for year in range(release_year, release_year + year_offset + 1):
+            year_str = str(year)
+            if year_str not in data:
+                continue
+            for item in data[year_str]:
+                cve_id = item.get('id')
+                description = item.get('description', '')
+                if name.lower() in description.lower():
+                    pkg['cves'].append(cve_id)
+                    found_cve_ids += 1
+
+def get_package_year(ssh, pkg):
+    cmd = f"zgrep -m 1 -E '^ --' /usr/share/doc/{pkg}/changelog.Debian.gz"
+    try:
+        stdin, stdout, stderr = ssh.exec_command(cmd)
+        output = stdout.read().decode().strip()
+        if output:
+            date_match = re.search(r'\w{3}, \d{1,2} \w{3} \d{4}', output)
+            if date_match:
+                date_str = date_match.group(0)
+                date_obj = datetime.strptime(date_str, "%a, %d %b %Y")
+                return date_obj.year
+    except Exception as e:
+        return None
 
 def get_installs(ip, username='msfadmin', password='msfadmin'):
     ssh = paramiko.SSHClient()
@@ -66,24 +71,25 @@ def get_installs(ip, username='msfadmin', password='msfadmin'):
     stdin, stdout, stderr = ssh.exec_command('dpkg -l')
     output = stdout.read().decode('utf-8')
 
-    ssh.close()
+    # with open('installed.txt', 'w', encoding='utf-8') as file:
+    #     file.write(output)
 
-    with open('installed.txt', 'w', encoding='utf-8') as file:
-        file.write(output)
-
-    return output
-
-def parse_installs(installs):
     packages = []
-    for line in installs.splitlines():
+    for line in output.splitlines():
         if line.startswith('ii'):
             splits = line.split()
             packages.append({
                 'name': splits[1],
                 'version': splits[2],
                 #'description': ''.join(splits[3:]),
+                'release_year': get_package_year(ssh, splits[1]),
                 'cves': []
             })
+
+    with open('installed.json', 'w', encoding='utf-8') as file:
+        json.dump(packages, file, indent=2)
+
+    ssh.close()
     return packages
 
 def main():
@@ -91,20 +97,18 @@ def main():
 
     with open('ip.txt', 'r') as f:
         ip = f.read()
-    #output = get_installs(ip)
-
-    with open ('installed.txt', 'r') as f:
-        output = f.read()
-
-    installs = parse_installs(output)
-    #installs = installs[340:440]
+    installs = get_installs(ip)
+    # with open('installed.json', 'r', encoding='utf-8') as file:
+    #     installs = json.load(file)
 
     with open('all_cves.json', 'r', encoding='utf-8') as file:
         all_cves = json.load(file)
 
-    matched_cves = match_cves(installs, all_cves)
-    with open('matched.json', 'w', encoding='utf-8') as file:
-        json.dump(matched_cves, file, indent=2)
+    match_cves(installs, all_cves)
+
+    # matched_cves = match_cves(installs, all_cves)
+    # with open('matched.json', 'w', encoding='utf-8') as file:
+    #     json.dump(matched_cves, file, indent=2)
 
     fails = successes = 0
     found_installs = []
@@ -120,6 +124,8 @@ def main():
     with open('results.json', 'w', encoding='utf-8') as file, open('results_abridged.json', 'w', encoding='utf-8') as file_abr:
         json.dump(installs, file, indent=2)
         json.dump(found_installs, file_abr, indent=2)
+
+    print(f"Number of found IDs: {found_cve_ids}")
 
     end_time = time.time() - start_time
     print(f"Execution Time: {end_time:.4f}")

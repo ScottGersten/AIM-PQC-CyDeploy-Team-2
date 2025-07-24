@@ -45,11 +45,18 @@ def parse_feed(filepath):
     return parsed_cves
 
 def main():
-    all_cves = []
+    # all_cves = []
+    # for year in range(START_YEAR, END_YEAR + 1):
+    #     path = download_feed(year)
+    #     cves = parse_feed(path)
+    #     all_cves.extend(cves)
+
+    all_cves = {}
     for year in range(START_YEAR, END_YEAR + 1):
         path = download_feed(year)
         cves = parse_feed(path)
-        all_cves.extend(cves)
+        all_cves[year] = cves
+
     print(f"Total CVEs parsed: {len(all_cves)}")
     
     with open("all_cves.json", "w", encoding="utf-8") as f:
