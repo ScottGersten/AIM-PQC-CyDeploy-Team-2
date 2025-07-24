@@ -2,9 +2,11 @@ import json
 import re
 import time
 from packaging import version
+from concurrent.futures import ThreadPoolExecutor
+from collections import defaultdict
 
-def simplify_version(version):
-    return re.split(r'[-+~]', version)[0]
+def simplify_version(version_str):
+    return re.split(r'[-+~]', version_str)[0]
 
 def parse_installed_packages(file_path='installed.txt'):
     packages = []
@@ -14,119 +16,128 @@ def parse_installed_packages(file_path='installed.txt'):
                 parts = line.split()
                 if len(parts) >= 3:
                     name = parts[1].lower()
-                    ver = parts[2].strip()
-                    packages.append({'name': name, 'version': ver, 'cves': []})
+                    full_version = parts[2].strip()
+                    base_version = simplify_version(full_version)
+                    packages.append({
+                        'name': name,
+                        'version': full_version,
+                        'base_version': base_version,
+                        'cves': []
+                    })
     return packages
-
 
 def load_ubuntu_cves(json_path='ubuntu_cves.json'):
     with open(json_path, 'r', encoding='utf-8') as f:
         return json.load(f)
 
-
-
-
-def extract_affected_from_description(desc):
-    """
-    Extracts affected packages and their versions from the CVE description.
-    Returns a list of (package, version) tuples.
-    """
-    matches = re.findall(r'^(\S+)\s+-\s+([\w\d\.\-\:\+~]+)', desc, re.MULTILINE)
+def normalize_affected(desc):
+    patterns = [
+        r'^(\S+)\s+-\s+([\w\d\.\-\:\+~]+)',
+        r'(\b[\w\-\+\.]+)\s+(?:before|less than|<|<=|prior to)\s+([\w\d\.\-\:\+~]+)',
+        r'(\b[\w\-\+\.]+)\s+(?:is\s+)?fixed in version\s+([\w\d\.\-\:\+~]+)'
+    ]
+    matches = []
+    for pattern in patterns:
+        matches += re.findall(pattern, desc, re.IGNORECASE | re.MULTILINE)
     return [(pkg.lower(), simplify_version(ver)) for pkg, ver in matches]
 
+def index_cves_by_package(cve_entries):
+    index = defaultdict(list)
+    for cve in cve_entries:
+        desc_raw = cve.get('description', '')
+        if isinstance(desc_raw, list):
+            desc = ' '.join(d.get('value', '') for d in desc_raw if isinstance(d, dict))
+        elif isinstance(desc_raw, str):
+            desc = desc_raw
+        else:
+            desc = ''
 
-def match_cves(packages, cve_entries):
+        desc = desc.lower()
+
+        if "rejected" in desc or "do not use this candidate" in desc:
+            continue
+
+        for name, ver in normalize_affected(desc):
+            index[name].append((ver, cve))
+    return index
+import re  # Move this to the top of your script
+
+def match_package(pkg, cve_index):
+    pkg_name = pkg['name']
+    base_version = pkg['base_version']
     matched = []
 
-    for pkg in packages:
-        for cve in cve_entries:
-            desc = cve.get("description", "").lower()
+    # Get all matching aliases
+    candidates = cve_index.get(pkg_name, [])
 
-            if "do not use this candidate number" in desc or "rejected" in desc:
-                continue
+    for affected_version, cve in candidates:
+        try:
+            if version.parse(base_version) < version.parse(affected_version):
 
-            affected_list = extract_affected_from_description(desc)
+                matched.append({
+                    'cve_id': cve.get('CVE'),
+                    'affected_pkg': pkg_name,
+                    'affected_version': affected_version,
+                    'title': cve.get('title', ''),
+                    'description': cve.get('description', ''),
+                    'severity': cve.get('priority', 'unknown')
+                })
 
-            for name, ver in affected_list:
-                if pkg['name'] == name:
-                    try:
-                        if version.parse(pkg['version']) < version.parse(ver):
-                            cve_info = {
-                                'cve_id': cve.get('CVE'),
-                                'affected_pkg': name,
-                                'affected_version': ver,
-                                'title': cve.get('title', ''),
-                                'description': cve.get('description', '')
-                            }
-                            pkg['cves'].append(cve_info)
-                            matched.append(cve_info)
-                    except Exception:
-                        continue
+        except Exception:
+            continue
+
+    pkg['cves'] = matched
     return matched
 
 
+def match_cves_fast(packages, cve_entries):
+    cve_index = index_cves_by_package(cve_entries)
+    matched = []
+
+    with ThreadPoolExecutor() as executor:
+        results = list(executor.map(lambda pkg: match_package(pkg, cve_index), packages))
+
+    for m in results:
+        matched.extend(m)
+    return matched
 
 def main():
     start = time.time()
 
     print("Parsing installed packages...")
     packages = parse_installed_packages()
-    print(f"Parsed {len(packages)} packages.")
+    print(f"{len(packages)} packages found.")
 
-    print("Loading Ubuntu CVE JSON...")
+    print("Loading Ubuntu CVEs...")
     cve_data = load_ubuntu_cves()
-    print(f"Loaded {len(cve_data)} CVE entries.")
+    print(f"{len(cve_data)} CVEs loaded.")
 
-    print("Matching packages with CVEs...")
-    matches = match_cves(packages, cve_data)
-
-    print(f"Found (matches) CVE matches.")
-
-    
-
-    # Print summary
-    vuln_count = 0
-    vulnerable_pkgs = []
-    unmatched_pkgs = 0
-
-    for pkg in packages:
-        cves = pkg.get('cves', [])
-        if isinstance(cves, list) and cves:
-            vuln_count += len(cves)
-            vulnerable_pkgs.append(pkg)
-    else:
-        unmatched_pkgs += 1
-
-
-
+    print("Matching CVEs to installed packages...")
+    matches = match_cves_fast(packages, cve_data)
     print(f"Found {len(matches)} CVE matches.")
 
-    # CVE summary
-    vuln_count = 0
-    vulnerable_pkgs = []
-    unmatched_pkgs = 0
+    vuln_pkgs = [p for p in packages if p['cves']]
+    print(f"{len(vuln_pkgs)} vulnerable packages with {sum(len(p['cves']) for p in vuln_pkgs)} total CVEs.")
+    print(f"{len(packages) - len(vuln_pkgs)} packages with no known vulnerabilities.")
 
+    fails = successes = 0
+    found_installs = []
     for pkg in packages:
-        cves = pkg.get('cves', [])
-        if isinstance(cves, list) and cves:
-            vuln_count += len(cves)
-            vulnerable_pkgs.append(pkg)
+        if not pkg['cves']:
+            fails += 1
         else:
-          unmatched_pkgs += 1
+            successes += 1
+            found_installs.append(pkg)
+    print(f"Number of successful matches in run: {successes}")
+    print(f"Number of failed matches in run: {fails}")
+    # Save results
+    with open('matched_packages.json', 'w') as f:
+        json.dump(vuln_pkgs, f, indent=2)
 
-    print(f"\n Found {vuln_count} total CVE vulnerabilities affecting {len(vulnerable_pkgs)} packages.\n")
-    print(f" {unmatched_pkgs} packages had no matching vulnerabilities.\n")
-
-
-    # Save output
-    with open('matched_packages.json', 'w', encoding='utf-8') as f:
-        json.dump([p for p in packages if p['cves']], f, indent=2)
-
-    with open('all_packages_cves.json', 'w', encoding='utf-8') as f:
+    with open('all_packages_cves.json', 'w') as f:
         json.dump(packages, f, indent=2)
 
-    print(f"Execution time: {time.time() - start:.2f} seconds.")
-
+    print(f"Done in {time.time() - start:.2f} seconds.")
 
 if __name__ == '__main__':
     main()
