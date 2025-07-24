@@ -6,10 +6,24 @@ import threading
 
 found_cve_ids = 0
 
+# def match_cves(installs, data):
+#     global found_cve_ids
+
+#     for pkg in installs:
+#         name = pkg['name']
+#         version = pkg['version']
+
+#         for item in data:
+#             cve_id = item.get('id')
+#             description = item.get('description', '')
+#             if name.lower() in description.lower():
+#                 pkg['cves'].append(cve_id)
+#                 found_cve_ids += 1
+
 def match_cves(installs, data):
     global found_cve_ids
 
-    matched_cves = []
+    #matched_cves = []
 
     for item in data:
         cve_id = item.get('id')
@@ -20,11 +34,11 @@ def match_cves(installs, data):
             name = pkg['name']
             version = pkg['version']
             if name.lower() in description.lower():
-                matched_cves.append((cve_id, name, version, description))
+                #matched_cves.append((cve_id, name, version, description))
                 pkg['cves'].append(cve_id)
                 found_cve_ids += 1
 
-    return matched_cves
+    #return matched_cves
 
 # def match_cves(installs, data):
 #     matched_cves = []
@@ -107,9 +121,11 @@ def main():
     with open('all_cves.json', 'r', encoding='utf-8') as file:
         all_cves = json.load(file)
 
-    matched_cves = match_cves(installs, all_cves)
-    with open('matched.json', 'w', encoding='utf-8') as file:
-        json.dump(matched_cves, file, indent=2)
+    match_cves(installs, all_cves)
+
+    # matched_cves = match_cves(installs, all_cves)
+    # with open('matched.json', 'w', encoding='utf-8') as file:
+    #     json.dump(matched_cves, file, indent=2)
 
     fails = successes = 0
     found_installs = []

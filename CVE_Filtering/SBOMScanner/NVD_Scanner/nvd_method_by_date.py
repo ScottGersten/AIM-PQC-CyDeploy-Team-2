@@ -8,27 +8,7 @@ import threading
 
 found_cve_ids = 0
 
-# def match_cves(installs, data):
-#     global found_cve_ids
-
-#     matched_cves = []
-
-#     for item in data:
-#         cve_id = item.get('id')
-#         description = item.get('description', '')
-#         raw = item.get('raw', {})
-
-#         for pkg in installs:
-#             name = pkg['name']
-#             version = pkg['version']
-#             if name.lower() in description.lower():
-#                 matched_cves.append((cve_id, name, version, description))
-#                 pkg['cves'].append(cve_id)
-#                 found_cve_ids += 1
-
-#     return matched_cves
-
-def match_cves(installs, data, year_offset=3):
+def match_cves(installs, data, year_offset=5):
     global found_cve_ids
 
     for pkg in installs:
@@ -101,7 +81,7 @@ def main():
     # with open('installed.json', 'r', encoding='utf-8') as file:
     #     installs = json.load(file)
 
-    with open('all_cves.json', 'r', encoding='utf-8') as file:
+    with open('all_cves_by_date.json', 'r', encoding='utf-8') as file:
         all_cves = json.load(file)
 
     match_cves(installs, all_cves)
