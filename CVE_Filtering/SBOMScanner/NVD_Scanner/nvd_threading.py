@@ -4,6 +4,8 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import time
 import threading
 
+found_cve_ids = 0
+
 # def match_cves(installs, data, max_threads=300):
 #     matched_cves = []
 #     matches_lock = threading.Lock()
@@ -60,6 +62,8 @@ def match_cves(installs, data, max_threads=250):
     lock = threading.Lock()
 
     def process_item(item):
+        global found_cve_ids
+
         cve_id = item.get('id')
         description = item.get('description', '').lower()
 
@@ -67,6 +71,7 @@ def match_cves(installs, data, max_threads=250):
             if name in description:
                 with lock:
                     installs_map[name]['cves'].append(cve_id)
+                    found_cve_ids += 1
 
     with ThreadPoolExecutor(max_workers=max_threads) as executor:
         executor.map(process_item, data)
@@ -135,6 +140,8 @@ def main():
     with open('results.json', 'w', encoding='utf-8') as file, open('results_abridged.json', 'w', encoding='utf-8') as file_abr:
         json.dump(installs, file, indent=2)
         json.dump(found_installs, file_abr, indent=2)
+
+    print(f"Number of found IDs: {found_cve_ids}")
 
     end_time = time.time() - start_time
     print(f"Execution Time: {end_time:.4f}")

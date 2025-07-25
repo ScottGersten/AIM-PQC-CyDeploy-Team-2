@@ -5,6 +5,7 @@ CVE_Filtering/SBOMScanner/vulnerabilities.json
 CVE_Filtering/SBOMScanner/vulners_api_key.txt
 CVE_Filtering/SBOMScanner/NVD_Scanner/nvd_feeds
 CVE_Filtering/SBOMScanner/NVD_Scanner/all_cves.json
+CVE_Filtering/SBOMScanner/NVD_Scanner/all_cves_by_date.json
 CVE_Filtering/SBOMScanner/NVD_Scanner/ip.txt
 CVE_Filtering/SBOMScanner/NVD_Scanner/results.json
 CVE_Filtering/SBOMScanner/NVD_Scanner/results_abridged.json
