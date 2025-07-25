@@ -1,0 +1,38 @@
+By date method using release year + 5:
+(qiskit2) baseb@NVD_Scanner > python nvd_method_by_date.py
+Number of successful matches in run: 41
+Number of failed matches in run: 549
+Number of found IDs: 6428
+Execution Time: 11.7386
+
+
+By date method using release year to present:
+(qiskit2) baseb@NVD_Scanner > python nvd_method_by_date.py
+Number of successful matches in run: 109
+Number of failed matches in run: 481
+Number of found IDs: 528849
+Execution Time: 82.1090
+
+
+By date method using release year to last year
+(qiskit2) baseb@NVD_Scanner > python nvd_method_by_date.py
+Number of successful matches in run: 29
+Number of failed matches in run: 561
+Number of found IDs: 2256
+Execution Time: 9.0570
+
+
+Full method using threading:
+(qiskit2) baseb@NVD_Scanner > python nvd_threading.py
+Number of successful matches in run: 129
+Number of failed matches in run: 461
+Number of found IDs: 543747
+Execution Time: 40.6950
+
+
+Full method without threading:
+(qiskit2) baseb@NVD_Scanner > python nvd_method_full.py
+Number of successful matches in run: 129
+Number of failed matches in run: 461
+Number of found IDs: 543747
+Execution Time: 68.7503
