@@ -8,6 +8,25 @@ import threading
 
 found_cve_ids = 0
 
+COMMON_PREFIXES = ['lib', 'python-', 'perl-', 'golang-', 'nodejs-']
+
+def strip_prefix(name):
+    for prefix in COMMON_PREFIXES:
+        if name.startswith(prefix):
+            return name[len(prefix):]
+    return name
+
+def strip_trailing_version_suffix(name):
+    return re.sub(r'\d+(off)?$', '', name)
+
+def normalize_name(name):
+    name = name.lower()
+    name = name.replace('-', '')
+    name = name.replace('_', '')
+    name = strip_prefix(name)
+    name = strip_trailing_version_suffix(name)
+    return name
+
 def match_cves(installs, data):
     global found_cve_ids
 
@@ -25,7 +44,8 @@ def match_cves(installs, data):
             for item in data[year_str]:
                 cve_id = item.get('id')
                 description = item.get('description', '')
-                if name.lower() in description.lower():
+                #if name.lower() in description.lower():
+                if normalize_name(name) in normalize_name(description):
                     pkg['cves'].append(cve_id)
                     found_cve_ids += 1
 

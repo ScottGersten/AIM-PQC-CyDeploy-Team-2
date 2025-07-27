@@ -69,6 +69,7 @@ def match_cves(installs, data, max_threads=250):
 
         for name in installs_map:
             if name in description:
+            #if name.replace('-','').replace('_','') in description.replace('-','').replace('_',''):
                 with lock:
                     installs_map[name]['cves'].append(cve_id)
                     found_cve_ids += 1

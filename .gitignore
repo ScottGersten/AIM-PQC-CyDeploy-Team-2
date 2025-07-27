@@ -10,3 +10,4 @@ CVE_Filtering/SBOMScanner/NVD_Scanner/ip.txt
 CVE_Filtering/SBOMScanner/NVD_Scanner/results.json
 CVE_Filtering/SBOMScanner/NVD_Scanner/results_abridged.json
 CVE_Filtering/SBOMScanner/NVD_Scanner/matched.json
+CVE_Filtering/SBOMScanner/NVD_Scanner/description_testing.json
