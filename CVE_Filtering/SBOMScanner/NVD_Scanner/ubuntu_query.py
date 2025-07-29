@@ -54,8 +54,7 @@ def index_cves_by_package(cve_entries):
 
         desc = desc.lower()
 
-        if "rejected" in desc or "do not use this candidate" in desc:
-            continue
+     
 
         for name, ver in normalize_affected(desc):
             index[name].append((ver, cve))
@@ -131,7 +130,7 @@ def main():
     print(f"Number of successful matches in run: {successes}")
     print(f"Number of failed matches in run: {fails}")
     # Save results
-    with open('matched_packages.json', 'w') as f:
+    with open('matched_ubuntu_packages.json', 'w') as f:
         json.dump(vuln_pkgs, f, indent=2)
 
     with open('all_packages_cves.json', 'w') as f:
