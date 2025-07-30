@@ -10,6 +10,8 @@ found_cve_ids = 0
 
 COMMON_PREFIXES = ['lib', 'python-', 'perl-', 'golang-', 'nodejs-']
 
+CPES = []
+
 def strip_prefix(name):
     for prefix in COMMON_PREFIXES:
         if name.startswith(prefix):
@@ -47,11 +49,14 @@ def match_cves(installs, data):
             for item in data[year_str]:
                 cve_id = item.get('id')
                 description = item.get('description', '')
+                nodes = item['raw']['configurations'].get('nodes', [])
                 #if name.lower() in description.lower():
                 #if INVALID_CVE not in description and normalize_name(name) in normalize_name(description):
                 if INVALID_CVE not in description and norm_name in normalize_name(description):
                     pkg['cves'].append(cve_id)
                     found_cve_ids += 1
+                    if nodes:
+                        CPES.extend(nodes)
 
 # def match_cves(installs, data, present_year=2025):
 #     global found_cve_ids
@@ -198,6 +203,7 @@ def main():
         json.dump(found_installs, file_abr, indent=2)
 
     print(f"Number of found IDs: {found_cve_ids}")
+    print(f"Number of found CPEs: {len(CPES)}")
 
     end_time = time.time() - start_time
     print(f"Execution Time: {end_time:.4f}")
