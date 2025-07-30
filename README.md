@@ -2,6 +2,8 @@
 
 ## Quantum Theory:
 
+- Can use a QUBO problem to figure out which CVEs are of highest priority to address. In a list of potentially hundreds of CVEs, this will give more direction to the user. Can use D-WAVE's Quantum Annealer to create this QUBO problem.
+
 ## Running by-date method:
 
 - Navigate to `CVE_Filtering/SBOMScanner/NVD_Scanner`
