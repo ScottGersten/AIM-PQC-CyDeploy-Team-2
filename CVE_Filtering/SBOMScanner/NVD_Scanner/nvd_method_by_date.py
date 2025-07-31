@@ -32,6 +32,9 @@ def match_cves(installs, data):
 
     INVALID_CVE = 'Rejected reason: DO NOT USE THIS CANDIDATE NUMBER.'
 
+    vulns = []
+    seen_cves = set()
+
     for pkg in installs:
         name = pkg['name']
         norm_name = pkg['norm_name']
@@ -50,8 +53,14 @@ def match_cves(installs, data):
                 #if name.lower() in description.lower():
                 #if INVALID_CVE not in description and normalize_name(name) in normalize_name(description):
                 if INVALID_CVE not in description and norm_name in normalize_name(description):
-                    pkg['cves'].append(cve_id)
+                    #pkg['cves'].append(cve_id)
+                    pkg['cves'].append({'id': cve_id, 'desc': description})
                     found_cve_ids += 1
+                    if cve_id not in seen_cves:
+                        vulns.append({'id': cve_id, 'desc': description})
+                        seen_cves.add(cve_id)
+    
+    return vulns
 
 # def match_cves(installs, data, present_year=2025):
 #     global found_cve_ids
@@ -176,7 +185,7 @@ def main():
     with open('all_cves_by_date.json', 'r', encoding='utf-8') as file:
         all_cves = json.load(file)
 
-    match_cves(installs, all_cves)
+    vulns = match_cves(installs, all_cves)
 
     # matched_cves = match_cves(installs, all_cves)
     # with open('matched.json', 'w', encoding='utf-8') as file:
@@ -193,9 +202,10 @@ def main():
     print(f"Number of successful matches in run: {successes}")
     print(f"Number of failed matches in run: {fails}")
 
-    with open('results.json', 'w', encoding='utf-8') as file, open('results_abridged.json', 'w', encoding='utf-8') as file_abr:
+    with open('results.json', 'w', encoding='utf-8') as file, open('results_abridged.json', 'w', encoding='utf-8') as file_abr, open('vulnerabilities.json', 'w', encoding='utf-8') as file_vulns:
         json.dump(installs, file, indent=2)
         json.dump(found_installs, file_abr, indent=2)
+        json.dump(vulns, file_vulns, indent=2)
 
     print(f"Number of found IDs: {found_cve_ids}")
 

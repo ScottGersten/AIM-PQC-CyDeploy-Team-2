@@ -11,5 +11,6 @@ CVE_Filtering/SBOMScanner/NVD_Scanner/results.json
 CVE_Filtering/SBOMScanner/NVD_Scanner/results_abridged.json
 CVE_Filtering/SBOMScanner/NVD_Scanner/matched.json
 CVE_Filtering/SBOMScanner/NVD_Scanner/description_testing.json
+CVE_Filtering/SBOMScanner/NVD_Scanner/vulnerabilities.json
 CVE_Filtering/SBOMScanner/all_ALBAJSON
 CVE_Filtering/SBOMScanner/all_cves_by_date.json
