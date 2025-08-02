@@ -196,7 +196,6 @@ def main():
    # print(f"[+] Fetching installed packages from {ip}...")
    # get_installs(ip)
 
-    print("[+] Proceeding with scanning installed.txt...")
     print("Parsing installed packages...")
     packages = parse_installed_packages()
     print(f"{len(packages)} packages found.")
