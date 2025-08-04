@@ -37,11 +37,13 @@ def match_cves(installs, data):
 
     for pkg in installs:
         name = pkg['name']
-        norm_name = pkg['norm_name']
+        #norm_name = pkg['norm_name']
         first_year = pkg['first_year']
         last_year = pkg['last_year']
-        if first_year is None or last_year is None:
-            continue
+        # if first_year is None or last_year is None:
+        #     continue
+        if first_year is None:
+            first_year = 2025
         
         for year in range(first_year, last_year + 1):
             year_str = str(year)
@@ -52,7 +54,8 @@ def match_cves(installs, data):
                 description = item.get('description', '')
                 #if name.lower() in description.lower():
                 #if INVALID_CVE not in description and normalize_name(name) in normalize_name(description):
-                if INVALID_CVE not in description and norm_name in normalize_name(description):
+                #if INVALID_CVE not in description and norm_name in normalize_name(description):
+                if INVALID_CVE not in description and name.lower() in description.lower():
                     #pkg['cves'].append(cve_id)
                     pkg['cves'].append({'id': cve_id, 'desc': description})
                     found_cve_ids += 1
@@ -62,90 +65,13 @@ def match_cves(installs, data):
     
     return vulns
 
-# def match_cves(installs, data, present_year=2025):
-#     global found_cve_ids
-
-#     for pkg in installs:
-#         name = pkg['name']
-#         release_year = pkg['release_year']
-#         if release_year is None:
-#             continue
-        
-#         for year in range(release_year, present_year + 1):
-#             year_str = str(year)
-#             if year_str not in data:
-#                 continue
-#             for item in data[year_str]:
-#                 cve_id = item.get('id')
-#                 description = item.get('description', '')
-#                 if name.lower() in description.lower():
-#                     pkg['cves'].append(cve_id)
-#                     found_cve_ids += 1
-
-# def match_cves(installs, data, year_offset=5):
-#     global found_cve_ids
-
-#     for pkg in installs:
-#         name = pkg['name']
-#         release_year = pkg['release_year']
-#         if release_year is None:
-#             continue
-        
-#         for year in range(release_year, release_year + year_offset + 1):
-#             year_str = str(year)
-#             if year_str not in data:
-#                 continue
-#             for item in data[year_str]:
-#                 cve_id = item.get('id')
-#                 description = item.get('description', '')
-#                 if name.lower() in description.lower():
-#                     pkg['cves'].append(cve_id)
-#                     found_cve_ids += 1
-
-# def get_package_year(ssh, pkg):
-#     cmd = f"zgrep -m 1 -E '^ --' /usr/share/doc/{pkg}/changelog.Debian.gz"
-#     try:
-#         stdin, stdout, stderr = ssh.exec_command(cmd)
-#         output = stdout.read().decode().strip()
-#         if output:
-#             date_match = re.search(r'\w{3}, \d{1,2} \w{3} \d{4}', output)
-#             if date_match:
-#                 date_str = date_match.group(0)
-#                 date_obj = datetime.strptime(date_str, "%a, %d %b %Y")
-#                 return date_obj.year
-#     except Exception as e:
-#         return None
-
-def get_package_years(ssh, pkg):
-    cmd = f"zgrep '^ --' /usr/share/doc/{pkg}/changelog.Debian.gz"
-    try:
-        stdin, stdout, stderr = ssh.exec_command(cmd)
-        lines = stdout.read().decode().strip().splitlines()
-
-        years = []
-        for line in lines:
-            date_match = re.search(r'\w{3}, \d{1,2} \w{3} \d{4}', line)
-            if date_match:
-                try:
-                    date_obj = datetime.strptime(date_match.group(0), "%a, %d %b %Y")
-                    years.append(date_obj.year)
-                except ValueError:
-                    continue
-
-        if years:
-            return years[-1], years[0]
-        else:
-            return None, None
-    except Exception as e:
-        return None, None
-
 def get_installs(ip, username='msfadmin', password='msfadmin'):
     ssh = paramiko.SSHClient()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
     ssh.connect(ip, username=username, password=password)
 
-    cmd = r'''powershell -Command "Get-ItemProperty 'HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*' | Where-Object { $_.DisplayName } | Select-Object DisplayName, DisplayVersion, Publisher | ConvertTo-Json"'''
+    cmd = r'''powershell -Command "Get-ItemProperty 'HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*' | Where-Object { $_.DisplayName } | Select-Object DisplayName, DisplayVersion, Publisher, InstallDate | ConvertTo-Json"'''
 
     stdin, stdout, stderr = ssh.exec_command(cmd)
     output = stdout.read().decode('utf-8')
@@ -157,17 +83,19 @@ def get_installs(ip, username='msfadmin', password='msfadmin'):
     for item in softwares:
         name = item.get('DisplayName')
         version = item.get('DisplayVersion')
-        first_year, last_year = 0, 0 #get_package_years(ssh, name)
+        #first_year, last_year = 0, 0 #get_package_years(ssh, name)
+        install_date = item.get('InstallDate')
+        install_year = datetime.strptime(install_date, "%Y%m%d").year if install_date is not None else None
         packages.append({
             'name': name,
-            'norm_name' : normalize_name(name),
+            #'norm_name' : normalize_name(name),
             'version': version,
-            'first_year': first_year,
-            'last_year': last_year,
+            'first_year': install_year,
+            'last_year': 2025,
             'cves': []
         })
 
-    with open('installed.json', 'w', encoding='utf-8') as file:
+    with open('installed_windows.json', 'w', encoding='utf-8') as file:
         json.dump(packages, file, indent=2)
 
     ssh.close()
@@ -183,14 +111,14 @@ def main():
         password = lines[2]
 
     installs = get_installs(ip, username, password)
-    # with open('installed.json', 'r', encoding='utf-8') as file:
+    # with open('installed_windows.json', 'r', encoding='utf-8') as file:
     #     installs = json.load(file)
 
     with open('all_cves_by_date.json', 'r', encoding='utf-8') as file:
         all_cves = json.load(file)
 
-    #vulns = match_cves(installs, all_cves)
-    vulns = []
+    vulns = match_cves(installs, all_cves)
+    #vulns = []
 
     fails = successes = 0
     found_installs = []

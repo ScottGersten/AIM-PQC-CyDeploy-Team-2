@@ -42,8 +42,13 @@ def match_cves(installs, data):
         last_year = pkg['last_year']
         if first_year is None or last_year is None:
             continue
+        # if first_year is None:
+        #     first_year = 2002
+        # if last_year is None:
+        #     last_year = 2025
         
         for year in range(first_year, last_year + 1):
+        #for year in range(2002, 2025 + 1):
             year_str = str(year)
             if year_str not in data:
                 continue
@@ -53,6 +58,7 @@ def match_cves(installs, data):
                 #if name.lower() in description.lower():
                 #if INVALID_CVE not in description and normalize_name(name) in normalize_name(description):
                 if INVALID_CVE not in description and norm_name in normalize_name(description):
+                #if INVALID_CVE not in description and name.lower() in description.lower():
                     #pkg['cves'].append(cve_id)
                     pkg['cves'].append({'id': cve_id, 'desc': description})
                     found_cve_ids += 1
@@ -189,6 +195,7 @@ def main():
         all_cves = json.load(file)
 
     vulns = match_cves(installs, all_cves)
+    #vulns = []
 
     # matched_cves = match_cves(installs, all_cves)
     # with open('matched.json', 'w', encoding='utf-8') as file:
