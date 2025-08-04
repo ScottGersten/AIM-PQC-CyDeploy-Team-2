@@ -37,7 +37,7 @@ def match_cves(installs, data):
 
     for pkg in installs:
         name = pkg['name']
-        norm_name = pkg['norm_name']
+        #norm_name = pkg['norm_name']
         first_year = pkg['first_year']
         last_year = pkg['last_year']
         if first_year is None or last_year is None:
@@ -57,8 +57,8 @@ def match_cves(installs, data):
                 description = item.get('description', '')
                 #if name.lower() in description.lower():
                 #if INVALID_CVE not in description and normalize_name(name) in normalize_name(description):
-                if INVALID_CVE not in description and norm_name in normalize_name(description):
-                #if INVALID_CVE not in description and name.lower() in description.lower():
+                #if INVALID_CVE not in description and norm_name in normalize_name(description):
+                if INVALID_CVE not in description and name.lower() in description.lower():
                     #pkg['cves'].append(cve_id)
                     pkg['cves'].append({'id': cve_id, 'desc': description})
                     found_cve_ids += 1
@@ -164,7 +164,7 @@ def get_installs(ip, username='msfadmin', password='msfadmin'):
             first_year, last_year = get_package_years(ssh, splits[1])
             packages.append({
                 'name': splits[1],
-                'norm_name': normalize_name(splits[1]),
+                #'norm_name': normalize_name(splits[1]),
                 'version': splits[2],
                 #'description': ''.join(splits[3:]),
                 #'release_year': get_package_year(ssh, splits[1]),
@@ -187,9 +187,9 @@ def main():
         ip = lines[0]
         username = lines[1]
         password = lines[2]
-    # installs = get_installs(ip, username, password)
-    with open('installed.json', 'r', encoding='utf-8') as file:
-        installs = json.load(file)
+    installs = get_installs(ip, username, password)
+    #with open('installed.json', 'r', encoding='utf-8') as file:
+        #installs = json.load(file)
 
     with open('all_cves_by_date.json', 'r', encoding='utf-8') as file:
         all_cves = json.load(file)
