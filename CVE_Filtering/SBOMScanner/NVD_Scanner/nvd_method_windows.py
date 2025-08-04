@@ -145,27 +145,27 @@ def get_installs(ip, username='msfadmin', password='msfadmin'):
 
     ssh.connect(ip, username=username, password=password)
 
-    stdin, stdout, stderr = ssh.exec_command('dpkg -l')
+    cmd = r'''powershell -Command "Get-ItemProperty 'HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*' | Where-Object { $_.DisplayName } | Select-Object DisplayName, DisplayVersion, Publisher | ConvertTo-Json"'''
+
+    stdin, stdout, stderr = ssh.exec_command(cmd)
     output = stdout.read().decode('utf-8')
 
-    # with open('installed.txt', 'w', encoding='utf-8') as file:
-    #     file.write(output)
+    #print(f"Error: {stderr.read().decode()}")
+    softwares = json.loads(output)
 
     packages = []
-    for line in output.splitlines():
-        if line.startswith('ii'):
-            splits = line.split()
-            first_year, last_year = get_package_years(ssh, splits[1])
-            packages.append({
-                'name': splits[1],
-                'norm_name': normalize_name(splits[1]),
-                'version': splits[2],
-                #'description': ''.join(splits[3:]),
-                #'release_year': get_package_year(ssh, splits[1]),
-                'first_year': first_year,
-                'last_year': last_year,
-                'cves': []
-            })
+    for item in softwares:
+        name = item.get('DisplayName')
+        version = item.get('DisplayVersion')
+        first_year, last_year = 0, 0 #get_package_years(ssh, name)
+        packages.append({
+            'name': name,
+            'norm_name' : normalize_name(name),
+            'version': version,
+            'first_year': first_year,
+            'last_year': last_year,
+            'cves': []
+        })
 
     with open('installed.json', 'w', encoding='utf-8') as file:
         json.dump(packages, file, indent=2)
@@ -175,21 +175,22 @@ def get_installs(ip, username='msfadmin', password='msfadmin'):
 
 def main():
     start_time = time.time()
+    
+    with open('ssh_windows.txt', 'r') as f:
+        lines = f.read().splitlines()
+        ip = lines[0]
+        username = lines[1]
+        password = lines[2]
 
-    with open('ip.txt', 'r') as f:
-        ip = f.read()
-    #installs = get_installs(ip)
-    with open('installed.json', 'r', encoding='utf-8') as file:
-        installs = json.load(file)
+    installs = get_installs(ip, username, password)
+    # with open('installed.json', 'r', encoding='utf-8') as file:
+    #     installs = json.load(file)
 
     with open('all_cves_by_date.json', 'r', encoding='utf-8') as file:
         all_cves = json.load(file)
 
-    vulns = match_cves(installs, all_cves)
-
-    # matched_cves = match_cves(installs, all_cves)
-    # with open('matched.json', 'w', encoding='utf-8') as file:
-    #     json.dump(matched_cves, file, indent=2)
+    #vulns = match_cves(installs, all_cves)
+    vulns = []
 
     fails = successes = 0
     found_installs = []

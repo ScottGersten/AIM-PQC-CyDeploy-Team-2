@@ -176,9 +176,12 @@ def get_installs(ip, username='msfadmin', password='msfadmin'):
 def main():
     start_time = time.time()
 
-    with open('ip.txt', 'r') as f:
-        ip = f.read()
-    #installs = get_installs(ip)
+    with open('ssh_linux.txt', 'r') as f:
+        lines = f.read().splitlines()
+        ip = lines[0]
+        username = lines[1]
+        password = lines[2]
+    # installs = get_installs(ip, username, password)
     with open('installed.json', 'r', encoding='utf-8') as file:
         installs = json.load(file)
 
