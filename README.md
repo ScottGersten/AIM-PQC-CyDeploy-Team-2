@@ -19,6 +19,8 @@
   - Final QUBO equation is `Q(x) = max_benefit + penalty`
   - Can build in code using D_WAVE's Quantum Annealer or pyqubo module.
 
+## Running combined logic method:
+
 ## Running by-date method:
 
 - Navigate to `CVE_Filtering/SBOMScanner/NVD_Scanner`
