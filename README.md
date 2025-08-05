@@ -32,6 +32,7 @@
 - Currently in-progress:
   - Using the CPEs method to reduce the list of found CVEs and improve accuracy.
   - Researching ways that quantum computing can be used within this algorithm.
+    - Working on QUBO demo using D-WAVE Ocean for the list of vulnerabilities.
   - Testing the name normalization to see if it is necessary. It does give a broader search to the CVE IDs but makes the programs take significantly longer to run.
     - While it seems to work for the Debian Version, it makes the Windows version take too long.
     - Looking to change the `get_nvd_feeds` files to do the name normalization when first installed rather than having to do it for each run.
