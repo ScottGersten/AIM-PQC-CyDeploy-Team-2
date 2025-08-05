@@ -21,6 +21,27 @@
 
 ## Running combined logic method:
 
+- Navigate to `CVE_Filtering/SBOMScanner/Combined_Scanner`
+- Run `combined_logic_scanner.py`, which implements version detection.
+- This scanner integrates the logic for querying the Ubuntu, NVD, and Debian databases.
+- The CVE Filtering scanner works by first parsing the packages from installed.txt.
+- Then it looks through each database by keyword and matches the packages with relevant CVEs according to the service version.
+- When the scanner executes version detection, it looks at the version to see if it is before or after the affected version, so it knows if the package is vulnerable or not.
+- In addition, the Ubuntu database is queried first because the packages with Ubuntu in their service version are scanned through first.
+- Then the Debian database is queried for non-Ubuntu packages.
+- When it is done, the NVD is queried for any non-Ubuntu packages that the Debian database could not match.
+
+ 
+- The results show you how many vulnerable packages were found from querying each database and the total successful matches, which is the number of all the discovered vulnerable packages.
+- It also displays the total failed matches, meaning the number of packages that were not detected as vulnerable.
+
+  
+- The scanner stores the results in a file called `combined_results.json`.
+- It only presents the vulnerable packages and not all the packages that were scanned.
+- When informing the user about the vulnerable packages, it first displays the name of the package, its version with and without the specific distro.
+- When it portrays the CVEs found, it tells the user the source (which database was queried to acquire the information), CVE ID, CVE title, description of the CVE, and the release version for the packages queried from the Debian database.
+
+
 ## Running by-date method:
 
 - Navigate to `CVE_Filtering/SBOMScanner/NVD_Scanner`
