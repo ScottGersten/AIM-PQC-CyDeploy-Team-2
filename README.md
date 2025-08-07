@@ -42,6 +42,13 @@
 - When it portrays the CVEs found, it tells the user the source (which database was queried to acquire the information), CVE ID, CVE title, description of the CVE, and the release version for the packages queried from the Debian database.
 
 
+## Anees's QUantum Theory:
+I’ve already built a tool that pulls down every CVE affecting the packages on my Metasploitable VM and matches them to offline NVD JSON feeds for descriptions. Even though it works, it can still feel slow when looping through thousands of entries. One idea I’d like to explore is using quantum search (Grover’s algorithm) to speed up lookups in my big JSON map. In theory, Grover’s would let me find a CVE description in roughly √N steps instead of N, which could cut down my parsing time dramatically once I import a quantum simulator like Qiskit or use a cloud-based quantum service.
+
+One part is in my debian_method where I loop over every package and call get_debian_cves on the huge Debian tracker file to pull out CVE IDs. I could swap that for a quantum search trick that jumps right to the ones I need instead of checking each one. Another spot is in fetch_cve_descriptions_from_nvd_file where I look up each CVE in the big NVD map built by load_nvd_data. A quantum amplitude amplification trick could let me hit the right entry with fewer steps. A third spot is when I gather all the CVE details into all_described and then flatten sort and remove duplicates with Python’s sort and set. That can take a long time if the list is big but a quantum sorting method could cut that down a lot. These three spots are where quantum ideas could make my code run a lot faster.
+
+Fully error corrected quantum hardware of the size I’d need doesn’t exist yet, but if it did I would simply swap my simulator backend for a real QPU. I’d load the JSON data into quantum memory, fire off Grover circuits to grab each description instantly, and even use quantum kernel evaluation to cluster similar CVEs on the fly. That would let my tool scan and analyze thousands of vulnerabilities in seconds, turning a slow batch job into an interactive experience—something only tomorrow’s quantum chips can really deliver.
+
 ## Running by-date method:
 
 - Navigate to `CVE_Filtering/SBOMScanner/NVD_Scanner`
