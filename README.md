@@ -19,16 +19,27 @@
   - Final QUBO equation is `Q(x) = max_benefit + penalty`
   - Can build in code using D_WAVE's Quantum Annealer or pyqubo module.
 
+## Anees's QUantum Theory:
+I’ve already built a tool that pulls down every CVE affecting the packages on my Metasploitable VM and matches them to offline NVD JSON feeds for descriptions. Even though it works, it can still feel slow when looping through thousands of entries. One idea I’d like to explore is using quantum search (Grover’s algorithm) to speed up lookups in my big JSON map. In theory, Grover’s would let me find a CVE description in roughly √N steps instead of N, which could cut down my parsing time dramatically once I import a quantum simulator like Qiskit or use a cloud-based quantum service.
+
+One part is in my debian_method where I loop over every package and call get_debian_cves on the huge Debian tracker file to pull out CVE IDs. I could swap that for a quantum search trick that jumps right to the ones I need instead of checking each one. Another spot is in fetch_cve_descriptions_from_nvd_file where I look up each CVE in the big NVD map built by load_nvd_data. A quantum amplitude amplification trick could let me hit the right entry with fewer steps. A third spot is when I gather all the CVE details into all_described and then flatten sort and remove duplicates with Python’s sort and set. That can take a long time if the list is big but a quantum sorting method could cut that down a lot. These three spots are where quantum ideas could make my code run a lot faster.
+
+Fully error corrected quantum hardware of the size I’d need doesn’t exist yet, but if it did I would simply swap my simulator backend for a real QPU. I’d load the JSON data into quantum memory, fire off Grover circuits to grab each description instantly, and even use quantum kernel evaluation to cluster similar CVEs on the fly. That would let my tool scan and analyze thousands of vulnerabilities in seconds, turning a slow batch job into an interactive experience—something only tomorrow’s quantum chips can really deliver.
+
 ## Running by-date method:
 
 - Navigate to `CVE_Filtering/SBOMScanner/NVD_Scanner`
 - Run `get_nvd_feeds_by_date.py` to create the `nvd_feeds` directory with all NVD feed JSONs. This will also create `all_cves_by_date.json`, which is the file the by-date method will use.
-- Then run `nvd_method_by_date.py`, which is the main logic. Currently, this file works for a Debian Linux VM with the SSH login of `msfadmin` for both the username and password. The IP address of the VM is read from the `ip.txt` file. Running this on the VM will create an `installed.json` file. Once this file is created, the main method can be edited to not use the `get_installs()` function and instead read from the `installed.json` file. The run will create the `results.json`, `results_abridged.json`, and `vulnerabilities.json` files:
+- For the Linux Version, then run `nvd_method_by_date.py`, which is the main logic. Currently, this file works for a Debian Linux VM with the SSH login of `msfadmin` for both the username and password. The IP address and username and password are read from the `ssh_linux.txt` file where the first line is the IP address, the second line is the username, and the third line is the password. Running this on the VM will create an `installed.json` file. Once this file is created, the main method can be edited to not use the `get_installs()` function and instead read from the `installed.json` file. The run will create the `results.json`, `results_abridged.json`, and `vulnerabilities.json` files:
   - `results.json` contains every package from `installed.json`, each with an added `CVEs` field listing the matching CVE IDs and the description that goes along with the ID.
   - `results_abridged.json` is a shortened version that only includes packages with matching CVE IDs and their descriptions.
   - `vulnerabilities.json` is a list of CVE IDs and their matching descriptions, excluding repeated IDs and descriptions. This should be the main output the user will care about.
+- For the Windows Version, instead follow the instructions in `windows_ssh_instructions.txt` to make sure your Windows machine has SSH setup. Then run `nvd_method_windows.py` which runs very similary to the Linux version, just for a Windows machine. It will put the installs in `installed_windows.json` and takes the IP address, username, and password from `ssh_windows.txt` in the same format as the Linux version. It will then output the same files as the Linux version.
 
 - Currently in-progress:
   - Using the CPEs method to reduce the list of found CVEs and improve accuracy.
-  - Creating a Windows-compatible version of the logic to scan Windows machines. The system will then detect the OS and run the appropriate logic. Even if this is not automated, both versions will be available, and the user can choose which to run based on the system type.
   - Researching ways that quantum computing can be used within this algorithm.
+  - Testing the name normalization to see if it is necessary. It does give a broader search to the CVE IDs but makes the programs take significantly longer to run.
+    - While it seems to work for the Debian Version, it makes the Windows version take too long.
+    - Looking to change the `get_nvd_feeds` files to do the name normalization when first installed rather than having to do it for each run.
+  - Looking for a better way to get the date information for the Windows Version. There is no changelog to parse in Windows like there is for the Debian Version so it is currently using the package install date on the computer and 2025 as the last date. Looking for a more effective means of estimating the package life.

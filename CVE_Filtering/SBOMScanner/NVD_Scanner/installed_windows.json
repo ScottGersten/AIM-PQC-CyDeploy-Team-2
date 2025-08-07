@@ -1,0 +1,1367 @@
+[
+  {
+    "name": "Visual Studio Community 2022",
+    "version": "17.10.5",
+    "first_year": 2023,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Visual Studio Community 2019",
+    "version": "16.11.34",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Intel(R) HID Event Filter",
+    "version": "2.2.1.386",
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Bitvise SSH Client 9.42 (remove only)",
+    "version": "9.42",
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "WinFsp installed by Bitvise SSH Client (remove only)",
+    "version": "2.0.23075",
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "DMD",
+    "version": "2.107.1",
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Google Chrome",
+    "version": "138.0.7204.184",
+    "first_year": 2025,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Graphviz",
+    "version": "12.1.2",
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft Edge",
+    "version": "138.0.3351.121",
+    "first_year": 2025,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft Edge WebView2 Runtime",
+    "version": "138.0.3351.121",
+    "first_year": 2025,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Nmap 7.97",
+    "version": "7.97",
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Npcap",
+    "version": "1.82",
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "OBS Studio",
+    "version": "31.0.4",
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Ivanti Secure Access Client 22.3",
+    "version": "22.3.18209",
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Racket v8.15 (x86_64)",
+    "version": "8.15",
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Steam",
+    "version": "2.10.91.91",
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Ubisoft Connect",
+    "version": "162.0.11687",
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "XDefiant",
+    "version": "",
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "WinSCP 6.3.3",
+    "version": "6.3.3",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Zotero",
+    "version": "6.0.27",
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft Windows Desktop Targeting Pack - 6.0.32 (x86)",
+    "version": "48.128.16742",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Visual C++ Library CRT Desktop Appx Package",
+    "version": "14.40.33811",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Windows Mobile Extension SDK Contracts",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Windows SDK for Windows Store Managed Apps Libs",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft Visual C++ 2013 Redistributable (x64) - 12.0.30501",
+    "version": "12.0.30501.0",
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft ASP.NET Core 6.0.32 Shared Framework (x86)",
+    "version": "6.0.32.24314",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft .NET Host - 8.0.7 (x86)",
+    "version": "64.28.16731",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft Visual Studio Setup WMI Provider",
+    "version": "3.9.2148.60653",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "vs_clickoncebootstrappermsires",
+    "version": "17.10.34803",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "vs_clickoncebootstrappermsi",
+    "version": "17.10.34804",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Visual C++ Library CRT Appx Package",
+    "version": "14.40.33811",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft .NET CoreRuntime SDK",
+    "version": "1.1.27004.0",
+    "first_year": 2023,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft Visual C++ 2013 x86 Minimum Runtime - 12.0.21005",
+    "version": "12.0.21005",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft Windows Desktop Targeting Pack - 7.0.20 (x86)",
+    "version": "56.80.15245",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft .NET Framework 4.7.2 Targeting Pack",
+    "version": "4.7.03062",
+    "first_year": 2023,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "vs_CoreEditorFonts",
+    "version": "17.7.40001",
+    "first_year": 2023,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "vs_tipsmsi",
+    "version": "17.10.34803",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft .NET Framework Cumulative Intellisense Pack for Visual Studio (ENU)",
+    "version": "4.8.09037",
+    "first_year": 2023,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Inland_MKF v1.6.5",
+    "version": null,
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Universal CRT Redistributable",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "ClickOnce Bootstrapper Package for Microsoft .NET Framework",
+    "version": "4.8.09037",
+    "first_year": 2023,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Windows SDK Desktop Libs x86",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft ASP.NET Core 7.0.20 Shared Framework (x86)",
+    "version": "7.0.20.24269",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft ASP.NET Core 8.0.7 Shared Framework (x86)",
+    "version": "8.0.7.24314",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Dell SupportAssist OS Recovery Plugin for Dell Update",
+    "version": "5.5.13.0",
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Visual C++ Library CRT Appx Package",
+    "version": "14.40.33811",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Windows App Certification Kit x64",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "SDK ARM Additions",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Windows SDK",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Windows SDK Desktop Libs arm",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft .NET Runtime - 8.0.7 (x86)",
+    "version": "64.28.16731",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "vs_communitysharedmsi",
+    "version": "17.10.34804",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Windows SDK Desktop Headers arm",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft Visual C++ 2012 Redistributable (x86) - 11.0.61030",
+    "version": "11.0.61030.0",
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Windows SDK AddOn",
+    "version": "10.1.0.0",
+    "first_year": 2023,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Windows SDK for Windows Store Apps Tools",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "WebAdvisor by McAfee",
+    "version": "4.1.1.1058",
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Universal CRT Tools x86",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "MSI Development Tools",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Windows SDK Desktop Headers x64",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "WinRT Intellisense UAP - Other Languages",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Visual C++ Library CRT Desktop Appx Package",
+    "version": "14.40.33811",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "vs_BlendMsi",
+    "version": "17.10.34803",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Windows SDK Redistributables",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Launcher Prerequisites (x64)",
+    "version": "1.0.0.0",
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "WinRT Intellisense IoT - en-us",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "vs_minshellmsires",
+    "version": "17.10.34804",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft .NET CoreRuntime For CoreCon",
+    "version": "1.0.0.0",
+    "first_year": 2023,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Java Auto Updater",
+    "version": "2.8.381.9",
+    "first_year": 2023,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Windows SDK for Windows Store Apps Metadata",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft ASP.NET Core 7.0.7 - Shared Framework (x64)",
+    "version": "7.0.7.23274",
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft .NET Runtime - 7.0.20 (x86)",
+    "version": "56.80.15184",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft .NET Targeting Pack - 7.0.20 (x86)",
+    "version": "56.80.15184",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "WinRT Intellisense Desktop - Other Languages",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Intelr Software Installer",
+    "version": "22.250.0.4",
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "vs_filehandler_x86",
+    "version": "17.10.34804",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Python Launcher",
+    "version": "3.13.3150.0",
+    "first_year": 2025,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Windows SDK Signing Tools",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Epic Online Services",
+    "version": "2.0.44.0",
+    "first_year": 2023,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft Visual C++ 2022 X86 Minimum Runtime - 14.42.34438",
+    "version": "14.42.34438",
+    "first_year": 2025,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Kits Configuration Installer",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft ASP.NET Core 6.0.32 Targeting Pack (x86)",
+    "version": "6.0.32.24314",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Windows SDK for Windows Store Apps DirectX x86 Remote",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "WinRT Intellisense PPI - Other Languages",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Windows SDK for Windows Store Apps Contracts",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft .NET Host - 6.0.16 (x86)",
+    "version": "48.67.58427",
+    "first_year": 2025,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Windows SDK for Windows Store Apps",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "WinRT Intellisense IoT - Other Languages",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "vs_vswebprotocolselectormsi",
+    "version": "17.10.34803",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Fusion Service",
+    "version": "2.2.14.0",
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft Visual Studio Setup Configuration",
+    "version": "3.9.2148.60653",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Windows Software Development Kit - Windows 10.0.22621.3233",
+    "version": "10.1.22621.3233",
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "vs_githubprotocolhandlermsi",
+    "version": "17.10.34803",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "vs_clickoncesigntoolmsi",
+    "version": "17.10.34803",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft NetStandard SDK",
+    "version": "15.0.51105",
+    "first_year": 2023,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Windows App Certification Kit x64 (OnecoreUAP)",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Windows SDK for Windows Store Apps Headers",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Windows SDK Modern Non-Versioned Developer Tools",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Windows SDK Facade Windows WinMD Versioned",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Windows Desktop Extension SDK Contracts",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "icecap_collectionresources",
+    "version": "17.10.34804",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft .NET Runtime - 6.0.32 (x86)",
+    "version": "48.128.16743",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Visual C++ Library CRT Appx Resource Package",
+    "version": "14.40.33811",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "icecap_collectionresourcesx64",
+    "version": "17.10.34804",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "vs_FileTracker_Singleton",
+    "version": "17.10.34804",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "WinRT Intellisense Mobile - en-us",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft TestPlatform SDK Local Feed",
+    "version": "17.10.0.9037153",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft Visual C++ 2015-2022 Redistributable (x64) - 14.42.34433",
+    "version": "14.42.34433.0",
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Windows SDK DirectX x86 Remote",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Windows SDK Desktop Libs x64",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft Visual C++ 2022 X86 Additional Runtime - 14.42.34433",
+    "version": "14.42.34433",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft ASP.NET Core 7.0.20 Targeting Pack (x86)",
+    "version": "7.0.20.24269",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "vcpp_crt.redist.clickonce",
+    "version": "14.40.33810",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Windows SDK Desktop Libs arm64",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Visual C++ Library CRT Desktop Appx Package",
+    "version": "14.40.33811",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Intel(R) Chipset Device Software",
+    "version": "10.1.19468.8385",
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "windows_toolscorepkg",
+    "version": "17.10.34804",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "icecap_collection_neutral",
+    "version": "17.10.34804",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "vs_minshellmsi",
+    "version": "16.11.34407",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Windows IoT Extension SDK Contracts",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft Windows Desktop Runtime - 6.0.32 (x86)",
+    "version": "48.128.16742",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Windows Team Extension SDK",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Alienware OC Controls",
+    "version": "1.4.34.1450",
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft .NET Framework 4.8 SDK",
+    "version": "4.8.03928",
+    "first_year": 2023,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "WinRT Intellisense UAP - en-us",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Windows SDK ARM Desktop Tools",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Visual C++ Library CRT ARM64 Appx Package",
+    "version": "14.40.33811",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft Windows Desktop Targeting Pack - 8.0.7 (x86)",
+    "version": "64.28.16739",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft .NET Host FX Resolver - 8.0.7 (x86)",
+    "version": "64.28.16731",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft ASP.NET Core 8.0.7 Targeting Pack (x86)",
+    "version": "8.0.7.24314",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Windows Mobile Extension SDK",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Windows SDK Desktop Tools arm64",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft Visual C++ 2005 Redistributable",
+    "version": "8.0.50727.42",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft .NET Framework 4.8 Targeting Pack (ENU)",
+    "version": "4.8.03761",
+    "first_year": 2023,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Windows SDK Desktop Headers arm64",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft .NET Runtime - 6.0.14 (x64)",
+    "version": "6.0.14.32123",
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "vs_SQLClickOnceBootstrappermsi",
+    "version": "17.10.34803",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft Visual C++ 2012 x86 Additional Runtime - 11.0.61030",
+    "version": "11.0.61030",
+    "first_year": 2023,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "WinRT Intellisense Desktop - en-us",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft .NET Framework 4.7.2 Targeting Pack (ENU)",
+    "version": "4.7.03062",
+    "first_year": 2023,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "SDK ARM Redistributables",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Epic Games Launcher",
+    "version": "1.3.93.0",
+    "first_year": 2023,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft .NET Framework 4.8 Targeting Pack",
+    "version": "4.8.03761",
+    "first_year": 2023,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft Windows Desktop Runtime - 6.0.28 (x64)",
+    "version": "6.0.28.33420",
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft Windows Desktop Runtime - 8.0.11 (x64)",
+    "version": "8.0.11.34221",
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft Visual C++ 2012 x86 Minimum Runtime - 11.0.61030",
+    "version": "11.0.61030",
+    "first_year": 2023,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Windows SDK Desktop Tools x64",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft .NET Targeting Pack - 8.0.7 (x86)",
+    "version": "64.28.16731",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "WinRT Intellisense PPI - en-us",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Windows SDK Modern Versioned Developer Tools",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "PDFtk - The PDF Toolkit version 2.02",
+    "version": "2.02",
+    "first_year": 2023,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft UniversalWindowsPlatform SDK",
+    "version": "15.9.16",
+    "first_year": 2023,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft ASP.NET Diagnostic Pack for Visual Studio",
+    "version": "17.10.344.38934",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Windows App Certification Kit SupportedApiList x86",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Dell SupportAssist Remediation",
+    "version": "5.5.13.0",
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "IntelliTraceProfilerProxy",
+    "version": "15.0.21225.01",
+    "first_year": 2023,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "WinAppDeploy",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft Visual C++ 2012 Redistributable (x64) - 11.0.61030",
+    "version": "11.0.61030.0",
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Windows SDK Desktop Tools x86",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "vs_devenvsharedmsi",
+    "version": "17.10.34803",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Windows SDK for Windows Store Apps Libs",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Windows IoT Extension SDK",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "TI ConnectT",
+    "version": "4.0.0.218",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "vs_filehandler_amd64",
+    "version": "17.10.34804",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft Windows Desktop Runtime - 7.0.20 (x86)",
+    "version": "56.80.15245",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Alienware Command Center Package Manager",
+    "version": "5.9.2.0",
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Universal General MIDI DLS Extension SDK",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Universal CRT Headers Libraries and Sources",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "vs_communitymsires",
+    "version": "17.10.34804",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Windows Desktop Extension SDK",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft .NET Host FX Resolver - 6.0.16 (x86)",
+    "version": "48.67.58427",
+    "first_year": 2025,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft .NET Runtime - 6.0.16 (x86)",
+    "version": "48.67.58427",
+    "first_year": 2025,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "PDFtk Server version 2.02",
+    "version": "2.02",
+    "first_year": 2023,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "vs_minshellsharedmsi",
+    "version": "17.10.34804",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Windows SDK EULA",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft Visual C++ 2015-2022 Redistributable (x86) - 14.42.34433",
+    "version": "14.42.34433.0",
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft Windows Desktop Runtime - 7.0.7 (x64)",
+    "version": "7.0.7.32525",
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Universal CRT Extension SDK",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Dell Digital Delivery Services",
+    "version": "5.5.0.0",
+    "first_year": 2025,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Xamarin Remoted iOS Simulator",
+    "version": "17.6.0.524",
+    "first_year": 2023,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "vs_minshellinteropsharedmsi",
+    "version": "17.10.34804",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft Windows Desktop Runtime - 8.0.7 (x86)",
+    "version": "64.28.16739",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft .NET Native SDK",
+    "version": "15.0.24211.07",
+    "first_year": 2023,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Entity Framework 6.2.0 Tools  for Visual Studio 2022",
+    "version": "6.2.0.0",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft .NET Targeting Pack - 6.0.32 (x86)",
+    "version": "48.128.16743",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft Visual C++ 2010  x86 Redistributable - 10.0.40219",
+    "version": "10.0.40219",
+    "first_year": 2023,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Realtek Audio Driver",
+    "version": "6.0.9635.1",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Bitvise SSH Client - FlowSshNet (x86)",
+    "version": "9.42.0.0",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Windows SDK Desktop Headers x86",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft Visual C++ 2013 Redistributable (x86) - 12.0.30501",
+    "version": "12.0.30501.0",
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft Visual C++ 2013 x86 Additional Runtime - 12.0.21005",
+    "version": "12.0.21005",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft .NET Runtime - 6.0.16 (x86)",
+    "version": "6.0.16.32323",
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Windows Team Extension SDK Contracts",
+    "version": "10.1.22621.3233",
+    "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "Microsoft .NET Core SDK 3.1.426 (x64)",
+    "version": "3.1.426.16244",
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "name": "VS Immersive Activate Helper",
+    "version": "17.0.125.0",
+    "first_year": 2023,
+    "last_year": 2025,
+    "cves": []
+  }
+]
