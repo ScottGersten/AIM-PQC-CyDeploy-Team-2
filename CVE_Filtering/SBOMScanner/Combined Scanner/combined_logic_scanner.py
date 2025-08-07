@@ -7,8 +7,6 @@ import time
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor
 
-def simplify_version(version_str):
-    return re.split(r'[-+~]', version_str)[0]
 
 def parse_installed_packages(file_path='installed.txt'):
     packages = []
@@ -19,11 +17,9 @@ def parse_installed_packages(file_path='installed.txt'):
                 if len(parts) >= 3:
                     name = parts[1].lower()
                     full_version = parts[2].strip()
-                    base_version = simplify_version(full_version)
                     packages.append({
                         'name': name,
                         'version': full_version,
-                        'base_version': base_version,
                         'cves': []
                     })
     return packages
@@ -36,6 +32,8 @@ def load_nvd_cves(json_path='all_cves.json'):
     with open(json_path, 'r', encoding='utf-8') as f:
         return json.load(f)
 
+# Looks at the service version if it is before or after the affected version. 
+
 def normalize_affected(desc):
     patterns = [
         r'^(\S+)\s+-\s+([\w\d\.\-\:\+~]+)',
@@ -45,7 +43,8 @@ def normalize_affected(desc):
     matches = []
     for pattern in patterns:
         matches += re.findall(pattern, desc, re.IGNORECASE | re.MULTILINE)
-    return [(pkg.lower(), simplify_version(ver)) for pkg, ver in matches]
+    return matches
+
 
 def index_cves_by_package(cve_entries):
     index = defaultdict(list)
@@ -58,8 +57,7 @@ def index_cves_by_package(cve_entries):
         else:
             desc = ''
         desc = desc.lower()
-        if "rejected" in desc or "do not use this candidate" in desc:
-            continue
+        
         for name, ver in normalize_affected(desc):
             index[name].append((ver, cve))
     return index
@@ -67,16 +65,17 @@ def index_cves_by_package(cve_entries):
 def match_ubuntu_cves(packages, ubuntu_index):
     def match(pkg):
         matched = []
-        for affected_version, cve in ubuntu_index.get(pkg['name'], []):
+        for version, cve in ubuntu_index.get(pkg['name'], []):
             try:
-                if packaging_version.parse(pkg['base_version']) < packaging_version.parse(affected_version):
+                if packaging_version.parse(pkg['version']) < packaging_version.parse(version):
                     matched.append({
                         'source': 'ubuntu',
-                        'cve_id': cve.get('CVE'),
-                        'title': cve.get('title', ''),
-                        'description': cve.get('description', ''),
-                       
+                        'title': cve.get('title'),
+                        'description': cve.get('description'),
+                        
                     })
+                
+    
             except Exception:
                 continue
         pkg['cves'] = matched
@@ -84,6 +83,7 @@ def match_ubuntu_cves(packages, ubuntu_index):
 
     with ThreadPoolExecutor() as executor:
         list(executor.map(match, packages))
+
 
 def index_nvd_by_keywords(cve_data):
     index = defaultdict(list)
@@ -97,7 +97,6 @@ def match_nvd_cves(packages, nvd_index):
     def match(pkg):
         matched = []
         name = pkg['name']
-        base_ver = pkg['base_version']
         full_ver = pkg['version']
         aliases = set(re.findall(r'\b[a-z0-9\-\+\.]{3,}\b', name))
 
@@ -106,27 +105,35 @@ def match_nvd_cves(packages, nvd_index):
             related_entries.extend(nvd_index.get(alias, []))
 
         seen_ids = set()
-        for entry in related_entries:
-            cve_id = entry.get('id')
-            desc = entry.get('description', '').lower()
-            title = entry.get('title', '')
 
-            if not cve_id or cve_id in seen_ids:
-                continue
+        
+            
+        for entry in related_entries:
+            
+
+            cve_id = entry.get('id')
+            desc = entry.get('description', '').lower()                      
             seen_ids.add(cve_id)
 
-            if name in desc and (base_ver in desc or full_ver in desc):
+            if name in desc and ('version') in desc or full_ver in desc:
+                if cve_id.startswith("TEMP"):
+                    continue
                 matched.append({
                     'source': 'nvd',
                     'cve_id': cve_id,
-                    'title': title,
+
                     'description': desc
                 })
 
+        if 'cves' not in pkg:
+            pkg['cves'] = []
+
         pkg['cves'].extend(matched)
+
 
     with ThreadPoolExecutor() as executor:
         list(executor.map(match, packages))
+
 
 debian_fails = 0
 debian_successes = 0
@@ -146,46 +153,47 @@ def get_debian_cves(data, pkg_name, installed_version):
 
     debian_successes += 1
     pkg_data = data[pkg_name]
-    cves = []
     seen = set()
+    return get_debian_cves_for_package(pkg_data, installed_version, seen)
+
+def get_debian_cves_for_package(pkg_data, installed_version, seen):
+    cves = []
+    installed_major = installed_version.split('.')[0:2]  
+    installed_major_str = ".".join(installed_major)
 
     for cve_id, cve_info in pkg_data.items():
+        if cve_id.startswith("TEMP"):
+            continue
+
+        description = cve_info.get('description', '').lower()
+
+        if installed_major_str not in description:
+            continue  
+
         for release, release_data in cve_info.get('releases', {}).items():
             fixed_version = release_data.get('fixed_version')
             status = release_data.get('status')
 
-            if fixed_version and status in ('open', 'resolved', 'not-fixed', 'vulnerable'):
+            if not fixed_version or not installed_version:
+                continue
+
+            if status in ('open', 'resolved', 'not-fixed', 'vulnerable'):
                 try:
-                    if (
-                        packaging_version.parse(installed_version) < packaging_version.parse(fixed_version)
-                        or packaging_version.parse(simplify_version(installed_version)) < packaging_version.parse(fixed_version)
-                    ):
+                    if packaging_version.parse(installed_version) < packaging_version.parse(fixed_version):
                         if cve_id not in seen:
                             cves.append({
                                 'source': 'debian',
                                 'cve_id': cve_id,
                                 'description': cve_info.get('description', ''),
                                 'release': release,
-                                
                             })
                             seen.add(cve_id)
-                except Exception as e:
-           
+                except Exception:
                     continue
 
     return cves
 
 
-def get_installs(ip, username='msfadmin', password='msfadmin'):
-    ssh = paramiko.SSHClient()
-    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    ssh.connect(ip, username=username, password=password)
-    stdin, stdout, stderr = ssh.exec_command('dpkg -l')
-    output = stdout.read().decode('utf-8')
-    ssh.close()
-    with open('installed.txt', 'w', encoding='utf-8') as file:
-        file.write(output)
-    return output
 
 def main():
     start = time.time()
@@ -196,7 +204,7 @@ def main():
    # print(f"[+] Fetching installed packages from {ip}...")
    # get_installs(ip)
 
-    print("[+] Proceeding with scanning installed.txt...")
+    print("Scanning installed.txt...")
     print("Parsing installed packages...")
     packages = parse_installed_packages()
     print(f"{len(packages)} packages found.")
@@ -205,14 +213,11 @@ def main():
     non_ubuntu_pkgs = [pkg for pkg in packages if "ubuntu" not in pkg['version'].lower()]
 
     if ubuntu_pkgs:
-        print("Ubuntu detected. Scanning Ubuntu CVE DB...")
+        print("Ubuntu detected. Scanning Ubuntu CVE Database.")
         ubuntu_cves_raw = load_ubuntu_cves()
         ubuntu_index = index_cves_by_package(ubuntu_cves_raw)
         match_ubuntu_cves(ubuntu_pkgs, ubuntu_index)
 
-    print("Loading and indexing NVD CVEs...")
-    nvd_cves = load_nvd_cves()
-    nvd_index = index_nvd_by_keywords(nvd_cves)
 
     if non_ubuntu_pkgs:
         print("Trying Debian Security Tracker for non-Ubuntu packages...")
@@ -220,9 +225,13 @@ def main():
         for pkg in non_ubuntu_pkgs:
             pkg['cves'] = get_debian_cves(debian_data, pkg['name'], pkg['version'])
 
+            
+
     fallback_to_nvd_non_ubuntu = [p for p in non_ubuntu_pkgs if not p['cves']]
     if fallback_to_nvd_non_ubuntu:
         print("Fallback: scanning NVD for non-Ubuntu packages with no Debian matches...")
+        nvd_cves = load_nvd_cves()
+        nvd_index = index_nvd_by_keywords(nvd_cves)
         match_nvd_cves(fallback_to_nvd_non_ubuntu, nvd_index)
 
     fallback_to_nvd_ubuntu = [p for p in ubuntu_pkgs if not p['cves']]
