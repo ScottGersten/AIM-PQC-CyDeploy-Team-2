@@ -69,10 +69,11 @@ def match_cves(installs, data):
                 if INVALID_CVE not in description and norm_name in description:
                     #pkg['cves'].append(cve_id)
                     pkg['cves'].append({'id': cve_id, 'desc': description})
-                    found_cve_ids += 1
+                    #found_cve_ids += 1
                     if cve_id not in seen_cves:
                         vulns.append({'id': cve_id, 'desc': description})
                         seen_cves.add(cve_id)
+                        found_cve_ids += 1
     
     return vulns
 
@@ -195,9 +196,9 @@ def main():
         ip = lines[0]
         username = lines[1]
         password = lines[2]
-    installs = get_installs(ip, username, password)
-    #with open('installed.json', 'r', encoding='utf-8') as file:
-        #installs = json.load(file)
+    #installs = get_installs(ip, username, password)
+    with open('installed.json', 'r', encoding='utf-8') as file:
+        installs = json.load(file)
 
     with open('all_cves_by_date_normalized.json', 'r', encoding='utf-8') as file:
         all_cves = json.load(file)

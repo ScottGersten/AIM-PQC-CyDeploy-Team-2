@@ -95,6 +95,7 @@ def get_installs(ip, username='msfadmin', password='msfadmin'):
         install_date = item.get('InstallDate')
         install_year = datetime.strptime(install_date, "%Y%m%d").year if install_date is not None else None
         packages.append({
+            'type': 'installed',
             'name': name,
             'norm_name' : normalize_name(name),
             'version': version,
@@ -103,8 +104,36 @@ def get_installs(ip, username='msfadmin', password='msfadmin'):
             'cves': []
         })
 
+    cmd = r'''powershell -Command "Get-Service | Where-Object { $_.Status -eq 'Running' } | ConvertTo-Json"'''
+    stdin, stdout, stderr = ssh.exec_command(cmd)
+    output = stdout.read().decode('utf-8')
+    running = json.loads(output)
+
+    for item in running:
+        name = item.get('ServiceName')
+        packages.append({
+            'type': 'running',
+            'name': name,
+            'norm_name': normalize_name(name),
+            'version': None,
+            'first_year': None,
+            'last_year': 2025,
+            'cves': []
+        })
+    
     with open('installed_windows.json', 'w', encoding='utf-8') as file:
         json.dump(packages, file, indent=2)
+
+    # running_softwares = []
+    # for item in running:
+    #     name = item.get('ServiceName')
+    #     running_softwares.append({
+    #         'name': name,
+    #         'norm_name': normalize_name(name)
+    #     })
+    
+    # with open('running_windows.json', 'w', encoding='utf-8') as file:
+    #     json.dump(running_softwares, file, indent=2)
 
     ssh.close()
     return packages
@@ -127,8 +156,8 @@ def main():
     with open('all_cves_by_date_normalized.json', 'r', encoding='utf-8') as file:
         all_cves = json.load(file)
 
-    #vulns = match_cves(installs, all_cves)
-    vulns = []
+    vulns = match_cves(installs, all_cves)
+    #vulns = []
 
     fails = successes = 0
     found_installs = []

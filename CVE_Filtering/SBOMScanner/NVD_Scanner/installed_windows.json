@@ -1,5 +1,6 @@
 [
   {
+    "type": "installed",
     "name": "Visual Studio Community 2022",
     "norm_name": "visual studio community ",
     "version": "17.10.5",
@@ -8,6 +9,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Visual Studio Community 2019",
     "norm_name": "visual studio community ",
     "version": "16.11.34",
@@ -16,6 +18,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Intel(R) HID Event Filter",
     "norm_name": "intel(r) hid event filter",
     "version": "2.2.1.386",
@@ -24,6 +27,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Bitvise SSH Client 9.42 (remove only)",
     "norm_name": "bitvise ssh client 9.42 (remove only)",
     "version": "9.42",
@@ -32,6 +36,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "WinFsp installed by Bitvise SSH Client (remove only)",
     "norm_name": "winfsp installed by bitvise ssh client (remove only)",
     "version": "2.0.23075",
@@ -40,6 +45,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "DMD",
     "norm_name": "dmd",
     "version": "2.107.1",
@@ -48,6 +54,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Google Chrome",
     "norm_name": "google chrome",
     "version": "138.0.7204.184",
@@ -56,6 +63,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Graphviz",
     "norm_name": "graphviz",
     "version": "12.1.2",
@@ -64,6 +72,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Edge",
     "norm_name": "microsoft edge",
     "version": "139.0.3405.86",
@@ -72,6 +81,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Edge WebView2 Runtime",
     "norm_name": "microsoft edge webview2 runtime",
     "version": "138.0.3351.121",
@@ -80,6 +90,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Nmap 7.97",
     "norm_name": "nmap 7.",
     "version": "7.97",
@@ -88,6 +99,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Npcap",
     "norm_name": "npcap",
     "version": "1.82",
@@ -96,6 +108,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "OBS Studio",
     "norm_name": "obs studio",
     "version": "31.0.4",
@@ -104,6 +117,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Ivanti Secure Access Client 22.3",
     "norm_name": "ivanti secure access client 22.",
     "version": "22.3.18209",
@@ -112,6 +126,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Racket v8.15 (x86_64)",
     "norm_name": "racket v8.15 (x8664)",
     "version": "8.15",
@@ -120,6 +135,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Steam",
     "norm_name": "steam",
     "version": "2.10.91.91",
@@ -128,6 +144,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Ubisoft Connect",
     "norm_name": "ubisoft connect",
     "version": "162.0.11687",
@@ -136,6 +153,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "XDefiant",
     "norm_name": "xdefiant",
     "version": "",
@@ -144,6 +162,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "WinSCP 6.3.3",
     "norm_name": "winscp 6.3.",
     "version": "6.3.3",
@@ -152,6 +171,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Zotero",
     "norm_name": "zotero",
     "version": "6.0.27",
@@ -160,6 +180,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Windows Desktop Targeting Pack - 6.0.32 (x86)",
     "norm_name": "microsoft windows desktop targeting pack  6.0.32 (x86)",
     "version": "48.128.16742",
@@ -168,6 +189,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Visual C++ Library CRT Desktop Appx Package",
     "norm_name": "visual c++ library crt desktop appx package",
     "version": "14.40.33811",
@@ -176,6 +198,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows Mobile Extension SDK Contracts",
     "norm_name": "windows mobile extension sdk contracts",
     "version": "10.1.22621.3233",
@@ -184,6 +207,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows SDK for Windows Store Managed Apps Libs",
     "norm_name": "windows sdk for windows store managed apps libs",
     "version": "10.1.22621.3233",
@@ -192,6 +216,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Visual C++ 2013 Redistributable (x64) - 12.0.30501",
     "norm_name": "microsoft visual c++ 2013 redistributable (x64)  12.0.",
     "version": "12.0.30501.0",
@@ -200,6 +225,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft ASP.NET Core 6.0.32 Shared Framework (x86)",
     "norm_name": "microsoft asp.net core 6.0.32 shared framework (x86)",
     "version": "6.0.32.24314",
@@ -208,6 +234,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Host - 8.0.7 (x86)",
     "norm_name": "microsoft .net host  8.0.7 (x86)",
     "version": "64.28.16731",
@@ -216,6 +243,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Visual Studio Setup WMI Provider",
     "norm_name": "microsoft visual studio setup wmi provider",
     "version": "3.9.2148.60653",
@@ -224,6 +252,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "vs_clickoncebootstrappermsires",
     "norm_name": "vsclickoncebootstrappermsires",
     "version": "17.10.34803",
@@ -232,6 +261,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "vs_clickoncebootstrappermsi",
     "norm_name": "vsclickoncebootstrappermsi",
     "version": "17.10.34804",
@@ -240,6 +270,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Visual C++ Library CRT Appx Package",
     "norm_name": "visual c++ library crt appx package",
     "version": "14.40.33811",
@@ -248,6 +279,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET CoreRuntime SDK",
     "norm_name": "microsoft .net coreruntime sdk",
     "version": "1.1.27004.0",
@@ -256,6 +288,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Visual C++ 2013 x86 Minimum Runtime - 12.0.21005",
     "norm_name": "microsoft visual c++ 2013 x86 minimum runtime  12.0.",
     "version": "12.0.21005",
@@ -264,6 +297,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Windows Desktop Targeting Pack - 7.0.20 (x86)",
     "norm_name": "microsoft windows desktop targeting pack  7.0.20 (x86)",
     "version": "56.80.15245",
@@ -272,6 +306,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Framework 4.7.2 Targeting Pack",
     "norm_name": "microsoft .net framework 4.7.2 targeting pack",
     "version": "4.7.03062",
@@ -280,6 +315,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "vs_CoreEditorFonts",
     "norm_name": "vscoreeditorfonts",
     "version": "17.7.40001",
@@ -288,6 +324,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "vs_tipsmsi",
     "norm_name": "vstipsmsi",
     "version": "17.10.34803",
@@ -296,6 +333,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Framework Cumulative Intellisense Pack for Visual Studio (ENU)",
     "norm_name": "microsoft .net framework cumulative intellisense pack for visual studio (enu)",
     "version": "4.8.09037",
@@ -304,6 +342,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Inland_MKF v1.6.5",
     "norm_name": "inlandmkf v1.6.",
     "version": null,
@@ -312,6 +351,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Universal CRT Redistributable",
     "norm_name": "universal crt redistributable",
     "version": "10.1.22621.3233",
@@ -320,6 +360,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "ClickOnce Bootstrapper Package for Microsoft .NET Framework",
     "norm_name": "clickonce bootstrapper package for microsoft .net framework",
     "version": "4.8.09037",
@@ -328,6 +369,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows SDK Desktop Libs x86",
     "norm_name": "windows sdk desktop libs x",
     "version": "10.1.22621.3233",
@@ -336,6 +378,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft ASP.NET Core 7.0.20 Shared Framework (x86)",
     "norm_name": "microsoft asp.net core 7.0.20 shared framework (x86)",
     "version": "7.0.20.24269",
@@ -344,6 +387,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft ASP.NET Core 8.0.7 Shared Framework (x86)",
     "norm_name": "microsoft asp.net core 8.0.7 shared framework (x86)",
     "version": "8.0.7.24314",
@@ -352,6 +396,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Dell SupportAssist OS Recovery Plugin for Dell Update",
     "norm_name": "dell supportassist os recovery plugin for dell update",
     "version": "5.5.13.0",
@@ -360,6 +405,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Visual C++ Library CRT Appx Package",
     "norm_name": "visual c++ library crt appx package",
     "version": "14.40.33811",
@@ -368,6 +414,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows App Certification Kit x64",
     "norm_name": "windows app certification kit x",
     "version": "10.1.22621.3233",
@@ -376,6 +423,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "SDK ARM Additions",
     "norm_name": "sdk arm additions",
     "version": "10.1.22621.3233",
@@ -384,6 +432,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows SDK",
     "norm_name": "windows sdk",
     "version": "10.1.22621.3233",
@@ -392,6 +441,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows SDK Desktop Libs arm",
     "norm_name": "windows sdk desktop libs arm",
     "version": "10.1.22621.3233",
@@ -400,6 +450,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Runtime - 8.0.7 (x86)",
     "norm_name": "microsoft .net runtime  8.0.7 (x86)",
     "version": "64.28.16731",
@@ -408,6 +459,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "vs_communitysharedmsi",
     "norm_name": "vscommunitysharedmsi",
     "version": "17.10.34804",
@@ -416,6 +468,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Dell Digital Delivery Services",
     "norm_name": "dell digital delivery services",
     "version": "5.6.2.0",
@@ -424,6 +477,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows SDK Desktop Headers arm",
     "norm_name": "windows sdk desktop headers arm",
     "version": "10.1.22621.3233",
@@ -432,6 +486,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Visual C++ 2012 Redistributable (x86) - 11.0.61030",
     "norm_name": "microsoft visual c++ 2012 redistributable (x86)  11.0.",
     "version": "11.0.61030.0",
@@ -440,6 +495,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows SDK AddOn",
     "norm_name": "windows sdk addon",
     "version": "10.1.0.0",
@@ -448,6 +504,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows SDK for Windows Store Apps Tools",
     "norm_name": "windows sdk for windows store apps tools",
     "version": "10.1.22621.3233",
@@ -456,6 +513,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "WebAdvisor by McAfee",
     "norm_name": "webadvisor by mcafee",
     "version": "4.1.1.1058",
@@ -464,6 +522,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Universal CRT Tools x86",
     "norm_name": "universal crt tools x",
     "version": "10.1.22621.3233",
@@ -472,6 +531,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "MSI Development Tools",
     "norm_name": "msi development tools",
     "version": "10.1.22621.3233",
@@ -480,6 +540,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows SDK Desktop Headers x64",
     "norm_name": "windows sdk desktop headers x",
     "version": "10.1.22621.3233",
@@ -488,6 +549,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "WinRT Intellisense UAP - Other Languages",
     "norm_name": "winrt intellisense uap  other languages",
     "version": "10.1.22621.3233",
@@ -496,6 +558,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Visual C++ Library CRT Desktop Appx Package",
     "norm_name": "visual c++ library crt desktop appx package",
     "version": "14.40.33811",
@@ -504,6 +567,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "vs_BlendMsi",
     "norm_name": "vsblendmsi",
     "version": "17.10.34803",
@@ -512,6 +576,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows SDK Redistributables",
     "norm_name": "windows sdk redistributables",
     "version": "10.1.22621.3233",
@@ -520,6 +585,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Launcher Prerequisites (x64)",
     "norm_name": "launcher prerequisites (x64)",
     "version": "1.0.0.0",
@@ -528,6 +594,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "WinRT Intellisense IoT - en-us",
     "norm_name": "winrt intellisense iot  enus",
     "version": "10.1.22621.3233",
@@ -536,6 +603,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "vs_minshellmsires",
     "norm_name": "vsminshellmsires",
     "version": "17.10.34804",
@@ -544,6 +612,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET CoreRuntime For CoreCon",
     "norm_name": "microsoft .net coreruntime for corecon",
     "version": "1.0.0.0",
@@ -552,6 +621,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Java Auto Updater",
     "norm_name": "java auto updater",
     "version": "2.8.381.9",
@@ -560,6 +630,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows SDK for Windows Store Apps Metadata",
     "norm_name": "windows sdk for windows store apps metadata",
     "version": "10.1.22621.3233",
@@ -568,6 +639,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft ASP.NET Core 7.0.7 - Shared Framework (x64)",
     "norm_name": "microsoft asp.net core 7.0.7  shared framework (x64)",
     "version": "7.0.7.23274",
@@ -576,6 +648,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Runtime - 7.0.20 (x86)",
     "norm_name": "microsoft .net runtime  7.0.20 (x86)",
     "version": "56.80.15184",
@@ -584,6 +657,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Targeting Pack - 7.0.20 (x86)",
     "norm_name": "microsoft .net targeting pack  7.0.20 (x86)",
     "version": "56.80.15184",
@@ -592,6 +666,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "WinRT Intellisense Desktop - Other Languages",
     "norm_name": "winrt intellisense desktop  other languages",
     "version": "10.1.22621.3233",
@@ -600,6 +675,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Intelr Software Installer",
     "norm_name": "intelr software installer",
     "version": "22.250.0.4",
@@ -608,6 +684,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "vs_filehandler_x86",
     "norm_name": "vsfilehandlerx",
     "version": "17.10.34804",
@@ -616,6 +693,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Python Launcher",
     "norm_name": "python launcher",
     "version": "3.13.3150.0",
@@ -624,6 +702,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows SDK Signing Tools",
     "norm_name": "windows sdk signing tools",
     "version": "10.1.22621.3233",
@@ -632,6 +711,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Epic Online Services",
     "norm_name": "epic online services",
     "version": "2.0.44.0",
@@ -640,6 +720,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Visual C++ 2022 X86 Minimum Runtime - 14.42.34438",
     "norm_name": "microsoft visual c++ 2022 x86 minimum runtime  14.42.",
     "version": "14.42.34438",
@@ -648,6 +729,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Kits Configuration Installer",
     "norm_name": "kits configuration installer",
     "version": "10.1.22621.3233",
@@ -656,6 +738,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft ASP.NET Core 6.0.32 Targeting Pack (x86)",
     "norm_name": "microsoft asp.net core 6.0.32 targeting pack (x86)",
     "version": "6.0.32.24314",
@@ -664,6 +747,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows SDK for Windows Store Apps DirectX x86 Remote",
     "norm_name": "windows sdk for windows store apps directx x86 remote",
     "version": "10.1.22621.3233",
@@ -672,6 +756,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "WinRT Intellisense PPI - Other Languages",
     "norm_name": "winrt intellisense ppi  other languages",
     "version": "10.1.22621.3233",
@@ -680,6 +765,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows SDK for Windows Store Apps Contracts",
     "norm_name": "windows sdk for windows store apps contracts",
     "version": "10.1.22621.3233",
@@ -688,6 +774,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Host - 6.0.16 (x86)",
     "norm_name": "microsoft .net host  6.0.16 (x86)",
     "version": "48.67.58427",
@@ -696,6 +783,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows SDK for Windows Store Apps",
     "norm_name": "windows sdk for windows store apps",
     "version": "10.1.22621.3233",
@@ -704,6 +792,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "WinRT Intellisense IoT - Other Languages",
     "norm_name": "winrt intellisense iot  other languages",
     "version": "10.1.22621.3233",
@@ -712,6 +801,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "vs_vswebprotocolselectormsi",
     "norm_name": "vsvswebprotocolselectormsi",
     "version": "17.10.34803",
@@ -720,6 +810,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Fusion Service",
     "norm_name": "fusion service",
     "version": "2.2.14.0",
@@ -728,6 +819,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Visual Studio Setup Configuration",
     "norm_name": "microsoft visual studio setup configuration",
     "version": "3.9.2148.60653",
@@ -736,6 +828,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows Software Development Kit - Windows 10.0.22621.3233",
     "norm_name": "windows software development kit  windows 10.0.22621.",
     "version": "10.1.22621.3233",
@@ -744,6 +837,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "vs_githubprotocolhandlermsi",
     "norm_name": "vsgithubprotocolhandlermsi",
     "version": "17.10.34803",
@@ -752,6 +846,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "vs_clickoncesigntoolmsi",
     "norm_name": "vsclickoncesigntoolmsi",
     "version": "17.10.34803",
@@ -760,6 +855,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft NetStandard SDK",
     "norm_name": "microsoft netstandard sdk",
     "version": "15.0.51105",
@@ -768,6 +864,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows App Certification Kit x64 (OnecoreUAP)",
     "norm_name": "windows app certification kit x64 (onecoreuap)",
     "version": "10.1.22621.3233",
@@ -776,6 +873,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows SDK for Windows Store Apps Headers",
     "norm_name": "windows sdk for windows store apps headers",
     "version": "10.1.22621.3233",
@@ -784,6 +882,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows SDK Modern Non-Versioned Developer Tools",
     "norm_name": "windows sdk modern nonversioned developer tools",
     "version": "10.1.22621.3233",
@@ -792,6 +891,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows SDK Facade Windows WinMD Versioned",
     "norm_name": "windows sdk facade windows winmd versioned",
     "version": "10.1.22621.3233",
@@ -800,6 +900,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows Desktop Extension SDK Contracts",
     "norm_name": "windows desktop extension sdk contracts",
     "version": "10.1.22621.3233",
@@ -808,6 +909,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "icecap_collectionresources",
     "norm_name": "icecapcollectionresources",
     "version": "17.10.34804",
@@ -816,6 +918,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Runtime - 6.0.32 (x86)",
     "norm_name": "microsoft .net runtime  6.0.32 (x86)",
     "version": "48.128.16743",
@@ -824,6 +927,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Visual C++ Library CRT Appx Resource Package",
     "norm_name": "visual c++ library crt appx resource package",
     "version": "14.40.33811",
@@ -832,6 +936,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "icecap_collectionresourcesx64",
     "norm_name": "icecapcollectionresourcesx",
     "version": "17.10.34804",
@@ -840,6 +945,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "vs_FileTracker_Singleton",
     "norm_name": "vsfiletrackersingleton",
     "version": "17.10.34804",
@@ -848,6 +954,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "WinRT Intellisense Mobile - en-us",
     "norm_name": "winrt intellisense mobile  enus",
     "version": "10.1.22621.3233",
@@ -856,6 +963,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft TestPlatform SDK Local Feed",
     "norm_name": "microsoft testplatform sdk local feed",
     "version": "17.10.0.9037153",
@@ -864,6 +972,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Visual C++ 2015-2022 Redistributable (x64) - 14.42.34433",
     "norm_name": "microsoft visual c++ 20152022 redistributable (x64)  14.42.",
     "version": "14.42.34433.0",
@@ -872,6 +981,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows SDK DirectX x86 Remote",
     "norm_name": "windows sdk directx x86 remote",
     "version": "10.1.22621.3233",
@@ -880,6 +990,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows SDK Desktop Libs x64",
     "norm_name": "windows sdk desktop libs x",
     "version": "10.1.22621.3233",
@@ -888,6 +999,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Visual C++ 2022 X86 Additional Runtime - 14.42.34433",
     "norm_name": "microsoft visual c++ 2022 x86 additional runtime  14.42.",
     "version": "14.42.34433",
@@ -896,6 +1008,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft ASP.NET Core 7.0.20 Targeting Pack (x86)",
     "norm_name": "microsoft asp.net core 7.0.20 targeting pack (x86)",
     "version": "7.0.20.24269",
@@ -904,6 +1017,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "vcpp_crt.redist.clickonce",
     "norm_name": "vcppcrt.redist.clickonce",
     "version": "14.40.33810",
@@ -912,6 +1026,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows SDK Desktop Libs arm64",
     "norm_name": "windows sdk desktop libs arm",
     "version": "10.1.22621.3233",
@@ -920,6 +1035,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Visual C++ Library CRT Desktop Appx Package",
     "norm_name": "visual c++ library crt desktop appx package",
     "version": "14.40.33811",
@@ -928,6 +1044,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Intel(R) Chipset Device Software",
     "norm_name": "intel(r) chipset device software",
     "version": "10.1.19468.8385",
@@ -936,6 +1053,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "windows_toolscorepkg",
     "norm_name": "windowstoolscorepkg",
     "version": "17.10.34804",
@@ -944,6 +1062,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "icecap_collection_neutral",
     "norm_name": "icecapcollectionneutral",
     "version": "17.10.34804",
@@ -952,6 +1071,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "vs_minshellmsi",
     "norm_name": "vsminshellmsi",
     "version": "16.11.34407",
@@ -960,6 +1080,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows IoT Extension SDK Contracts",
     "norm_name": "windows iot extension sdk contracts",
     "version": "10.1.22621.3233",
@@ -968,6 +1089,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Windows Desktop Runtime - 6.0.32 (x86)",
     "norm_name": "microsoft windows desktop runtime  6.0.32 (x86)",
     "version": "48.128.16742",
@@ -976,6 +1098,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows Team Extension SDK",
     "norm_name": "windows team extension sdk",
     "version": "10.1.22621.3233",
@@ -984,6 +1107,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Alienware OC Controls",
     "norm_name": "alienware oc controls",
     "version": "1.4.34.1450",
@@ -992,6 +1116,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Framework 4.8 SDK",
     "norm_name": "microsoft .net framework 4.8 sdk",
     "version": "4.8.03928",
@@ -1000,6 +1125,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "WinRT Intellisense UAP - en-us",
     "norm_name": "winrt intellisense uap  enus",
     "version": "10.1.22621.3233",
@@ -1008,6 +1134,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows SDK ARM Desktop Tools",
     "norm_name": "windows sdk arm desktop tools",
     "version": "10.1.22621.3233",
@@ -1016,6 +1143,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Visual C++ Library CRT ARM64 Appx Package",
     "norm_name": "visual c++ library crt arm64 appx package",
     "version": "14.40.33811",
@@ -1024,6 +1152,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Windows Desktop Targeting Pack - 8.0.7 (x86)",
     "norm_name": "microsoft windows desktop targeting pack  8.0.7 (x86)",
     "version": "64.28.16739",
@@ -1032,6 +1161,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Host FX Resolver - 8.0.7 (x86)",
     "norm_name": "microsoft .net host fx resolver  8.0.7 (x86)",
     "version": "64.28.16731",
@@ -1040,6 +1170,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft ASP.NET Core 8.0.7 Targeting Pack (x86)",
     "norm_name": "microsoft asp.net core 8.0.7 targeting pack (x86)",
     "version": "8.0.7.24314",
@@ -1048,6 +1179,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows Mobile Extension SDK",
     "norm_name": "windows mobile extension sdk",
     "version": "10.1.22621.3233",
@@ -1056,6 +1188,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows SDK Desktop Tools arm64",
     "norm_name": "windows sdk desktop tools arm",
     "version": "10.1.22621.3233",
@@ -1064,6 +1197,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Visual C++ 2005 Redistributable",
     "norm_name": "microsoft visual c++ 2005 redistributable",
     "version": "8.0.50727.42",
@@ -1072,6 +1206,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Framework 4.8 Targeting Pack (ENU)",
     "norm_name": "microsoft .net framework 4.8 targeting pack (enu)",
     "version": "4.8.03761",
@@ -1080,6 +1215,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows SDK Desktop Headers arm64",
     "norm_name": "windows sdk desktop headers arm",
     "version": "10.1.22621.3233",
@@ -1088,6 +1224,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Runtime - 6.0.14 (x64)",
     "norm_name": "microsoft .net runtime  6.0.14 (x64)",
     "version": "6.0.14.32123",
@@ -1096,6 +1233,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "vs_SQLClickOnceBootstrappermsi",
     "norm_name": "vssqlclickoncebootstrappermsi",
     "version": "17.10.34803",
@@ -1104,6 +1242,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Visual C++ 2012 x86 Additional Runtime - 11.0.61030",
     "norm_name": "microsoft visual c++ 2012 x86 additional runtime  11.0.",
     "version": "11.0.61030",
@@ -1112,6 +1251,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "WinRT Intellisense Desktop - en-us",
     "norm_name": "winrt intellisense desktop  enus",
     "version": "10.1.22621.3233",
@@ -1120,6 +1260,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Framework 4.7.2 Targeting Pack (ENU)",
     "norm_name": "microsoft .net framework 4.7.2 targeting pack (enu)",
     "version": "4.7.03062",
@@ -1128,6 +1269,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "SDK ARM Redistributables",
     "norm_name": "sdk arm redistributables",
     "version": "10.1.22621.3233",
@@ -1136,6 +1278,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Epic Games Launcher",
     "norm_name": "epic games launcher",
     "version": "1.3.93.0",
@@ -1144,6 +1287,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Framework 4.8 Targeting Pack",
     "norm_name": "microsoft .net framework 4.8 targeting pack",
     "version": "4.8.03761",
@@ -1152,6 +1296,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Windows Desktop Runtime - 6.0.28 (x64)",
     "norm_name": "microsoft windows desktop runtime  6.0.28 (x64)",
     "version": "6.0.28.33420",
@@ -1160,6 +1305,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Windows Desktop Runtime - 8.0.11 (x64)",
     "norm_name": "microsoft windows desktop runtime  8.0.11 (x64)",
     "version": "8.0.11.34221",
@@ -1168,6 +1314,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Visual C++ 2012 x86 Minimum Runtime - 11.0.61030",
     "norm_name": "microsoft visual c++ 2012 x86 minimum runtime  11.0.",
     "version": "11.0.61030",
@@ -1176,6 +1323,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows SDK Desktop Tools x64",
     "norm_name": "windows sdk desktop tools x",
     "version": "10.1.22621.3233",
@@ -1184,6 +1332,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Targeting Pack - 8.0.7 (x86)",
     "norm_name": "microsoft .net targeting pack  8.0.7 (x86)",
     "version": "64.28.16731",
@@ -1192,6 +1341,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "WinRT Intellisense PPI - en-us",
     "norm_name": "winrt intellisense ppi  enus",
     "version": "10.1.22621.3233",
@@ -1200,6 +1350,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows SDK Modern Versioned Developer Tools",
     "norm_name": "windows sdk modern versioned developer tools",
     "version": "10.1.22621.3233",
@@ -1208,6 +1359,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "PDFtk - The PDF Toolkit version 2.02",
     "norm_name": "pdftk  the pdf toolkit version 2.",
     "version": "2.02",
@@ -1216,6 +1368,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft UniversalWindowsPlatform SDK",
     "norm_name": "microsoft universalwindowsplatform sdk",
     "version": "15.9.16",
@@ -1224,6 +1377,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft ASP.NET Diagnostic Pack for Visual Studio",
     "norm_name": "microsoft asp.net diagnostic pack for visual studio",
     "version": "17.10.344.38934",
@@ -1232,6 +1386,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows App Certification Kit SupportedApiList x86",
     "norm_name": "windows app certification kit supportedapilist x",
     "version": "10.1.22621.3233",
@@ -1240,6 +1395,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Dell SupportAssist Remediation",
     "norm_name": "dell supportassist remediation",
     "version": "5.5.13.0",
@@ -1248,6 +1404,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "IntelliTraceProfilerProxy",
     "norm_name": "intellitraceprofilerproxy",
     "version": "15.0.21225.01",
@@ -1256,6 +1413,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "WinAppDeploy",
     "norm_name": "winappdeploy",
     "version": "10.1.22621.3233",
@@ -1264,6 +1422,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Visual C++ 2012 Redistributable (x64) - 11.0.61030",
     "norm_name": "microsoft visual c++ 2012 redistributable (x64)  11.0.",
     "version": "11.0.61030.0",
@@ -1272,6 +1431,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows SDK Desktop Tools x86",
     "norm_name": "windows sdk desktop tools x",
     "version": "10.1.22621.3233",
@@ -1280,6 +1440,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "vs_devenvsharedmsi",
     "norm_name": "vsdevenvsharedmsi",
     "version": "17.10.34803",
@@ -1288,6 +1449,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows SDK for Windows Store Apps Libs",
     "norm_name": "windows sdk for windows store apps libs",
     "version": "10.1.22621.3233",
@@ -1296,6 +1458,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows IoT Extension SDK",
     "norm_name": "windows iot extension sdk",
     "version": "10.1.22621.3233",
@@ -1304,6 +1467,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "TI ConnectT",
     "norm_name": "ti connectt",
     "version": "4.0.0.218",
@@ -1312,6 +1476,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "vs_filehandler_amd64",
     "norm_name": "vsfilehandleramd",
     "version": "17.10.34804",
@@ -1320,6 +1485,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Windows Desktop Runtime - 7.0.20 (x86)",
     "norm_name": "microsoft windows desktop runtime  7.0.20 (x86)",
     "version": "56.80.15245",
@@ -1328,6 +1494,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Alienware Command Center Package Manager",
     "norm_name": "alienware command center package manager",
     "version": "5.9.2.0",
@@ -1336,6 +1503,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Universal General MIDI DLS Extension SDK",
     "norm_name": "universal general midi dls extension sdk",
     "version": "10.1.22621.3233",
@@ -1344,6 +1512,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Universal CRT Headers Libraries and Sources",
     "norm_name": "universal crt headers libraries and sources",
     "version": "10.1.22621.3233",
@@ -1352,6 +1521,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "vs_communitymsires",
     "norm_name": "vscommunitymsires",
     "version": "17.10.34804",
@@ -1360,6 +1530,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows Desktop Extension SDK",
     "norm_name": "windows desktop extension sdk",
     "version": "10.1.22621.3233",
@@ -1368,6 +1539,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Host FX Resolver - 6.0.16 (x86)",
     "norm_name": "microsoft .net host fx resolver  6.0.16 (x86)",
     "version": "48.67.58427",
@@ -1376,6 +1548,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Runtime - 6.0.16 (x86)",
     "norm_name": "microsoft .net runtime  6.0.16 (x86)",
     "version": "48.67.58427",
@@ -1384,6 +1557,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "PDFtk Server version 2.02",
     "norm_name": "pdftk server version 2.",
     "version": "2.02",
@@ -1392,6 +1566,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "vs_minshellsharedmsi",
     "norm_name": "vsminshellsharedmsi",
     "version": "17.10.34804",
@@ -1400,6 +1575,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows SDK EULA",
     "norm_name": "windows sdk eula",
     "version": "10.1.22621.3233",
@@ -1408,6 +1584,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Visual C++ 2015-2022 Redistributable (x86) - 14.42.34433",
     "norm_name": "microsoft visual c++ 20152022 redistributable (x86)  14.42.",
     "version": "14.42.34433.0",
@@ -1416,6 +1593,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Windows Desktop Runtime - 7.0.7 (x64)",
     "norm_name": "microsoft windows desktop runtime  7.0.7 (x64)",
     "version": "7.0.7.32525",
@@ -1424,6 +1602,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Universal CRT Extension SDK",
     "norm_name": "universal crt extension sdk",
     "version": "10.1.22621.3233",
@@ -1432,6 +1611,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Xamarin Remoted iOS Simulator",
     "norm_name": "xamarin remoted ios simulator",
     "version": "17.6.0.524",
@@ -1440,6 +1620,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "vs_minshellinteropsharedmsi",
     "norm_name": "vsminshellinteropsharedmsi",
     "version": "17.10.34804",
@@ -1448,6 +1629,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Windows Desktop Runtime - 8.0.7 (x86)",
     "norm_name": "microsoft windows desktop runtime  8.0.7 (x86)",
     "version": "64.28.16739",
@@ -1456,6 +1638,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Native SDK",
     "norm_name": "microsoft .net native sdk",
     "version": "15.0.24211.07",
@@ -1464,6 +1647,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Entity Framework 6.2.0 Tools  for Visual Studio 2022",
     "norm_name": "entity framework 6.2.0 tools  for visual studio ",
     "version": "6.2.0.0",
@@ -1472,6 +1656,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Targeting Pack - 6.0.32 (x86)",
     "norm_name": "microsoft .net targeting pack  6.0.32 (x86)",
     "version": "48.128.16743",
@@ -1480,6 +1665,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Visual C++ 2010  x86 Redistributable - 10.0.40219",
     "norm_name": "microsoft visual c++ 2010  x86 redistributable  10.0.",
     "version": "10.0.40219",
@@ -1488,6 +1674,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Realtek Audio Driver",
     "norm_name": "realtek audio driver",
     "version": "6.0.9635.1",
@@ -1496,6 +1683,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Bitvise SSH Client - FlowSshNet (x86)",
     "norm_name": "bitvise ssh client  flowsshnet (x86)",
     "version": "9.42.0.0",
@@ -1504,6 +1692,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows SDK Desktop Headers x86",
     "norm_name": "windows sdk desktop headers x",
     "version": "10.1.22621.3233",
@@ -1512,6 +1701,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Visual C++ 2013 Redistributable (x86) - 12.0.30501",
     "norm_name": "microsoft visual c++ 2013 redistributable (x86)  12.0.",
     "version": "12.0.30501.0",
@@ -1520,6 +1710,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Visual C++ 2013 x86 Additional Runtime - 12.0.21005",
     "norm_name": "microsoft visual c++ 2013 x86 additional runtime  12.0.",
     "version": "12.0.21005",
@@ -1528,6 +1719,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Runtime - 6.0.16 (x86)",
     "norm_name": "microsoft .net runtime  6.0.16 (x86)",
     "version": "6.0.16.32323",
@@ -1536,6 +1728,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows Team Extension SDK Contracts",
     "norm_name": "windows team extension sdk contracts",
     "version": "10.1.22621.3233",
@@ -1544,6 +1737,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Core SDK 3.1.426 (x64)",
     "norm_name": "microsoft .net core sdk 3.1.426 (x64)",
     "version": "3.1.426.16244",
@@ -1552,6 +1746,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "VS Immersive Activate Helper",
     "norm_name": "vs immersive activate helper",
     "version": "17.0.125.0",
@@ -1560,6 +1755,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows Driver Package - Texas Instruments Inc. (TIEHDUSB) USB  (09/02/2009 1.0.0.1)",
     "norm_name": "windows driver package  texas instruments inc. (tiehdusb) usb  (09/02/2009 1.0.0.1)",
     "version": "09/02/2009 1.0.0.1",
@@ -1568,6 +1764,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Alienware CC Components for AWCC (1.1.40.0)",
     "norm_name": "alienware cc components for awcc (1.1.40.0)",
     "version": "1.1.40.0",
@@ -1576,6 +1773,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Audacity 3.4.2",
     "norm_name": "audacity 3.4.",
     "version": "3.4.2",
@@ -1584,6 +1782,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Alienware FX Display Smart Installer (2.2.14.1)",
     "norm_name": "alienware fx display smart installer (2.2.14.1)",
     "version": "2.2.14.1",
@@ -1592,6 +1791,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "BlueStacks App Player",
     "norm_name": "bluestacks app player",
     "version": "5.20.105.1004",
@@ -1600,6 +1800,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows Driver Package - Texas Instruments Inc. (SilvrLnk) USB  (06/11/2009 1.0.0.0)",
     "norm_name": "windows driver package  texas instruments inc. (silvrlnk) usb  (06/11/2009 1.0.0.0)",
     "version": "06/11/2009 1.0.0.0",
@@ -1608,6 +1809,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Git",
     "norm_name": "git",
     "version": "2.43.0",
@@ -1616,6 +1818,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Notepad++ (64-bit x64)",
     "norm_name": "notepad++ (64bit x64)",
     "version": "8.6",
@@ -1624,6 +1827,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft 365 - en-us",
     "norm_name": "microsoft 365  enus",
     "version": "16.0.19029.20156",
@@ -1632,6 +1836,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft OneNote - en-us",
     "norm_name": "microsoft onenote  enus",
     "version": "16.0.19029.20156",
@@ -1640,6 +1845,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Riot Vanguard",
     "norm_name": "riot vanguard",
     "version": null,
@@ -1648,6 +1854,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Severed Steel",
     "norm_name": "severed steel",
     "version": null,
@@ -1656,6 +1863,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Severed Steel Soundtrack",
     "norm_name": "severed steel soundtrack",
     "version": null,
@@ -1664,6 +1872,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Overwatchr 2",
     "norm_name": "overwatchr ",
     "version": null,
@@ -1672,6 +1881,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Call of Duty: Black Ops III",
     "norm_name": "call of duty: black ops iii",
     "version": null,
@@ -1680,6 +1890,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Tom Clancy's Rainbow Six Siege",
     "norm_name": "tom clancy's rainbow six siege",
     "version": null,
@@ -1688,6 +1899,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Counter-Strike 2",
     "norm_name": "counterstrike ",
     "version": null,
@@ -1696,6 +1908,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Wolfram 14.2 (W-WIN-Standard 14.2.1 11457624)",
     "norm_name": "wolfram 14.2 (wwinstandard 14.2.1 11457624)",
     "version": "14.2.1",
@@ -1704,6 +1917,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET AppHost Pack - 7.0.20 (x64_arm)",
     "norm_name": "microsoft .net apphost pack  7.0.20 (x64arm)",
     "version": "56.80.15184",
@@ -1712,6 +1926,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET AppHost Pack - 8.0.7 (x64)",
     "norm_name": "microsoft .net apphost pack  8.0.7 (x64)",
     "version": "64.28.16731",
@@ -1720,6 +1935,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.iOS.Sdk (x64)",
     "norm_name": "microsoft.ios.sdk (x64)",
     "version": "17.2.8053.0",
@@ -1728,6 +1944,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.Maui.Resizetizer (x64)",
     "norm_name": "microsoft.maui.resizetizer (x64)",
     "version": "8.0.71.0",
@@ -1736,6 +1953,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NETCore.App.Runtime.Mono.iossimulator-arm64 (x64)",
     "norm_name": "microsoft.netcore.app.runtime.mono.iossimulatorarm64 (x64)",
     "version": "8.0.7.0",
@@ -1744,6 +1962,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "IIS Express Application Compatibility Database for x64",
     "norm_name": "iis express application compatibility database for x",
     "version": null,
@@ -1752,6 +1971,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NETCore.App.Runtime.Mono.android-x86 (x64)",
     "norm_name": "microsoft.netcore.app.runtime.mono.androidx86 (x64)",
     "version": "7.0.20.0",
@@ -1760,6 +1980,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.Android.Runtime.34.android-x64 (x64)",
     "norm_name": "microsoft.android.runtime.34.androidx64 (x64)",
     "version": "34.0.95.0",
@@ -1768,6 +1989,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft ODBC Driver 17 for SQL Server",
     "norm_name": "microsoft odbc driver 17 for sql server",
     "version": "17.10.6.1",
@@ -1776,6 +1998,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.Android.Ref.34 (x64)",
     "norm_name": "microsoft.android.ref.34 (x64)",
     "version": "34.0.113.0",
@@ -1784,6 +2007,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Python 3.13.3 Tcl/Tk Support (64-bit)",
     "norm_name": "python 3.13.3 tcl/tk support (64bit)",
     "version": "3.13.3150.0",
@@ -1792,6 +2016,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NETCore.App.Runtime.Mono.android-x64 (x64)",
     "norm_name": "microsoft.netcore.app.runtime.mono.androidx64 (x64)",
     "version": "8.0.7.0",
@@ -1800,6 +2025,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.Maui.Resizetizer (x64)",
     "norm_name": "microsoft.maui.resizetizer (x64)",
     "version": "8.0.61.0",
@@ -1808,6 +2034,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Dell Update for Windows Universal",
     "norm_name": "dell update for windows universal",
     "version": "5.2.0",
@@ -1816,6 +2043,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.Maui.Essentials (x64)",
     "norm_name": "microsoft.maui.essentials (x64)",
     "version": "8.0.71.0",
@@ -1824,6 +2052,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NET.Runtime.MonoAOTCompiler.Task (x64)",
     "norm_name": "microsoft.net.runtime.monoaotcompiler.task (x64)",
     "version": "7.0.20.0",
@@ -1832,6 +2061,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.Maui.Controls.Xaml (x64)",
     "norm_name": "microsoft.maui.controls.xaml (x64)",
     "version": "8.0.61.0",
@@ -1840,6 +2070,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Visual C++ 2010  x64 Redistributable - 10.0.40219",
     "norm_name": "microsoft visual c++ 2010  x64 redistributable  10.0.",
     "version": "10.0.40219",
@@ -1848,6 +2079,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.Maui.Controls.Core (x64)",
     "norm_name": "microsoft.maui.controls.core (x64)",
     "version": "8.0.61.0",
@@ -1856,6 +2088,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET AppHost Pack - 7.0.20 (x64)",
     "norm_name": "microsoft .net apphost pack  7.0.20 (x64)",
     "version": "56.80.15184",
@@ -1864,6 +2097,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Core 3.1 Templates 3.1.426 (x64)",
     "norm_name": "microsoft .net core 3.1 templates 3.1.426 (x64)",
     "version": "3.1.33.016244",
@@ -1872,6 +2106,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.iOS.Sdk.net8.0_17.0 (x64)",
     "norm_name": "microsoft.ios.sdk.net8.017.0 (x64)",
     "version": "17.0.8523.0",
@@ -1880,6 +2115,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Runtime - 7.0.20 (x64)",
     "norm_name": "microsoft .net runtime  7.0.20 (x64)",
     "version": "56.80.15184",
@@ -1888,6 +2124,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "7-Zip 23.01 (x64 edition)",
     "norm_name": "7zip 23.01 (x64 edition)",
     "version": "23.01.00.0",
@@ -1896,6 +2133,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "vs_minshellx64msi",
     "norm_name": "vsminshellx64msi",
     "version": "17.10.34804",
@@ -1904,6 +2142,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Core AppHost Pack - 3.1.32 (x64_arm)",
     "norm_name": "microsoft .net core apphost pack  3.1.32 (x64arm)",
     "version": "24.192.31915",
@@ -1912,6 +2151,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NET.Workload.Mono.Toolchain.net6.Manifest (x64)",
     "norm_name": "microsoft.net.workload.mono.toolchain.net6.manifest (x64)",
     "version": "64.28.16731",
@@ -1920,6 +2160,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.Maui.Resizetizer.Sdk (x64)",
     "norm_name": "microsoft.maui.resizetizer.sdk (x64)",
     "version": "7.0.101.0",
@@ -1928,6 +2169,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NETCore.App.Runtime.Mono.iossimulator-x64 (x64)",
     "norm_name": "microsoft.netcore.app.runtime.mono.iossimulatorx64 (x64)",
     "version": "7.0.20.0",
@@ -1936,6 +2178,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "BlueJ",
     "norm_name": "bluej",
     "version": "5.4.2",
@@ -1944,6 +2187,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Application Verifier x64 External Package (OnecoreUAP)",
     "norm_name": "application verifier x64 external package (onecoreuap)",
     "version": "10.1.22621.3233",
@@ -1952,6 +2196,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Universal CRT Tools x64",
     "norm_name": "universal crt tools x",
     "version": "10.1.22621.3233",
@@ -1960,6 +2205,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows Subsystem for Linux",
     "norm_name": "windows subsystem for linux",
     "version": "2.5.10.0",
@@ -1968,6 +2214,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NETCore.App.Runtime.Mono.ios-arm (x64)",
     "norm_name": "microsoft.netcore.app.runtime.mono.iosarm (x64)",
     "version": "7.0.20.0",
@@ -1976,6 +2223,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft ASP.NET Core 3.1.32 Shared Framework (x64)",
     "norm_name": "microsoft asp.net core 3.1.32 shared framework (x64)",
     "version": "3.1.32.22566",
@@ -1984,6 +2232,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.Android.Runtime.34.android-arm (x64)",
     "norm_name": "microsoft.android.runtime.34.androidarm (x64)",
     "version": "34.0.95.0",
@@ -1992,6 +2241,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Core Targeting Pack - 3.1.0 (x64)",
     "norm_name": "microsoft .net core targeting pack  3.1.0 (x64)",
     "version": "24.64.28315",
@@ -2000,6 +2250,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Ivanti Secure Access Client",
     "norm_name": "ivanti secure access client",
     "version": "22.3.18209",
@@ -2008,6 +2259,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.Maui.Graphics.Win2D.WinUI.Desktop (x64)",
     "norm_name": "microsoft.maui.graphics.win2d.winui.desktop (x64)",
     "version": "8.0.61.0",
@@ -2016,6 +2268,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.iOS.Runtime.ios-arm64 (x64)",
     "norm_name": "microsoft.ios.runtime.iosarm64 (x64)",
     "version": "17.2.8053.0",
@@ -2024,6 +2277,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "TI Connect CE",
     "norm_name": "ti connect ce",
     "version": "6.0.1.344",
@@ -2032,6 +2286,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.iOS.Runtime.iossimulator-arm64 (x64)",
     "norm_name": "microsoft.ios.runtime.iossimulatorarm64 (x64)",
     "version": "17.2.8053.0",
@@ -2040,6 +2295,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Host - 8.0.11 (x64)",
     "norm_name": "microsoft .net host  8.0.11 (x64)",
     "version": "64.44.23191",
@@ -2048,6 +2304,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.iOS.Ref.net8.0_17.5 (x64)",
     "norm_name": "microsoft.ios.ref.net8.017.5 (x64)",
     "version": "17.5.8018.0",
@@ -2056,6 +2313,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NETCore.App.Runtime.AOT.win-x64.Cross.android-x86 (x64)",
     "norm_name": "microsoft.netcore.app.runtime.aot.winx64.cross.androidx86 (x64)",
     "version": "8.0.7.0",
@@ -2064,6 +2322,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft SQL Server 2019 LocalDB ",
     "norm_name": "microsoft sql server 2019 localdb ",
     "version": "15.0.4153.1",
@@ -2072,6 +2331,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET AppHost Pack - 6.0.32 (x64_x86)",
     "norm_name": "microsoft .net apphost pack  6.0.32 (x64x86)",
     "version": "48.128.16743",
@@ -2080,6 +2340,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": ".NET MAUI SDK (x64)",
     "norm_name": ".net maui sdk (x64)",
     "version": "8.0.61.0",
@@ -2088,6 +2349,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Visual C++ 2012 x64 Additional Runtime - 11.0.61030",
     "norm_name": "microsoft visual c++ 2012 x64 additional runtime  11.0.",
     "version": "11.0.61030",
@@ -2096,6 +2358,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NET.Sdk.tvOS.Manifest-8.0.100 (x64)",
     "norm_name": "microsoft.net.sdk.tvos.manifest8.0.100 (x64)",
     "version": "17.2.8053",
@@ -2104,6 +2367,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Visual C++ 2022 X64 Minimum Runtime - 14.42.34433",
     "norm_name": "microsoft visual c++ 2022 x64 minimum runtime  14.42.",
     "version": "14.42.34433",
@@ -2112,6 +2376,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NET.Sdk.Aspire.Manifest-8.0.100 (x64)",
     "norm_name": "microsoft.net.sdk.aspire.manifest8.0.100 (x64)",
     "version": "64.64.18482",
@@ -2120,6 +2385,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Dell SupportAssist",
     "norm_name": "dell supportassist",
     "version": "4.8.2.29006",
@@ -2128,6 +2394,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Bitvise SSH Client - FlowSshNet (x64)",
     "norm_name": "bitvise ssh client  flowsshnet (x64)",
     "version": "9.42.0.0",
@@ -2136,6 +2403,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Aspire.Dashboard.Sdk.win-x64 (x64)",
     "norm_name": "aspire.dashboard.sdk.winx64 (x64)",
     "version": "8.0.0.0",
@@ -2144,6 +2412,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Host FX Resolver - 8.0.7 (x64)",
     "norm_name": "microsoft .net host fx resolver  8.0.7 (x64)",
     "version": "64.28.16731",
@@ -2152,6 +2421,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Runtime - 6.0.32 (x64)",
     "norm_name": "microsoft .net runtime  6.0.32 (x64)",
     "version": "48.128.16743",
@@ -2160,6 +2430,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.Maui.Essentials (x64)",
     "norm_name": "microsoft.maui.essentials (x64)",
     "version": "8.0.61.0",
@@ -2168,6 +2439,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Aspire.Hosting (x64)",
     "norm_name": "aspire.hosting (x64)",
     "version": "8.0.0.0",
@@ -2176,6 +2448,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Command Line Utilities 15 for SQL Server",
     "norm_name": "microsoft command line utilities 15 for sql server",
     "version": "15.0.1300.359",
@@ -2184,6 +2457,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET AppHost Pack - 6.0.32 (x64_arm64)",
     "norm_name": "microsoft .net apphost pack  6.0.32 (x64arm64)",
     "version": "48.128.16743",
@@ -2192,6 +2466,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Windows Desktop Runtime - 6.0.28 (x64)",
     "norm_name": "microsoft windows desktop runtime  6.0.28 (x64)",
     "version": "48.112.10435",
@@ -2200,6 +2475,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NET.Sdk.iOS.Manifest-8.0.100 (x64)",
     "norm_name": "microsoft.net.sdk.ios.manifest8.0.100 (x64)",
     "version": "17.2.8053",
@@ -2208,6 +2484,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NET.Sdk.iOS.Manifest-8.0.100 (x64)",
     "norm_name": "microsoft.net.sdk.ios.manifest8.0.100 (x64)",
     "version": "17.5.8018",
@@ -2216,6 +2493,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.MacCatalyst.Runtime.maccatalyst-x64.net8.0_17.5 (x64)",
     "norm_name": "microsoft.maccatalyst.runtime.maccatalystx64.net8.017.5 (x64)",
     "version": "17.5.8018.0",
@@ -2224,6 +2502,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Reko decompiler for x86-64",
     "norm_name": "reko decompiler for x",
     "version": "0.10.0.0",
@@ -2232,6 +2511,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "WolframScript (A-WIN64-WolframScript 14.2.1 11421753)",
     "norm_name": "wolframscript (awin64wolframscript 14.2.1 11421753)",
     "version": "14.2.676",
@@ -2240,6 +2520,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.Maui.Controls.Compatibility (x64)",
     "norm_name": "microsoft.maui.controls.compatibility (x64)",
     "version": "8.0.61.0",
@@ -2248,6 +2529,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Runtime - 6.0.28 (x64)",
     "norm_name": "microsoft .net runtime  6.0.28 (x64)",
     "version": "48.112.10439",
@@ -2256,6 +2538,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NET.Sdk.macOS.Manifest-8.0.100 (x64)",
     "norm_name": "microsoft.net.sdk.macos.manifest8.0.100 (x64)",
     "version": "14.5.8018",
@@ -2264,6 +2547,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.iOS.Windows.Sdk (x64)",
     "norm_name": "microsoft.ios.windows.sdk (x64)",
     "version": "16.4.7142.0",
@@ -2272,6 +2556,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NETCore.App.Runtime.AOT.win-x64.Cross.android-x64 (x64)",
     "norm_name": "microsoft.netcore.app.runtime.aot.winx64.cross.androidx64 (x64)",
     "version": "8.0.7.0",
@@ -2280,6 +2565,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NETCore.App.Runtime.Mono.iossimulator-x64 (x64)",
     "norm_name": "microsoft.netcore.app.runtime.mono.iossimulatorx64 (x64)",
     "version": "8.0.7.0",
@@ -2288,6 +2574,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.Maui.Graphics.Win2D.WinUI.Desktop (x64)",
     "norm_name": "microsoft.maui.graphics.win2d.winui.desktop (x64)",
     "version": "8.0.71.0",
@@ -2296,6 +2583,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NET.Sdk.MacCatalyst.Manifest-8.0.100 (x64)",
     "norm_name": "microsoft.net.sdk.maccatalyst.manifest8.0.100 (x64)",
     "version": "17.2.8053",
@@ -2304,6 +2592,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Core AppHost Pack - 3.1.32 (x64)",
     "norm_name": "microsoft .net core apphost pack  3.1.32 (x64)",
     "version": "24.192.31915",
@@ -2312,6 +2601,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.MacCatalyst.Runtime.maccatalyst-arm64.net8.0_17.5 (x64)",
     "norm_name": "microsoft.maccatalyst.runtime.maccatalystarm64.net8.017.5 (x64)",
     "version": "17.5.8018.0",
@@ -2320,6 +2610,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NETCore.App.Runtime.Mono.android-x86 (x64)",
     "norm_name": "microsoft.netcore.app.runtime.mono.androidx86 (x64)",
     "version": "8.0.7.0",
@@ -2328,6 +2619,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.iOS.Runtime.iossimulator-x64.net8.0_17.5 (x64)",
     "norm_name": "microsoft.ios.runtime.iossimulatorx64.net8.017.5 (x64)",
     "version": "17.5.8018.0",
@@ -2336,6 +2628,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.Maui.Sdk (x64)",
     "norm_name": "microsoft.maui.sdk (x64)",
     "version": "7.0.101.0",
@@ -2344,6 +2637,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Windows Desktop Runtime - 7.0.7 (x64)",
     "norm_name": "microsoft windows desktop runtime  7.0.7 (x64)",
     "version": "56.31.61651",
@@ -2352,6 +2646,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft System CLR Types for SQL Server 2019",
     "norm_name": "microsoft system clr types for sql server ",
     "version": "15.0.2000.5",
@@ -2360,6 +2655,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.MacCatalyst.Ref.net8.0_17.5 (x64)",
     "norm_name": "microsoft.maccatalyst.ref.net8.017.5 (x64)",
     "version": "17.5.8018.0",
@@ -2368,6 +2664,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Windows Desktop Runtime - 3.1.32 (x64)",
     "norm_name": "microsoft windows desktop runtime  3.1.32 (x64)",
     "version": "24.192.31915",
@@ -2376,6 +2673,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NET.Sdk.tvOS.Manifest-8.0.100 (x64)",
     "norm_name": "microsoft.net.sdk.tvos.manifest8.0.100 (x64)",
     "version": "17.5.8018",
@@ -2384,6 +2682,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.Maui.Controls.Core (x64)",
     "norm_name": "microsoft.maui.controls.core (x64)",
     "version": "8.0.71.0",
@@ -2392,6 +2691,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": ".NET MAUI Templates (x64)",
     "norm_name": ".net maui templates (x64)",
     "version": "7.0.101.0",
@@ -2400,6 +2700,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft ASP.NET Core 7.0.7 Shared Framework (x64)",
     "norm_name": "microsoft asp.net core 7.0.7 shared framework (x64)",
     "version": "7.0.7.23274",
@@ -2408,6 +2709,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft ASP.NET Core 6.0.32 Targeting Pack (x64)",
     "norm_name": "microsoft asp.net core 6.0.32 targeting pack (x64)",
     "version": "6.0.32.24314",
@@ -2416,6 +2718,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.MacCatalyst.Sdk (x64)",
     "norm_name": "microsoft.maccatalyst.sdk (x64)",
     "version": "17.2.8053.0",
@@ -2424,6 +2727,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.Maui.Core (x64)",
     "norm_name": "microsoft.maui.core (x64)",
     "version": "8.0.61.0",
@@ -2432,6 +2736,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "icecap_collection_x64",
     "norm_name": "icecapcollectionx",
     "version": "17.10.34804",
@@ -2440,6 +2745,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Runtime - 6.0.14 (x64)",
     "norm_name": "microsoft .net runtime  6.0.14 (x64)",
     "version": "48.59.55225",
@@ -2448,6 +2754,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NETCore.App.Runtime.AOT.win-x64.Cross.android-arm (x64)",
     "norm_name": "microsoft.netcore.app.runtime.aot.winx64.cross.androidarm (x64)",
     "version": "7.0.20.0",
@@ -2456,6 +2763,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Host FX Resolver - 7.0.7 (x64)",
     "norm_name": "microsoft .net host fx resolver  7.0.7 (x64)",
     "version": "56.31.61636",
@@ -2464,6 +2772,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NETCore.App.Runtime.AOT.win-x64.Cross.android-arm64 (x64)",
     "norm_name": "microsoft.netcore.app.runtime.aot.winx64.cross.androidarm64 (x64)",
     "version": "8.0.7.0",
@@ -2472,6 +2781,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Windows Desktop Targeting Pack - 7.0.20 (x64)",
     "norm_name": "microsoft windows desktop targeting pack  7.0.20 (x64)",
     "version": "56.80.15245",
@@ -2480,6 +2790,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Python 3.13.3 Standard Library (64-bit)",
     "norm_name": "python 3.13.3 standard library (64bit)",
     "version": "3.13.3150.0",
@@ -2488,6 +2799,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NETCore.App.Runtime.Mono.maccatalyst-arm64 (x64)",
     "norm_name": "microsoft.netcore.app.runtime.mono.maccatalystarm64 (x64)",
     "version": "7.0.20.0",
@@ -2496,6 +2808,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Webex",
     "norm_name": "webex",
     "version": "43.2.0.25211",
@@ -2504,6 +2817,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Core Toolset 3.1.426 (x64)",
     "norm_name": "microsoft .net core toolset 3.1.426 (x64)",
     "version": "12.22.49012",
@@ -2512,6 +2826,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.Android.Runtime.34.android-arm64 (x64)",
     "norm_name": "microsoft.android.runtime.34.androidarm64 (x64)",
     "version": "34.0.113.0",
@@ -2520,6 +2835,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft ASP.NET Core 8.0.7 Targeting Pack (x64)",
     "norm_name": "microsoft asp.net core 8.0.7 targeting pack (x64)",
     "version": "8.0.7.24314",
@@ -2528,6 +2844,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Visual Studio Installer",
     "norm_name": "microsoft visual studio installer",
     "version": "3.10.2157.28521",
@@ -2536,6 +2853,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Oracle VirtualBox 7.1.2",
     "norm_name": "oracle virtualbox 7.1.",
     "version": "7.1.2",
@@ -2544,6 +2862,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": ".NET MAUI SDK (x64)",
     "norm_name": ".net maui sdk (x64)",
     "version": "8.0.71.0",
@@ -2552,6 +2871,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.iOS.Templates (x64)",
     "norm_name": "microsoft.ios.templates (x64)",
     "version": "17.2.8053.0",
@@ -2560,6 +2880,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Windows Desktop Runtime - 7.0.20 (x64)",
     "norm_name": "microsoft windows desktop runtime  7.0.20 (x64)",
     "version": "56.80.15245",
@@ -2568,6 +2889,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.Maui.Controls (x64)",
     "norm_name": "microsoft.maui.controls (x64)",
     "version": "8.0.61.0",
@@ -2576,6 +2898,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows App Certification Kit Native Components",
     "norm_name": "windows app certification kit native components",
     "version": "10.1.22621.3233",
@@ -2584,6 +2907,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Windows Desktop Targeting Pack - 3.1.0 (x64)",
     "norm_name": "microsoft windows desktop targeting pack  3.1.0 (x64)",
     "version": "24.64.28315",
@@ -2592,6 +2916,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NET.Runtime.MonoAOTCompiler.Task (x64)",
     "norm_name": "microsoft.net.runtime.monoaotcompiler.task (x64)",
     "version": "8.0.7.0",
@@ -2600,6 +2925,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Java 8 Update 381 (64-bit)",
     "norm_name": "java 8 update 381 (64bit)",
     "version": "8.0.3810.9",
@@ -2608,6 +2934,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET 6.0 Templates 8.0.303 (x64)",
     "norm_name": "microsoft .net 6.0 templates 8.0.303 (x64)",
     "version": "24.15.56572",
@@ -2616,6 +2943,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Wolfram Language 14.2 English Documentation (M-WIN-Documentation.en-us 14.2.0 11168610)",
     "norm_name": "wolfram language 14.2 english documentation (mwindocumentation.enus 14.2.0 11168610)",
     "version": "14.2.891",
@@ -2624,6 +2952,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NETCore.App.Runtime.Mono.android-arm (x64)",
     "norm_name": "microsoft.netcore.app.runtime.mono.androidarm (x64)",
     "version": "8.0.7.0",
@@ -2632,6 +2961,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.MacCatalyst.Sdk.net8.0_17.5 (x64)",
     "norm_name": "microsoft.maccatalyst.sdk.net8.017.5 (x64)",
     "version": "17.5.8018.0",
@@ -2640,6 +2970,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NET.Workload.Emscripten.net6.Manifest (x64)",
     "norm_name": "microsoft.net.workload.emscripten.net6.manifest (x64)",
     "version": "64.28.16721",
@@ -2648,6 +2979,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Aspire.ProjectTemplates (x64)",
     "norm_name": "aspire.projecttemplates (x64)",
     "version": "8.1.0.0",
@@ -2656,6 +2988,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET 7.0 Templates 8.0.302 (x64)",
     "norm_name": "microsoft .net 7.0 templates 8.0.302 (x64)",
     "version": "28.12.52866",
@@ -2664,6 +2997,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.iOS.Windows.Sdk (x64)",
     "norm_name": "microsoft.ios.windows.sdk (x64)",
     "version": "17.2.8053.0",
@@ -2672,6 +3006,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Host FX Resolver - 6.0.28 (x64)",
     "norm_name": "microsoft .net host fx resolver  6.0.28 (x64)",
     "version": "48.112.10439",
@@ -2680,6 +3015,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Targeting Pack - 7.0.20 (x64)",
     "norm_name": "microsoft .net targeting pack  7.0.20 (x64)",
     "version": "56.80.15184",
@@ -2688,6 +3024,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NET.Workload.Emscripten.net7.Manifest (x64)",
     "norm_name": "microsoft.net.workload.emscripten.net7.manifest (x64)",
     "version": "64.28.16721",
@@ -2696,6 +3033,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Windows SDK DirectX x64 Remote",
     "norm_name": "windows sdk directx x64 remote",
     "version": "10.1.22621.3233",
@@ -2704,6 +3042,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.iOS.Windows.Sdk.net8.0_17.0 (x64)",
     "norm_name": "microsoft.ios.windows.sdk.net8.017.0 (x64)",
     "version": "17.0.8523.0",
@@ -2712,6 +3051,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NET.Workload.Mono.Toolchain.Current.Manifest (x64)",
     "norm_name": "microsoft.net.workload.mono.toolchain.current.manifest (x64)",
     "version": "64.28.16731",
@@ -2720,6 +3060,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET SDK 8.0.303 (x64) from Visual Studio",
     "norm_name": "microsoft .net sdk 8.0.303 (x64) from visual studio",
     "version": "8.3.324.31708",
@@ -2728,6 +3069,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NET.Sdk.Android.Manifest-8.0.100 (x64)",
     "norm_name": "microsoft.net.sdk.android.manifest8.0.100 (x64)",
     "version": "34.0.113",
@@ -2736,6 +3078,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Alienware Command Center Suite",
     "norm_name": "alienware command center suite",
     "version": "5.9.2.0",
@@ -2744,6 +3087,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Web Deploy 4.0",
     "norm_name": "microsoft web deploy 4.",
     "version": "10.0.8305",
@@ -2752,6 +3096,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NETCore.App.Runtime.Mono.android-x64 (x64)",
     "norm_name": "microsoft.netcore.app.runtime.mono.androidx64 (x64)",
     "version": "7.0.20.0",
@@ -2760,6 +3105,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET AppHost Pack - 7.0.20 (x64_arm64)",
     "norm_name": "microsoft .net apphost pack  7.0.20 (x64arm64)",
     "version": "56.80.15184",
@@ -2768,6 +3114,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft ASP.NET Core 7.0.20 Targeting Pack (x64)",
     "norm_name": "microsoft asp.net core 7.0.20 targeting pack (x64)",
     "version": "7.0.20.24269",
@@ -2776,6 +3123,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Windows Desktop Runtime - 6.0.32 (x64)",
     "norm_name": "microsoft windows desktop runtime  6.0.32 (x64)",
     "version": "48.128.16742",
@@ -2784,6 +3132,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Core Host - 3.1.32 (x64)",
     "norm_name": "microsoft .net core host  3.1.32 (x64)",
     "version": "24.192.31915",
@@ -2792,6 +3141,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": ".NET Android Templates (x64)",
     "norm_name": ".net android templates (x64)",
     "version": "34.0.113.0",
@@ -2800,6 +3150,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.MacCatalyst.Ref (x64)",
     "norm_name": "microsoft.maccatalyst.ref (x64)",
     "version": "17.2.8053.0",
@@ -2808,6 +3159,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.iOS.Ref (x64)",
     "norm_name": "microsoft.ios.ref (x64)",
     "version": "17.2.8053.0",
@@ -2816,6 +3168,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Vagrant",
     "norm_name": "vagrant",
     "version": "2.4.8",
@@ -2824,6 +3177,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Python 3.13.3 Core Interpreter (64-bit)",
     "norm_name": "python 3.13.3 core interpreter (64bit)",
     "version": "3.13.3150.0",
@@ -2832,6 +3186,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Office 16 Click-to-Run Licensing Component",
     "norm_name": "office 16 clicktorun licensing component",
     "version": "16.0.19029.20156",
@@ -2840,6 +3195,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Office 16 Click-to-Run Extensibility Component",
     "norm_name": "office 16 clicktorun extensibility component",
     "version": "16.0.19029.20156",
@@ -2848,6 +3204,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET AppHost Pack - 8.0.7 (x64_x86)",
     "norm_name": "microsoft .net apphost pack  8.0.7 (x64x86)",
     "version": "64.28.16731",
@@ -2856,6 +3213,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NETCore.App.Runtime.Mono.android-arm64 (x64)",
     "norm_name": "microsoft.netcore.app.runtime.mono.androidarm64 (x64)",
     "version": "7.0.20.0",
@@ -2864,6 +3222,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "vs_devenx64vmsi",
     "norm_name": "vsdevenx64vmsi",
     "version": "17.10.34803",
@@ -2872,6 +3231,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NET.Sdk.MacCatalyst.Manifest-8.0.100 (x64)",
     "norm_name": "microsoft.net.sdk.maccatalyst.manifest8.0.100 (x64)",
     "version": "17.5.8018",
@@ -2880,6 +3240,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": ".NET Android Templates (x64)",
     "norm_name": ".net android templates (x64)",
     "version": "34.0.95.0",
@@ -2888,6 +3249,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Visual C++ 2013 x64 Additional Runtime - 12.0.21005",
     "norm_name": "microsoft visual c++ 2013 x64 additional runtime  12.0.",
     "version": "12.0.21005",
@@ -2896,6 +3258,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "DiagnosticsHub_CollectionService",
     "norm_name": "diagnosticshubcollectionservice",
     "version": "17.10.34627",
@@ -2904,6 +3267,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Fusion Service",
     "norm_name": "fusion service",
     "version": "2.2.14.0",
@@ -2912,6 +3276,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": ".NET MAUI Templates (x64)",
     "norm_name": ".net maui templates (x64)",
     "version": "8.0.71.0",
@@ -2920,6 +3285,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NET.Runtime.MonoTargets.Sdk (x64)",
     "norm_name": "microsoft.net.runtime.monotargets.sdk (x64)",
     "version": "6.0.32.0",
@@ -2928,6 +3294,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NETCore.App.Runtime.Mono.android-arm (x64)",
     "norm_name": "microsoft.netcore.app.runtime.mono.androidarm (x64)",
     "version": "7.0.20.0",
@@ -2936,6 +3303,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NET.Runtime.MonoTargets.Sdk (x64)",
     "norm_name": "microsoft.net.runtime.monotargets.sdk (x64)",
     "version": "8.0.7.0",
@@ -2944,6 +3312,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.iOS.Sdk.net8.0_17.5 (x64)",
     "norm_name": "microsoft.ios.sdk.net8.017.5 (x64)",
     "version": "17.5.8018.0",
@@ -2952,6 +3321,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.Maui.Controls.Build.Tasks (x64)",
     "norm_name": "microsoft.maui.controls.build.tasks (x64)",
     "version": "8.0.71.0",
@@ -2960,6 +3330,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Runtime - 8.0.11 (x64)",
     "norm_name": "microsoft .net runtime  8.0.11 (x64)",
     "version": "64.44.23191",
@@ -2968,6 +3339,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.Android.Sdk.Windows (x64)",
     "norm_name": "microsoft.android.sdk.windows (x64)",
     "version": "34.0.95.0",
@@ -2976,6 +3348,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Aspire.Hosting.Sdk (x64)",
     "norm_name": "aspire.hosting.sdk (x64)",
     "version": "8.1.0.0",
@@ -2984,6 +3357,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NET.Workload.Mono.Toolchain.net7.Manifest (x64)",
     "norm_name": "microsoft.net.workload.mono.toolchain.net7.manifest (x64)",
     "version": "64.28.16731",
@@ -2992,6 +3366,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "vs_communityx64msi",
     "norm_name": "vscommunityx64msi",
     "version": "17.10.34804",
@@ -3000,6 +3375,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "vs_minshellinteropx64msi",
     "norm_name": "vsminshellinteropx64msi",
     "version": "17.10.34803",
@@ -3008,6 +3384,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NETCore.App.Runtime.Mono.ios-arm64 (x64)",
     "norm_name": "microsoft.netcore.app.runtime.mono.iosarm64 (x64)",
     "version": "7.0.20.0",
@@ -3016,6 +3393,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.Maui.Core (x64)",
     "norm_name": "microsoft.maui.core (x64)",
     "version": "8.0.71.0",
@@ -3024,6 +3402,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "IIS 10.0 Express",
     "norm_name": "iis 10.0 express",
     "version": "10.0.08608",
@@ -3032,6 +3411,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Core AppHost Pack - 3.1.32 (x64_x86)",
     "norm_name": "microsoft .net core apphost pack  3.1.32 (x64x86)",
     "version": "24.192.31915",
@@ -3040,6 +3420,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NETCore.App.Runtime.AOT.win-x64.Cross.android-arm (x64)",
     "norm_name": "microsoft.netcore.app.runtime.aot.winx64.cross.androidarm (x64)",
     "version": "8.0.7.0",
@@ -3048,6 +3429,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Standard Targeting Pack - 2.1.0 (x64)",
     "norm_name": "microsoft .net standard targeting pack  2.1.0 (x64)",
     "version": "24.0.28113",
@@ -3056,6 +3438,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Core Runtime - 3.1.32 (x64)",
     "norm_name": "microsoft .net core runtime  3.1.32 (x64)",
     "version": "24.192.31915",
@@ -3064,6 +3447,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Visual C++ 2013 x64 Minimum Runtime - 12.0.21005",
     "norm_name": "microsoft visual c++ 2013 x64 minimum runtime  12.0.",
     "version": "12.0.21005",
@@ -3072,6 +3456,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Teams Meeting Add-in for Microsoft Office",
     "norm_name": "microsoft teams meeting addin for microsoft office",
     "version": "1.24.14501",
@@ -3080,6 +3465,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NET.Sdk.Maui.Manifest-8.0.100 (x64)",
     "norm_name": "microsoft.net.sdk.maui.manifest8.0.100 (x64)",
     "version": "8.0.61",
@@ -3088,6 +3474,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Corsair iCUE5 Software",
     "norm_name": "corsair icue5 software",
     "version": "5.14.93",
@@ -3096,6 +3483,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NETCore.App.Runtime.AOT.win-x64.Cross.android-x86 (x64)",
     "norm_name": "microsoft.netcore.app.runtime.aot.winx64.cross.androidx86 (x64)",
     "version": "7.0.20.0",
@@ -3104,6 +3492,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Core Host FX Resolver - 3.1.32 (x64)",
     "norm_name": "microsoft .net core host fx resolver  3.1.32 (x64)",
     "version": "24.192.31915",
@@ -3112,6 +3501,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Alienware OCControls Service Installer",
     "norm_name": "alienware occontrols service installer",
     "version": "1.4.34.1450",
@@ -3120,6 +3510,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Alienware FX Display001 Smart Installer (2.4.1.205)",
     "norm_name": "alienware fx display001 smart installer (2.4.1.205)",
     "version": "2.4.1.205",
@@ -3128,6 +3519,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Aspire.Hosting (x64)",
     "norm_name": "aspire.hosting (x64)",
     "version": "8.1.0.0",
@@ -3136,6 +3528,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "IIS Express Application Compatibility Database for x86",
     "norm_name": "iis express application compatibility database for x",
     "version": null,
@@ -3144,6 +3537,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NETCore.App.Runtime.Mono.iossimulator-x86 (x64)",
     "norm_name": "microsoft.netcore.app.runtime.mono.iossimulatorx86 (x64)",
     "version": "7.0.20.0",
@@ -3152,6 +3546,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.MacCatalyst.Runtime.maccatalyst-x64 (x64)",
     "norm_name": "microsoft.maccatalyst.runtime.maccatalystx64 (x64)",
     "version": "17.2.8053.0",
@@ -3160,6 +3555,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.MacCatalyst.Runtime.maccatalyst-arm64 (x64)",
     "norm_name": "microsoft.maccatalyst.runtime.maccatalystarm64 (x64)",
     "version": "17.2.8053.0",
@@ -3168,6 +3564,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET AppHost Pack - 7.0.20 (x64_x86)",
     "norm_name": "microsoft .net apphost pack  7.0.20 (x64x86)",
     "version": "56.80.15184",
@@ -3176,6 +3573,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "NVIDIA Graphics Driver 580.88",
     "norm_name": "nvidia graphics driver 580.",
     "version": "580.88",
@@ -3184,6 +3582,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "NVIDIA App 11.0.4.526",
     "norm_name": "nvidia app 11.0.4.",
     "version": "11.0.4.526",
@@ -3192,6 +3591,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "NVIDIA MessageBus 3 for NvApp",
     "norm_name": "nvidia messagebus 3 for nvapp",
     "version": "3.15",
@@ -3200,6 +3600,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "NVIDIA Backend",
     "norm_name": "nvidia backend",
     "version": "11.0.4.526",
@@ -3208,6 +3609,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "NvCpl",
     "norm_name": "nvcpl",
     "version": "1.0",
@@ -3216,6 +3618,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "NVIDIA PhysX System Software 9.23.1019",
     "norm_name": "nvidia physx system software 9.23.",
     "version": "9.23.1019",
@@ -3224,6 +3627,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "NVIDIA FrameView SDK 1.5.10920.35420203",
     "norm_name": "nvidia frameview sdk 1.5.10920.",
     "version": "1.5.10920.35420203",
@@ -3232,6 +3636,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "NVIDIA HD Audio Driver 1.4.5.0",
     "norm_name": "nvidia hd audio driver 1.4.5.",
     "version": "1.4.5.0",
@@ -3240,6 +3645,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "NVIDIA Install Application",
     "norm_name": "nvidia install application",
     "version": "2.1002.434.0",
@@ -3248,6 +3654,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "NVIDIA Container",
     "norm_name": "nvidia container",
     "version": "1.42",
@@ -3256,6 +3663,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "NVIDIA AIUser Container",
     "norm_name": "nvidia aiuser container",
     "version": "1.42",
@@ -3264,6 +3672,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "NVIDIA LocalSystem Container",
     "norm_name": "nvidia localsystem container",
     "version": "1.42",
@@ -3272,6 +3681,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "NVIDIA Session Container",
     "norm_name": "nvidia session container",
     "version": "1.42",
@@ -3280,6 +3690,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "NVIDIA User Container",
     "norm_name": "nvidia user container",
     "version": "1.42",
@@ -3288,6 +3699,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "NVIDIA NvDLISR",
     "norm_name": "nvidia nvdlisr",
     "version": "1.0",
@@ -3296,6 +3708,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "NVIDIA Platform Controllers and Framework",
     "norm_name": "nvidia platform controllers and framework",
     "version": "580.79",
@@ -3304,6 +3717,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "NVIDIA Watchdog Plugin for NvContainer",
     "norm_name": "nvidia watchdog plugin for nvcontainer",
     "version": "1.42",
@@ -3312,6 +3726,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "NVIDIA Telemetry Client",
     "norm_name": "nvidia telemetry client",
     "version": "19.4.23.0",
@@ -3320,6 +3735,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "NVIDIA ShadowPlay 11.0.4.500",
     "norm_name": "nvidia shadowplay 11.0.4.",
     "version": "11.0.4.500",
@@ -3328,6 +3744,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "NVIDIA USBC Driver 1.52.831.832",
     "norm_name": "nvidia usbc driver 1.52.831.",
     "version": "1.52.831.832",
@@ -3336,6 +3753,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "NVIDIA Virtual Audio 4.65.0.3",
     "norm_name": "nvidia virtual audio 4.65.0.",
     "version": "4.65.0.3",
@@ -3344,6 +3762,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NET.Runtime.MonoTargets.Sdk (x64)",
     "norm_name": "microsoft.net.runtime.monotargets.sdk (x64)",
     "version": "7.0.20.0",
@@ -3352,6 +3771,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NET.Sdk.macOS.Manifest-8.0.100 (x64)",
     "norm_name": "microsoft.net.sdk.macos.manifest8.0.100 (x64)",
     "version": "14.2.8053",
@@ -3360,6 +3780,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft ASP.NET Core 8.0.7 Shared Framework (x64)",
     "norm_name": "microsoft asp.net core 8.0.7 shared framework (x64)",
     "version": "8.0.7.24314",
@@ -3368,6 +3789,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Python 3.13.3 pip Bootstrap (64-bit)",
     "norm_name": "python 3.13.3 pip bootstrap (64bit)",
     "version": "3.13.3150.0",
@@ -3376,6 +3798,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NETCore.App.Runtime.Mono.maccatalyst-arm64 (x64)",
     "norm_name": "microsoft.netcore.app.runtime.mono.maccatalystarm64 (x64)",
     "version": "8.0.7.0",
@@ -3384,6 +3807,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.Maui.Controls.Build.Tasks (x64)",
     "norm_name": "microsoft.maui.controls.build.tasks (x64)",
     "version": "8.0.61.0",
@@ -3392,6 +3816,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.iOS.Sdk (x64)",
     "norm_name": "microsoft.ios.sdk (x64)",
     "version": "16.4.7142.0",
@@ -3400,6 +3825,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET AppHost Pack - 8.0.7 (x64_arm64)",
     "norm_name": "microsoft .net apphost pack  8.0.7 (x64arm64)",
     "version": "64.28.16731",
@@ -3408,6 +3834,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Python 3.13.3 Test Suite (64-bit)",
     "norm_name": "python 3.13.3 test suite (64bit)",
     "version": "3.13.3150.0",
@@ -3416,6 +3843,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.Android.Sdk.Windows (x64)",
     "norm_name": "microsoft.android.sdk.windows (x64)",
     "version": "33.0.95.0",
@@ -3424,6 +3852,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NETCore.App.Runtime.Mono.iossimulator-arm64 (x64)",
     "norm_name": "microsoft.netcore.app.runtime.mono.iossimulatorarm64 (x64)",
     "version": "7.0.20.0",
@@ -3432,6 +3861,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Aspire.Dashboard.Sdk.win-x64 (x64)",
     "norm_name": "aspire.dashboard.sdk.winx64 (x64)",
     "version": "8.1.0.0",
@@ -3440,6 +3870,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft ASP.NET Core 7.0.20 Shared Framework (x64)",
     "norm_name": "microsoft asp.net core 7.0.20 shared framework (x64)",
     "version": "7.0.20.24269",
@@ -3448,6 +3879,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": ".NET MAUI Templates (x64)",
     "norm_name": ".net maui templates (x64)",
     "version": "8.0.61.0",
@@ -3456,6 +3888,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Windows Desktop Runtime - 8.0.11 (x64)",
     "norm_name": "microsoft windows desktop runtime  8.0.11 (x64)",
     "version": "64.44.23253",
@@ -3464,6 +3897,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.AspNetCore.Components.WebView.Maui (x64)",
     "norm_name": "microsoft.aspnetcore.components.webview.maui (x64)",
     "version": "8.0.71.0",
@@ -3472,6 +3906,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "VS JIT Debugger",
     "norm_name": "vs jit debugger",
     "version": "17.0.125.0",
@@ -3480,6 +3915,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Killer Ethernet Performance Driver Suite UWD",
     "norm_name": "killer ethernet performance driver suite uwd",
     "version": "34.23.7197",
@@ -3488,6 +3924,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Update Health Tools",
     "norm_name": "microsoft update health tools",
     "version": "5.72.0.0",
@@ -3496,6 +3933,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Toolset 8.0.303 (x64)",
     "norm_name": "microsoft .net toolset 8.0.303 (x64)",
     "version": "32.8.56572",
@@ -3504,6 +3942,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Application Verifier x64 External Package (DesktopEditions)",
     "norm_name": "application verifier x64 external package (desktopeditions)",
     "version": "10.1.22621.3233",
@@ -3512,6 +3951,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET AppHost Pack - 6.0.32 (x64_arm)",
     "norm_name": "microsoft .net apphost pack  6.0.32 (x64arm)",
     "version": "48.128.16743",
@@ -3520,6 +3960,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.AspNetCore.Components.WebView.Maui (x64)",
     "norm_name": "microsoft.aspnetcore.components.webview.maui (x64)",
     "version": "8.0.61.0",
@@ -3528,6 +3969,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Runtime - 8.0.7 (x64)",
     "norm_name": "microsoft .net runtime  8.0.7 (x64)",
     "version": "64.28.16731",
@@ -3536,6 +3978,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Host - 6.0.28 (x64)",
     "norm_name": "microsoft .net host  6.0.28 (x64)",
     "version": "48.112.10439",
@@ -3544,6 +3987,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.Android.Runtime.34.android-arm (x64)",
     "norm_name": "microsoft.android.runtime.34.androidarm (x64)",
     "version": "34.0.113.0",
@@ -3552,6 +3996,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Aspire.ProjectTemplates (x64)",
     "norm_name": "aspire.projecttemplates (x64)",
     "version": "8.0.0.0",
@@ -3560,6 +4005,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Visual C++ 2012 x64 Minimum Runtime - 11.0.61030",
     "norm_name": "microsoft visual c++ 2012 x64 minimum runtime  11.0.",
     "version": "11.0.61030",
@@ -3568,6 +4014,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Host FX Resolver - 6.0.14 (x64)",
     "norm_name": "microsoft .net host fx resolver  6.0.14 (x64)",
     "version": "48.59.55225",
@@ -3576,6 +4023,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NET.Sdk.Aspire.Manifest-8.0.100 (x64)",
     "norm_name": "microsoft.net.sdk.aspire.manifest8.0.100 (x64)",
     "version": "64.0.15042",
@@ -3584,6 +4032,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Java(TM) SE Development Kit 20.0.2 (64-bit)",
     "norm_name": "java(tm) se development kit 20.0.2 (64bit)",
     "version": "20.0.2.0",
@@ -3592,6 +4041,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Windows Desktop Targeting Pack - 8.0.7 (x64)",
     "norm_name": "microsoft windows desktop targeting pack  8.0.7 (x64)",
     "version": "64.28.16739",
@@ -3600,6 +4050,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Dell SupportAssist Remediation",
     "norm_name": "dell supportassist remediation",
     "version": "5.5.13.0",
@@ -3608,6 +4059,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.iOS.Windows.Sdk.net8.0_17.5 (x64)",
     "norm_name": "microsoft.ios.windows.sdk.net8.017.5 (x64)",
     "version": "17.5.8018.0",
@@ -3616,6 +4068,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "PowerToys (Preview)",
     "norm_name": "powertoys (preview)",
     "version": "0.91.1",
@@ -3624,6 +4077,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "VS Script Debugging Common",
     "norm_name": "vs script debugging common",
     "version": "17.0.125.0",
@@ -3632,6 +4086,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Targeting Pack - 8.0.7 (x64)",
     "norm_name": "microsoft .net targeting pack  8.0.7 (x64)",
     "version": "64.28.16731",
@@ -3640,6 +4095,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.iOS.Runtime.ios-arm64.net8.0_17.5 (x64)",
     "norm_name": "microsoft.ios.runtime.iosarm64.net8.017.5 (x64)",
     "version": "17.5.8018.0",
@@ -3648,6 +4104,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET 8.0 Templates 8.0.303 (x64)",
     "norm_name": "microsoft .net 8.0 templates 8.0.303 (x64)",
     "version": "32.9.56572",
@@ -3656,6 +4113,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.Android.Sdk.Windows (x64)",
     "norm_name": "microsoft.android.sdk.windows (x64)",
     "version": "34.0.113.0",
@@ -3664,6 +4122,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NETCore.App.Runtime.AOT.win-x64.Cross.android-arm64 (x64)",
     "norm_name": "microsoft.netcore.app.runtime.aot.winx64.cross.androidarm64 (x64)",
     "version": "7.0.20.0",
@@ -3672,6 +4131,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NET.Runtime.MonoAOTCompiler.Task (x64)",
     "norm_name": "microsoft.net.runtime.monoaotcompiler.task (x64)",
     "version": "6.0.32.0",
@@ -3680,6 +4140,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.Android.Runtime.34.android-x86 (x64)",
     "norm_name": "microsoft.android.runtime.34.androidx86 (x64)",
     "version": "34.0.113.0",
@@ -3688,6 +4149,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NETCore.App.Runtime.Mono.ios-arm64 (x64)",
     "norm_name": "microsoft.netcore.app.runtime.mono.iosarm64 (x64)",
     "version": "8.0.7.0",
@@ -3696,6 +4158,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "TeraCopy",
     "norm_name": "teracopy",
     "version": "3.17",
@@ -3704,6 +4167,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "PuTTY release 0.79 (64-bit)",
     "norm_name": "putty release 0.79 (64bit)",
     "version": "0.79.0.0",
@@ -3712,6 +4176,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Visual C++ 2022 X64 Additional Runtime - 14.42.34433",
     "norm_name": "microsoft visual c++ 2022 x64 additional runtime  14.42.",
     "version": "14.42.34433",
@@ -3720,6 +4185,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Targeting Pack - 6.0.32 (x64)",
     "norm_name": "microsoft .net targeting pack  6.0.32 (x64)",
     "version": "48.128.16743",
@@ -3728,6 +4194,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.MacCatalyst.Sdk (x64)",
     "norm_name": "microsoft.maccatalyst.sdk (x64)",
     "version": "16.4.7142.0",
@@ -3736,6 +4203,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.Maui.Graphics (x64)",
     "norm_name": "microsoft.maui.graphics (x64)",
     "version": "8.0.71.0",
@@ -3744,6 +4212,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.MacCatalyst.Sdk.net8.0_17.0 (x64)",
     "norm_name": "microsoft.maccatalyst.sdk.net8.017.0 (x64)",
     "version": "17.0.8523.0",
@@ -3752,6 +4221,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.iOS.Templates (x64)",
     "norm_name": "microsoft.ios.templates (x64)",
     "version": "17.5.8018.0",
@@ -3760,6 +4230,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NET.Workload.Emscripten.Current.Manifest (x64)",
     "norm_name": "microsoft.net.workload.emscripten.current.manifest (x64)",
     "version": "64.28.16721",
@@ -3768,6 +4239,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.Android.Runtime.34.android-arm64 (x64)",
     "norm_name": "microsoft.android.runtime.34.androidarm64 (x64)",
     "version": "34.0.95.0",
@@ -3776,6 +4248,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Intel(R) Chipset Device Software",
     "norm_name": "intel(r) chipset device software",
     "version": "10.1.19468.8385",
@@ -3784,6 +4257,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Python 3.13.3 Development Libraries (64-bit)",
     "norm_name": "python 3.13.3 development libraries (64bit)",
     "version": "3.13.3150.0",
@@ -3792,6 +4266,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Host - 7.0.7 (x64)",
     "norm_name": "microsoft .net host  7.0.7 (x64)",
     "version": "56.31.61636",
@@ -3800,6 +4275,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.MacCatalyst.Templates (x64)",
     "norm_name": "microsoft.maccatalyst.templates (x64)",
     "version": "17.5.8018.0",
@@ -3808,6 +4284,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Runtime - 7.0.7 (x64)",
     "norm_name": "microsoft .net runtime  7.0.7 (x64)",
     "version": "56.31.61636",
@@ -3816,6 +4293,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Aspire.Hosting.Orchestration.win-x64 (x64)",
     "norm_name": "aspire.hosting.orchestration.winx64 (x64)",
     "version": "8.0.0.0",
@@ -3824,6 +4302,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NETCore.App.Runtime.Mono.maccatalyst-x64 (x64)",
     "norm_name": "microsoft.netcore.app.runtime.mono.maccatalystx64 (x64)",
     "version": "8.0.7.0",
@@ -3832,6 +4311,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NET.Sdk.Android.Manifest-8.0.100 (x64)",
     "norm_name": "microsoft.net.sdk.android.manifest8.0.100 (x64)",
     "version": "34.0.95",
@@ -3840,6 +4320,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft ASP.NET Core 6.0.32 Shared Framework (x64)",
     "norm_name": "microsoft asp.net core 6.0.32 shared framework (x64)",
     "version": "6.0.32.24314",
@@ -3848,6 +4329,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.iOS.Runtime.iossimulator-arm64.net8.0_17.5 (x64)",
     "norm_name": "microsoft.ios.runtime.iossimulatorarm64.net8.017.5 (x64)",
     "version": "17.5.8018.0",
@@ -3856,6 +4338,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft ASP.NET Core Module V2 for IIS Express",
     "norm_name": "microsoft asp.net core module v2 for iis express",
     "version": "17.0.22116.0",
@@ -3864,6 +4347,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Core AppHost Pack - 3.1.32 (x64_arm64)",
     "norm_name": "microsoft .net core apphost pack  3.1.32 (x64arm64)",
     "version": "24.192.31915",
@@ -3872,6 +4356,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Build of OpenJDK with Hotspot 11.0.16.1+1 (x64)",
     "norm_name": "microsoft build of openjdk with hotspot 11.0.16.1+1 (x64)",
     "version": "11.0.16.101",
@@ -3880,6 +4365,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.Android.Runtime.34.android-x86 (x64)",
     "norm_name": "microsoft.android.runtime.34.androidx86 (x64)",
     "version": "34.0.95.0",
@@ -3888,6 +4374,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.Android.Runtime.34.android-x64 (x64)",
     "norm_name": "microsoft.android.runtime.34.androidx64 (x64)",
     "version": "34.0.113.0",
@@ -3896,6 +4383,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NETCore.App.Runtime.Mono.android-arm64 (x64)",
     "norm_name": "microsoft.netcore.app.runtime.mono.androidarm64 (x64)",
     "version": "8.0.7.0",
@@ -3904,6 +4392,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NETCore.App.Runtime.AOT.win-x64.Cross.android-x64 (x64)",
     "norm_name": "microsoft.netcore.app.runtime.aot.winx64.cross.androidx64 (x64)",
     "version": "7.0.20.0",
@@ -3912,6 +4401,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.Maui.Controls (x64)",
     "norm_name": "microsoft.maui.controls (x64)",
     "version": "8.0.71.0",
@@ -3920,6 +4410,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.MacCatalyst.Templates (x64)",
     "norm_name": "microsoft.maccatalyst.templates (x64)",
     "version": "17.2.8053.0",
@@ -3928,6 +4419,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.iOS.Runtime.iossimulator-x64 (x64)",
     "norm_name": "microsoft.ios.runtime.iossimulatorx64 (x64)",
     "version": "17.2.8053.0",
@@ -3936,6 +4428,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Dell SupportAssist OS Recovery Plugin for Dell Update",
     "norm_name": "dell supportassist os recovery plugin for dell update",
     "version": "5.5.13.0",
@@ -3944,6 +4437,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET Host FX Resolver - 8.0.11 (x64)",
     "norm_name": "microsoft .net host fx resolver  8.0.11 (x64)",
     "version": "64.44.23191",
@@ -3952,6 +4446,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Windows Desktop Runtime - 8.0.7 (x64)",
     "norm_name": "microsoft windows desktop runtime  8.0.7 (x64)",
     "version": "64.28.16739",
@@ -3960,6 +4455,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Python 3.13.3 Executables (64-bit)",
     "norm_name": "python 3.13.3 executables (64bit)",
     "version": "3.13.3150.0",
@@ -3968,6 +4464,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft .NET AppHost Pack - 6.0.32 (x64)",
     "norm_name": "microsoft .net apphost pack  6.0.32 (x64)",
     "version": "48.128.16743",
@@ -3976,6 +4473,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "IntelliTraceProfilerProxy",
     "norm_name": "intellitraceprofilerproxy",
     "version": "15.0.21225.01",
@@ -3984,6 +4482,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Epic Games Launcher Prerequisites (x64)",
     "norm_name": "epic games launcher prerequisites (x64)",
     "version": "1.0.0.0",
@@ -3992,6 +4491,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.Maui.Graphics (x64)",
     "norm_name": "microsoft.maui.graphics (x64)",
     "version": "8.0.61.0",
@@ -4000,6 +4500,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NETCore.App.Runtime.Mono.maccatalyst-x64 (x64)",
     "norm_name": "microsoft.netcore.app.runtime.mono.maccatalystx64 (x64)",
     "version": "7.0.20.0",
@@ -4008,6 +4509,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Aspire.Hosting.Orchestration.win-x64 (x64)",
     "norm_name": "aspire.hosting.orchestration.winx64 (x64)",
     "version": "8.1.0.0",
@@ -4016,6 +4518,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft ASP.NET Core Module for IIS Express",
     "norm_name": "microsoft asp.net core module for iis express",
     "version": "12.2.18292.0",
@@ -4024,6 +4527,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft Windows Desktop Targeting Pack - 6.0.32 (x64)",
     "norm_name": "microsoft windows desktop targeting pack  6.0.32 (x64)",
     "version": "48.128.16742",
@@ -4032,6 +4536,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.Maui.Controls.Xaml (x64)",
     "norm_name": "microsoft.maui.controls.xaml (x64)",
     "version": "8.0.71.0",
@@ -4040,6 +4545,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.Android.Ref.34 (x64)",
     "norm_name": "microsoft.android.ref.34 (x64)",
     "version": "34.0.95.0",
@@ -4048,6 +4554,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "logisim-evolution",
     "norm_name": "logisimevolution",
     "version": "3.9.0",
@@ -4056,6 +4563,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.NET.Sdk.Maui.Manifest-8.0.100 (x64)",
     "norm_name": "microsoft.net.sdk.maui.manifest8.0.100 (x64)",
     "version": "8.0.71",
@@ -4064,6 +4572,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft.Maui.Controls.Compatibility (x64)",
     "norm_name": "microsoft.maui.controls.compatibility (x64)",
     "version": "8.0.71.0",
@@ -4072,6 +4581,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Python 3.13.3 Documentation (64-bit)",
     "norm_name": "python 3.13.3 documentation (64bit)",
     "version": "3.13.3150.0",
@@ -4080,6 +4590,7 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Microsoft ASP.NET Core 3.1.10 Targeting Pack (x64)",
     "norm_name": "microsoft asp.net core 3.1.10 targeting pack (x64)",
     "version": "3.1.10.20520",
@@ -4088,10 +4599,1406 @@
     "cves": []
   },
   {
+    "type": "installed",
     "name": "Aspire.Hosting.Sdk (x64)",
     "norm_name": "aspire.hosting.sdk (x64)",
     "version": "8.0.0.0",
     "first_year": 2024,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "Appinfo",
+    "norm_name": "appinfo",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "AppXSvc",
+    "norm_name": "appxsvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "AudioEndpointBuilder",
+    "norm_name": "audioendpointbuilder",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "Audiosrv",
+    "norm_name": "audiosrv",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "AWCCService",
+    "norm_name": "awccservice",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "BFE",
+    "norm_name": "bfe",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "BITS",
+    "norm_name": "bits",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "BluetoothUserService_679112e6",
+    "norm_name": "bluetoothuserservice679112e",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "BrokerInfrastructure",
+    "norm_name": "brokerinfrastructure",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "BTAGService",
+    "norm_name": "btagservice",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "BthAvctpSvc",
+    "norm_name": "bthavctpsvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "bthserv",
+    "norm_name": "bthserv",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "camsvc",
+    "norm_name": "camsvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "cbdhsvc_679112e6",
+    "norm_name": "cbdhsvc679112e",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "CDPSvc",
+    "norm_name": "cdpsvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "CDPUserSvc_679112e6",
+    "norm_name": "cdpusersvc679112e",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "ClickToRunSvc",
+    "norm_name": "clicktorunsvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "CoreMessagingRegistrar",
+    "norm_name": "coremessagingregistrar",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "cplspcon",
+    "norm_name": "cplspcon",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "CryptSvc",
+    "norm_name": "cryptsvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "DcomLaunch",
+    "norm_name": "dcomlaunch",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "DDVCollectorSvcApi",
+    "norm_name": "ddvcollectorsvcapi",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "DDVDataCollector",
+    "norm_name": "ddvdatacollector",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "DDVRulesProcessor",
+    "norm_name": "ddvrulesprocessor",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "Dell Digital Delivery Services",
+    "norm_name": "dell digital delivery services",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "Dell SupportAssist Remediation",
+    "norm_name": "dell supportassist remediation",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "DellClientManagementService",
+    "norm_name": "dellclientmanagementservice",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "DellTechHub",
+    "norm_name": "delltechhub",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "DeviceAssociationService",
+    "norm_name": "deviceassociationservice",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "DeviceInstall",
+    "norm_name": "deviceinstall",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "DevicesFlowUserSvc_679112e6",
+    "norm_name": "devicesflowusersvc679112e",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "DevQueryBroker",
+    "norm_name": "devquerybroker",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "Dhcp",
+    "norm_name": "dhcp",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "DiagTrack",
+    "norm_name": "diagtrack",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "DispBrokerDesktopSvc",
+    "norm_name": "dispbrokerdesktopsvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "DisplayEnhancementService",
+    "norm_name": "displayenhancementservice",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "Dnscache",
+    "norm_name": "dnscache",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "DolbyDAXAPI",
+    "norm_name": "dolbydaxapi",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "DoSvc",
+    "norm_name": "dosvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "dot3svc",
+    "norm_name": "dot3svc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "DPS",
+    "norm_name": "dps",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "dptftcs",
+    "norm_name": "dptftcs",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "DsSvc",
+    "norm_name": "dssvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "DusmSvc",
+    "norm_name": "dusmsvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "EapHost",
+    "norm_name": "eaphost",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "EventLog",
+    "norm_name": "eventlog",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "EventSystem",
+    "norm_name": "eventsystem",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "FontCache",
+    "norm_name": "fontcache",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "FusionService",
+    "norm_name": "fusionservice",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "GamingServices",
+    "norm_name": "gamingservices",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "GamingServicesNet",
+    "norm_name": "gamingservicesnet",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "hidserv",
+    "norm_name": "hidserv",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "hns",
+    "norm_name": "hns",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "HvHost",
+    "norm_name": "hvhost",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "icssvc",
+    "norm_name": "icssvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "igccservice",
+    "norm_name": "igccservice",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "IgoAudioService",
+    "norm_name": "igoaudioservice",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "InstallService",
+    "norm_name": "installservice",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "IntelAudioService",
+    "norm_name": "intelaudioservice",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "InventorySvc",
+    "norm_name": "inventorysvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "ipfsvc",
+    "norm_name": "ipfsvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "iphlpsvc",
+    "norm_name": "iphlpsvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "jhi_service",
+    "norm_name": "jhiservice",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "KeyIso",
+    "norm_name": "keyiso",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "Killer Analytics Service",
+    "norm_name": "killer analytics service",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "Killer Network Service",
+    "norm_name": "killer network service",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "KNDBWM",
+    "norm_name": "kndbwm",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "LanmanServer",
+    "norm_name": "lanmanserver",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "LanmanWorkstation",
+    "norm_name": "lanmanworkstation",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "lfsvc",
+    "norm_name": "lfsvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "LicenseManager",
+    "norm_name": "licensemanager",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "lmhosts",
+    "norm_name": "lmhosts",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "LSM",
+    "norm_name": "lsm",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "McAfee WebAdvisor",
+    "norm_name": "mcafee webadvisor",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "MDCoreSvc",
+    "norm_name": "mdcoresvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "mpssvc",
+    "norm_name": "mpssvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "NcbService",
+    "norm_name": "ncbservice",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "Netman",
+    "norm_name": "netman",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "netprofm",
+    "norm_name": "netprofm",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "NgcCtnrSvc",
+    "norm_name": "ngcctnrsvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "NgcSvc",
+    "norm_name": "ngcsvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "NPSMSvc_679112e6",
+    "norm_name": "npsmsvc679112e",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "nsi",
+    "norm_name": "nsi",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "nvagent",
+    "norm_name": "nvagent",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "NvContainerLocalSystem",
+    "norm_name": "nvcontainerlocalsystem",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "NVDisplay.ContainerLocalSystem",
+    "norm_name": "nvdisplay.containerlocalsystem",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "OneSyncSvc_679112e6",
+    "norm_name": "onesyncsvc679112e",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "PcaSvc",
+    "norm_name": "pcasvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "PIEServiceNew",
+    "norm_name": "pieservicenew",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "PlugPlay",
+    "norm_name": "plugplay",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "PolicyAgent",
+    "norm_name": "policyagent",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "Power",
+    "norm_name": "power",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "ProfSvc",
+    "norm_name": "profsvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "PulseSecureService",
+    "norm_name": "pulsesecureservice",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "QWAVE",
+    "norm_name": "qwave",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "RasMan",
+    "norm_name": "rasman",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "RmSvc",
+    "norm_name": "rmsvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "RpcEptMapper",
+    "norm_name": "rpceptmapper",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "RpcSs",
+    "norm_name": "rpcss",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "RstMwService",
+    "norm_name": "rstmwservice",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "RtkAudioUniversalService",
+    "norm_name": "rtkaudiouniversalservice",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "SamSs",
+    "norm_name": "samss",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "Schedule",
+    "norm_name": "schedule",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "SecurityHealthService",
+    "norm_name": "securityhealthservice",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "SENS",
+    "norm_name": "sens",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "SharedAccess",
+    "norm_name": "sharedaccess",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "ShellHWDetection",
+    "norm_name": "shellhwdetection",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "smphost",
+    "norm_name": "smphost",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "Spooler",
+    "norm_name": "spooler",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "SQLWriter",
+    "norm_name": "sqlwriter",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "SSDPSRV",
+    "norm_name": "ssdpsrv",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "sshd",
+    "norm_name": "sshd",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "SstpSvc",
+    "norm_name": "sstpsvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "StateRepository",
+    "norm_name": "staterepository",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "Steam Client Service",
+    "norm_name": "steam client service",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "StiSvc",
+    "norm_name": "stisvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "StorSvc",
+    "norm_name": "storsvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "SupportAssistAgent",
+    "norm_name": "supportassistagent",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "SysMain",
+    "norm_name": "sysmain",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "SystemEventsBroker",
+    "norm_name": "systemeventsbroker",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "TeraCopyService.exe",
+    "norm_name": "teracopyservice.exe",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "TextInputManagementService",
+    "norm_name": "textinputmanagementservice",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "Themes",
+    "norm_name": "themes",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "TimeBrokerSvc",
+    "norm_name": "timebrokersvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "TokenBroker",
+    "norm_name": "tokenbroker",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "TrkWks",
+    "norm_name": "trkwks",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "UdkUserSvc_679112e6",
+    "norm_name": "udkusersvc679112e",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "UserManager",
+    "norm_name": "usermanager",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "UsoSvc",
+    "norm_name": "usosvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "VaultSvc",
+    "norm_name": "vaultsvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "VBoxSDS",
+    "norm_name": "vboxsds",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "W32Time",
+    "norm_name": "w32time",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "Wcmsvc",
+    "norm_name": "wcmsvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "wcncsvc",
+    "norm_name": "wcncsvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "WdiSystemHost",
+    "norm_name": "wdisystemhost",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "WdNisSvc",
+    "norm_name": "wdnissvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "WebClient",
+    "norm_name": "webclient",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "webthreatdefsvc",
+    "norm_name": "webthreatdefsvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "webthreatdefusersvc_679112e6",
+    "norm_name": "webthreatdefusersvc679112e",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "whesvc",
+    "norm_name": "whesvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "WinDefend",
+    "norm_name": "windefend",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "WinHttpAutoProxySvc",
+    "norm_name": "winhttpautoproxysvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "Winmgmt",
+    "norm_name": "winmgmt",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "WlanSvc",
+    "norm_name": "wlansvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "wlidsvc",
+    "norm_name": "wlidsvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "wmiApSrv",
+    "norm_name": "wmiapsrv",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "WMIRegistrationService",
+    "norm_name": "wmiregistrationservice",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "WpcMonSvc",
+    "norm_name": "wpcmonsvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "WpnService",
+    "norm_name": "wpnservice",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "WpnUserService_679112e6",
+    "norm_name": "wpnuserservice679112e",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "WSAIFabricSvc",
+    "norm_name": "wsaifabricsvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "wscsvc",
+    "norm_name": "wscsvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "WSearch",
+    "norm_name": "wsearch",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "WSLService",
+    "norm_name": "wslservice",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "XTU3SERVICE",
+    "norm_name": "xtu3service",
+    "version": null,
+    "first_year": null,
     "last_year": 2025,
     "cves": []
   }
