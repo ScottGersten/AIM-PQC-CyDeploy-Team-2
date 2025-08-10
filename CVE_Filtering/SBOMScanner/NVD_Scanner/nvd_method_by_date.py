@@ -8,7 +8,14 @@ import threading
 
 found_cve_ids = 0
 
-COMMON_PREFIXES = ['lib', 'python-', 'perl-', 'golang-', 'nodejs-']
+COMMON_PREFIXES = [
+    'lib', 'python-', 'perl-', 'golang-', 'nodejs-', 
+    'ms-', 'microsoft-', 'windows-', 'win-', 'vc-', 'vs-', 'vcredist-', 'dotnet-', 
+    'adobe-', 'oracle-', 'java-', 'jdk-', 'jre-', 'openjdk-', 
+    'msvc-', 'msxml-', 'msedge-', 'chromium-', 'chrome-', 'mozilla-', 'firefox-', 
+    'sqlserver-', 'postgresql-', 'mysql-', 'mariadb-', 
+    'vmware-', 'virtualbox-', 'cygwin-', 'mingw-'
+]
 
 def strip_prefix(name):
     for prefix in COMMON_PREFIXES:
@@ -37,7 +44,7 @@ def match_cves(installs, data):
 
     for pkg in installs:
         name = pkg['name']
-        #norm_name = pkg['norm_name']
+        norm_name = pkg['norm_name']
         first_year = pkg['first_year']
         last_year = pkg['last_year']
         if first_year is None or last_year is None:
@@ -58,7 +65,8 @@ def match_cves(installs, data):
                 #if name.lower() in description.lower():
                 #if INVALID_CVE not in description and normalize_name(name) in normalize_name(description):
                 #if INVALID_CVE not in description and norm_name in normalize_name(description):
-                if INVALID_CVE not in description and name.lower() in description.lower():
+                #if INVALID_CVE not in description and name.lower() in description.lower():
+                if INVALID_CVE not in description and norm_name in description:
                     #pkg['cves'].append(cve_id)
                     pkg['cves'].append({'id': cve_id, 'desc': description})
                     found_cve_ids += 1
@@ -164,7 +172,7 @@ def get_installs(ip, username='msfadmin', password='msfadmin'):
             first_year, last_year = get_package_years(ssh, splits[1])
             packages.append({
                 'name': splits[1],
-                #'norm_name': normalize_name(splits[1]),
+                'norm_name': normalize_name(splits[1]),
                 'version': splits[2],
                 #'description': ''.join(splits[3:]),
                 #'release_year': get_package_year(ssh, splits[1]),
@@ -191,8 +199,10 @@ def main():
     #with open('installed.json', 'r', encoding='utf-8') as file:
         #installs = json.load(file)
 
-    with open('all_cves_by_date.json', 'r', encoding='utf-8') as file:
+    with open('all_cves_by_date_normalized.json', 'r', encoding='utf-8') as file:
         all_cves = json.load(file)
+    # with open('all_cves_by_date.json', 'r', encoding='utf-8') as file:
+    #     all_cves = json.load(file)
 
     vulns = match_cves(installs, all_cves)
     #vulns = []

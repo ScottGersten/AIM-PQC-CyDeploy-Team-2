@@ -8,7 +8,14 @@ import threading
 
 found_cve_ids = 0
 
-COMMON_PREFIXES = ['lib', 'python-', 'perl-', 'golang-', 'nodejs-']
+COMMON_PREFIXES = [
+    'lib', 'python-', 'perl-', 'golang-', 'nodejs-', 
+    'ms-', 'microsoft-', 'windows-', 'win-', 'vc-', 'vs-', 'vcredist-', 'dotnet-', 
+    'adobe-', 'oracle-', 'java-', 'jdk-', 'jre-', 'openjdk-', 
+    'msvc-', 'msxml-', 'msedge-', 'chromium-', 'chrome-', 'mozilla-', 'firefox-', 
+    'sqlserver-', 'postgresql-', 'mysql-', 'mariadb-', 
+    'vmware-', 'virtualbox-', 'cygwin-', 'mingw-'
+]
 
 def strip_prefix(name):
     for prefix in COMMON_PREFIXES:
@@ -71,7 +78,7 @@ def get_installs(ip, username='msfadmin', password='msfadmin'):
 
     ssh.connect(ip, username=username, password=password)
 
-    cmd = r'''powershell -Command "Get-ItemProperty 'HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*' | Where-Object { $_.DisplayName } | Select-Object DisplayName, DisplayVersion, Publisher, InstallDate | ConvertTo-Json"'''
+    cmd = r'''powershell -Command "Get-ItemProperty 'HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*', 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*' | Where-Object { $_.DisplayName } | Select-Object DisplayName, DisplayVersion, Publisher, InstallDate | ConvertTo-Json"'''
 
     stdin, stdout, stderr = ssh.exec_command(cmd)
     output = stdout.read().decode('utf-8')
@@ -88,7 +95,7 @@ def get_installs(ip, username='msfadmin', password='msfadmin'):
         install_year = datetime.strptime(install_date, "%Y%m%d").year if install_date is not None else None
         packages.append({
             'name': name,
-            #'norm_name' : normalize_name(name),
+            'norm_name' : normalize_name(name),
             'version': version,
             'first_year': install_year,
             'last_year': 2025,
@@ -114,11 +121,13 @@ def main():
     # with open('installed_windows.json', 'r', encoding='utf-8') as file:
     #     installs = json.load(file)
 
-    with open('all_cves_by_date.json', 'r', encoding='utf-8') as file:
+    # with open('all_cves_by_date.json', 'r', encoding='utf-8') as file:
+    #     all_cves = json.load(file)
+    with open('all_cves_by_date_normalized.json', 'r', encoding='utf-8') as file:
         all_cves = json.load(file)
 
-    vulns = match_cves(installs, all_cves)
-    #vulns = []
+    #vulns = match_cves(installs, all_cves)
+    vulns = []
 
     fails = successes = 0
     found_installs = []
