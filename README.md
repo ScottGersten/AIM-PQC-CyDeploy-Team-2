@@ -52,7 +52,7 @@ Fully error corrected quantum hardware of the size I’d need doesn’t exist ye
 ## Running by-date method:
 
 - Navigate to `CVE_Filtering/SBOMScanner/NVD_Scanner`
-- Run `get_nvd_feeds_by_date.py` to create the `nvd_feeds` directory with all NVD feed JSONs. This will also create `all_cves_by_date.json`, which is the file the by-date method will use.
+- Run `get_nvd_feeds_by_date_normalized.py` to create the `nvd_feeds` directory with all NVD feed JSONs. This will also create `all_cves_by_date_normalized.json`, which is the file the by-date method will use.
 - For the Linux Version, then run `nvd_method_by_date.py`, which is the main logic. Currently, this file works for a Debian Linux VM with the SSH login of `msfadmin` for both the username and password. The IP address and username and password are read from the `ssh_linux.txt` file where the first line is the IP address, the second line is the username, and the third line is the password. Running this on the VM will create an `installed.json` file. Once this file is created, the main method can be edited to not use the `get_installs()` function and instead read from the `installed.json` file. The run will create the `results.json`, `results_abridged.json`, and `vulnerabilities.json` files:
   - `results.json` contains every package from `installed.json`, each with an added `CVEs` field listing the matching CVE IDs and the description that goes along with the ID.
   - `results_abridged.json` is a shortened version that only includes packages with matching CVE IDs and their descriptions.
@@ -66,4 +66,5 @@ Fully error corrected quantum hardware of the size I’d need doesn’t exist ye
   - Testing the name normalization to see if it is necessary. It does give a broader search to the CVE IDs but makes the programs take significantly longer to run.
     - While it seems to work for the Debian Version, it makes the Windows version take too long.
     - Looking to change the `get_nvd_feeds` files to do the name normalization when first installed rather than having to do it for each run.
+    - Right now have the normalization of the descriptions done in the `get_nvd_feeds_by_date_normalized.py` file so it does do it for each run of the scanner. This seems to be the most beneficial.
   - Looking for a better way to get the date information for the Windows Version. There is no changelog to parse in Windows like there is for the Debian Version so it is currently using the package install date on the computer and 2025 as the last date. Looking for a more effective means of estimating the package life.
