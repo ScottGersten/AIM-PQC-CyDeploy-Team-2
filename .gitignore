@@ -9,7 +9,8 @@ CVE_Filtering/SBOMScanner/NVD_Scanner/all_cves.json
 CVE_Filtering/SBOMScanner/NVD_Scanner/all_cves_by_date.json
 CVE_Filtering/SBOMScanner/NVD_Scanner/all_cves_by_date_normalized.json
 CVE_Filtering/SBOMScanner/NVD_Scanner/ssh_linux.txt
-CVE_Filtering/SBOMScanner/NVD_Scanner/ssh_windows.txt
+CVE_Filtering/SBOMScanner/NVD_Scanner/ssh_windows_local.txt
+CVE_Filtering/SBOMScanner/NVD_Scanner/ssh_windows_vm.txt
 CVE_Filtering/SBOMScanner/NVD_Scanner/results.json
 CVE_Filtering/SBOMScanner/NVD_Scanner/results_abridged.json
 CVE_Filtering/SBOMScanner/NVD_Scanner/matched.json

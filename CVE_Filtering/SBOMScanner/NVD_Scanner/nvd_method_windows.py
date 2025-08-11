@@ -111,8 +111,11 @@ def get_installs(ip, username='msfadmin', password='msfadmin'):
 
 def main():
     start_time = time.time()
+
+    filename = 'ssh_windows_local.txt'
+    #filename = 'ssh_windows_vm.txt'
     
-    with open('ssh_windows.txt', 'r') as f:
+    with open(filename, 'r') as f:
         lines = f.read().splitlines()
         ip = lines[0]
         username = lines[1]

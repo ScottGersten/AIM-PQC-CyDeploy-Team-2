@@ -5,6 +5,7 @@ import time
 from datetime import datetime
 import re
 import threading
+import winrm
 
 found_cve_ids = 0
 
@@ -74,17 +75,14 @@ def match_cves(installs, data):
     return vulns
 
 def get_installs(ip, username='msfadmin', password='msfadmin'):
-    ssh = paramiko.SSHClient()
-    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-
-    ssh.connect(ip, username=username, password=password)
+    session = winrm.Session(
+        ip,
+        auth=(username, password)
+    )
 
     cmd = r'''powershell -Command "Get-ItemProperty 'HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*', 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*' | Where-Object { $_.DisplayName } | Select-Object DisplayName, DisplayVersion, Publisher, InstallDate | ConvertTo-Json"'''
+    output = session.run_cmd(cmd).std_out.decode('cp1252').strip()
 
-    stdin, stdout, stderr = ssh.exec_command(cmd)
-    output = stdout.read().decode('utf-8')
-
-    #print(f"Error: {stderr.read().decode()}")
     softwares = json.loads(output)
 
     packages = []
@@ -105,8 +103,7 @@ def get_installs(ip, username='msfadmin', password='msfadmin'):
         })
 
     cmd = r'''powershell -Command "Get-Service | Where-Object { $_.Status -eq 'Running' } | ConvertTo-Json"'''
-    stdin, stdout, stderr = ssh.exec_command(cmd)
-    output = stdout.read().decode('utf-8')
+    output = session.run_cmd(cmd).std_out.decode('cp1252').strip()
     running = json.loads(output)
 
     for item in running:
@@ -124,25 +121,13 @@ def get_installs(ip, username='msfadmin', password='msfadmin'):
     with open('installed_windows.json', 'w', encoding='utf-8') as file:
         json.dump(packages, file, indent=2)
 
-    # running_softwares = []
-    # for item in running:
-    #     name = item.get('ServiceName')
-    #     running_softwares.append({
-    #         'name': name,
-    #         'norm_name': normalize_name(name)
-    #     })
-    
-    # with open('running_windows.json', 'w', encoding='utf-8') as file:
-    #     json.dump(running_softwares, file, indent=2)
-
-    ssh.close()
     return packages
 
 def main():
     start_time = time.time()
 
-    filename = 'ssh_windows_local.txt'
-    #filename = 'ssh_windows_vm.txt'
+    #filename = 'ssh_windows_local.txt'
+    filename = 'ssh_windows_vm.txt'
     
     with open(filename, 'r') as f:
         lines = f.read().splitlines()
