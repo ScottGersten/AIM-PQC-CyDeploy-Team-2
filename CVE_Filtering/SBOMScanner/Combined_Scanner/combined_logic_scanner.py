@@ -24,6 +24,21 @@ def parse_installed_packages(file_path='installed.txt'):
                     })
     return packages
 
+def get_installs(ip, username='msfadmin', password='msfadmin'):
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+
+    ssh.connect(ip, username=username, password=password)
+
+    stdin, stdout, stderr = ssh.exec_command('dpkg -l')
+    output = stdout.read().decode('utf-8')
+
+    ssh.close()
+
+    with open('installed.txt', 'w', encoding='utf-8') as file:
+        file.write(output)
+
+
 def load_ubuntu_cves(json_path='ubuntu_cves.json'):
     with open(json_path, 'r', encoding='utf-8') as f:
         return json.load(f)

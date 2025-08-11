@@ -5,6 +5,7 @@ import time
 from datetime import datetime
 import re
 import threading
+import winrm
 
 found_cve_ids = 0
 
@@ -74,17 +75,14 @@ def match_cves(installs, data):
     return vulns
 
 def get_installs(ip, username='msfadmin', password='msfadmin'):
-    ssh = paramiko.SSHClient()
-    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-
-    ssh.connect(ip, username=username, password=password)
+    session = winrm.Session(
+        ip,
+        auth=(username, password)
+    )
 
     cmd = r'''powershell -Command "Get-ItemProperty 'HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*', 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*' | Where-Object { $_.DisplayName } | Select-Object DisplayName, DisplayVersion, Publisher, InstallDate | ConvertTo-Json"'''
+    output = session.run_cmd(cmd).std_out.decode('cp1252').strip()
 
-    stdin, stdout, stderr = ssh.exec_command(cmd)
-    output = stdout.read().decode('utf-8')
-
-    #print(f"Error: {stderr.read().decode()}")
     softwares = json.loads(output)
 
     packages = []
@@ -95,6 +93,7 @@ def get_installs(ip, username='msfadmin', password='msfadmin'):
         install_date = item.get('InstallDate')
         install_year = datetime.strptime(install_date, "%Y%m%d").year if install_date is not None else None
         packages.append({
+            'type': 'installed',
             'name': name,
             'norm_name' : normalize_name(name),
             'version': version,
@@ -103,17 +102,32 @@ def get_installs(ip, username='msfadmin', password='msfadmin'):
             'cves': []
         })
 
+    cmd = r'''powershell -Command "Get-Service | Where-Object { $_.Status -eq 'Running' } | ConvertTo-Json"'''
+    output = session.run_cmd(cmd).std_out.decode('cp1252').strip()
+    running = json.loads(output)
+
+    for item in running:
+        name = item.get('ServiceName')
+        packages.append({
+            'type': 'running',
+            'name': name,
+            'norm_name': normalize_name(name),
+            'version': None,
+            'first_year': None,
+            'last_year': 2025,
+            'cves': []
+        })
+    
     with open('installed_windows.json', 'w', encoding='utf-8') as file:
         json.dump(packages, file, indent=2)
 
-    ssh.close()
     return packages
 
 def main():
     start_time = time.time()
 
-    filename = 'ssh_windows_local.txt'
-    #filename = 'ssh_windows_vm.txt'
+    #filename = 'ssh_windows_local.txt'
+    filename = 'ssh_windows_vm.txt'
     
     with open(filename, 'r') as f:
         lines = f.read().splitlines()
@@ -130,8 +144,8 @@ def main():
     with open('all_cves_by_date_normalized.json', 'r', encoding='utf-8') as file:
         all_cves = json.load(file)
 
-    #vulns = match_cves(installs, all_cves)
-    vulns = []
+    vulns = match_cves(installs, all_cves)
+    #vulns = []
 
     fails = successes = 0
     found_installs = []
