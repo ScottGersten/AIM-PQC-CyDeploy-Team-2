@@ -43,7 +43,7 @@ def prioritize_cves(cve_list):
         bqm.add_variable(entry["id"], entry["score"])
     sampler = neal.SimulatedAnnealingSampler()
     sample_set = sampler.sample(bqm, num_reads=100)
-    assignment = sample_set.first.sample
+    assignment = sample_set.first.sample # type: ignore
     return [e for e in cve_list if assignment.get(e["id"], 0) == 1]
 
 def debian_method(installs):

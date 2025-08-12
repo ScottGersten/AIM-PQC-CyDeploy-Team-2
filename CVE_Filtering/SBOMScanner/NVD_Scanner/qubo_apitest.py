@@ -76,7 +76,7 @@ def prioritize_cves(cve_details):
     Q = build_qubo(cve_details)
     sampler = EmbeddingComposite(DWaveSampler())
     sampleset = sampler.sample_qubo(Q, num_reads=100)
-    best = sampleset.first.sample
+    best = sampleset.first.sample # type: ignore
     return [c for c, v in best.items() if v == 1]
 
 def debian_method(installs):
