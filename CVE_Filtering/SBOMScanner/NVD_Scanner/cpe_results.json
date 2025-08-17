@@ -1,0 +1,3685 @@
+[
+  {
+    "name": "adduser",
+    "version": "3.105ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "ant",
+    "version": "1.7.0-3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "antlr",
+    "version": "2.7.6-10",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "apache2",
+    "version": "2.2.8-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "apache2-mpm-prefork",
+    "version": "2.2.8-1ubuntu0.15",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "apache2-utils",
+    "version": "2.2.8-1ubuntu0.15",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "apache2.2-common",
+    "version": "2.2.8-1ubuntu0.15",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "apparmor",
+    "version": "2.1+1075-0ubuntu9",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "apparmor-utils",
+    "version": "2.1+1075-0ubuntu9",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "apt",
+    "version": "0.7.9ubuntu17",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "apt-utils",
+    "version": "0.7.9ubuntu17",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "aptitude",
+    "version": "0.4.9-2ubuntu5",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "at",
+    "version": "3.1.10ubuntu4",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "autoconf",
+    "version": "2.61-4",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "autoconf2.59",
+    "version": "2.59-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "base-files",
+    "version": "4.0.1ubuntu5",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "base-passwd",
+    "version": "3.5.16",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "bash",
+    "version": "3.2-0ubuntu16",
+    "cpes": [
+      "cpe:2.3:a:gnu:bash:3.2:*:*:*:*:*:*:*"
+    ],
+    "cves": []
+  },
+  {
+    "name": "bash-completion",
+    "version": "20060301-3ubuntu3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "belocs-locales-bin",
+    "version": "2.4-2.2ubuntu7",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "bind9",
+    "version": "1:9.4.2-10",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "bind9-host",
+    "version": "1:9.4.2-10",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "binutils",
+    "version": "2.18.1~cvs20080103-0ubuntu1",
+    "cpes": [
+      "cpe:2.3:a:gnu:binutils:2.18:*:*:*:*:*:*:*"
+    ],
+    "cves": []
+  },
+  {
+    "name": "bsdmainutils",
+    "version": "6.1.10ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "bsdutils",
+    "version": "1:2.13.1-5ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "busybox-initramfs",
+    "version": "1:1.1.3-5ubuntu12",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "bzip2",
+    "version": "1.0.4-2ubuntu4",
+    "cpes": [
+      "cpe:2.3:a:bzip:bzip2:1.0.4:*:*:*:*:*:*:*"
+    ],
+    "cves": []
+  },
+  {
+    "name": "comerr-dev",
+    "version": "2.1-1.40.8-2ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "command-not-found",
+    "version": "0.2.17ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "command-not-found-data",
+    "version": "0.2.17ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "console-setup",
+    "version": "1.21ubuntu8",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "console-terminus",
+    "version": "4.20-6",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "console-tools",
+    "version": "1:0.2.3dbs-65ubuntu7",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "coreutils",
+    "version": "6.10-3ubuntu2",
+    "cpes": [
+      "cpe:2.3:a:gnu:coreutils:6.10:*:*:*:*:*:*:*"
+    ],
+    "cves": []
+  },
+  {
+    "name": "cpio",
+    "version": "2.9-6ubuntu1",
+    "cpes": [
+      "cpe:2.3:a:gnu:cpio:2.9:*:*:*:*:*:*:*"
+    ],
+    "cves": []
+  },
+  {
+    "name": "cpp",
+    "version": "4:4.2.3-1ubuntu6",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "cpp-4.2",
+    "version": "4.2.4-1ubuntu4",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "cron",
+    "version": "3.0pl1-100ubuntu2",
+    "cpes": [
+      "cpe:2.3:a:debian:cron:3.0:-:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-100:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-101:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-102:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-103:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-104:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-105:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-106:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-107:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-108:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-109:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-110:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-111:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-112:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-113:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-114:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-115:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-116:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-117:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-118:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-119:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-120:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-121:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-122:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-123:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-124:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-124.1:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-124.2:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-125:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-126:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-127:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-128:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-130:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-131:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-132:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-133:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-134:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-135:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-37:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-38:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-39:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-40:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-41:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-42:*:*:*:*:*:*",
+      "cpe:2.3:a:debian:cron:3.0:pl1-43:*:*:*:*:*:*"
+    ],
+    "cves": []
+  },
+  {
+    "name": "curl",
+    "version": "7.18.0-1ubuntu2.3",
+    "cpes": [
+      "cpe:2.3:a:haxx:curl:7.18.0:*:*:*:*:*:*:*",
+      "cpe:2.3:a:haxx:curl:7.1:*:*:*:*:*:*:*"
+    ],
+    "cves": []
+  },
+  {
+    "name": "dash",
+    "version": "0.5.4-8ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "debconf",
+    "version": "1.5.20",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "debconf-i18n",
+    "version": "1.5.20",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "debhelper",
+    "version": "7.0.13ubuntu1~hardy1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "debianutils",
+    "version": "2.28.2-0ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "defoma",
+    "version": "0.11.10-0.2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "devscripts",
+    "version": "2.10.39ubuntu2~hardy1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "dhcp3-client",
+    "version": "3.0.6.dfsg-1ubuntu9",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "dhcp3-common",
+    "version": "3.0.6.dfsg-1ubuntu9",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "diff",
+    "version": "2.8.1-12ubuntu1",
+    "cpes": [
+      "cpe:2.3:a:reproducible_builds:diffoscope:2:*:*:*:*:*:*:*"
+    ],
+    "cves": []
+  },
+  {
+    "name": "diffstat",
+    "version": "1.45-2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "distcc",
+    "version": "2.18.3-4.1ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "dmidecode",
+    "version": "2.9-1ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "dmsetup",
+    "version": "2:1.02.20-2ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "dnsutils",
+    "version": "1:9.4.2-10",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "dosfstools",
+    "version": "2.11-2.3ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "dpkg",
+    "version": "1.14.16.6ubuntu3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "dpkg-dev",
+    "version": "1.14.16.6ubuntu4.1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "e2fslibs",
+    "version": "1.40.8-2ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "e2fsprogs",
+    "version": "1.40.8-2ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "ecj",
+    "version": "3.3.0+0728-5",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "ecj-gcj",
+    "version": "3.3.0+0728-5",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "ed",
+    "version": "0.7-1ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "eject",
+    "version": "2.1.5-6",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "esound-common",
+    "version": "0.2.38-0ubuntu9",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "eterm",
+    "version": "0.9.4.0debian1-2ubuntu3",
+    "cpes": [
+      "cpe:2.3:a:eterm_project:eterm:0.9.4:*:*:*:*:*:*:*"
+    ],
+    "cves": []
+  },
+  {
+    "name": "ethtool",
+    "version": "6-0",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "fakeroot",
+    "version": "1.9ubuntu1.1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "fastjar",
+    "version": "2:0.95-1ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "fdutils",
+    "version": "5.5-20060227-1.1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "figlet",
+    "version": "2.2.2-1ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "file",
+    "version": "4.21-3",
+    "cpes": [
+      "cpe:2.3:a:redhat:rhel_global_file_system:4:*:*:*:*:*:*:*"
+    ],
+    "cves": []
+  },
+  {
+    "name": "filezilla",
+    "version": "3.0.11.1-0ubuntu1~hardy1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "filezilla-common",
+    "version": "3.0.11.1-0ubuntu1~hardy1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "findutils",
+    "version": "4.2.32-1ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "firefox",
+    "version": "3.6.17+build3+nobinonly-0ubuntu0.8.04.1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "firefox-3.0",
+    "version": "3.6.17+build3+nobinonly-0ubuntu0.8.04.1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "firefox-branding",
+    "version": "3.6.17+build3+nobinonly-0ubuntu0.8.04.1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "fluxbox",
+    "version": "1.1.1-1~hardy1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "fontconfig",
+    "version": "2.5.0-2ubuntu3",
+    "cpes": [
+      "cpe:2.3:a:fontconfig_project:fontconfig:2.5.0:*:*:*:*:*:*:*"
+    ],
+    "cves": []
+  },
+  {
+    "name": "fontconfig-config",
+    "version": "2.5.0-2ubuntu3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "friendly-recovery",
+    "version": "0.1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "ftp",
+    "version": "0.17-16build1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "fuse-utils",
+    "version": "2.7.2-1ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "g++",
+    "version": "4:4.2.3-1ubuntu6",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "g++-4.2",
+    "version": "4.2.4-1ubuntu4",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "gappletviewer-4.2",
+    "version": "4.2.4-1ubuntu3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "gcc",
+    "version": "4:4.2.3-1ubuntu6",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "gcc-4.2",
+    "version": "4.2.4-1ubuntu4",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "gcc-4.2-base",
+    "version": "4.2.4-1ubuntu4",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "gcj-4.2",
+    "version": "4.2.4-1ubuntu3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "gcj-4.2-base",
+    "version": "4.2.4-1ubuntu3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "gconf2",
+    "version": "2.22.0-0ubuntu3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "gconf2-common",
+    "version": "2.22.0-0ubuntu3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "gdb",
+    "version": "6.8-1ubuntu3",
+    "cpes": [
+      "cpe:2.3:a:gnu:gdb:6.8:*:*:*:*:*:*:*"
+    ],
+    "cves": []
+  },
+  {
+    "name": "gettext",
+    "version": "0.17-2ubuntu1",
+    "cpes": [
+      "cpe:2.3:a:gnu:gettext:0.17:*:*:*:*:*:*:*"
+    ],
+    "cves": []
+  },
+  {
+    "name": "gettext-base",
+    "version": "0.17-2ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "gij",
+    "version": "4:4.2.3-1ubuntu6",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "gij-4.2",
+    "version": "4.2.4-1ubuntu3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "gjdoc",
+    "version": "0.7.8-6",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "gnupg",
+    "version": "1.4.6-2ubuntu5",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "gpgv",
+    "version": "1.4.6-2ubuntu5",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "grep",
+    "version": "2.5.3~dfsg-3",
+    "cpes": [
+      "cpe:2.3:a:gnu:grep:2.5.3:*:*:*:gnuwin32:*:*:*",
+      "cpe:2.3:a:gnu:grep:2.5.3:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gnu:grep:2.5:*:*:*:*:*:*:*"
+    ],
+    "cves": []
+  },
+  {
+    "name": "groff-base",
+    "version": "1.18.1.1-16",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "grub",
+    "version": "0.97-29ubuntu21.2",
+    "cpes": [
+      "cpe:2.3:a:gnu:grub:0.97:*:*:*:*:*:*:*"
+    ],
+    "cves": []
+  },
+  {
+    "name": "gzip",
+    "version": "1.3.12-3.2",
+    "cpes": [
+      "cpe:2.3:a:gnu:gzip:1.3:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gnu:gzip:1.3.12:*:*:*:*:*:*:*"
+    ],
+    "cves": []
+  },
+  {
+    "name": "hdparm",
+    "version": "8.6-1ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "hostname",
+    "version": "2.94",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "html2text",
+    "version": "1.3.2a-3build2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "ifupdown",
+    "version": "0.6.8ubuntu8",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "info",
+    "version": "4.11.dfsg.1-4",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "initramfs-tools",
+    "version": "0.85eubuntu36",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "initscripts",
+    "version": "2.86.ds1-14.1ubuntu45",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "inputattach",
+    "version": "1.23-0ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "installation-report",
+    "version": "2.31ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "intltool-debian",
+    "version": "0.35.0+20060710.1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "iproute",
+    "version": "20071016-2ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "iptables",
+    "version": "1.3.8.0debian1-1ubuntu2",
+    "cpes": [
+      "cpe:2.3:a:netfilter:iptables:1.3.8:*:*:*:*:*:*:*"
+    ],
+    "cves": []
+  },
+  {
+    "name": "iputils-arping",
+    "version": "3:20071127-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "iputils-ping",
+    "version": "3:20071127-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "iputils-tracepath",
+    "version": "3:20071127-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "java-common",
+    "version": "0.28ubuntu3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "java-gcj-compat",
+    "version": "1.0.77-2ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "java-gcj-compat-dev",
+    "version": "1.0.77-2ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "java-gcj-compat-headless",
+    "version": "1.0.77-2ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "jsvc",
+    "version": "1.0.2~svn20061127-6",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "klibc-utils",
+    "version": "1.5.7-4ubuntu3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "klogd",
+    "version": "1.5-1ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "laptop-detect",
+    "version": "0.13.2ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "less",
+    "version": "418-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libacl1",
+    "version": "2.2.45-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libapr1",
+    "version": "1.2.11-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libaprutil1",
+    "version": "1.2.12+dfsg-3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libasound2",
+    "version": "1.0.15-3ubuntu4",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libaspell15",
+    "version": "0.60.5-1ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libast2",
+    "version": "0.7-2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libatk1.0-0",
+    "version": "1.22.0-0ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libatm1",
+    "version": "2.4.1-17.1build1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libattr1",
+    "version": "1:2.4.39-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libaudiofile0",
+    "version": "0.2.6-7ubuntu1.8.04.1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libavahi-client3",
+    "version": "0.6.22-2ubuntu4.3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libavahi-common-data",
+    "version": "0.6.22-2ubuntu4.3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libavahi-common3",
+    "version": "0.6.22-2ubuntu4.3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libavahi-glib1",
+    "version": "0.6.22-2ubuntu4.3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libbcel-java",
+    "version": "5.2-3ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libbind9-30",
+    "version": "1:9.4.2-10",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libblkid1",
+    "version": "1.40.8-2ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libbz2-1.0",
+    "version": "1.0.4-2ubuntu4",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libc6",
+    "version": "2.7-10ubuntu5",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libc6-dev",
+    "version": "2.7-10ubuntu5",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libc6-i686",
+    "version": "2.7-10ubuntu5",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libcairo2",
+    "version": "1.6.0-0ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libcap1",
+    "version": "1:1.10-14build1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libchromexvmc1",
+    "version": "1:0.2.901-0ubuntu4",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libchromexvmcpro1",
+    "version": "1:0.2.901-0ubuntu4",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libck-connector0",
+    "version": "0.2.3-3ubuntu5",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libcomerr2",
+    "version": "1.40.8-2ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libcommons-beanutils-java",
+    "version": "1.8.0~beta-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libcommons-collections-java",
+    "version": "2.1.1-8",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libcommons-collections3-java",
+    "version": "3.1a-3.1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libcommons-daemon-java",
+    "version": "1.0.2~svn20061127-6",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libcommons-dbcp-java",
+    "version": "1.2.2-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libcommons-digester-java",
+    "version": "1.8-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libcommons-el-java",
+    "version": "1.0-4",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libcommons-fileupload-java",
+    "version": "1.2-2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libcommons-io-java",
+    "version": "1.3.2-2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libcommons-launcher-java",
+    "version": "1.1-3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libcommons-logging-java",
+    "version": "1.1-1ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libcommons-modeler-java",
+    "version": "2.0.1-4",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libcommons-pool-java",
+    "version": "1.3-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libcommons-validator-java",
+    "version": "1:1.3.1-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libconsole",
+    "version": "1:0.2.3dbs-65ubuntu7",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libcupsys2",
+    "version": "1.3.7-1ubuntu3.9",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libcurl3",
+    "version": "7.18.0-1ubuntu2.3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libcurl3-gnutls",
+    "version": "7.18.0-1ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libcurl4-openssl-dev",
+    "version": "7.18.0-1ubuntu2.3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libcwidget3",
+    "version": "0.5.8-1ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libdatrie0",
+    "version": "0.1.2-2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libdb4.6",
+    "version": "4.6.21-6ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libdbd-mysql-perl",
+    "version": "4.005-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libdbi-perl",
+    "version": "1.601-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libdbus-1-3",
+    "version": "1.1.20-1ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libdbus-glib-1-2",
+    "version": "0.74-2ubuntu0.1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libdevmapper1.02.1",
+    "version": "2:1.02.20-2ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libdns32",
+    "version": "1:9.4.2-10",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libdrm2",
+    "version": "2.3.0-4ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libecj-java",
+    "version": "3.3.0+0728-5",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libecj-java-gcj",
+    "version": "3.3.0+0728-5",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libedit2",
+    "version": "2.9.cvs.20050518-4",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libelfg0",
+    "version": "0.8.6-4",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libesd-alsa0",
+    "version": "0.2.38-0ubuntu9",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libevent1",
+    "version": "1.3e-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libexpat1",
+    "version": "2.0.1-0ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libfontconfig1",
+    "version": "2.5.0-2ubuntu3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libfontenc1",
+    "version": "1:1.0.4-2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libfreetype6",
+    "version": "2.3.5-1ubuntu4.8.04.2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libfribidi0",
+    "version": "0.10.9-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libfs6",
+    "version": "2:1.0.0-4ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libfuse2",
+    "version": "2.7.2-1ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libgadu3",
+    "version": "1:1.7~rc2-2ubuntu0.8.04.1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libgc1c2",
+    "version": "1:6.8-1.1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libgcc1",
+    "version": "1:4.2.4-1ubuntu4",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libgcj-bc",
+    "version": "4.2.3-1ubuntu6",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libgcj-common",
+    "version": "1:4.2.3-1ubuntu6",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libgcj8-1",
+    "version": "4.2.4-1ubuntu3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libgcj8-1-awt",
+    "version": "4.2.4-1ubuntu3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libgcj8-dev",
+    "version": "4.2.4-1ubuntu3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libgcj8-jar",
+    "version": "4.2.4-1ubuntu3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libgconf2-4",
+    "version": "2.22.0-0ubuntu3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libgcrypt11",
+    "version": "1.2.4-2ubuntu7",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libgd2-xpm",
+    "version": "2.0.35.dfsg-3ubuntu2.1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libgdbm3",
+    "version": "1.8.3-3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libgif4",
+    "version": "4.1.6-4",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libgl1-mesa-glx",
+    "version": "7.0.3~rc2-1ubuntu3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libglib2.0-0",
+    "version": "2.16.6-0ubuntu1.2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libglu1-mesa",
+    "version": "7.0.3~rc2-1ubuntu3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libgnutls13",
+    "version": "2.0.4-1ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libgomp1",
+    "version": "4.2.4-1ubuntu4",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libgpg-error0",
+    "version": "1.4-2ubuntu7",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libgpmg1",
+    "version": "1.19.6-25ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libgssglue1",
+    "version": "0.1-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libgstreamer-plugins-base0.10-0",
+    "version": "0.10.18-3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libgstreamer0.10-0",
+    "version": "0.10.18-4ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libgtk2.0-0",
+    "version": "2.12.9-3ubuntu5",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libgtk2.0-common",
+    "version": "2.12.9-3ubuntu5",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libgtkspell0",
+    "version": "2.0.10-4",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libhal1",
+    "version": "0.5.11~rc2-1ubuntu8.3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libhesiod0",
+    "version": "3.0.2-18.1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libhtml-parser-perl",
+    "version": "3.56-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libhtml-tagset-perl",
+    "version": "3.10-2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libhtml-tree-perl",
+    "version": "3.23-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libice6",
+    "version": "2:1.0.4-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libid3tag0",
+    "version": "0.15.1b-10",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libidl0",
+    "version": "0.8.10-0.1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libidn11",
+    "version": "1.1-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libidn11-dev",
+    "version": "1.1-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libimlib2",
+    "version": "1.4.0-1ubuntu1.2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libisc32",
+    "version": "1:9.4.2-10",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libisccc30",
+    "version": "1:9.4.2-10",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libisccfg30",
+    "version": "1:9.4.2-10",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libiw29",
+    "version": "29-1ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libjaxp1.3-java",
+    "version": "1.3.04-2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libjpeg62",
+    "version": "6b-14",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libkadm55",
+    "version": "1.6.dfsg.3~beta1-2ubuntu1.8",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libkeyutils1",
+    "version": "1.2-4",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libklibc",
+    "version": "1.5.7-4ubuntu3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libkrb5-dev",
+    "version": "1.6.dfsg.3~beta1-2ubuntu1.8",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libkrb53",
+    "version": "1.6.dfsg.3~beta1-2ubuntu1.8",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "liblaunchpad-integration1",
+    "version": "0.1.19",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libldap-2.4-2",
+    "version": "2.4.9-0ubuntu0.8.04.3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libldap2-dev",
+    "version": "2.4.9-0ubuntu0.8.04.3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "liblocale-gettext-perl",
+    "version": "1.05-2ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "liblog4j1.2-java",
+    "version": "1.2.15-2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "liblwres30",
+    "version": "1:9.4.2-10",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "liblzo2-2",
+    "version": "2.02-3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libmagic1",
+    "version": "4.21-3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libmeanwhile1",
+    "version": "1.0.2-3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libmx4j-java",
+    "version": "3.0.1-3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libmysqlclient15off",
+    "version": "5.0.51a-3ubuntu5",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libncurses5",
+    "version": "5.6+20071124-1ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libncursesw5",
+    "version": "5.6+20071124-1ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libnet-daemon-perl",
+    "version": "0.38-1.1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libnewt0.52",
+    "version": "0.52.2-11.2ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libnfsidmap2",
+    "version": "0.20-0build1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libnspr4-0d",
+    "version": "4.8.6-0ubuntu0.8.04.1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libnss3-1d",
+    "version": "3.12.9+ckbi-1.82-0ubuntu0.8.04.1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libntfs-3g23",
+    "version": "1:1.2216-1ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libopencdk10",
+    "version": "0.6.6-1ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "liborbit2",
+    "version": "1:2.14.12-0.1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "liboro-java",
+    "version": "2.0.8a-3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libpam-modules",
+    "version": "0.99.7.1-5ubuntu6",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libpam-runtime",
+    "version": "0.99.7.1-5ubuntu6",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libpam0g",
+    "version": "0.99.7.1-5ubuntu6.1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libpam0g-dev",
+    "version": "0.99.7.1-5ubuntu6.1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libpango1.0-0",
+    "version": "1.20.5-0ubuntu1.1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libpango1.0-common",
+    "version": "1.20.5-0ubuntu1.1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libparted1.7-1",
+    "version": "1.7.1-5.1ubuntu9",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libpcap0.8",
+    "version": "0.9.8-2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libpcre3",
+    "version": "7.4-1ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libperl5.8",
+    "version": "5.8.8-12ubuntu0.5",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libpixman-1-0",
+    "version": "0.10.0-0ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libplrpc-perl",
+    "version": "0.2017-1.1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libpng12-0",
+    "version": "1.2.15~beta5-3ubuntu0.2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libpopt-dev",
+    "version": "1.10-3build1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libpopt0",
+    "version": "1.10-3build1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libpq5",
+    "version": "8.3.1-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libpurple0",
+    "version": "1:2.5.2-0ubuntu1.2~hardy1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libreadline5",
+    "version": "5.2-3build1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libregexp-java",
+    "version": "1.4-4",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "librpc-xml-perl",
+    "version": "0.59-2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "librpcsecgss3",
+    "version": "0.17-1ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libruby1.8",
+    "version": "1.8.6.111-2ubuntu1.3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libsasl2-2",
+    "version": "2.1.22.dfsg1-18ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libsasl2-modules",
+    "version": "2.1.22.dfsg1-18ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libselinux1",
+    "version": "2.0.55-0ubuntu4",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libsepol1",
+    "version": "2.0.20-0ubuntu3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libservlet2.3-java",
+    "version": "4.0-10",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libservlet2.4-java",
+    "version": "5.0.30-6ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libsigc++-2.0-0c2a",
+    "version": "2.0.17-2ubuntu3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libsilc-1.1-2",
+    "version": "1.1.5-1ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libslang2",
+    "version": "2.1.3-2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libsm6",
+    "version": "2:1.0.3-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libsqlite3-0",
+    "version": "3.4.2-2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libss2",
+    "version": "1.40.8-2ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libssl-dev",
+    "version": "0.9.8g-4ubuntu3.18",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libssl0.9.8",
+    "version": "0.9.8g-4ubuntu3.18",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libstartup-notification0",
+    "version": "0.9-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libstdc++6",
+    "version": "4.2.4-1ubuntu4",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libstdc++6-4.2-dev",
+    "version": "4.2.4-1ubuntu4",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libstruts1.2-java",
+    "version": "1.2.9-3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libsysfs2",
+    "version": "2.1.0-4",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libt1-5",
+    "version": "5.1.1-5",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libtasn1-3",
+    "version": "1.1-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libterm-readkey-perl",
+    "version": "2.30-3ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libtext-charwidth-perl",
+    "version": "0.04-4build1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libtext-iconv-perl",
+    "version": "1.4-3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libtext-wrapi18n-perl",
+    "version": "0.06-5",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libthai-data",
+    "version": "0.1.9-1ubuntu0.2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libthai0",
+    "version": "0.1.9-1ubuntu0.2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libtiff4",
+    "version": "3.8.2-7ubuntu3.4",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libtimedate-perl",
+    "version": "1.1600-9",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libtomcat5.5-java",
+    "version": "5.5.25-5ubuntu1.2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "liburi-perl",
+    "version": "1.35.dfsg.1-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libusb-0.1-4",
+    "version": "2:0.1.12-8",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libuuid1",
+    "version": "1.40.8-2ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libvolume-id0",
+    "version": "117-8",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libwrap0",
+    "version": "7.6.dbs-14",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libwww-perl",
+    "version": "5.808-1",
+    "cpes": [
+      "cpe:2.3:a:search.cpan:libwww-perl:5.808:*:*:*:*:*:*:*"
+    ],
+    "cves": []
+  },
+  {
+    "name": "libwxbase2.8-0",
+    "version": "2.8.7.1-0ubuntu3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libwxgtk2.8-0",
+    "version": "2.8.7.1-0ubuntu3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libx11-6",
+    "version": "2:1.1.3-1ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libx11-data",
+    "version": "2:1.1.3-1ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libxau6",
+    "version": "1:1.0.3-2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libxaw7",
+    "version": "2:1.0.4-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libxcb-xlib0",
+    "version": "1.1-1ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libxcb1",
+    "version": "1.1-1ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libxcomposite1",
+    "version": "1:0.4.0-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libxcursor1",
+    "version": "1:1.1.9-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libxdamage1",
+    "version": "1:1.1.1-3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libxdmcp6",
+    "version": "1:1.0.2-2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libxerces2-java",
+    "version": "2.9.0-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libxext6",
+    "version": "2:1.0.3-2build1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libxfixes3",
+    "version": "1:4.0.3-2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libxfont1",
+    "version": "1:1.3.1-2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libxft2",
+    "version": "2.1.12-2ubuntu5",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libxi6",
+    "version": "2:1.1.3-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libxinerama1",
+    "version": "2:1.0.2-1build1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libxkbfile1",
+    "version": "1:1.0.4-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libxml-parser-perl",
+    "version": "2.34-4.3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libxml2",
+    "version": "2.6.31.dfsg-2ubuntu1",
+    "cpes": [
+      "cpe:2.3:a:xmlsoft:libxml2:2.6.3:*:*:*:*:*:*:*"
+    ],
+    "cves": []
+  },
+  {
+    "name": "libxmu6",
+    "version": "2:1.0.4-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libxmuu1",
+    "version": "2:1.0.4-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libxpm4",
+    "version": "1:3.5.7-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libxrandr2",
+    "version": "2:1.2.2-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libxrender1",
+    "version": "1:0.9.4-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libxss1",
+    "version": "1:1.1.2-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libxt6",
+    "version": "1:1.0.5-3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libxtrap6",
+    "version": "2:1.0.0-4build1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libxtst6",
+    "version": "2:1.0.3-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libxv1",
+    "version": "2:1.0.3-1ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libxxf86dga1",
+    "version": "2:1.0.2-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libxxf86misc1",
+    "version": "1:1.0.1-2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libxxf86vm1",
+    "version": "1:1.0.1-2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "libzephyr3",
+    "version": "2.1.20070719.SNAPSHOT-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "linux-image-2.6.24-16-server",
+    "version": "2.6.24-16.30",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "linux-image-server",
+    "version": "2.6.24.16.18",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "linux-libc-dev",
+    "version": "2.6.24-27.68",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "linux-server",
+    "version": "2.6.24.16.18",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "linux-ubuntu-modules-2.6.24-16-server",
+    "version": "2.6.24-16.23",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "locales",
+    "version": "2.7.9-4",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "login",
+    "version": "1:4.0.18.2-1ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "logrotate",
+    "version": "3.7.1-3",
+    "cpes": [
+      "cpe:2.3:a:logrotate_project:logrotate:3.7:*:*:*:*:*:*:*",
+      "cpe:2.3:a:logrotate_project:logrotate:3.7.1:*:*:*:*:*:*:*"
+    ],
+    "cves": []
+  },
+  {
+    "name": "lsb-base",
+    "version": "3.2-4ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "lsb-release",
+    "version": "3.2-4ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "lshw",
+    "version": "02.12.01-2ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "lsof",
+    "version": "4.78.dfsg.1-3",
+    "cpes": [
+      "cpe:2.3:a:lsof_project:lsof:4.78:*:*:*:*:*:*:*"
+    ],
+    "cves": []
+  },
+  {
+    "name": "ltrace",
+    "version": "0.5-3ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "lvm2",
+    "version": "2.02.26-1ubuntu9",
+    "cpes": [
+      "cpe:2.3:a:redhat:lvm2:2.02.26:*:*:*:*:*:*:*"
+    ],
+    "cves": []
+  },
+  {
+    "name": "lzma",
+    "version": "4.43-12ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "m4",
+    "version": "1.4.10-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "make",
+    "version": "3.81-3build1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "makedev",
+    "version": "2.3.1-84ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "man-db",
+    "version": "2.5.1-3",
+    "cpes": [
+      "cpe:2.3:a:man-db_project:man-db:2.5.1:-:*:*:*:*:*:*",
+      "cpe:2.3:a:man-db_project:man-db:2.5.1:pre1:*:*:*:*:*:*",
+      "cpe:2.3:a:man-db_project:man-db:2.5.1:pre2:*:*:*:*:*:*"
+    ],
+    "cves": []
+  },
+  {
+    "name": "manpages",
+    "version": "2.77-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "mawk",
+    "version": "1.3.3-11ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "mdetect",
+    "version": "0.5.2.1ubuntu4",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "memtest86+",
+    "version": "1.70-3ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "menu",
+    "version": "2.1.38ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "mii-diag",
+    "version": "2.11-2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "mime-support",
+    "version": "3.39-1ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "mktemp",
+    "version": "1.5-5ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "mlocate",
+    "version": "0.18-2ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "module-init-tools",
+    "version": "3.3-pre11-4ubuntu5",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "mount",
+    "version": "2.13.1-5ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "mtr-tiny",
+    "version": "0.72-2ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "mysql-client-5.0",
+    "version": "5.0.51a-3ubuntu5",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "mysql-common",
+    "version": "5.0.51a-3ubuntu5",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "mysql-server",
+    "version": "5.0.51a-3ubuntu5",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "mysql-server-5.0",
+    "version": "5.0.51a-3ubuntu5",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "nano",
+    "version": "2.0.7-1ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "ncurses-base",
+    "version": "5.6+20071124-1ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "ncurses-bin",
+    "version": "5.6+20071124-1ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "net-tools",
+    "version": "1.60-19ubuntu1",
+    "cpes": [
+      "cpe:2.3:a:net-tools_project:net-tools:1.60:*:*:*:*:*:*:*"
+    ],
+    "cves": []
+  },
+  {
+    "name": "netbase",
+    "version": "4.30ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "netcat",
+    "version": "1.10-36",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "netcat-traditional",
+    "version": "1.10-36",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "nfs-common",
+    "version": "1:1.1.2-2ubuntu2.2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "nfs-kernel-server",
+    "version": "1:1.1.2-2ubuntu2.2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "nmap",
+    "version": "4.53-3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "ntfs-3g",
+    "version": "1:1.2216-1ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "ntpdate",
+    "version": "1:4.2.4p4+dfsg-3ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "openssh-client",
+    "version": "1:4.7p1-8ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "openssh-server",
+    "version": "1:4.7p1-8ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "openssl",
+    "version": "0.9.8g-4ubuntu3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "p7zip-full",
+    "version": "4.57~dfsg.1-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "parted",
+    "version": "1.7.1-5.1ubuntu9",
+    "cpes": [
+      "cpe:2.3:a:parted_project:parted:1.7.1:*:*:*:*:*:*:*"
+    ],
+    "cves": []
+  },
+  {
+    "name": "passwd",
+    "version": "1:4.0.18.2-1ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "patch",
+    "version": "2.5.9-4",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "pciutils",
+    "version": "1:2.2.4-1.1ubuntu3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "pcmciautils",
+    "version": "014-4ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "perl",
+    "version": "5.8.8-12ubuntu0.5",
+    "cpes": [
+      "cpe:2.3:a:perl:perl:5.8.8:*:*:*:*:*:*:*"
+    ],
+    "cves": []
+  },
+  {
+    "name": "perl-base",
+    "version": "5.8.8-12ubuntu0.5",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "perl-modules",
+    "version": "5.8.8-12ubuntu0.5",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "php5-cgi",
+    "version": "5.2.4-2ubuntu5.10",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "php5-cli",
+    "version": "5.2.4-2ubuntu5.10",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "php5-common",
+    "version": "5.2.4-2ubuntu5.10",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "php5-gd",
+    "version": "5.2.4-2ubuntu5.10",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "php5-mysql",
+    "version": "5.2.4-2ubuntu5.10",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "pidgin",
+    "version": "1:2.5.2-0ubuntu1.2~hardy1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "pidgin-data",
+    "version": "1:2.5.2-0ubuntu1.2~hardy1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "pkg-config",
+    "version": "0.22-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "po-debconf",
+    "version": "1.0.10",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "popularity-contest",
+    "version": "1.43ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "portmap",
+    "version": "6.0-4",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "postfix",
+    "version": "2.5.1-2ubuntu1",
+    "cpes": [
+      "cpe:2.3:a:postfix:postfix:2.5.1:*:*:*:*:*:*:*"
+    ],
+    "cves": []
+  },
+  {
+    "name": "postgresql-8.3",
+    "version": "8.3.1-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "postgresql-client-8.3",
+    "version": "8.3.1-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "postgresql-client-common",
+    "version": "87",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "postgresql-common",
+    "version": "87",
+    "cpes": [
+      "cpe:2.3:a:debian:postgresql-common:8:*:*:*:*:*:*:*"
+    ],
+    "cves": []
+  },
+  {
+    "name": "ppp",
+    "version": "2.4.4rel-9ubuntu2",
+    "cpes": [
+      "cpe:2.3:a:samba:ppp:2.4.4:*:*:*:*:*:*:*"
+    ],
+    "cves": []
+  },
+  {
+    "name": "pppconfig",
+    "version": "2.3.17ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "pppoeconf",
+    "version": "1.17ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "procps",
+    "version": "1:3.2.7-5ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "proftpd",
+    "version": "1.3.1-6ubuntu1",
+    "cpes": [
+      "cpe:2.3:a:proftpd:proftpd:1.3.1:*:*:*:*:*:*:*",
+      "cpe:2.3:a:proftpd:proftpd:1.3.1:rc3:*:*:*:*:*:*",
+      "cpe:2.3:a:proftpd:proftpd:1.3.1:rc2:*:*:*:*:*:*",
+      "cpe:2.3:a:proftpd:proftpd:1.3.1:rc1:*:*:*:*:*:*"
+    ],
+    "cves": []
+  },
+  {
+    "name": "psmisc",
+    "version": "22.6-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "python",
+    "version": "2.5.2-0ubuntu1",
+    "cpes": [
+      "cpe:2.3:a:python:python:2.5:*:*:*:*:*:*:*",
+      "cpe:2.3:a:python:python:2.5.2:*:*:*:*:*:*:*"
+    ],
+    "cves": []
+  },
+  {
+    "name": "python-apt",
+    "version": "0.7.4ubuntu7",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "python-central",
+    "version": "0.6.5ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "python-gdbm",
+    "version": "2.5.2-0ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "python-gnupginterface",
+    "version": "0.3.2-9ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "python-minimal",
+    "version": "2.5.2-0ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "python-support",
+    "version": "0.7.5ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "python2.5",
+    "version": "2.5.2-2ubuntu6.1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "python2.5-dev",
+    "version": "2.5.2-2ubuntu6.1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "python2.5-minimal",
+    "version": "2.5.2-2ubuntu6.1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "quilt",
+    "version": "0.46-4",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "rcs",
+    "version": "5.7-21",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "readline-common",
+    "version": "5.2-3build1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "reiserfsprogs",
+    "version": "1:3.6.19-6",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "rhino",
+    "version": "1.6.R7-2ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "rsh-client",
+    "version": "0.17-14ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "rsh-server",
+    "version": "0.17-14ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "rsync",
+    "version": "2.6.9-6ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "ruby",
+    "version": "4.1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "ruby1.8",
+    "version": "1.8.6.111-2ubuntu1.3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "samba",
+    "version": "3.0.20-0.1ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "samba-common",
+    "version": "3.0.20-0.1ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "screen",
+    "version": "4.0.3-7ubuntu1",
+    "cpes": [
+      "cpe:2.3:a:gnu:screen:4.0.3:*:*:*:*:*:*:*"
+    ],
+    "cves": []
+  },
+  {
+    "name": "sed",
+    "version": "4.1.5-5",
+    "cpes": [
+      "cpe:2.3:a:gnu:sed:4.1:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gnu:sed:4.1.5:*:*:*:*:*:*:*"
+    ],
+    "cves": []
+  },
+  {
+    "name": "sgml-base",
+    "version": "1.26",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "socat",
+    "version": "1.6.0.0-1",
+    "cpes": [
+      "cpe:2.3:a:dest-unreach:socat:1.6.0.0:*:*:*:*:*:*:*"
+    ],
+    "cves": []
+  },
+  {
+    "name": "ssl-cert",
+    "version": "1.0.14-0ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "startup-tasks",
+    "version": "0.3.9-2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "strace",
+    "version": "4.5.15-1.1ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "sudo",
+    "version": "1.6.9p10-1ubuntu3",
+    "cpes": [
+      "cpe:2.3:a:todd_miller:sudo:1.6:*:*:*:*:*:*:*",
+      "cpe:2.3:a:todd_miller:sudo:1.6.9:*:*:*:*:*:*:*"
+    ],
+    "cves": []
+  },
+  {
+    "name": "sysklogd",
+    "version": "1.5-1ubuntu1",
+    "cpes": [
+      "cpe:2.3:a:sysklogd_project:sysklogd:1.5:*:*:*:*:*:*:*"
+    ],
+    "cves": []
+  },
+  {
+    "name": "system-services",
+    "version": "0.3.9-2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "sysv-rc",
+    "version": "2.86.ds1-14.1ubuntu45",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "sysvutils",
+    "version": "2.86.ds1-14.1ubuntu45",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "tar",
+    "version": "1.19-3",
+    "cpes": [
+      "cpe:2.3:a:php:pear_archive_tar:1.1:*:*:*:*:*:*:*"
+    ],
+    "cves": []
+  },
+  {
+    "name": "tasksel",
+    "version": "2.70ubuntu5",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "tasksel-data",
+    "version": "2.70ubuntu5",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "tcpd",
+    "version": "7.6.dbs-14",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "tcpdump",
+    "version": "3.9.8-2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "telnet",
+    "version": "0.17-35ubuntu1",
+    "cpes": [
+      "cpe:2.3:a:netkit_telnet_project:netkit_telnet:0.17:*:*:*:*:*:*:*"
+    ],
+    "cves": []
+  },
+  {
+    "name": "telnetd",
+    "version": "0.17-35ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "tftpd",
+    "version": "0.17-15ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "tightvncserver",
+    "version": "1.2.9-22",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "time",
+    "version": "1.7-21build1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "tomcat5.5",
+    "version": "5.5.25-5ubuntu1.2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "tomcat5.5-admin",
+    "version": "5.5.25-5ubuntu1.2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "tomcat5.5-webapps",
+    "version": "5.5.25-5ubuntu1.2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "ttf-dejavu",
+    "version": "2.23-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "ttf-dejavu-core",
+    "version": "2.23-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "ttf-dejavu-extra",
+    "version": "2.23-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "tzdata",
+    "version": "2008b-1ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "ubuntu-keyring",
+    "version": "2008.03.04",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "ubuntu-minimal",
+    "version": "1.102",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "ubuntu-standard",
+    "version": "1.102",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "ucf",
+    "version": "3.005",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "udev",
+    "version": "117-8",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "ufw",
+    "version": "0.16.2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "unzip",
+    "version": "5.52-10ubuntu2",
+    "cpes": [
+      "cpe:2.3:a:info-zip:unzip:5.52:*:*:*:*:*:*:*"
+    ],
+    "cves": []
+  },
+  {
+    "name": "update-inetd",
+    "version": "4.27-0.6",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "update-manager-core",
+    "version": "1:0.87.24",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "upstart",
+    "version": "0.3.9-2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "upstart-compat-sysv",
+    "version": "0.3.9-2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "upstart-logd",
+    "version": "0.3.9-2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "usbutils",
+    "version": "0.73-5ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "util-linux",
+    "version": "2.13.1-5ubuntu1",
+    "cpes": [
+      "cpe:2.3:a:kernel:util-linux:2.13:*:*:*:*:*:*:*"
+    ],
+    "cves": []
+  },
+  {
+    "name": "util-linux-locales",
+    "version": "2.13.1-5ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "uuid-runtime",
+    "version": "1.40.8-2ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "vim-common",
+    "version": "1:7.1-138+1ubuntu3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "vim-tiny",
+    "version": "1:7.1-138+1ubuntu3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "w3m",
+    "version": "0.5.1-5.1ubuntu1",
+    "cpes": [
+      "cpe:2.3:a:w3m_project:w3m:0.5.1:*:*:*:*:*:*:*"
+    ],
+    "cves": []
+  },
+  {
+    "name": "wget",
+    "version": "1.10.2-3ubuntu1",
+    "cpes": [
+      "cpe:2.3:a:gnu:wget:1.10:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gnu:wget:1.10.2:*:*:*:*:*:*:*"
+    ],
+    "cves": []
+  },
+  {
+    "name": "whiptail",
+    "version": "0.52.2-11.2ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "wireless-tools",
+    "version": "29-1ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "wpasupplicant",
+    "version": "0.6.0+0.5.8-0ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "x11-apps",
+    "version": "7.3+1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "x11-common",
+    "version": "1:7.3+10ubuntu10.2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "x11-session-utils",
+    "version": "7.3+1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "x11-utils",
+    "version": "7.3+1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "x11-xfs-utils",
+    "version": "7.3+1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "x11-xkb-utils",
+    "version": "7.3+1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "x11-xserver-utils",
+    "version": "7.3+2ubuntu0.1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xauth",
+    "version": "1:1.0.2-2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xbase-clients",
+    "version": "1:7.3+10ubuntu10.2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xbitmaps",
+    "version": "1.0.1-2ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xfonts-100dpi",
+    "version": "1:1.0.0-4",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xfonts-75dpi",
+    "version": "1:1.0.0-4",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xfonts-base",
+    "version": "1:1.0.0-5",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xfonts-encodings",
+    "version": "1:1.0.2-3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xfonts-scalable",
+    "version": "1:1.0.0-6ubuntu0.8.04.1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xfonts-utils",
+    "version": "1:1.0.1-2ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xinetd",
+    "version": "1:2.3.14-5",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xinit",
+    "version": "1.0.7-2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xkb-data",
+    "version": "1.1~cvs.20080104.1-1ubuntu6",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xorg",
+    "version": "1:7.3+10ubuntu10.2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg",
+    "version": "1:7.3+10ubuntu10.2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-core",
+    "version": "2:1.4.1~git20080131-1ubuntu9.3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-input-all",
+    "version": "1:7.3+10ubuntu10.2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-input-evdev",
+    "version": "1:1.2.0-1ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-input-kbd",
+    "version": "1:1.2.2-3ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-input-mouse",
+    "version": "1:1.2.3-2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-input-synaptics",
+    "version": "0.14.7~git20070706-1ubuntu4",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-input-vmmouse",
+    "version": "1:12.4.3-1ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-input-wacom",
+    "version": "1:0.7.9.8-0ubuntu3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-video-all",
+    "version": "1:7.3+10ubuntu10.2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-video-apm",
+    "version": "1:1.1.1-10",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-video-ark",
+    "version": "1:0.6.0-9",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-video-ati",
+    "version": "1:6.8.0-1ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-video-chips",
+    "version": "1:1.1.1-9",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-video-cirrus",
+    "version": "1:1.1.0-8ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-video-cyrix",
+    "version": "1:1.1.0-8",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-video-dummy",
+    "version": "1:0.2.0-7",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-video-fbdev",
+    "version": "1:0.3.1-4",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-video-geode",
+    "version": "2.9.0-1ubuntu2.5",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-video-glint",
+    "version": "1:1.1.1-8",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-video-i128",
+    "version": "1:1.2.1-4",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-video-i740",
+    "version": "1:1.1.0-7",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-video-i810",
+    "version": "2:1.7.4-0ubuntu7",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-video-imstt",
+    "version": "1:1.1.0-7",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-video-intel",
+    "version": "2:2.2.1-1ubuntu13.8",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-video-mga",
+    "version": "1:1.4.8.dfsg.1-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-video-neomagic",
+    "version": "1:1.1.1-8",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-video-newport",
+    "version": "1:0.2.1-4ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-video-nsc",
+    "version": "1:2.8.3-2ubuntu0.1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-video-nv",
+    "version": "1:2.1.8-1ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-video-openchrome",
+    "version": "1:0.2.901-0ubuntu4",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-video-psb",
+    "version": "0.2.1-1ubuntu3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-video-rendition",
+    "version": "1:4.1.3.dfsg.1-4",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-video-s3",
+    "version": "1:0.5.0-4",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-video-s3virge",
+    "version": "1:1.9.1-7",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-video-savage",
+    "version": "1:2.1.3-5",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-video-siliconmotion",
+    "version": "1:1.5.1-3",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-video-sis",
+    "version": "1:0.9.3-6",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-video-sisusb",
+    "version": "1:0.8.1-9",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-video-tdfx",
+    "version": "1:1.3.0-6",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-video-tga",
+    "version": "1:1.1.0-9ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-video-trident",
+    "version": "1:1.2.4-1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-video-tseng",
+    "version": "1:1.1.1-4",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-video-v4l",
+    "version": "1:0.1.1-6ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-video-vesa",
+    "version": "1:1.3.0-4ubuntu4",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-video-vga",
+    "version": "1:4.1.0-8",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-video-via",
+    "version": "1:0.2.2-5",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-video-vmware",
+    "version": "1:10.15.2-1ubuntu2",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xserver-xorg-video-voodoo",
+    "version": "1:1.1.1-5",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "xterm",
+    "version": "229-1ubuntu1.1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "zlib1g",
+    "version": "1:1.2.3.3.dfsg-7ubuntu1",
+    "cpes": [],
+    "cves": []
+  },
+  {
+    "name": "zlib1g-dev",
+    "version": "1:1.2.3.3.dfsg-7ubuntu1",
+    "cpes": [],
+    "cves": []
+  }
+]

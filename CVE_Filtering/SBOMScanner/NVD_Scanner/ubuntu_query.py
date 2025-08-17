@@ -89,6 +89,7 @@ def match_package(pkg, cve_index):
     return matched
 
 
+
 def match_cves_fast(packages, cve_entries):
     cve_index = index_cves_by_package(cve_entries)
     matched = []

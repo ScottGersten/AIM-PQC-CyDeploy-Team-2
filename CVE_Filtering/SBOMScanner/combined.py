@@ -152,8 +152,8 @@ def flatten_results(installs):
 def main():
     start_time = time.time()
 
-    with open('ip.txt', 'r') as f:
-        ip = f.read()
+   # with open('ip.txt', 'r') as f:
+    #    ip = f.read()
     #ip = '192.168.56.101'
     #output = get_installs(ip)
 
@@ -186,8 +186,6 @@ def main():
     with open('results.json', 'w', encoding='utf-8') as file:
         json.dump(installs, file, indent=2)
 
-    with open('results_abridged.json', 'w', encoding='utf-8') as file:
-        json.dump(found_installs, file, indent=2)
     
     end_time = time.time() - start_time
     print(f"Execution Time: {end_time:.4f}")

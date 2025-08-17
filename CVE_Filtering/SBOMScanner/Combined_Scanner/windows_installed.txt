@@ -1,0 +1,14 @@
+/ Name                                   Vulnerable Version(s)               Description
++++-=====================================-===================================-============================================================
+ii  Microsoft SharePoint Server          ≤ 2019 KB5002439                    RCE via deserialization (CVE‑2025‑49704), spoofing (49706)
+ii  Microsoft SQL Server                 ≤ 2019 CU21                         Memory corruption RCE (CVE‑2025‑49719)
+ii  Windows Kernel (Win32k.sys)         Windows 10 ≤ 22H2, Server ≤ 2022    Privilege escalation (CVE‑2025‑47981)
+ii  Windows Hyper-V                     ≤ Windows Server 2022               Device assignment RCE (CVE‑2025‑48822)
+ii  Netlogon (NetlogonRPC.dll)          Windows Server 2016–2022            Elevation of Privilege (CVE‑2025‑49670, 49676)
+ii  Microsoft Edge (Chromium)           ≤ 126.0.2592.101                    Multiple RCEs via V8 engine (CVE‑2025‑49713)
+ii  Microsoft Excel                     ≤ Office 365 Build 2406             RCE via malicious spreadsheet (CVE‑2025‑49711)
+ii  MSDT (diagcab)                      Windows 10 ≤ 21H2                   RCE via .diagcab files (CVE‑2022‑30190 “DogWalk”)
+ii  Outlook / Windows OLE               ≤ Office 2019 / Outlook 2016        Zero-click RCE via RTF (CVE‑2025‑21298)
+ii  Asus Armoury Crate / MyAsus         All versions before July 2025       Privilege escalation (CVE‑2025‑3464)
+ii  AMD CPUs (Speculation bug)          Ryzen 3000, 5000, EPYC Milan        Data leakage via transient execution (Spectre variant)
+ii  Gigabyte BIOS (UEFI firmware)       Z690, B660, A520 ≤ F20b             Bootkit installation risk (CVE‑2025‑7026, 7029)

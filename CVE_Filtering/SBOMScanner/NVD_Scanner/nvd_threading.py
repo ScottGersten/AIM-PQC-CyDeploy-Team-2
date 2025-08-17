@@ -109,12 +109,9 @@ def parse_installs(installs):
 def main():
     start_time = time.time()
 
-    with open('ssh_linux.txt', 'r') as f:
-        lines = f.read().splitlines()
-        ip = lines[0]
-        username = lines[1]
-        password = lines[2]
-    #output = get_installs(ip, username, password)
+   # with open('ip.txt', 'r') as f:
+    #    ip = f.read()
+    #output = get_installs(ip)
 
     with open ('installed.txt', 'r') as f:
         output = f.read()

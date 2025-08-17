@@ -1,0 +1,2934 @@
+{
+  "source_counts": {
+    "ubuntu": 0,
+    "debian": 392,
+    "nvd": 11
+  },
+  "vulnerable_packages": [
+    {
+      "name": "ant",
+      "version": "1.7.0-3",
+      "cves": [
+        {
+          "source": "debian",
+          "cve_id": "CVE-2018-10886",
+          "description": "",
+          "release": "bookworm",
+          "fixed_version": "1.10.4-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2020-11979",
+          "description": "As mitigation for CVE-2020-1945 Apache Ant 1.10.8 changed the permissions of temporary files it created so that only the current user was allowed to access them. Unfortunately the fixcrlf task deleted the temporary file and created a new one without said protection, effectively nullifying the effort. This would still allow an attacker to inject modified source files into the build process.",
+          "release": "bookworm",
+          "fixed_version": "1.10.9-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2020-1945",
+          "description": "Apache Ant 1.1 to 1.9.14 and 1.10.0 to 1.10.7 uses the default temporary directory identified by the Java system property java.io.tmpdir for several tasks and may thus leak sensitive information. The fixcrlf and replaceregexp tasks also copy files from the temporary directory back into the build tree allowing an attacker to inject modified source files into the build process.",
+          "release": "bookworm",
+          "fixed_version": "1.10.8-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2021-36373",
+          "description": "When reading a specially crafted TAR archive an Apache Ant build can be made to allocate large amounts of memory that finally leads to an out of memory error, even for small inputs. This can be used to disrupt builds using Apache Ant. Apache Ant prior to 1.9.16 and 1.10.11 were affected.",
+          "release": "bookworm",
+          "fixed_version": "1.10.11-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2021-36374",
+          "description": "When reading a specially crafted ZIP archive, or a derived formats, an Apache Ant build can be made to allocate large amounts of memory that leads to an out of memory error, even for small inputs. This can be used to disrupt builds using Apache Ant. Commonly used derived formats from ZIP archives are for instance JAR files and many office files. Apache Ant prior to 1.9.16 and 1.10.11 were affected.",
+          "release": "bookworm",
+          "fixed_version": "1.10.11-1"
+        }
+      ]
+    },
+    {
+      "name": "apache2",
+      "version": "2.2.8-1",
+      "cves": [
+        {
+          "source": "debian",
+          "cve_id": "CVE-2006-20001",
+          "description": "A carefully crafted If: request header can cause a memory read, or write of a single zero byte, in a pool (heap) memory location beyond the header value sent. This could cause the process to crash.  This issue affects Apache HTTP Server 2.4.54 and earlier.",
+          "release": "bookworm",
+          "fixed_version": "2.4.55-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2007-1741",
+          "description": "Multiple race conditions in suexec in Apache HTTP Server (httpd) 2.2.3 between directory and file validation, and their usage, allow local users to gain privileges and execute arbitrary code by renaming directories or performing symlink attacks. NOTE: the researcher, who is reliable, claims that the vendor disputes the issue because \"the attacks described rely on an insecure server configuration\" in which the user \"has write access to the document root.\"",
+          "release": "bookworm",
+          "fixed_version": "2.2.8-5"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2007-1742",
+          "description": "suexec in Apache HTTP Server (httpd) 2.2.3 uses a partial comparison for verifying whether the current directory is within the document root, which might allow local users to perform unauthorized operations on incorrect directories, as demonstrated using \"html_backup\" and \"htmleditor\" under an \"html\" directory.  NOTE: the researcher, who is reliable, claims that the vendor disputes the issue because \"the attacks described rely on an insecure server configuration\" in which the user \"has write access to the document root.\"",
+          "release": "bookworm",
+          "fixed_version": "2.2.8-5"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2007-6420",
+          "description": "Cross-site request forgery (CSRF) vulnerability in the balancer-manager in mod_proxy_balancer for Apache HTTP Server 2.2.x allows remote attackers to gain privileges via unspecified vectors.",
+          "release": "bookworm",
+          "fixed_version": "2.2.9-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2007-6750",
+          "description": "The Apache HTTP Server 1.x and 2.x allows remote attackers to cause a denial of service (daemon outage) via partial HTTP requests, as demonstrated by Slowloris, related to the lack of the mod_reqtimeout module in versions before 2.2.15.",
+          "release": "bookworm",
+          "fixed_version": "2.2.15-3"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2008-0455",
+          "description": "Cross-site scripting (XSS) vulnerability in the mod_negotiation module in the Apache HTTP Server 2.2.6 and earlier in the 2.2.x series, 2.0.61 and earlier in the 2.0.x series, and 1.3.39 and earlier in the 1.3.x series allows remote authenticated users to inject arbitrary web script or HTML by uploading a file with a name containing XSS sequences and a file extension, which leads to injection within a (1) \"406 Not Acceptable\" or (2) \"300 Multiple Choices\" HTTP response when the extension is omitted in a request for the file.",
+          "release": "bookworm",
+          "fixed_version": "2.2.22-8"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2008-1678",
+          "description": "Memory leak in the zlib_stateful_init function in crypto/comp/c_zlib.c in libssl in OpenSSL 0.9.8f through 0.9.8h allows remote attackers to cause a denial of service (memory consumption) via multiple calls, as demonstrated by initial SSL client handshakes to the Apache HTTP Server mod_ssl that specify a compression algorithm.",
+          "release": "bookworm",
+          "fixed_version": "2.2.8-4"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2008-2364",
+          "description": "The ap_proxy_http_process_response function in mod_proxy_http.c in the mod_proxy module in the Apache HTTP Server 2.0.63 and 2.2.8 does not limit the number of forwarded interim responses, which allows remote HTTP servers to cause a denial of service (memory consumption) via a large number of interim responses.",
+          "release": "bookworm",
+          "fixed_version": "2.2.9-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2008-2939",
+          "description": "Cross-site scripting (XSS) vulnerability in proxy_ftp.c in the mod_proxy_ftp module in Apache 2.0.63 and earlier, and mod_proxy_ftp.c in the mod_proxy_ftp module in Apache 2.2.9 and earlier 2.2 versions, allows remote attackers to inject arbitrary web script or HTML via a wildcard in the last directory component in the pathname in an FTP URI.",
+          "release": "bookworm",
+          "fixed_version": "2.2.9-7"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2009-1191",
+          "description": "mod_proxy_ajp.c in the mod_proxy_ajp module in the Apache HTTP Server 2.2.11 allows remote attackers to obtain sensitive response data, intended for a client that sent an earlier POST request with no request body, via an HTTP request.",
+          "release": "bookworm",
+          "fixed_version": "2.2.11-4"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2009-1195",
+          "description": "The Apache HTTP Server 2.2.11 and earlier 2.2 versions does not properly handle Options=IncludesNOEXEC in the AllowOverride directive, which allows local users to gain privileges by configuring (1) Options Includes, (2) Options +Includes, or (3) Options +IncludesNOEXEC in a .htaccess file, and then inserting an exec element in a .shtml file.",
+          "release": "bookworm",
+          "fixed_version": "2.2.11-6"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2009-1890",
+          "description": "The stream_reqbody_cl function in mod_proxy_http.c in the mod_proxy module in the Apache HTTP Server before 2.3.3, when a reverse proxy is configured, does not properly handle an amount of streamed data that exceeds the Content-Length value, which allows remote attackers to cause a denial of service (CPU consumption) via crafted requests.",
+          "release": "bookworm",
+          "fixed_version": "2.2.11-7"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2009-1891",
+          "description": "The mod_deflate module in Apache httpd 2.2.11 and earlier compresses large files until completion even after the associated network connection is closed, which allows remote attackers to cause a denial of service (CPU consumption).",
+          "release": "bookworm",
+          "fixed_version": "2.2.11-7"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2009-3094",
+          "description": "The ap_proxy_ftp_handler function in modules/proxy/proxy_ftp.c in the mod_proxy_ftp module in the Apache HTTP Server 2.0.63 and 2.2.13 allows remote FTP servers to cause a denial of service (NULL pointer dereference and child process crash) via a malformed reply to an EPSV command.",
+          "release": "bookworm",
+          "fixed_version": "2.2.13-2"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2009-3095",
+          "description": "The mod_proxy_ftp module in the Apache HTTP Server allows remote attackers to bypass intended access restrictions and send arbitrary commands to an FTP server via vectors related to the embedding of these commands in the Authorization HTTP header, as demonstrated by a certain module in VulnDisco Pack Professional 8.11.",
+          "release": "bookworm",
+          "fixed_version": "2.2.13-2"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2009-3555",
+          "description": "The TLS protocol, and the SSL protocol 3.0 and possibly earlier, as used in Microsoft Internet Information Services (IIS) 7.0, mod_ssl in the Apache HTTP Server 2.2.14 and earlier, OpenSSL before 0.9.8l, GnuTLS 2.8.5 and earlier, Mozilla Network Security Services (NSS) 3.12.4 and earlier, multiple Cisco products, and other products, does not properly associate renegotiation handshakes with an existing connection, which allows man-in-the-middle attackers to insert data into HTTPS sessions, and possibly other types of sessions protected by TLS or SSL, by sending an unauthenticated request that is processed retroactively by a server in a post-renegotiation context, related to a \"plaintext injection\" attack, aka the \"Project Mogul\" issue.",
+          "release": "bookworm",
+          "fixed_version": "2.2.14-2"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2010-0408",
+          "description": "The ap_proxy_ajp_request function in mod_proxy_ajp.c in mod_proxy_ajp in the Apache HTTP Server 2.2.x before 2.2.15 does not properly handle certain situations in which a client sends no request body, which allows remote attackers to cause a denial of service (backend server outage) via a crafted request, related to use of a 500 error code instead of the appropriate 400 error code.",
+          "release": "bookworm",
+          "fixed_version": "2.2.15-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2010-0434",
+          "description": "The ap_read_request function in server/protocol.c in the Apache HTTP Server 2.2.x before 2.2.15, when a multithreaded MPM is used, does not properly handle headers in subrequests in certain circumstances involving a parent request that has a body, which might allow remote attackers to obtain sensitive information via a crafted request that triggers access to memory locations associated with an earlier request.",
+          "release": "bookworm",
+          "fixed_version": "2.2.15-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2010-1452",
+          "description": "The (1) mod_cache and (2) mod_dav modules in the Apache HTTP Server 2.2.x before 2.2.16 allow remote attackers to cause a denial of service (process crash) via a request that lacks a path.",
+          "release": "bookworm",
+          "fixed_version": "2.2.16-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2010-1623",
+          "description": "Memory leak in the apr_brigade_split_line function in buckets/apr_brigade.c in the Apache Portable Runtime Utility library (aka APR-util) before 1.3.10, as used in the mod_reqtimeout module in the Apache HTTP Server and other software, allows remote attackers to cause a denial of service (memory consumption) via unspecified vectors related to the destruction of an APR bucket.",
+          "release": "bookworm",
+          "fixed_version": "2.2.16-3"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2010-2791",
+          "description": "mod_proxy in httpd in Apache HTTP Server 2.2.9, when running on Unix, does not close the backend connection if a timeout occurs when reading a response from a persistent connection, which allows remote attackers to obtain a potentially sensitive response intended for a different client in opportunistic circumstances via a normal HTTP request.  NOTE: this is the same issue as CVE-2010-2068, but for a different OS and set of affected versions.",
+          "release": "bookworm",
+          "fixed_version": "2.2.9-10"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2011-1176",
+          "description": "The configuration merger in itk.c in the Steinar H. Gunderson mpm-itk Multi-Processing Module 2.2.11-01 and 2.2.11-02 for the Apache HTTP Server does not properly handle certain configuration sections that specify NiceValue but not AssignUserID, which might allow remote attackers to gain privileges by leveraging the root uid and root gid of an mpm-itk process.",
+          "release": "bookworm",
+          "fixed_version": "2.2.17-2"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2011-3192",
+          "description": "The byterange filter in the Apache HTTP Server 1.3.x, 2.0.x through 2.0.64, and 2.2.x through 2.2.19 allows remote attackers to cause a denial of service (memory and CPU consumption) via a Range header that expresses multiple overlapping ranges, as exploited in the wild in August 2011, a different vulnerability than CVE-2007-0086.",
+          "release": "bookworm",
+          "fixed_version": "2.2.19-2"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2011-3348",
+          "description": "The mod_proxy_ajp module in the Apache HTTP Server before 2.2.21, when used with mod_proxy_balancer in certain configurations, allows remote attackers to cause a denial of service (temporary \"error state\" in the backend server) via a malformed HTTP request.",
+          "release": "bookworm",
+          "fixed_version": "2.2.21-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2011-3368",
+          "description": "The mod_proxy module in the Apache HTTP Server 1.3.x through 1.3.42, 2.0.x through 2.0.64, and 2.2.x through 2.2.21 does not properly interact with use of (1) RewriteRule and (2) ProxyPassMatch pattern matches for configuration of a reverse proxy, which allows remote attackers to send requests to intranet servers via a malformed URI containing an initial @ (at sign) character.",
+          "release": "bookworm",
+          "fixed_version": "2.2.21-2"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2011-3607",
+          "description": "Integer overflow in the ap_pregsub function in server/util.c in the Apache HTTP Server 2.0.x through 2.0.64 and 2.2.x through 2.2.21, when the mod_setenvif module is enabled, allows local users to gain privileges via a .htaccess file with a crafted SetEnvIf directive, in conjunction with a crafted HTTP request header, leading to a heap-based buffer overflow.",
+          "release": "bookworm",
+          "fixed_version": "2.2.21-4"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2011-3639",
+          "description": "The mod_proxy module in the Apache HTTP Server 2.0.x through 2.0.64 and 2.2.x before 2.2.18, when the Revision 1179239 patch is in place, does not properly interact with use of (1) RewriteRule and (2) ProxyPassMatch pattern matches for configuration of a reverse proxy, which allows remote attackers to send requests to intranet servers by using the HTTP/0.9 protocol with a malformed URI containing an initial @ (at sign) character.  NOTE: this vulnerability exists because of an incomplete fix for CVE-2011-3368.",
+          "release": "bookworm",
+          "fixed_version": "2.2.18-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2011-4317",
+          "description": "The mod_proxy module in the Apache HTTP Server 1.3.x through 1.3.42, 2.0.x through 2.0.64, and 2.2.x through 2.2.21, when the Revision 1179239 patch is in place, does not properly interact with use of (1) RewriteRule and (2) ProxyPassMatch pattern matches for configuration of a reverse proxy, which allows remote attackers to send requests to intranet servers via a malformed URI containing an @ (at sign) character and a : (colon) character in invalid positions.  NOTE: this vulnerability exists because of an incomplete fix for CVE-2011-3368.",
+          "release": "bookworm",
+          "fixed_version": "2.2.21-3"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2011-4415",
+          "description": "The ap_pregsub function in server/util.c in the Apache HTTP Server 2.0.x through 2.0.64 and 2.2.x through 2.2.21, when the mod_setenvif module is enabled, does not restrict the size of values of environment variables, which allows local users to cause a denial of service (memory consumption or NULL pointer dereference) via a .htaccess file with a crafted SetEnvIf directive, in conjunction with a crafted HTTP request header, related to (1) the \"len +=\" statement and (2) the apr_pcalloc function call, a different vulnerability than CVE-2011-3607.",
+          "release": "bookworm",
+          "fixed_version": "2.4.1-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2012-0021",
+          "description": "The log_cookie function in mod_log_config.c in the mod_log_config module in the Apache HTTP Server 2.2.17 through 2.2.21, when a threaded MPM is used, does not properly handle a %{}C format string, which allows remote attackers to cause a denial of service (daemon crash) via a cookie that lacks both a name and a value.",
+          "release": "bookworm",
+          "fixed_version": "2.2.22-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2012-0031",
+          "description": "scoreboard.c in the Apache HTTP Server 2.2.21 and earlier might allow local users to cause a denial of service (daemon crash during shutdown) or possibly have unspecified other impact by modifying a certain type field within a scoreboard shared memory segment, leading to an invalid call to the free function.",
+          "release": "bookworm",
+          "fixed_version": "2.2.22-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2012-0053",
+          "description": "protocol.c in the Apache HTTP Server 2.2.x through 2.2.21 does not properly restrict header information during construction of Bad Request (aka 400) error documents, which allows remote attackers to obtain the values of HTTPOnly cookies via vectors involving a (1) long or (2) malformed header in conjunction with crafted web script.",
+          "release": "bookworm",
+          "fixed_version": "2.2.22-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2012-0216",
+          "description": "The default configuration of the apache2 package in Debian GNU/Linux squeeze before 2.2.16-6+squeeze7, wheezy before 2.2.22-4, and sid before 2.2.22-4, when mod_php or mod_rivet is used, provides example scripts under the doc/ URI, which might allow local users to conduct cross-site scripting (XSS) attacks, gain privileges, or obtain sensitive information via vectors involving localhost HTTP requests to the Apache HTTP Server.",
+          "release": "bookworm",
+          "fixed_version": "2.2.22-4"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2012-2687",
+          "description": "Multiple cross-site scripting (XSS) vulnerabilities in the make_variant_list function in mod_negotiation.c in the mod_negotiation module in the Apache HTTP Server 2.4.x before 2.4.3, when the MultiViews option is enabled, allow remote attackers to inject arbitrary web script or HTML via a crafted filename that is not properly handled during construction of a variant list.",
+          "release": "bookworm",
+          "fixed_version": "2.2.22-8"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2012-3499",
+          "description": "Multiple cross-site scripting (XSS) vulnerabilities in the Apache HTTP Server 2.2.x before 2.2.24-dev and 2.4.x before 2.4.4 allow remote attackers to inject arbitrary web script or HTML via vectors involving hostnames and URIs in the (1) mod_imagemap, (2) mod_info, (3) mod_ldap, (4) mod_proxy_ftp, and (5) mod_status modules.",
+          "release": "bookworm",
+          "fixed_version": "2.2.22-13"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2012-4557",
+          "description": "The mod_proxy_ajp module in the Apache HTTP Server 2.2.12 through 2.2.21 places a worker node into an error state upon detection of a long request-processing time, which allows remote attackers to cause a denial of service (worker consumption) via an expensive request.",
+          "release": "bookworm",
+          "fixed_version": "2.2.22-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2012-4558",
+          "description": "Multiple cross-site scripting (XSS) vulnerabilities in the balancer_handler function in the manager interface in mod_proxy_balancer.c in the mod_proxy_balancer module in the Apache HTTP Server 2.2.x before 2.2.24-dev and 2.4.x before 2.4.4 allow remote attackers to inject arbitrary web script or HTML via a crafted string.",
+          "release": "bookworm",
+          "fixed_version": "2.2.22-13"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2012-4929",
+          "description": "The TLS protocol 1.2 and earlier, as used in Mozilla Firefox, Google Chrome, Qt, and other products, can encrypt compressed data without properly obfuscating the length of the unencrypted data, which allows man-in-the-middle attackers to obtain plaintext HTTP headers by observing length differences during a series of guesses in which a string in an HTTP request potentially matches an unknown string in an HTTP header, aka a \"CRIME\" attack.",
+          "release": "bookworm",
+          "fixed_version": "2.2.22-12"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2013-1048",
+          "description": "The Debian apache2ctl script in the apache2 package squeeze before 2.2.16-6+squeeze11, wheezy before 2.2.22-13, and sid before 2.2.22-13 for the Apache HTTP Server on Debian GNU/Linux does not properly create the /var/lock/apache2 lock directory, which allows local users to gain privileges via an unspecified symlink attack.",
+          "release": "bookworm",
+          "fixed_version": "2.2.22-13"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2013-1862",
+          "description": "mod_rewrite.c in the mod_rewrite module in the Apache HTTP Server 2.2.x before 2.2.25 writes data to a log file without sanitizing non-printable characters, which might allow remote attackers to execute arbitrary commands via an HTTP request containing an escape sequence for a terminal emulator.",
+          "release": "bookworm",
+          "fixed_version": "2.4.1-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2013-1896",
+          "description": "mod_dav.c in the Apache HTTP Server before 2.2.25 does not properly determine whether DAV is enabled for a URI, which allows remote attackers to cause a denial of service (segmentation fault) via a MERGE request in which the URI is configured for handling by the mod_dav_svn module, but a certain href attribute in XML data refers to a non-DAV URI.",
+          "release": "bookworm",
+          "fixed_version": "2.4.6-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2013-2249",
+          "description": "mod_session_dbd.c in the mod_session_dbd module in the Apache HTTP Server before 2.4.5 proceeds with save operations for a session without considering the dirty flag and the requirement for a new session ID, which has unspecified impact and remote attack vectors.",
+          "release": "bookworm",
+          "fixed_version": "2.4.6-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2013-4352",
+          "description": "The cache_invalidate function in modules/cache/cache_storage.c in the mod_cache module in the Apache HTTP Server 2.4.6, when a caching forward proxy is enabled, allows remote HTTP servers to cause a denial of service (NULL pointer dereference and daemon crash) via vectors that trigger a missing hostname value.",
+          "release": "bookworm",
+          "fixed_version": "2.4.7-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2013-5704",
+          "description": "The mod_headers module in the Apache HTTP Server 2.2.22 allows remote attackers to bypass \"RequestHeader unset\" directives by placing a header in the trailer portion of data sent with chunked transfer coding.  NOTE: the vendor states \"this is not a security issue in httpd as such.\"",
+          "release": "bookworm",
+          "fixed_version": "2.4.10-2"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2013-6438",
+          "description": "The dav_xml_get_cdata function in main/util.c in the mod_dav module in the Apache HTTP Server before 2.4.8 does not properly remove whitespace characters from CDATA sections, which allows remote attackers to cause a denial of service (daemon crash) via a crafted DAV WRITE request.",
+          "release": "bookworm",
+          "fixed_version": "2.4.9-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2014-0098",
+          "description": "The log_cookie function in mod_log_config.c in the mod_log_config module in the Apache HTTP Server before 2.4.8 allows remote attackers to cause a denial of service (segmentation fault and daemon crash) via a crafted cookie that is not properly handled during truncation.",
+          "release": "bookworm",
+          "fixed_version": "2.4.9-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2014-0117",
+          "description": "The mod_proxy module in the Apache HTTP Server 2.4.x before 2.4.10, when a reverse proxy is enabled, allows remote attackers to cause a denial of service (child-process crash) via a crafted HTTP Connection header.",
+          "release": "bookworm",
+          "fixed_version": "2.4.10-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2014-0118",
+          "description": "The deflate_in_filter function in mod_deflate.c in the mod_deflate module in the Apache HTTP Server before 2.4.10, when request body decompression is enabled, allows remote attackers to cause a denial of service (resource consumption) via crafted request data that decompresses to a much larger size.",
+          "release": "bookworm",
+          "fixed_version": "2.4.10-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2014-0226",
+          "description": "Race condition in the mod_status module in the Apache HTTP Server before 2.4.10 allows remote attackers to cause a denial of service (heap-based buffer overflow), or possibly obtain sensitive credential information or execute arbitrary code, via a crafted request that triggers improper scoreboard handling within the status_handler function in modules/generators/mod_status.c and the lua_ap_scoreboard_worker function in modules/lua/lua_request.c.",
+          "release": "bookworm",
+          "fixed_version": "2.4.10-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2014-0231",
+          "description": "The mod_cgid module in the Apache HTTP Server before 2.4.10 does not have a timeout mechanism, which allows remote attackers to cause a denial of service (process hang) via a request to a CGI script that does not read from its stdin file descriptor.",
+          "release": "bookworm",
+          "fixed_version": "2.4.10-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2014-3581",
+          "description": "The cache_merge_headers_out function in modules/cache/cache_util.c in the mod_cache module in the Apache HTTP Server before 2.4.11 allows remote attackers to cause a denial of service (NULL pointer dereference and application crash) via an empty HTTP Content-Type header.",
+          "release": "bookworm",
+          "fixed_version": "2.4.10-3"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2014-3583",
+          "description": "The handle_headers function in mod_proxy_fcgi.c in the mod_proxy_fcgi module in the Apache HTTP Server 2.4.10 allows remote FastCGI servers to cause a denial of service (buffer over-read and daemon crash) via long response headers.",
+          "release": "bookworm",
+          "fixed_version": "2.4.10-8"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2014-8109",
+          "description": "mod_lua.c in the mod_lua module in the Apache HTTP Server 2.3.x and 2.4.x through 2.4.10 does not support an httpd configuration in which the same Lua authorization provider is used with different arguments within different contexts, which allows remote attackers to bypass intended access restrictions in opportunistic circumstances by leveraging multiple Require directives, as demonstrated by a configuration that specifies authorization for one group to access a certain directory, and authorization for a second group to access a second directory.",
+          "release": "bookworm",
+          "fixed_version": "2.4.10-9"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2015-0228",
+          "description": "The lua_websocket_read function in lua_request.c in the mod_lua module in the Apache HTTP Server through 2.4.12 allows remote attackers to cause a denial of service (child-process crash) by sending a crafted WebSocket Ping frame after a Lua script has called the wsupgrade function.",
+          "release": "bookworm",
+          "fixed_version": "2.4.10-10"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2015-3183",
+          "description": "The chunked transfer coding implementation in the Apache HTTP Server before 2.4.14 does not properly parse chunk headers, which allows remote attackers to conduct HTTP request smuggling attacks via a crafted request, related to mishandling of large chunk-size values and invalid chunk-extension characters in modules/http/http_filters.c.",
+          "release": "bookworm",
+          "fixed_version": "2.4.16-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2015-3185",
+          "description": "The ap_some_auth_required function in server/request.c in the Apache HTTP Server 2.4.x before 2.4.14 does not consider that a Require directive may be associated with an authorization setting rather than an authentication setting, which allows remote attackers to bypass intended access restrictions in opportunistic circumstances by leveraging the presence of a module that relies on the 2.2 API behavior.",
+          "release": "bookworm",
+          "fixed_version": "2.4.16-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-0736",
+          "description": "In Apache HTTP Server versions 2.4.0 to 2.4.23, mod_session_crypto was encrypting its data/cookie using the configured ciphers with possibly either CBC or ECB modes of operation (AES256-CBC by default), hence no selectable or builtin authenticated encryption. This made it vulnerable to padding oracle attacks, particularly with CBC.",
+          "release": "bookworm",
+          "fixed_version": "2.4.25-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-1546",
+          "description": "The Apache HTTP Server 2.4.17 and 2.4.18, when mod_http2 is enabled, does not limit the number of simultaneous stream workers for a single HTTP/2 connection, which allows remote attackers to cause a denial of service (stream-processing outage) via modified flow-control windows.",
+          "release": "bookworm",
+          "fixed_version": "2.4.20-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-2161",
+          "description": "In Apache HTTP Server versions 2.4.0 to 2.4.23, malicious input to mod_auth_digest can cause the server to crash, and each instance continues to crash even for subsequently valid requests.",
+          "release": "bookworm",
+          "fixed_version": "2.4.25-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-4975",
+          "description": "Possible CRLF injection allowing HTTP response splitting attacks for sites which use mod_userdir. This issue was mitigated by changes made in 2.4.25 and 2.2.32 which prohibit CR or LF injection into the \"Location\" or other outbound header key or value. Fixed in Apache HTTP Server 2.4.25 (Affected 2.4.1-2.4.23). Fixed in Apache HTTP Server 2.2.32 (Affected 2.2.0-2.2.31).",
+          "release": "bookworm",
+          "fixed_version": "2.4.25-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-4979",
+          "description": "The Apache HTTP Server 2.4.18 through 2.4.20, when mod_http2 and mod_ssl are enabled, does not properly recognize the \"SSLVerifyClient require\" directive for HTTP/2 request authorization, which allows remote attackers to bypass intended access restrictions by leveraging the ability to send multiple requests over a single connection and aborting a renegotiation.",
+          "release": "bookworm",
+          "fixed_version": "2.4.23-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-5387",
+          "description": "The Apache HTTP Server through 2.4.23 follows RFC 3875 section 4.1.18 and therefore does not protect applications from the presence of untrusted client data in the HTTP_PROXY environment variable, which might allow remote attackers to redirect an application's outbound HTTP traffic to an arbitrary proxy server via a crafted Proxy header in an HTTP request, aka an \"httpoxy\" issue.  NOTE: the vendor states \"This mitigation has been assigned the identifier CVE-2016-5387\"; in other words, this is not a CVE ID for a vulnerability.",
+          "release": "bookworm",
+          "fixed_version": "2.4.23-2"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-8740",
+          "description": "The mod_http2 module in the Apache HTTP Server 2.4.17 through 2.4.23, when the Protocols configuration includes h2 or h2c, does not restrict request-header length, which allows remote attackers to cause a denial of service (memory consumption) via crafted CONTINUATION frames in an HTTP/2 request.",
+          "release": "bookworm",
+          "fixed_version": "2.4.25-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-8743",
+          "description": "Apache HTTP Server, in all releases prior to 2.2.32 and 2.4.25, was liberal in the whitespace accepted from requests and sent in response lines and headers. Accepting these different behaviors represented a security concern when httpd participates in any chain of proxies or interacts with back-end application servers, either through mod_proxy or using conventional CGI mechanisms, and may result in request smuggling, response splitting and cache pollution.",
+          "release": "bookworm",
+          "fixed_version": "2.4.25-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-15710",
+          "description": "In Apache httpd 2.0.23 to 2.0.65, 2.2.0 to 2.2.34, and 2.4.0 to 2.4.29, mod_authnz_ldap, if configured with AuthLDAPCharsetConfig, uses the Accept-Language header value to lookup the right charset encoding when verifying the user's credentials. If the header value is not present in the charset conversion table, a fallback mechanism is used to truncate it to a two characters value to allow a quick retry (for example, 'en-US' is truncated to 'en'). A header value of less than two characters forces an out of bound write of one NUL byte to a memory location that is not part of the string. In the worst case, quite unlikely, the process would crash which could be used as a Denial of Service attack. In the more likely case, this memory is already reserved for future use and the issue has no effect at all.",
+          "release": "bookworm",
+          "fixed_version": "2.4.33-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-15715",
+          "description": "In Apache httpd 2.4.0 to 2.4.29, the expression specified in <FilesMatch> could match '$' to a newline character in a malicious filename, rather than matching only the end of the filename. This could be exploited in environments where uploads of some files are are externally blocked, but only by matching the trailing portion of the filename.",
+          "release": "bookworm",
+          "fixed_version": "2.4.33-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-3167",
+          "description": "In Apache httpd 2.2.x before 2.2.33 and 2.4.x before 2.4.26, use of the ap_get_basic_auth_pw() by third-party modules outside of the authentication phase may lead to authentication requirements being bypassed.",
+          "release": "bookworm",
+          "fixed_version": "2.4.25-4"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-3169",
+          "description": "In Apache httpd 2.2.x before 2.2.33 and 2.4.x before 2.4.26, mod_ssl may dereference a NULL pointer when third-party modules call ap_hook_process_connection() during an HTTP request to an HTTPS port.",
+          "release": "bookworm",
+          "fixed_version": "2.4.25-4"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-7659",
+          "description": "A maliciously constructed HTTP/2 request could cause mod_http2 in Apache HTTP Server 2.4.24, 2.4.25 to dereference a NULL pointer and crash the server process.",
+          "release": "bookworm",
+          "fixed_version": "2.4.25-4"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-7668",
+          "description": "The HTTP strict parsing changes added in Apache httpd 2.2.32 and 2.4.24 introduced a bug in token list parsing, which allows ap_find_token() to search past the end of its input string. By maliciously crafting a sequence of request headers, an attacker may be able to cause a segmentation fault, or to force ap_find_token() to return an incorrect value.",
+          "release": "bookworm",
+          "fixed_version": "2.4.25-4"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-7679",
+          "description": "In Apache httpd 2.2.x before 2.2.33 and 2.4.x before 2.4.26, mod_mime can read one byte past the end of a buffer when sending a malicious Content-Type response header.",
+          "release": "bookworm",
+          "fixed_version": "2.4.25-4"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-9788",
+          "description": "In Apache httpd before 2.2.34 and 2.4.x before 2.4.27, the value placeholder in [Proxy-]Authorization headers of type 'Digest' was not initialized or reset before or between successive key=value assignments by mod_auth_digest. Providing an initial key with no '=' assignment could reflect the stale value of uninitialized pool memory used by the prior request, leading to leakage of potentially confidential information, and a segfault in other cases resulting in denial of service.",
+          "release": "bookworm",
+          "fixed_version": "2.4.27-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-9798",
+          "description": "Apache httpd allows remote attackers to read secret data from process memory if the Limit directive can be set in a user's .htaccess file, or if httpd.conf has certain misconfigurations, aka Optionsbleed. This affects the Apache HTTP Server through 2.2.34 and 2.4.x through 2.4.27. The attacker sends an unauthenticated OPTIONS HTTP request when attempting to read secret data. This is a use-after-free issue and thus secret data is not always sent, and the specific data depends on many factors including configuration. Exploitation with .htaccess can be blocked with a patch to the ap_limit_section function in server/core.c.",
+          "release": "bookworm",
+          "fixed_version": "2.4.27-6"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2018-11763",
+          "description": "In Apache HTTP Server 2.4.17 to 2.4.34, by sending continuous, large SETTINGS frames a client can occupy a connection, server thread and CPU time without any connection timeout coming to effect. This affects only HTTP/2 connections. A possible mitigation is to not enable the h2 protocol.",
+          "release": "bookworm",
+          "fixed_version": "2.4.35-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2018-1283",
+          "description": "In Apache httpd 2.4.0 to 2.4.29, when mod_session is configured to forward its session data to CGI applications (SessionEnv on, not the default), a remote user may influence their content by using a \"Session\" header. This comes from the \"HTTP_SESSION\" variable name used by mod_session to forward its data to CGIs, since the prefix \"HTTP_\" is also used by the Apache HTTP Server to pass HTTP header fields, per CGI specifications.",
+          "release": "bookworm",
+          "fixed_version": "2.4.33-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2018-1301",
+          "description": "A specially crafted request could have crashed the Apache HTTP Server prior to version 2.4.30, due to an out of bound access after a size limit is reached by reading the HTTP header. This vulnerability is considered very hard if not impossible to trigger in non-debug mode (both log and build level), so it is classified as low risk for common server usage.",
+          "release": "bookworm",
+          "fixed_version": "2.4.33-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2018-1302",
+          "description": "When an HTTP/2 stream was destroyed after being handled, the Apache HTTP Server prior to version 2.4.30 could have written a NULL pointer potentially to an already freed memory. The memory pools maintained by the server make this vulnerability hard to trigger in usual configurations, the reporter and the team could not reproduce it outside debug builds, so it is classified as low risk.",
+          "release": "bookworm",
+          "fixed_version": "2.4.33-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2018-1303",
+          "description": "A specially crafted HTTP request header could have crashed the Apache HTTP Server prior to version 2.4.30 due to an out of bound read while preparing data to be cached in shared memory. It could be used as a Denial of Service attack against users of mod_cache_socache. The vulnerability is considered as low risk since mod_cache_socache is not widely used, mod_cache_disk is not concerned by this vulnerability.",
+          "release": "bookworm",
+          "fixed_version": "2.4.33-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2018-1312",
+          "description": "In Apache httpd 2.2.0 to 2.4.29, when generating an HTTP Digest authentication challenge, the nonce sent to prevent reply attacks was not correctly generated using a pseudo-random seed. In a cluster of servers using a common Digest authentication configuration, HTTP requests could be replayed across servers by an attacker without detection.",
+          "release": "bookworm",
+          "fixed_version": "2.4.33-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2018-1333",
+          "description": "By specially crafting HTTP/2 requests, workers would be allocated 60 seconds longer than necessary, leading to worker exhaustion and a denial of service. Fixed in Apache HTTP Server 2.4.34 (Affected 2.4.18-2.4.30,2.4.33).",
+          "release": "bookworm",
+          "fixed_version": "2.4.34-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2018-17189",
+          "description": "In Apache HTTP server versions 2.4.37 and prior, by sending request bodies in a slow loris way to plain resources, the h2 stream for that request unnecessarily occupied a server thread cleaning up that incoming data. This affects only HTTP/2 (mod_http2) connections.",
+          "release": "bookworm",
+          "fixed_version": "2.4.38-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2018-17199",
+          "description": "In Apache HTTP Server 2.4 release 2.4.37 and prior, mod_session checks the session expiry time before decoding the session. This causes session expiry time to be ignored for mod_session_cookie sessions since the expiry time is loaded when the session is decoded.",
+          "release": "bookworm",
+          "fixed_version": "2.4.38-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2018-8011",
+          "description": "By specially crafting HTTP requests, the mod_md challenge handler would dereference a NULL pointer and cause the child process to segfault. This could be used to DoS the server. Fixed in Apache HTTP Server 2.4.34 (Affected 2.4.33).",
+          "release": "bookworm",
+          "fixed_version": "2.4.34-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2019-0190",
+          "description": "A bug exists in the way mod_ssl handled client renegotiations. A remote attacker could send a carefully crafted request that would cause mod_ssl to enter a loop leading to a denial of service. This bug can be only triggered with Apache HTTP Server version 2.4.37 when using OpenSSL version 1.1.1 or later, due to an interaction in changes to handling of renegotiation attempts.",
+          "release": "bookworm",
+          "fixed_version": "2.4.38-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2019-0196",
+          "description": "A vulnerability was found in Apache HTTP Server 2.4.17 to 2.4.38. Using fuzzed network input, the http/2 request handling could be made to access freed memory in string comparison when determining the method of a request and thus process the request incorrectly.",
+          "release": "bookworm",
+          "fixed_version": "2.4.38-3"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2019-0197",
+          "description": "A vulnerability was found in Apache HTTP Server 2.4.34 to 2.4.38. When HTTP/2 was enabled for a http: host or H2Upgrade was enabled for h2 on a https: host, an Upgrade request from http/1.1 to http/2 that was not the first request on a connection could lead to a misconfiguration and crash. Server that never enabled the h2 protocol or that only enabled it for https: and did not set \"H2Upgrade on\" are unaffected by this issue.",
+          "release": "bookworm",
+          "fixed_version": "2.4.38-3"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2019-0211",
+          "description": "In Apache HTTP Server 2.4 releases 2.4.17 to 2.4.38, with MPM event, worker or prefork, code executing in less-privileged child processes or threads (including scripts executed by an in-process scripting interpreter) could execute arbitrary code with the privileges of the parent process (usually root) by manipulating the scoreboard. Non-Unix systems are not affected.",
+          "release": "bookworm",
+          "fixed_version": "2.4.38-3"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2019-0215",
+          "description": "In Apache HTTP Server 2.4 releases 2.4.37 and 2.4.38, a bug in mod_ssl when using per-location client certificate verification with TLSv1.3 allowed a client to bypass configured access control restrictions.",
+          "release": "bookworm",
+          "fixed_version": "2.4.38-3"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2019-0217",
+          "description": "In Apache HTTP Server 2.4 release 2.4.38 and prior, a race condition in mod_auth_digest when running in a threaded server could allow a user with valid credentials to authenticate using another username, bypassing configured access control restrictions.",
+          "release": "bookworm",
+          "fixed_version": "2.4.38-3"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2019-0220",
+          "description": "A vulnerability was found in Apache HTTP Server 2.4.0 to 2.4.38. When the path component of a request URL contains multiple consecutive slashes ('/'), directives such as LocationMatch and RewriteRule must account for duplicates in regular expressions while other aspects of the servers processing will implicitly collapse them.",
+          "release": "bookworm",
+          "fixed_version": "2.4.38-3"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2019-10081",
+          "description": "HTTP/2 (2.4.20 through 2.4.39) very early pushes, for example configured with \"H2PushResource\", could lead to an overwrite of memory in the pushing request's pool, leading to crashes. The memory copied is that of the configured push link header values, not data supplied by the client.",
+          "release": "bookworm",
+          "fixed_version": "2.4.41-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2019-10082",
+          "description": "In Apache HTTP Server 2.4.18-2.4.39, using fuzzed network input, the http/2 session handling could be made to read memory after being freed, during connection shutdown.",
+          "release": "bookworm",
+          "fixed_version": "2.4.41-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2019-10092",
+          "description": "In Apache HTTP Server 2.4.0-2.4.39, a limited cross-site scripting issue was reported affecting the mod_proxy error page. An attacker could cause the link on the error page to be malformed and instead point to a page of their choice. This would only be exploitable where a server was set up with proxying enabled but was misconfigured in such a way that the Proxy Error page was displayed.",
+          "release": "bookworm",
+          "fixed_version": "2.4.41-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2019-10097",
+          "description": "In Apache HTTP Server 2.4.32-2.4.39, when mod_remoteip was configured to use a trusted intermediary proxy server using the \"PROXY\" protocol, a specially crafted PROXY header could trigger a stack buffer overflow or NULL pointer deference. This vulnerability could only be triggered by a trusted proxy and not by untrusted HTTP clients.",
+          "release": "bookworm",
+          "fixed_version": "2.4.41-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2019-10098",
+          "description": "In Apache HTTP server 2.4.0 to 2.4.39, Redirects configured with mod_rewrite that were intended to be self-referential might be fooled by encoded newlines and redirect instead to an unexpected URL within the request URL.",
+          "release": "bookworm",
+          "fixed_version": "2.4.41-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2019-17567",
+          "description": "Apache HTTP Server versions 2.4.6 to 2.4.46 mod_proxy_wstunnel configured on an URL that is not necessarily Upgraded by the origin server was tunneling the whole connection regardless, thus allowing for subsequent requests on the same connection to pass through with no HTTP validation, authentication or authorization possibly configured.",
+          "release": "bookworm",
+          "fixed_version": "2.4.48-2"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2019-9517",
+          "description": "Some HTTP/2 implementations are vulnerable to unconstrained interal data buffering, potentially leading to a denial of service. The attacker opens the HTTP/2 window so the peer can send without constraint; however, they leave the TCP window closed so the peer cannot actually write (many of) the bytes on the wire. The attacker then sends a stream of requests for a large response object. Depending on how the servers queue the responses, this can consume excess memory, CPU, or both.",
+          "release": "bookworm",
+          "fixed_version": "2.4.41-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2020-11984",
+          "description": "Apache HTTP server 2.4.32 to 2.4.44 mod_proxy_uwsgi info disclosure and possible RCE",
+          "release": "bookworm",
+          "fixed_version": "2.4.46-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2020-11985",
+          "description": "IP address spoofing when proxying using mod_remoteip and mod_rewrite For configurations using proxying with mod_remoteip and certain mod_rewrite rules, an attacker could spoof their IP address for logging and PHP scripts. Note this issue was fixed in Apache HTTP Server 2.4.24 but was retrospectively allocated a low severity CVE in 2020.",
+          "release": "bookworm",
+          "fixed_version": "2.4.25-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2020-11993",
+          "description": "Apache HTTP Server versions 2.4.20 to 2.4.43 When trace/debug was enabled for the HTTP/2 module and on certain traffic edge patterns, logging statements were made on the wrong connection, causing concurrent use of memory pools. Configuring the LogLevel of mod_http2 above \"info\" will mitigate this vulnerability for unpatched servers.",
+          "release": "bookworm",
+          "fixed_version": "2.4.46-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2020-13950",
+          "description": "Apache HTTP Server versions 2.4.41 to 2.4.46 mod_proxy_http can be made to crash (NULL pointer dereference) with specially crafted requests using both Content-Length and Transfer-Encoding headers, leading to a Denial of Service",
+          "release": "bookworm",
+          "fixed_version": "2.4.46-6"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2020-1927",
+          "description": "In Apache HTTP Server 2.4.0 to 2.4.41, redirects configured with mod_rewrite that were intended to be self-referential might be fooled by encoded newlines and redirect instead to an an unexpected URL within the request URL.",
+          "release": "bookworm",
+          "fixed_version": "2.4.43-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2020-1934",
+          "description": "In Apache HTTP Server 2.4.0 to 2.4.41, mod_proxy_ftp may use uninitialized memory when proxying to a malicious FTP server.",
+          "release": "bookworm",
+          "fixed_version": "2.4.43-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2020-35452",
+          "description": "Apache HTTP Server versions 2.4.0 to 2.4.46 A specially crafted Digest nonce can cause a stack overflow in mod_auth_digest. There is no report of this overflow being exploitable, nor the Apache HTTP Server team could create one, though some particular compiler and/or compilation option might make it possible, with limited consequences anyway due to the size (a single byte) and the value (zero byte) of the overflow",
+          "release": "bookworm",
+          "fixed_version": "2.4.46-6"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2020-9490",
+          "description": "Apache HTTP Server versions 2.4.20 to 2.4.43. A specially crafted value for the 'Cache-Digest' header in a HTTP/2 request would result in a crash when the server actually tries to HTTP/2 PUSH a resource afterwards. Configuring the HTTP/2 feature via \"H2Push off\" will mitigate this vulnerability for unpatched servers.",
+          "release": "bookworm",
+          "fixed_version": "2.4.46-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2021-26690",
+          "description": "Apache HTTP Server versions 2.4.0 to 2.4.46 A specially crafted Cookie header handled by mod_session can cause a NULL pointer dereference and crash, leading to a possible Denial Of Service",
+          "release": "bookworm",
+          "fixed_version": "2.4.46-6"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2021-26691",
+          "description": "In Apache HTTP Server versions 2.4.0 to 2.4.46 a specially crafted SessionHeader sent by an origin server could cause a heap overflow",
+          "release": "bookworm",
+          "fixed_version": "2.4.46-6"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2021-30641",
+          "description": "Apache HTTP Server versions 2.4.39 to 2.4.46 Unexpected matching behavior with 'MergeSlashes OFF'",
+          "release": "bookworm",
+          "fixed_version": "2.4.46-6"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2021-31618",
+          "description": "Apache HTTP Server protocol handler for the HTTP/2 protocol checks received request headers against the size limitations as configured for the server and used for the HTTP/1 protocol as well. On violation of these restrictions and HTTP response is sent to the client with a status code indicating why the request was rejected. This rejection response was not fully initialised in the HTTP/2 protocol handler if the offending header was the very first one received or appeared in a a footer. This led to a NULL pointer dereference on initialised memory, crashing reliably the child process. Since such a triggering HTTP/2 request is easy to craft and submit, this can be exploited to DoS the server. This issue affected mod_http2 1.15.17 and Apache HTTP Server version 2.4.47 only. Apache HTTP Server 2.4.47 was never released.",
+          "release": "bookworm",
+          "fixed_version": "2.4.46-5"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2021-33193",
+          "description": "A crafted method sent through HTTP/2 will bypass validation and be forwarded by mod_proxy, which can lead to request splitting or cache poisoning. This issue affects Apache HTTP Server 2.4.17 to 2.4.48.",
+          "release": "bookworm",
+          "fixed_version": "2.4.48-4"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2021-34798",
+          "description": "Malformed requests may cause the server to dereference a NULL pointer. This issue affects Apache HTTP Server 2.4.48 and earlier.",
+          "release": "bookworm",
+          "fixed_version": "2.4.49-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2021-36160",
+          "description": "A carefully crafted request uri-path can cause mod_proxy_uwsgi to read above the allocated memory and crash (DoS). This issue affects Apache HTTP Server versions 2.4.30 to 2.4.48 (inclusive).",
+          "release": "bookworm",
+          "fixed_version": "2.4.49-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2021-39275",
+          "description": "ap_escape_quotes() may write beyond the end of a buffer when given malicious input. No included modules pass untrusted data to these functions, but third-party / external modules may. This issue affects Apache HTTP Server 2.4.48 and earlier.",
+          "release": "bookworm",
+          "fixed_version": "2.4.49-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2021-40438",
+          "description": "A crafted request uri-path can cause mod_proxy to forward the request to an origin server choosen by the remote user. This issue affects Apache HTTP Server 2.4.48 and earlier.",
+          "release": "bookworm",
+          "fixed_version": "2.4.49-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2021-41524",
+          "description": "While fuzzing the 2.4.49 httpd, a new null pointer dereference was detected during HTTP/2 request processing, allowing an external source to DoS the server. This requires a specially crafted request. The vulnerability was recently introduced in version 2.4.49. No exploit is known to the project.",
+          "release": "bookworm",
+          "fixed_version": "2.4.50-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2021-41773",
+          "description": "A flaw was found in a change made to path normalization in Apache HTTP Server 2.4.49. An attacker could use a path traversal attack to map URLs to files outside the directories configured by Alias-like directives. If files outside of these directories are not protected by the usual default configuration \"require all denied\", these requests can succeed. If CGI scripts are also enabled for these aliased pathes, this could allow for remote code execution. This issue is known to be exploited in the wild. This issue only affects Apache 2.4.49 and not earlier versions. The fix in Apache HTTP Server 2.4.50 was found to be incomplete, see CVE-2021-42013.",
+          "release": "bookworm",
+          "fixed_version": "2.4.50-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2021-42013",
+          "description": "It was found that the fix for CVE-2021-41773 in Apache HTTP Server 2.4.50 was insufficient. An attacker could use a path traversal attack to map URLs to files outside the directories configured by Alias-like directives. If files outside of these directories are not protected by the usual default configuration \"require all denied\", these requests can succeed. If CGI scripts are also enabled for these aliased pathes, this could allow for remote code execution. This issue only affects Apache 2.4.49 and Apache 2.4.50 and not earlier versions.",
+          "release": "bookworm",
+          "fixed_version": "2.4.51-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2021-44224",
+          "description": "A crafted URI sent to httpd configured as a forward proxy (ProxyRequests on) can cause a crash (NULL pointer dereference) or, for configurations mixing forward and reverse proxy declarations, can allow for requests to be directed to a declared Unix Domain Socket endpoint (Server Side Request Forgery). This issue affects Apache HTTP Server 2.4.7 up to 2.4.51 (included).",
+          "release": "bookworm",
+          "fixed_version": "2.4.52-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2021-44790",
+          "description": "A carefully crafted request body can cause a buffer overflow in the mod_lua multipart parser (r:parsebody() called from Lua scripts). The Apache httpd team is not aware of an exploit for the vulnerabilty though it might be possible to craft one. This issue affects Apache HTTP Server 2.4.51 and earlier.",
+          "release": "bookworm",
+          "fixed_version": "2.4.52-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2022-22719",
+          "description": "A carefully crafted request body can cause a read to a random memory area which could cause the process to crash. This issue affects Apache HTTP Server 2.4.52 and earlier.",
+          "release": "bookworm",
+          "fixed_version": "2.4.53-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2022-22720",
+          "description": "Apache HTTP Server 2.4.52 and earlier fails to close inbound connection when errors are encountered discarding the request body, exposing the server to HTTP Request Smuggling",
+          "release": "bookworm",
+          "fixed_version": "2.4.53-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2022-22721",
+          "description": "If LimitXMLRequestBody is set to allow request bodies larger than 350MB (defaults to 1M) on 32 bit systems an integer overflow happens which later causes out of bounds writes. This issue affects Apache HTTP Server 2.4.52 and earlier.",
+          "release": "bookworm",
+          "fixed_version": "2.4.53-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2022-23943",
+          "description": "Out-of-bounds Write vulnerability in mod_sed of Apache HTTP Server allows an attacker to overwrite heap memory with possibly attacker provided data. This issue affects Apache HTTP Server 2.4 version 2.4.52 and prior versions.",
+          "release": "bookworm",
+          "fixed_version": "2.4.53-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2022-26377",
+          "description": "Inconsistent Interpretation of HTTP Requests ('HTTP Request Smuggling') vulnerability in mod_proxy_ajp of Apache HTTP Server allows an attacker to smuggle requests to the AJP server it forwards requests to. This issue affects Apache HTTP Server Apache HTTP Server 2.4 version 2.4.53 and prior versions.",
+          "release": "bookworm",
+          "fixed_version": "2.4.54-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2022-28614",
+          "description": "The ap_rwrite() function in Apache HTTP Server 2.4.53 and earlier may read unintended memory if an attacker can cause the server to reflect very large input using ap_rwrite() or ap_rputs(), such as with mod_luas r:puts() function. Modules compiled and distributed separately from Apache HTTP Server that use the 'ap_rputs' function and may pass it a very large (INT_MAX or larger) string must be compiled against current headers to resolve the issue.",
+          "release": "bookworm",
+          "fixed_version": "2.4.54-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2022-28615",
+          "description": "Apache HTTP Server 2.4.53 and earlier may crash or disclose information due to a read beyond bounds in ap_strcmp_match() when provided with an extremely large input buffer. While no code distributed with the server can be coerced into such a call, third-party modules or lua scripts that use ap_strcmp_match() may hypothetically be affected.",
+          "release": "bookworm",
+          "fixed_version": "2.4.54-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2022-29404",
+          "description": "In Apache HTTP Server 2.4.53 and earlier, a malicious request to a lua script that calls r:parsebody(0) may cause a denial of service due to no default limit on possible input size.",
+          "release": "bookworm",
+          "fixed_version": "2.4.54-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2022-30522",
+          "description": "If Apache HTTP Server 2.4.53 is configured to do transformations with mod_sed in contexts where the input to mod_sed may be very large, mod_sed may make excessively large memory allocations and trigger an abort.",
+          "release": "bookworm",
+          "fixed_version": "2.4.54-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2022-30556",
+          "description": "Apache HTTP Server 2.4.53 and earlier may return lengths to applications calling r:wsread() that point past the end of the storage allocated for the buffer.",
+          "release": "bookworm",
+          "fixed_version": "2.4.54-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2022-31813",
+          "description": "Apache HTTP Server 2.4.53 and earlier may not send the X-Forwarded-* headers to the origin server based on client side Connection header hop-by-hop mechanism. This may be used to bypass IP based authentication on the origin server/application.",
+          "release": "bookworm",
+          "fixed_version": "2.4.54-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2022-36760",
+          "description": "Inconsistent Interpretation of HTTP Requests ('HTTP Request Smuggling') vulnerability in mod_proxy_ajp of Apache HTTP Server allows an attacker to smuggle requests to the AJP server it forwards requests to.  This issue affects Apache HTTP Server Apache HTTP Server 2.4 version 2.4.54 and prior versions.",
+          "release": "bookworm",
+          "fixed_version": "2.4.55-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2022-37436",
+          "description": "Prior to Apache HTTP Server 2.4.55, a malicious backend can cause the response headers to be truncated early, resulting in some headers being incorporated into the response body. If the later headers have any security purpose, they will not be interpreted by the client.",
+          "release": "bookworm",
+          "fixed_version": "2.4.55-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2023-25690",
+          "description": "Some mod_proxy configurations on Apache HTTP Server versions 2.4.0 through 2.4.55 allow a HTTP Request Smuggling attack.     Configurations are affected when mod_proxy is enabled along with some form of RewriteRule  or ProxyPassMatch in which a non-specific pattern matches  some portion of the user-supplied request-target (URL) data and is then  re-inserted into the proxied request-target using variable  substitution. For example, something like:     RewriteEngine on RewriteRule \"^/here/(.*)\" \"http://example.com:8080/elsewhere?$1\"; [P] ProxyPassReverse /here/ http://example.com:8080/   Request splitting/smuggling could result in bypass of access controls in the proxy server, proxying unintended URLs to existing origin servers, and cache poisoning. Users are recommended to update to at least version 2.4.56 of Apache HTTP Server.",
+          "release": "bookworm",
+          "fixed_version": "2.4.56-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2023-27522",
+          "description": "HTTP Response Smuggling vulnerability in Apache HTTP Server via mod_proxy_uwsgi. This issue affects Apache HTTP Server: from 2.4.30 through 2.4.55.  Special characters in the origin response header can truncate/split the response forwarded to the client.",
+          "release": "bookworm",
+          "fixed_version": "2.4.56-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2023-31122",
+          "description": "Out-of-bounds Read vulnerability in mod_macro of Apache HTTP Server.This issue affects Apache HTTP Server: through 2.4.57.",
+          "release": "forky",
+          "fixed_version": "2.4.58-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2023-38709",
+          "description": "Faulty input validation in the core of Apache allows malicious or exploitable backend/content generators to split HTTP responses.  This issue affects Apache HTTP Server: through 2.4.58.",
+          "release": "forky",
+          "fixed_version": "2.4.59-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2023-43622",
+          "description": "An attacker, opening a HTTP/2 connection with an initial window size of 0, was able to block handling of that connection indefinitely in Apache HTTP Server. This could be used to exhaust worker resources in the server, similar to the well known \"slow loris\" attack pattern. This has been fixed in version 2.4.58, so that such connection are terminated properly after the configured connection timeout.  This issue affects Apache HTTP Server: from 2.4.55 through 2.4.57.  Users are recommended to upgrade to version 2.4.58, which fixes the issue.",
+          "release": "forky",
+          "fixed_version": "2.4.58-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2023-45802",
+          "description": "When a HTTP/2 stream was reset (RST frame) by a client, there was a time window were the request's memory resources were not reclaimed immediately. Instead, de-allocation was deferred to connection close. A client could send new requests and resets, keeping the connection busy and open and causing the memory footprint to keep on growing. On connection close, all resources were reclaimed, but the process might run out of memory before that.  This was found by the reporter during testing of\u00a0CVE-2023-44487 (HTTP/2 Rapid Reset Exploit) with their own test client. During \"normal\" HTTP/2 use, the probability to hit this bug is very low. The kept memory would not become noticeable before the connection closes or times out.  Users are recommended to upgrade to version 2.4.58, which fixes the issue.",
+          "release": "forky",
+          "fixed_version": "2.4.58-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2024-24795",
+          "description": "HTTP Response splitting in multiple modules in Apache HTTP Server allows an attacker that can inject malicious response headers into backend applications to cause an HTTP desynchronization attack.  Users are recommended to upgrade to version 2.4.59, which fixes this issue.",
+          "release": "forky",
+          "fixed_version": "2.4.59-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2024-27316",
+          "description": "HTTP/2 incoming headers exceeding the limit are temporarily buffered in nghttp2 in order to generate an informative HTTP 413 response. If a client does not stop sending headers, this leads to memory exhaustion.",
+          "release": "forky",
+          "fixed_version": "2.4.59-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2024-36387",
+          "description": "Serving WebSocket protocol upgrades over a HTTP/2 connection could result in a Null Pointer dereference, leading to a crash of the server process, degrading performance.",
+          "release": "forky",
+          "fixed_version": "2.4.60-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2024-38473",
+          "description": "Encoding problem in mod_proxy in Apache HTTP Server 2.4.59 and earlier allows request URLs with incorrect encoding to be sent to backend services, potentially bypassing authentication via crafted requests. Users are recommended to upgrade to version 2.4.60, which fixes this issue.",
+          "release": "forky",
+          "fixed_version": "2.4.60-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2024-38474",
+          "description": "Substitution encoding issue in mod_rewrite in Apache HTTP Server 2.4.59 and earlier allows attacker to execute scripts in directories permitted by the configuration but not directly reachable by any\u00a0URL or source disclosure of scripts meant to only to be executed as CGI.  Users are recommended to upgrade to version 2.4.60, which fixes this issue.  Some RewriteRules that capture and substitute unsafely will now fail unless rewrite flag \"UnsafeAllow3F\" is specified.",
+          "release": "forky",
+          "fixed_version": "2.4.60-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2024-38475",
+          "description": "Improper escaping of output in mod_rewrite in Apache HTTP Server 2.4.59 and earlier allows an attacker to map URLs to filesystem locations that are\u00a0permitted to be served by the server but are not intentionally/directly reachable by any URL, resulting in code execution or source code disclosure.   Substitutions in\u00a0server context that use a backreferences or variables as the first segment of the substitution are affected.\u00a0 Some unsafe RewiteRules will be broken by this change and the rewrite flag \"UnsafePrefixStat\" can be used to opt back in once ensuring the substitution is appropriately constrained.",
+          "release": "forky",
+          "fixed_version": "2.4.60-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2024-38476",
+          "description": "Vulnerability in core of Apache HTTP Server 2.4.59 and earlier are vulnerably to information disclosure, SSRF or local script execution via\u00a0backend applications whose response headers are malicious or exploitable.  Users are recommended to upgrade to version 2.4.60, which fixes this issue.",
+          "release": "forky",
+          "fixed_version": "2.4.60-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2024-38477",
+          "description": "null pointer dereference in mod_proxy in Apache HTTP Server 2.4.59 and earlier allows an attacker to crash the server via a malicious request. Users are recommended to upgrade to version 2.4.60, which fixes this issue.",
+          "release": "forky",
+          "fixed_version": "2.4.60-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2024-39573",
+          "description": "Potential SSRF in mod_rewrite in Apache HTTP Server 2.4.59 and earlier allows an attacker to cause unsafe RewriteRules to unexpectedly setup URL's to be handled by mod_proxy. Users are recommended to upgrade to version 2.4.60, which fixes this issue.",
+          "release": "forky",
+          "fixed_version": "2.4.60-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2024-39884",
+          "description": "A regression in the core of Apache HTTP Server 2.4.60 ignores some use of the legacy content-type based configuration of handlers.\u00a0 \u00a0\"AddType\" and similar configuration, under some circumstances where files are requested indirectly, result in source code disclosure of local content. For example, PHP scripts may be served instead of interpreted.  Users are recommended to upgrade to version 2.4.61, which fixes this issue.",
+          "release": "bullseye",
+          "fixed_version": "2.4.61-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2024-40725",
+          "description": "A partial fix for\u00a0 CVE-2024-39884 in the core of Apache HTTP Server 2.4.61 ignores some use of the legacy content-type based configuration of handlers. \"AddType\" and similar configuration, under some circumstances where files are requested indirectly, result in source code disclosure of local content. For example, PHP scripts may be served instead of interpreted.  Users are recommended to upgrade to version 2.4.62, which fixes this issue.",
+          "release": "forky",
+          "fixed_version": "2.4.62-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2024-42516",
+          "description": "HTTP response splitting in the core of Apache HTTP Server allows an attacker who can manipulate the Content-Type response headers of applications hosted or proxied by the server can split the HTTP response.  This vulnerability was described as CVE-2023-38709 but the patch included in Apache HTTP Server 2.4.59 did not address the issue.  Users are recommended to upgrade to version 2.4.64, which fixes this issue.",
+          "release": "forky",
+          "fixed_version": "2.4.64-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2024-43204",
+          "description": "SSRF in Apache HTTP Server with mod_proxy loaded allows an attacker to send outbound proxy requests to a URL controlled by the attacker.\u00a0 Requires an unlikely configuration where mod_headers is configured to modify the Content-Type request or response header with a value provided in the HTTP request.  Users are recommended to upgrade to version 2.4.64 which fixes this issue.",
+          "release": "forky",
+          "fixed_version": "2.4.64-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2024-47252",
+          "description": "Insufficient escaping of user-supplied data in mod_ssl in Apache HTTP Server 2.4.63 and earlier allows an untrusted SSL/TLS client to insert escape characters into log files in some configurations.  In a logging configuration where CustomLog is used with \"%{varname}x\" or \"%{varname}c\" to log variables provided by mod_ssl such as SSL_TLS_SNI, no escaping is performed by either mod_log_config or mod_ssl and unsanitized data provided by the client may appear in log files.",
+          "release": "forky",
+          "fixed_version": "2.4.64-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2025-23048",
+          "description": "In some mod_ssl configurations on Apache HTTP Server 2.4.35 through to 2.4.63, an access control bypass by trusted clients is possible using TLS 1.3 session resumption.  Configurations are affected when mod_ssl is configured for multiple virtual hosts, with each restricted to a different set of trusted client certificates (for example with a different SSLCACertificateFile/Path setting). In such a case, a client trusted to access one virtual host may be able to access another virtual host, if SSLStrictSNIVHostCheck is not enabled in either virtual host.",
+          "release": "forky",
+          "fixed_version": "2.4.64-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2025-49630",
+          "description": "In certain proxy configurations, a denial of service attack against\u00a0Apache HTTP Server versions 2.4.26 through to 2.4.63 can be triggered by untrusted clients causing an assertion in mod_proxy_http2.  Configurations affected are a reverse proxy is configured for an HTTP/2 backend, with ProxyPreserveHost set to \"on\".",
+          "release": "forky",
+          "fixed_version": "2.4.64-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2025-49812",
+          "description": "In some mod_ssl configurations on Apache HTTP Server versions through to 2.4.63, an HTTP desynchronisation attack allows a man-in-the-middle attacker to hijack an HTTP session via a TLS upgrade.  Only configurations using \"SSLEngine optional\" to enable TLS upgrades are affected. Users are recommended to upgrade to version 2.4.64, which removes support for TLS upgrade.",
+          "release": "forky",
+          "fixed_version": "2.4.64-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2025-53020",
+          "description": "Late Release of Memory after Effective Lifetime vulnerability in Apache HTTP Server.  This issue affects Apache HTTP Server: from 2.4.17 up to 2.4.63.  Users are recommended to upgrade to version 2.4.64, which fixes the issue.",
+          "release": "forky",
+          "fixed_version": "2.4.64-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2025-54090",
+          "description": "A bug in Apache HTTP Server 2.4.64 results in all \"RewriteCond expr ...\" tests evaluating as \"true\".    Users are recommended to upgrade to version 2.4.65, which fixes the issue.",
+          "release": "forky",
+          "fixed_version": "2.4.65-1"
+        }
+      ]
+    },
+    {
+      "name": "file",
+      "version": "4.21-3",
+      "cves": [
+        {
+          "source": "debian",
+          "cve_id": "CVE-2009-0947",
+          "description": "Multiple integer overflows in the (1) cdf_read_property_info and (2) cdf_read_sat functions in file before 5.02.",
+          "release": "bookworm",
+          "fixed_version": "5.02-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2009-0948",
+          "description": "Multiple buffer overflows in the (1) cdf_read_sat, (2) cdf_read_long_sector_chain, and (3) cdf_read_ssat function in file before 5.02.",
+          "release": "bookworm",
+          "fixed_version": "5.02-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2009-1515",
+          "description": "Heap-based buffer overflow in the cdf_read_sat function in src/cdf.c in Christos Zoulas file 5.00 allows user-assisted remote attackers to execute arbitrary code via a crafted compound document file, as demonstrated by a .msi, .doc, or .mpp file.  NOTE: some of these details are obtained from third party information.",
+          "release": "bookworm",
+          "fixed_version": "5.02-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2009-2830",
+          "description": "Multiple buffer overflows in Christos Zoulas file before 5.03 in Apple Mac OS X 10.6.x before 10.6.2 allow user-assisted remote attackers to execute arbitrary code or cause a denial of service (application crash) via a crafted Common Document Format (CDF) file.  NOTE: this might overlap CVE-2009-1515.",
+          "release": "bookworm",
+          "fixed_version": "5.03-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2009-3930",
+          "description": "Multiple integer overflows in Christos Zoulas file before 5.02 allow user-assisted remote attackers to have an unspecified impact via a malformed compound document (aka cdf) file that triggers a buffer overflow.",
+          "release": "bookworm",
+          "fixed_version": "5.03-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2012-1571",
+          "description": "file before 5.11 and libmagic allow remote attackers to cause a denial of service (crash) via a crafted Composite Document File (CDF) file that triggers (1) an out-of-bounds read or (2) an invalid pointer dereference.",
+          "release": "bookworm",
+          "fixed_version": "5.11-1"
+        }
+      ]
+    },
+    {
+      "name": "hostname",
+      "version": "2.94",
+      "cves": [
+        {
+          "source": "nvd",
+          "cve_id": "CVE-2018-11775",
+          "description": "tls hostname verification when using the apache activemq client before 5.15.6 was missing which could make the client vulnerable to a mitm attack between a java application using the activemq client and the activemq server. this is now enabled by default."
+        },
+        {
+          "source": "nvd",
+          "cve_id": "CVE-2018-20852",
+          "description": "http.cookiejar.defaultpolicy.domain_return_ok in lib/http/cookiejar.py in python before 3.7.3 does not correctly validate the domain: it can be tricked into sending existing cookies to the wrong server. an attacker may abuse this flaw by using a server with a hostname that has another valid hostname as a suffix (e.g., pythonicexample.com to steal cookies for example.com). when a program uses http.cookiejar.defaultpolicy and tries to do an http connection to an attacker-controlled server, existing cookies can be leaked to the attacker. this affects 2.x through 2.7.16, 3.x before 3.4.10, 3.5.x before 3.5.7, 3.6.x before 3.6.9, and 3.7.x before 3.7.3."
+        },
+        {
+          "source": "nvd",
+          "cve_id": "CVE-2019-19941",
+          "description": "missing hostname validation in swisscom centro grande before 6.16.12 allows a remote attacker to inject its local ip address as a domain entry in the dns service of the router via crafted hostnames in dhcp requests, causing xss."
+        },
+        {
+          "source": "nvd",
+          "cve_id": "CVE-2020-14387",
+          "description": "a flaw was found in rsync in versions since 3.2.0pre1. rsync improperly validates certificate with host mismatch vulnerability. a remote, unauthenticated attacker could exploit the flaw by performing a man-in-the-middle attack using a valid certificate for another hostname which could compromise confidentiality and integrity of data transmitted using rsync-ssl. the highest threat from this vulnerability is to data confidentiality and integrity. this flaw affects rsync versions before 3.2.4."
+        },
+        {
+          "source": "nvd",
+          "cve_id": "CVE-2020-1887",
+          "description": "incorrect validation of the tls sni hostname in osquery versions after 2.9.0 and before 4.2.0 could allow an attacker to mitm osquery traffic in the absence of a configured root chain of trust."
+        }
+      ]
+    },
+    {
+      "name": "less",
+      "version": "418-1",
+      "cves": [
+        {
+          "source": "debian",
+          "cve_id": "CVE-2014-9488",
+          "description": "The is_utf8_well_formed function in GNU less before 475 allows remote attackers to have unspecified impact via malformed UTF-8 characters, which triggers an out-of-bounds read.",
+          "release": "bookworm",
+          "fixed_version": "481-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2022-48624",
+          "description": "close_altfile in filename.c in less before 606 omits shell_quote calls for LESSCLOSE.",
+          "release": "bullseye",
+          "fixed_version": "551-2+deb11u2"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2024-32487",
+          "description": "less through 653 allows OS command execution via a newline character in the name of a file, because quoting is mishandled in filename.c. Exploitation typically requires use with attacker-controlled file names, such as the files extracted from an untrusted archive. Exploitation also requires the LESSOPEN environment variable, but this is set by default in many common cases.",
+          "release": "bullseye",
+          "fixed_version": "551-2+deb11u2"
+        }
+      ]
+    },
+    {
+      "name": "libcommons-fileupload-java",
+      "version": "1.2-2",
+      "cves": [
+        {
+          "source": "debian",
+          "cve_id": "CVE-2013-0248",
+          "description": "The default configuration of javax.servlet.context.tempdir in Apache Commons FileUpload 1.0 through 1.2.2 uses the /tmp directory for uploaded files, which allows local users to overwrite arbitrary files via an unspecified symlink attack.",
+          "release": "bookworm",
+          "fixed_version": "1.3-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2014-0050",
+          "description": "MultipartStream.java in Apache Commons FileUpload before 1.3.1, as used in Apache Tomcat, JBoss Web, and other products, allows remote attackers to cause a denial of service (infinite loop and CPU consumption) via a crafted Content-Type header that bypasses a loop's intended exit conditions.",
+          "release": "bookworm",
+          "fixed_version": "1.3.1-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-3092",
+          "description": "The MultipartStream class in Apache Commons Fileupload before 1.3.2, as used in Apache Tomcat 7.x before 7.0.70, 8.x before 8.0.36, 8.5.x before 8.5.3, and 9.x before 9.0.0.M7 and other products, allows remote attackers to cause a denial of service (CPU consumption) via a long boundary string.",
+          "release": "bookworm",
+          "fixed_version": "1.3.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2023-24998",
+          "description": "Apache Commons FileUpload before 1.5 does not limit the number of request parts to be processed resulting in the possibility of an attacker triggering a DoS with a malicious upload or series of uploads.     Note that, like all of the file upload limits, the           new configuration option (FileUploadBase#setFileCountMax) is not           enabled by default and must be explicitly configured.",
+          "release": "bookworm",
+          "fixed_version": "1.4-2"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2025-48976",
+          "description": "Allocation of resources for multipart headers with insufficient limits enabled a DoS vulnerability in Apache Commons FileUpload.  This issue affects Apache Commons FileUpload: from 1.0 before 1.6; from 2.0.0-M1 before 2.0.0-M4.  Users are recommended to upgrade to versions 1.6 or 2.0.0-M4, which fix the issue.",
+          "release": "bullseye",
+          "fixed_version": "1.4-1+deb11u1"
+        }
+      ]
+    },
+    {
+      "name": "libdbd-mysql-perl",
+      "version": "4.005-1",
+      "cves": [
+        {
+          "source": "debian",
+          "cve_id": "CVE-2014-9906",
+          "description": "Use-after-free vulnerability in DBD::mysql before 4.029 allows attackers to cause a denial of service (program crash) or possibly execute arbitrary code via vectors related to a lost server connection.",
+          "release": "bookworm",
+          "fixed_version": "4.033-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2015-8949",
+          "description": "Use-after-free vulnerability in the my_login function in DBD::mysql before 4.033_01 allows attackers to have unspecified impact by leveraging a call to mysql_errno after a failure of my_login.",
+          "release": "bookworm",
+          "fixed_version": "4.035-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-1246",
+          "description": "Buffer overflow in the DBD::mysql module before 4.037 for Perl allows context-dependent attackers to cause a denial of service (crash) via vectors related to an error message.",
+          "release": "bookworm",
+          "fixed_version": "4.037-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-1249",
+          "description": "The DBD::mysql module before 4.039 for Perl, when using server-side prepared statement support, allows attackers to cause a denial of service (out-of-bounds read) via vectors involving an unaligned number of placeholders in WHERE condition and output fields in SELECT expression.",
+          "release": "bookworm",
+          "fixed_version": "4.039-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-1251",
+          "description": "There is a vulnerability of type use-after-free affecting DBD::mysql (aka DBD-mysql or the Database Interface (DBI) MySQL driver for Perl) 3.x and 4.x before 4.041 when used with mysql_server_prepare=1.",
+          "release": "bookworm",
+          "fixed_version": "4.041-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-10788",
+          "description": "The DBD::mysql module through 4.043 for Perl allows remote attackers to cause a denial of service (use-after-free and application crash) or possibly have unspecified other impact by triggering (1) certain error responses from a MySQL server or (2) a loss of a network connection to a MySQL server. The use-after-free defect was introduced by relying on incorrect Oracle mysql_stmt_close documentation and code examples.",
+          "release": "bookworm",
+          "fixed_version": "4.046-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-10789",
+          "description": "The DBD::mysql module through 4.043 for Perl uses the mysql_ssl=1 setting to mean that SSL is optional (even though this setting's documentation has a \"your communication with the server will be encrypted\" statement), which allows man-in-the-middle attackers to spoof servers via a cleartext-downgrade attack, a related issue to CVE-2015-3152.",
+          "release": "bookworm",
+          "fixed_version": "4.046-1"
+        }
+      ]
+    },
+    {
+      "name": "libdbi-perl",
+      "version": "1.601-1",
+      "cves": [
+        {
+          "source": "debian",
+          "cve_id": "CVE-2013-7490",
+          "description": "An issue was discovered in the DBI module before 1.632 for Perl. Using many arguments to methods for Callbacks may lead to memory corruption.",
+          "release": "bookworm",
+          "fixed_version": "1.633-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2013-7491",
+          "description": "An issue was discovered in the DBI module before 1.628 for Perl. Stack corruption occurs when a user-defined function requires a non-trivial amount of memory and the Perl stack gets reallocated.",
+          "release": "bookworm",
+          "fixed_version": "1.628-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2014-10401",
+          "description": "An issue was discovered in the DBI module before 1.632 for Perl. DBD::File drivers can open files from folders other than those specifically passed via the f_dir attribute.",
+          "release": "bookworm",
+          "fixed_version": "1.633-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2014-10402",
+          "description": "An issue was discovered in the DBI module through 1.643 for Perl. DBD::File drivers can open files from folders other than those specifically passed via the f_dir attribute in the data source name (DSN). NOTE: this issue exists because of an incomplete fix for CVE-2014-10401.",
+          "release": "bookworm",
+          "fixed_version": "1.643-3"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2019-20919",
+          "description": "An issue was discovered in the DBI module before 1.643 for Perl. The hv_fetch() documentation requires checking for NULL and the code does that. But, shortly thereafter, it calls SvOK(profile), causing a NULL pointer dereference.",
+          "release": "bookworm",
+          "fixed_version": "1.643-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2020-14392",
+          "description": "An untrusted pointer dereference flaw was found in Perl-DBI < 1.643. A local attacker who is able to manipulate calls to dbd_db_login6_sv() could cause memory corruption, affecting the service's availability.",
+          "release": "bookworm",
+          "fixed_version": "1.643-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2020-14393",
+          "description": "A buffer overflow was found in perl-DBI < 1.643 in DBI.xs. A local attacker who is able to supply a string longer than 300 characters could cause an out-of-bounds write, affecting the availability of the service or integrity of data.",
+          "release": "bookworm",
+          "fixed_version": "1.643-1"
+        }
+      ]
+    },
+    {
+      "name": "libhtml-parser-perl",
+      "version": "3.56-1",
+      "cves": [
+        {
+          "source": "debian",
+          "cve_id": "CVE-2009-3627",
+          "description": "The decode_entities function in util.c in HTML-Parser before 3.63 allows context-dependent attackers to cause a denial of service (infinite loop) via an incomplete SGML numeric character reference, which triggers generation of an invalid UTF-8 character.",
+          "release": "bookworm",
+          "fixed_version": "3.64-1"
+        }
+      ]
+    },
+    {
+      "name": "libwww-perl",
+      "version": "5.808-1",
+      "cves": [
+        {
+          "source": "debian",
+          "cve_id": "CVE-2010-2253",
+          "description": "lwp-download in libwww-perl before 5.835 does not reject downloads to filenames that begin with a . (dot) character, which allows remote servers to create or overwrite files via (1) a 3xx redirect to a URL with a crafted filename or (2) a Content-Disposition header that suggests a crafted filename, and possibly execute arbitrary code as a consequence of writing to a dotfile in a home directory.",
+          "release": "bookworm",
+          "fixed_version": "5.835-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2011-0633",
+          "description": "The Net::HTTPS module in libwww-perl (LWP) before 6.00, as used in WWW::Mechanize, LWP::UserAgent, and other products, when running in environments that do not set the If-SSL-Cert-Subject header, does not enable full validation of SSL certificates by default, which allows remote attackers to spoof servers via man-in-the-middle (MITM) attacks involving hostnames that are not properly validated.  NOTE: it could be argued that this is a design limitation of the Net::HTTPS API, and separate implementations should be independently assigned CVE identifiers for not working around this limitation. However, because this API was modified within LWP, a single CVE identifier has been assigned.",
+          "release": "bookworm",
+          "fixed_version": "6.01-1"
+        }
+      ]
+    },
+    {
+      "name": "libxerces2-java",
+      "version": "2.9.0-1",
+      "cves": [
+        {
+          "source": "debian",
+          "cve_id": "CVE-2022-23437",
+          "description": "There's a vulnerability within the Apache Xerces Java (XercesJ) XML parser when handling specially crafted XML document payloads. This causes, the XercesJ XML parser to wait in an infinite loop, which may sometimes consume system resources for prolonged duration. This vulnerability is present within XercesJ version 2.12.1 and the previous versions.",
+          "release": "bookworm",
+          "fixed_version": "2.12.2-1"
+        }
+      ]
+    },
+    {
+      "name": "logrotate",
+      "version": "3.7.1-3",
+      "cves": [
+        {
+          "source": "debian",
+          "cve_id": "CVE-2011-1098",
+          "description": "Race condition in the createOutputFile function in logrotate.c in logrotate 3.7.9 and earlier allows local users to read log data by opening a file before the intended permissions are in place.",
+          "release": "bookworm",
+          "fixed_version": "3.8.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2011-1154",
+          "description": "The shred_file function in logrotate.c in logrotate 3.7.9 and earlier might allow context-dependent attackers to execute arbitrary commands via shell metacharacters in a log filename, as demonstrated by a filename that is automatically constructed on the basis of a hostname or virtual machine name.",
+          "release": "bookworm",
+          "fixed_version": "3.8.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2011-1155",
+          "description": "The writeState function in logrotate.c in logrotate 3.7.9 and earlier might allow context-dependent attackers to cause a denial of service (rotation outage) via a (1) \\n (newline) or (2) \\ (backslash) character in a log filename, as demonstrated by a filename that is automatically constructed on the basis of a hostname or virtual machine name.",
+          "release": "bookworm",
+          "fixed_version": "3.8.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2011-1548",
+          "description": "The default configuration of logrotate on Debian GNU/Linux uses root privileges to process files in directories that permit non-root write access, which allows local users to conduct symlink and hard link attacks by leveraging logrotate's lack of support for untrusted directories, as demonstrated by /var/log/postgresql/.",
+          "release": "bookworm",
+          "fixed_version": "3.7.8-6"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2022-1348",
+          "description": "A vulnerability was found in logrotate in how the state file is created. The state file is used to prevent parallel executions of multiple instances of logrotate by acquiring and releasing a file lock. When the state file does not exist, it is created with world-readable permission, allowing an unprivileged user to lock the state file, stopping any rotation. This flaw affects logrotate versions before 3.20.0.",
+          "release": "bookworm",
+          "fixed_version": "3.20.1-1"
+        }
+      ]
+    },
+    {
+      "name": "man-db",
+      "version": "2.5.1-3",
+      "cves": [
+        {
+          "source": "debian",
+          "cve_id": "CVE-2015-1336",
+          "description": "The daily mandb cleanup job in Man-db before 2.7.6.1-1 as packaged in Ubuntu and Debian allows local users with access to the man account to gain privileges via vectors involving insecure chown use.",
+          "release": "bookworm",
+          "fixed_version": "2.7.6-1"
+        }
+      ]
+    },
+    {
+      "name": "netcat",
+      "version": "1.10-36",
+      "cves": [
+        {
+          "source": "nvd",
+          "cve_id": "CVE-2017-9732",
+          "description": "the read_packet function in knc (kerberised netcat) before 1.11-1 is vulnerable to denial of service (memory exhaustion) that can be exploited remotely without authentication, possibly affecting another services running on the targeted host."
+        }
+      ]
+    },
+    {
+      "name": "nmap",
+      "version": "4.53-3",
+      "cves": [
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-18594",
+          "description": "nse_libssh2.cc in Nmap 7.70 is subject to a denial of service condition due to a double free when an SSH connection fails, as demonstrated by a leading \\n character to ssh-brute.nse or ssh-auth-methods.nse.",
+          "release": "bookworm",
+          "fixed_version": "7.80+dfsg1-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2018-1000161",
+          "description": "nmap version 6.49BETA6 through 7.60, up to and including SVN revision 37147 contains a Directory Traversal vulnerability in NSE script http-fetch that can result in file overwrite as the user is running it. This attack appears to be exploitable via a victim that runs NSE script http-fetch against a malicious web site. This vulnerability appears to have been fixed in 7.7.",
+          "release": "bookworm",
+          "fixed_version": "7.70+dfsg1-1"
+        }
+      ]
+    },
+    {
+      "name": "patch",
+      "version": "2.5.9-4",
+      "cves": [
+        {
+          "source": "debian",
+          "cve_id": "CVE-2014-9637",
+          "description": "GNU patch 2.7.2 and earlier allows remote attackers to cause a denial of service (memory consumption and segmentation fault) via a crafted diff file.",
+          "release": "bookworm",
+          "fixed_version": "2.7.1-7"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2015-1196",
+          "description": "GNU patch 2.7.1 allows remote attackers to write to arbitrary files via a symlink attack in a patch file.",
+          "release": "bookworm",
+          "fixed_version": "2.7.1-7"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2015-1395",
+          "description": "Directory traversal vulnerability in GNU patch versions which support Git-style patching before 2.7.3 allows remote attackers to write to arbitrary files with the permissions of the target user via a .. (dot dot) in a diff file name.",
+          "release": "bookworm",
+          "fixed_version": "2.7.3-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2015-1396",
+          "description": "A Directory Traversal vulnerability exists in the GNU patch before 2.7.4. A remote attacker can write to arbitrary files via a symlink attack in a patch file. NOTE: this issue exists because of an incomplete fix for CVE-2015-1196.",
+          "release": "bookworm",
+          "fixed_version": "2.7.3-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-10713",
+          "description": "An issue was discovered in GNU patch before 2.7.6. Out-of-bounds access within pch_write_line() in pch.c can possibly lead to DoS via a crafted input file.",
+          "release": "bookworm",
+          "fixed_version": "2.7.6-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2018-1000156",
+          "description": "GNU Patch version 2.7.6 contains an input validation vulnerability when processing patch files, specifically the EDITOR_PROGRAM invocation (using ed) can result in code execution. This attack appear to be exploitable via a patch file processed via the patch utility. This is similar to FreeBSD's CVE-2015-1418 however although they share a common ancestry the code bases have diverged over time.",
+          "release": "bookworm",
+          "fixed_version": "2.7.6-2"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2018-20969",
+          "description": "do_ed_script in pch.c in GNU patch through 2.7.6 does not block strings beginning with a ! character. NOTE: this is the same commit as for CVE-2019-13638, but the ! syntax is specific to ed, and is unrelated to a shell metacharacter.",
+          "release": "bookworm",
+          "fixed_version": "2.7.6-5"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2019-13636",
+          "description": "In GNU patch through 2.7.6, the following of symlinks is mishandled in certain cases other than input files. This affects inp.c and util.c.",
+          "release": "bookworm",
+          "fixed_version": "2.7.6-5"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2019-13638",
+          "description": "GNU patch through 2.7.6 is vulnerable to OS shell command injection that can be exploited by opening a crafted patch file that contains an ed style diff payload with shell metacharacters. The ed editor does not need to be present on the vulnerable system. This is different from CVE-2018-1000156.",
+          "release": "bookworm",
+          "fixed_version": "2.7.6-5"
+        }
+      ]
+    },
+    {
+      "name": "postgresql-common",
+      "version": "87",
+      "cves": [
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-1255",
+          "description": "The pg_ctlcluster script in postgresql-common package in Debian wheezy before 134wheezy5, in Debian jessie before 165+deb8u2, in Debian unstable before 178, in Ubuntu 12.04 LTS before 129ubuntu1.2, in Ubuntu 14.04 LTS before 154ubuntu1.1, in Ubuntu 16.04 LTS before 173ubuntu0.1, in Ubuntu 17.04 before 179ubuntu0.1, and in Ubuntu 17.10 before 184ubuntu1.1 allows local users to gain root privileges via a symlink attack on a logfile in /var/log/postgresql.",
+          "release": "bookworm",
+          "fixed_version": "178"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-8806",
+          "description": "The Debian pg_ctlcluster, pg_createcluster, and pg_upgradecluster scripts, as distributed in the Debian postgresql-common package before 181+deb9u1 for PostgreSQL (and other packages related to Debian and Ubuntu), handled symbolic links insecurely, which could result in local denial of service by overwriting arbitrary files.",
+          "release": "bookworm",
+          "fixed_version": "188"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2019-3466",
+          "description": "The pg_ctlcluster script in postgresql-common in versions prior to 210 didn't drop privileges when creating socket/statistics temporary directories, which could result in local privilege escalation.",
+          "release": "bookworm",
+          "fixed_version": "210"
+        }
+      ]
+    },
+    {
+      "name": "ruby",
+      "version": "4.1",
+      "cves": [
+        {
+          "source": "nvd",
+          "cve_id": "CVE-2019-10780",
+          "description": "bibtex-ruby before 5.1.0 allows shell command injection due to unsanitized user input being passed directly to the built-in ruby kernel.open method through bibtex.open."
+        },
+        {
+          "source": "nvd",
+          "cve_id": "CVE-2021-22902",
+          "description": "the actionpack ruby gem (a framework for handling and responding to web requests in rails) before 6.0.3.7, 6.1.3.2 suffers from a possible denial of service vulnerability in the mime type parser of action dispatch. carefully crafted accept headers can cause the mime type parser in action dispatch to do catastrophic backtracking in the regular expression engine."
+        },
+        {
+          "source": "nvd",
+          "cve_id": "CVE-2021-22903",
+          "description": "the actionpack ruby gem before 6.1.3.2 suffers from a possible open redirect vulnerability. specially crafted host headers in combination with certain \"allowed host\" formats can cause the host authorization middleware in action pack to redirect users to a malicious website. this is similar to cve-2021-22881. strings in config.hosts that do not have a leading dot are converted to regular expressions without proper escaping. this causes, for example, `config.hosts << \"sub.example.com\"` to permit a request with a host header value of `sub-example.com`."
+        },
+        {
+          "source": "nvd",
+          "cve_id": "CVE-2021-22904",
+          "description": "the actionpack ruby gem before 6.1.3.2, 6.0.3.7, 5.2.4.6, 5.2.6 suffers from a possible denial of service vulnerability in the token authentication logic in action controller due to a too permissive regular expression. impacted code uses `authenticate_or_request_with_http_token` or `authenticate_with_http_token` for request authentication."
+        },
+        {
+          "source": "nvd",
+          "cve_id": "CVE-2021-39880",
+          "description": "a denial of service vulnerability in the apollo_upload_server ruby gem in gitlab ce/ee all versions starting from 11.9 before 14.0.9, all versions starting from 14.1 before 14.1.4, and all versions starting from 14.2 before 14.2.2 allows an attacker to deny access to all users via specially crafted requests to the apollo_upload_server middleware."
+        }
+      ]
+    },
+    {
+      "name": "socat",
+      "version": "1.6.0.0-1",
+      "cves": [
+        {
+          "source": "debian",
+          "cve_id": "CVE-2010-2799",
+          "description": "Stack-based buffer overflow in the nestlex function in nestlex.c in Socat 1.5.0.0 through 1.7.1.2 and 2.0.0-b1 through 2.0.0-b3, when bidirectional data relay is enabled, allows context-dependent attackers to execute arbitrary code via long command-line arguments.",
+          "release": "bookworm",
+          "fixed_version": "1.7.1.3-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2014-0019",
+          "description": "Stack-based buffer overflow in socat 1.3.0.0 through 1.7.2.2 and 2.0.0-b1 through 2.0.0-b6 allows local users to cause a denial of service (segmentation fault) via a long server name in the PROXY-CONNECT address in the command line.",
+          "release": "bookworm",
+          "fixed_version": "1.7.2.3-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2015-1379",
+          "description": "The signal handler implementations in socat before 1.7.3.0 and 2.0.0-b8 allow remote attackers to cause a denial of service (process freeze or crash).",
+          "release": "bookworm",
+          "fixed_version": "1.7.2.4-2"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-2217",
+          "description": "The OpenSSL address implementation in Socat 1.7.3.0 and 2.0.0-b8 does not use a prime number for the DH, which makes it easier for remote attackers to obtain the shared secret.",
+          "release": "bookworm",
+          "fixed_version": "1.7.3.1-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2024-54661",
+          "description": "readline.sh in socat before1.8.0.2 relies on the /tmp/$USER/stderr2 file.",
+          "release": "forky",
+          "fixed_version": "1.8.0.2-1"
+        }
+      ]
+    },
+    {
+      "name": "tar",
+      "version": "1.19-3",
+      "cves": [
+        {
+          "source": "debian",
+          "cve_id": "CVE-2010-0624",
+          "description": "Heap-based buffer overflow in the rmt_read__ function in lib/rtapelib.c in the rmt client functionality in GNU tar before 1.23 and GNU cpio before 2.11 allows remote rmt servers to cause a denial of service (memory corruption) or possibly execute arbitrary code by sending more data than was requested, related to archive filenames that contain a : (colon) character.",
+          "release": "bookworm",
+          "fixed_version": "1.23-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2018-20482",
+          "description": "GNU Tar through 1.30, when --sparse is used, mishandles file shrinkage during read access, which allows local users to cause a denial of service (infinite read loop in sparse_dump_region in sparse.c) by modifying a file that is supposed to be archived by a different user's process (e.g., a system backup running as root).",
+          "release": "bookworm",
+          "fixed_version": "1.30+dfsg-3.1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2019-9923",
+          "description": "pax_decode_header in sparse.c in GNU Tar before 1.32 had a NULL pointer dereference when parsing certain archives that have malformed extended headers.",
+          "release": "bookworm",
+          "fixed_version": "1.32+dfsg-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2021-20193",
+          "description": "A flaw was found in the src/list.c of tar 1.33 and earlier. This flaw allows an attacker who can submit a crafted input file to tar to cause uncontrolled consumption of memory. The highest threat from this vulnerability is to system availability.",
+          "release": "bookworm",
+          "fixed_version": "1.34+dfsg-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2022-48303",
+          "description": "GNU Tar through 1.34 has a one-byte out-of-bounds read that results in use of uninitialized memory for a conditional jump. Exploitation to change the flow of control has not been demonstrated. The issue occurs in from_header in list.c via a V7 archive in which mtime has approximately 11 whitespace characters.",
+          "release": "forky",
+          "fixed_version": "1.34+dfsg-1.4"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2023-39804",
+          "description": "In GNU tar before 1.35, mishandled extension attributes in a PAX archive can lead to an application crash in xheader.c.",
+          "release": "forky",
+          "fixed_version": "1.34+dfsg-1.3"
+        }
+      ]
+    },
+    {
+      "name": "tcpdump",
+      "version": "3.9.8-2",
+      "cves": [
+        {
+          "source": "debian",
+          "cve_id": "CVE-2014-8767",
+          "description": "Integer underflow in the olsr_print function in tcpdump 3.9.6 through 4.6.2, when in verbose mode, allows remote attackers to cause a denial of service (crash) via a crafted length value in an OLSR frame.",
+          "release": "bookworm",
+          "fixed_version": "4.6.2-2"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2014-8768",
+          "description": "Multiple Integer underflows in the geonet_print function in tcpdump 4.5.0 through 4.6.2, when in verbose mode, allow remote attackers to cause a denial of service (segmentation fault and crash) via a crafted length value in a Geonet frame.",
+          "release": "bookworm",
+          "fixed_version": "4.6.2-2"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2014-8769",
+          "description": "tcpdump 3.8 through 4.6.2 might allow remote attackers to obtain sensitive information from memory or cause a denial of service (packet loss or segmentation fault) via a crafted Ad hoc On-Demand Distance Vector (AODV) packet, which triggers an out-of-bounds memory access.",
+          "release": "bookworm",
+          "fixed_version": "4.6.2-2"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2014-9140",
+          "description": "Buffer overflow in the ppp_hdlc function in print-ppp.c in tcpdump 4.6.2 and earlier allows remote attackers to cause a denial of service (crash) cia a crafted PPP packet.",
+          "release": "bookworm",
+          "fixed_version": "4.6.2-3"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2015-0261",
+          "description": "Integer signedness error in the mobility_opt_print function in the IPv6 mobility printer in tcpdump before 4.7.2 allows remote attackers to cause a denial of service (out-of-bounds read and crash) or possibly execute arbitrary code via a negative length value.",
+          "release": "bookworm",
+          "fixed_version": "4.6.2-4"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2015-2153",
+          "description": "The rpki_rtr_pdu_print function in print-rpki-rtr.c in the TCP printer in tcpdump before 4.7.2 allows remote attackers to cause a denial of service (out-of-bounds read or write and crash) via a crafted header length in an RPKI-RTR Protocol Data Unit (PDU).",
+          "release": "bookworm",
+          "fixed_version": "4.6.2-4"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2015-2154",
+          "description": "The osi_print_cksum function in print-isoclns.c in the ethernet printer in tcpdump before 4.7.2 allows remote attackers to cause a denial of service (out-of-bounds read and crash) via a crafted (1) length, (2) offset, or (3) base pointer checksum value.",
+          "release": "bookworm",
+          "fixed_version": "4.6.2-4"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2015-2155",
+          "description": "The force printer in tcpdump before 4.7.2 allows remote attackers to cause a denial of service (crash) and possibly execute arbitrary code via unspecified vectors.",
+          "release": "bookworm",
+          "fixed_version": "4.6.2-4"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-7922",
+          "description": "The AH parser in tcpdump before 4.9.0 has a buffer overflow in print-ah.c:ah_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-7923",
+          "description": "The ARP parser in tcpdump before 4.9.0 has a buffer overflow in print-arp.c:arp_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-7924",
+          "description": "The ATM parser in tcpdump before 4.9.0 has a buffer overflow in print-atm.c:oam_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-7925",
+          "description": "The compressed SLIP parser in tcpdump before 4.9.0 has a buffer overflow in print-sl.c:sl_if_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-7926",
+          "description": "The Ethernet parser in tcpdump before 4.9.0 has a buffer overflow in print-ether.c:ethertype_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-7927",
+          "description": "The IEEE 802.11 parser in tcpdump before 4.9.0 has a buffer overflow in print-802_11.c:ieee802_11_radio_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-7928",
+          "description": "The IPComp parser in tcpdump before 4.9.0 has a buffer overflow in print-ipcomp.c:ipcomp_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-7929",
+          "description": "The Juniper PPPoE ATM parser in tcpdump before 4.9.0 has a buffer overflow in print-juniper.c:juniper_parse_header().",
+          "release": "bookworm",
+          "fixed_version": "4.9.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-7930",
+          "description": "The LLC/SNAP parser in tcpdump before 4.9.0 has a buffer overflow in print-llc.c:llc_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-7931",
+          "description": "The MPLS parser in tcpdump before 4.9.0 has a buffer overflow in print-mpls.c:mpls_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-7932",
+          "description": "The PIM parser in tcpdump before 4.9.0 has a buffer overflow in print-pim.c:pimv2_check_checksum().",
+          "release": "bookworm",
+          "fixed_version": "4.9.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-7933",
+          "description": "The PPP parser in tcpdump before 4.9.0 has a buffer overflow in print-ppp.c:ppp_hdlc_if_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-7934",
+          "description": "The RTCP parser in tcpdump before 4.9.0 has a buffer overflow in print-udp.c:rtcp_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-7935",
+          "description": "The RTP parser in tcpdump before 4.9.0 has a buffer overflow in print-udp.c:rtp_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-7936",
+          "description": "The UDP parser in tcpdump before 4.9.0 has a buffer overflow in print-udp.c:udp_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-7937",
+          "description": "The VAT parser in tcpdump before 4.9.0 has a buffer overflow in print-udp.c:vat_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-7938",
+          "description": "The ZeroMQ parser in tcpdump before 4.9.0 has an integer overflow in print-zeromq.c:zmtp1_print_frame().",
+          "release": "bookworm",
+          "fixed_version": "4.9.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-7939",
+          "description": "The GRE parser in tcpdump before 4.9.0 has a buffer overflow in print-gre.c, multiple functions.",
+          "release": "bookworm",
+          "fixed_version": "4.9.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-7940",
+          "description": "The STP parser in tcpdump before 4.9.0 has a buffer overflow in print-stp.c, multiple functions.",
+          "release": "bookworm",
+          "fixed_version": "4.9.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-7973",
+          "description": "The AppleTalk parser in tcpdump before 4.9.0 has a buffer overflow in print-atalk.c, multiple functions.",
+          "release": "bookworm",
+          "fixed_version": "4.9.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-7974",
+          "description": "The IP parser in tcpdump before 4.9.0 has a buffer overflow in print-ip.c, multiple functions.",
+          "release": "bookworm",
+          "fixed_version": "4.9.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-7975",
+          "description": "The TCP parser in tcpdump before 4.9.0 has a buffer overflow in print-tcp.c:tcp_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-7983",
+          "description": "The BOOTP parser in tcpdump before 4.9.0 has a buffer overflow in print-bootp.c:bootp_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-7984",
+          "description": "The TFTP parser in tcpdump before 4.9.0 has a buffer overflow in print-tftp.c:tftp_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-7985",
+          "description": "The CALM FAST parser in tcpdump before 4.9.0 has a buffer overflow in print-calm-fast.c:calm_fast_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-7986",
+          "description": "The GeoNetworking parser in tcpdump before 4.9.0 has a buffer overflow in print-geonet.c, multiple functions.",
+          "release": "bookworm",
+          "fixed_version": "4.9.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-7992",
+          "description": "The Classical IP over ATM parser in tcpdump before 4.9.0 has a buffer overflow in print-cip.c:cip_if_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-7993",
+          "description": "A bug in util-print.c:relts_print() in tcpdump before 4.9.0 could cause a buffer overflow in multiple protocol parsers (DNS, DVMRP, HSRP, IGMP, lightweight resolver protocol, PIM).",
+          "release": "bookworm",
+          "fixed_version": "4.9.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-8574",
+          "description": "The FRF.15 parser in tcpdump before 4.9.0 has a buffer overflow in print-fr.c:frf15_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2016-8575",
+          "description": "The Q.933 parser in tcpdump before 4.9.0 has a buffer overflow in print-fr.c:q933_print(), a different vulnerability than CVE-2017-5482.",
+          "release": "bookworm",
+          "fixed_version": "4.9.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-11108",
+          "description": "tcpdump 4.9.0 allows remote attackers to cause a denial of service (heap-based buffer over-read and application crash) via crafted packet data. The crash occurs in the EXTRACT_16BITS function, called from the stp_print function for the Spanning Tree Protocol.",
+          "release": "bookworm",
+          "fixed_version": "4.9.1-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-11541",
+          "description": "tcpdump 4.9.0 has a heap-based buffer over-read in the lldp_print function in print-lldp.c, related to util-print.c.",
+          "release": "bookworm",
+          "fixed_version": "4.9.1-3"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-11542",
+          "description": "tcpdump 4.9.0 has a heap-based buffer over-read in the pimv1_print function in print-pim.c.",
+          "release": "bookworm",
+          "fixed_version": "4.9.1-3"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-11543",
+          "description": "tcpdump 4.9.0 has a buffer overflow in the sliplink_print function in print-sl.c.",
+          "release": "bookworm",
+          "fixed_version": "4.9.1-3"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-12893",
+          "description": "The SMB/CIFS parser in tcpdump before 4.9.2 has a buffer over-read in smbutil.c:name_len().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-12894",
+          "description": "Several protocol parsers in tcpdump before 4.9.2 could cause a buffer over-read in addrtoname.c:lookup_bytestring().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-12895",
+          "description": "The ICMP parser in tcpdump before 4.9.2 has a buffer over-read in print-icmp.c:icmp_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-12896",
+          "description": "The ISAKMP parser in tcpdump before 4.9.2 has a buffer over-read in print-isakmp.c:isakmp_rfc3948_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-12897",
+          "description": "The ISO CLNS parser in tcpdump before 4.9.2 has a buffer over-read in print-isoclns.c:isoclns_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-12898",
+          "description": "The NFS parser in tcpdump before 4.9.2 has a buffer over-read in print-nfs.c:interp_reply().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-12899",
+          "description": "The DECnet parser in tcpdump before 4.9.2 has a buffer over-read in print-decnet.c:decnet_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-12900",
+          "description": "Several protocol parsers in tcpdump before 4.9.2 could cause a buffer over-read in util-print.c:tok2strbuf().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-12901",
+          "description": "The EIGRP parser in tcpdump before 4.9.2 has a buffer over-read in print-eigrp.c:eigrp_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-12902",
+          "description": "The Zephyr parser in tcpdump before 4.9.2 has a buffer over-read in print-zephyr.c, several functions.",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-12985",
+          "description": "The IPv6 parser in tcpdump before 4.9.2 has a buffer over-read in print-ip6.c:ip6_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-12986",
+          "description": "The IPv6 routing header parser in tcpdump before 4.9.2 has a buffer over-read in print-rt6.c:rt6_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-12987",
+          "description": "The IEEE 802.11 parser in tcpdump before 4.9.2 has a buffer over-read in print-802_11.c:parse_elements().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-12988",
+          "description": "The telnet parser in tcpdump before 4.9.2 has a buffer over-read in print-telnet.c:telnet_parse().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-12989",
+          "description": "The RESP parser in tcpdump before 4.9.2 could enter an infinite loop due to a bug in print-resp.c:resp_get_length().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-12990",
+          "description": "The ISAKMP parser in tcpdump before 4.9.2 could enter an infinite loop due to bugs in print-isakmp.c, several functions.",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-12991",
+          "description": "The BGP parser in tcpdump before 4.9.2 has a buffer over-read in print-bgp.c:bgp_attr_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-12992",
+          "description": "The RIPng parser in tcpdump before 4.9.2 has a buffer over-read in print-ripng.c:ripng_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-12993",
+          "description": "The Juniper protocols parser in tcpdump before 4.9.2 has a buffer over-read in print-juniper.c, several functions.",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-12994",
+          "description": "The BGP parser in tcpdump before 4.9.2 has a buffer over-read in print-bgp.c:bgp_attr_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-12995",
+          "description": "The DNS parser in tcpdump before 4.9.2 could enter an infinite loop due to a bug in print-domain.c:ns_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-12996",
+          "description": "The PIMv2 parser in tcpdump before 4.9.2 has a buffer over-read in print-pim.c:pimv2_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-12997",
+          "description": "The LLDP parser in tcpdump before 4.9.2 could enter an infinite loop due to a bug in print-lldp.c:lldp_private_8021_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-12998",
+          "description": "The IS-IS parser in tcpdump before 4.9.2 has a buffer over-read in print-isoclns.c:isis_print_extd_ip_reach().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-12999",
+          "description": "The IS-IS parser in tcpdump before 4.9.2 has a buffer over-read in print-isoclns.c:isis_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13000",
+          "description": "The IEEE 802.15.4 parser in tcpdump before 4.9.2 has a buffer over-read in print-802_15_4.c:ieee802_15_4_if_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13001",
+          "description": "The NFS parser in tcpdump before 4.9.2 has a buffer over-read in print-nfs.c:nfs_printfh().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13002",
+          "description": "The AODV parser in tcpdump before 4.9.2 has a buffer over-read in print-aodv.c:aodv_extension().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13003",
+          "description": "The LMP parser in tcpdump before 4.9.2 has a buffer over-read in print-lmp.c:lmp_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13004",
+          "description": "The Juniper protocols parser in tcpdump before 4.9.2 has a buffer over-read in print-juniper.c:juniper_parse_header().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13005",
+          "description": "The NFS parser in tcpdump before 4.9.2 has a buffer over-read in print-nfs.c:xid_map_enter().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13006",
+          "description": "The L2TP parser in tcpdump before 4.9.2 has a buffer over-read in print-l2tp.c, several functions.",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13007",
+          "description": "The Apple PKTAP parser in tcpdump before 4.9.2 has a buffer over-read in print-pktap.c:pktap_if_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13008",
+          "description": "The IEEE 802.11 parser in tcpdump before 4.9.2 has a buffer over-read in print-802_11.c:parse_elements().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13009",
+          "description": "The IPv6 mobility parser in tcpdump before 4.9.2 has a buffer over-read in print-mobility.c:mobility_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13010",
+          "description": "The BEEP parser in tcpdump before 4.9.2 has a buffer over-read in print-beep.c:l_strnstart().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13011",
+          "description": "Several protocol parsers in tcpdump before 4.9.2 could cause a buffer overflow in util-print.c:bittok2str_internal().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13012",
+          "description": "The ICMP parser in tcpdump before 4.9.2 has a buffer over-read in print-icmp.c:icmp_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13013",
+          "description": "The ARP parser in tcpdump before 4.9.2 has a buffer over-read in print-arp.c, several functions.",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13014",
+          "description": "The White Board protocol parser in tcpdump before 4.9.2 has a buffer over-read in print-wb.c:wb_prep(), several functions.",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13015",
+          "description": "The EAP parser in tcpdump before 4.9.2 has a buffer over-read in print-eap.c:eap_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13016",
+          "description": "The ISO ES-IS parser in tcpdump before 4.9.2 has a buffer over-read in print-isoclns.c:esis_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13017",
+          "description": "The DHCPv6 parser in tcpdump before 4.9.2 has a buffer over-read in print-dhcp6.c:dhcp6opt_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13018",
+          "description": "The PGM parser in tcpdump before 4.9.2 has a buffer over-read in print-pgm.c:pgm_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13019",
+          "description": "The PGM parser in tcpdump before 4.9.2 has a buffer over-read in print-pgm.c:pgm_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13020",
+          "description": "The VTP parser in tcpdump before 4.9.2 has a buffer over-read in print-vtp.c:vtp_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13021",
+          "description": "The ICMPv6 parser in tcpdump before 4.9.2 has a buffer over-read in print-icmp6.c:icmp6_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13022",
+          "description": "The IP parser in tcpdump before 4.9.2 has a buffer over-read in print-ip.c:ip_printroute().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13023",
+          "description": "The IPv6 mobility parser in tcpdump before 4.9.2 has a buffer over-read in print-mobility.c:mobility_opt_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13024",
+          "description": "The IPv6 mobility parser in tcpdump before 4.9.2 has a buffer over-read in print-mobility.c:mobility_opt_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13025",
+          "description": "The IPv6 mobility parser in tcpdump before 4.9.2 has a buffer over-read in print-mobility.c:mobility_opt_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13026",
+          "description": "The ISO IS-IS parser in tcpdump before 4.9.2 has a buffer over-read in print-isoclns.c, several functions.",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13027",
+          "description": "The LLDP parser in tcpdump before 4.9.2 has a buffer over-read in print-lldp.c:lldp_mgmt_addr_tlv_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13028",
+          "description": "The BOOTP parser in tcpdump before 4.9.2 has a buffer over-read in print-bootp.c:bootp_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13029",
+          "description": "The PPP parser in tcpdump before 4.9.2 has a buffer over-read in print-ppp.c:print_ccp_config_options().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13030",
+          "description": "The PIM parser in tcpdump before 4.9.2 has a buffer over-read in print-pim.c, several functions.",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13031",
+          "description": "The IPv6 fragmentation header parser in tcpdump before 4.9.2 has a buffer over-read in print-frag6.c:frag6_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13032",
+          "description": "The RADIUS parser in tcpdump before 4.9.2 has a buffer over-read in print-radius.c:print_attr_string().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13033",
+          "description": "The VTP parser in tcpdump before 4.9.2 has a buffer over-read in print-vtp.c:vtp_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13034",
+          "description": "The PGM parser in tcpdump before 4.9.2 has a buffer over-read in print-pgm.c:pgm_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13035",
+          "description": "The ISO IS-IS parser in tcpdump before 4.9.2 has a buffer over-read in print-isoclns.c:isis_print_id().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13036",
+          "description": "The OSPFv3 parser in tcpdump before 4.9.2 has a buffer over-read in print-ospf6.c:ospf6_decode_v3().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13037",
+          "description": "The IP parser in tcpdump before 4.9.2 has a buffer over-read in print-ip.c:ip_printts().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13038",
+          "description": "The PPP parser in tcpdump before 4.9.2 has a buffer over-read in print-ppp.c:handle_mlppp().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13039",
+          "description": "The ISAKMP parser in tcpdump before 4.9.2 has a buffer over-read in print-isakmp.c, several functions.",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13040",
+          "description": "The MPTCP parser in tcpdump before 4.9.2 has a buffer over-read in print-mptcp.c, several functions.",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13041",
+          "description": "The ICMPv6 parser in tcpdump before 4.9.2 has a buffer over-read in print-icmp6.c:icmp6_nodeinfo_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13042",
+          "description": "The HNCP parser in tcpdump before 4.9.2 has a buffer over-read in print-hncp.c:dhcpv6_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13043",
+          "description": "The BGP parser in tcpdump before 4.9.2 has a buffer over-read in print-bgp.c:decode_multicast_vpn().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13044",
+          "description": "The HNCP parser in tcpdump before 4.9.2 has a buffer over-read in print-hncp.c:dhcpv4_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13045",
+          "description": "The VQP parser in tcpdump before 4.9.2 has a buffer over-read in print-vqp.c:vqp_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13046",
+          "description": "The BGP parser in tcpdump before 4.9.2 has a buffer over-read in print-bgp.c:bgp_attr_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13047",
+          "description": "The ISO ES-IS parser in tcpdump before 4.9.2 has a buffer over-read in print-isoclns.c:esis_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13048",
+          "description": "The RSVP parser in tcpdump before 4.9.2 has a buffer over-read in print-rsvp.c:rsvp_obj_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13049",
+          "description": "The Rx protocol parser in tcpdump before 4.9.2 has a buffer over-read in print-rx.c:ubik_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13050",
+          "description": "The RPKI-Router parser in tcpdump before 4.9.2 has a buffer over-read in print-rpki-rtr.c:rpki_rtr_pdu_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13051",
+          "description": "The RSVP parser in tcpdump before 4.9.2 has a buffer over-read in print-rsvp.c:rsvp_obj_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13052",
+          "description": "The CFM parser in tcpdump before 4.9.2 has a buffer over-read in print-cfm.c:cfm_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13053",
+          "description": "The BGP parser in tcpdump before 4.9.2 has a buffer over-read in print-bgp.c:decode_rt_routing_info().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13054",
+          "description": "The LLDP parser in tcpdump before 4.9.2 has a buffer over-read in print-lldp.c:lldp_private_8023_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13055",
+          "description": "The ISO IS-IS parser in tcpdump before 4.9.2 has a buffer over-read in print-isoclns.c:isis_print_is_reach_subtlv().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13687",
+          "description": "The Cisco HDLC parser in tcpdump before 4.9.2 has a buffer over-read in print-chdlc.c:chdlc_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13688",
+          "description": "The OLSR parser in tcpdump before 4.9.2 has a buffer over-read in print-olsr.c:olsr_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13689",
+          "description": "The IKEv1 parser in tcpdump before 4.9.2 has a buffer over-read in print-isakmp.c:ikev1_id_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13690",
+          "description": "The IKEv2 parser in tcpdump before 4.9.2 has a buffer over-read in print-isakmp.c, several functions.",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-13725",
+          "description": "The IPv6 routing header parser in tcpdump before 4.9.2 has a buffer over-read in print-rt6.c:rt6_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.2-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-5202",
+          "description": "The ISO CLNS parser in tcpdump before 4.9.0 has a buffer overflow in print-isoclns.c:clnp_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-5203",
+          "description": "The BOOTP parser in tcpdump before 4.9.0 has a buffer overflow in print-bootp.c:bootp_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-5204",
+          "description": "The IPv6 parser in tcpdump before 4.9.0 has a buffer overflow in print-ip6.c:ip6_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-5205",
+          "description": "The ISAKMP parser in tcpdump before 4.9.0 has a buffer overflow in print-isakmp.c:ikev2_e_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-5341",
+          "description": "The OTV parser in tcpdump before 4.9.0 has a buffer overflow in print-otv.c:otv_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-5342",
+          "description": "In tcpdump before 4.9.0, a bug in multiple protocol parsers (Geneve, GRE, NSH, OTV, VXLAN and VXLAN GPE) could cause a buffer overflow in print-ether.c:ether_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-5482",
+          "description": "The Q.933 parser in tcpdump before 4.9.0 has a buffer overflow in print-fr.c:q933_print(), a different vulnerability than CVE-2016-8575.",
+          "release": "bookworm",
+          "fixed_version": "4.9.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-5483",
+          "description": "The SNMP parser in tcpdump before 4.9.0 has a buffer overflow in print-snmp.c:asn1_parse().",
+          "release": "bookworm",
+          "fixed_version": "4.9.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-5484",
+          "description": "The ATM parser in tcpdump before 4.9.0 has a buffer overflow in print-atm.c:sig_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-5485",
+          "description": "The ISO CLNS parser in tcpdump before 4.9.0 has a buffer overflow in addrtoname.c:lookup_nsap().",
+          "release": "bookworm",
+          "fixed_version": "4.9.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2017-5486",
+          "description": "The ISO CLNS parser in tcpdump before 4.9.0 has a buffer overflow in print-isoclns.c:clnp_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2018-10103",
+          "description": "tcpdump before 4.9.3 mishandles the printing of SMB data (issue 1 of 2).",
+          "release": "bookworm",
+          "fixed_version": "4.9.3-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2018-10105",
+          "description": "tcpdump before 4.9.3 mishandles the printing of SMB data (issue 2 of 2).",
+          "release": "bookworm",
+          "fixed_version": "4.9.3-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2018-14461",
+          "description": "The LDP parser in tcpdump before 4.9.3 has a buffer over-read in print-ldp.c:ldp_tlv_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.3-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2018-14462",
+          "description": "The ICMP parser in tcpdump before 4.9.3 has a buffer over-read in print-icmp.c:icmp_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.3-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2018-14463",
+          "description": "The VRRP parser in tcpdump before 4.9.3 has a buffer over-read in print-vrrp.c:vrrp_print() for VRRP version 2, a different vulnerability than CVE-2019-15167.",
+          "release": "bookworm",
+          "fixed_version": "4.9.3-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2018-14464",
+          "description": "The LMP parser in tcpdump before 4.9.3 has a buffer over-read in print-lmp.c:lmp_print_data_link_subobjs().",
+          "release": "bookworm",
+          "fixed_version": "4.9.3-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2018-14465",
+          "description": "The RSVP parser in tcpdump before 4.9.3 has a buffer over-read in print-rsvp.c:rsvp_obj_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.3-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2018-14466",
+          "description": "The Rx parser in tcpdump before 4.9.3 has a buffer over-read in print-rx.c:rx_cache_find() and rx_cache_insert().",
+          "release": "bookworm",
+          "fixed_version": "4.9.3-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2018-14467",
+          "description": "The BGP parser in tcpdump before 4.9.3 has a buffer over-read in print-bgp.c:bgp_capabilities_print() (BGP_CAPCODE_MP).",
+          "release": "bookworm",
+          "fixed_version": "4.9.3-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2018-14468",
+          "description": "The FRF.16 parser in tcpdump before 4.9.3 has a buffer over-read in print-fr.c:mfr_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.3-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2018-14469",
+          "description": "The IKEv1 parser in tcpdump before 4.9.3 has a buffer over-read in print-isakmp.c:ikev1_n_print().",
+          "release": "bookworm",
+          "fixed_version": "4.9.3-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2018-14470",
+          "description": "The Babel parser in tcpdump before 4.9.3 has a buffer over-read in print-babel.c:babel_print_v2().",
+          "release": "bookworm",
+          "fixed_version": "4.9.3-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2018-14879",
+          "description": "The command-line argument parser in tcpdump before 4.9.3 has a buffer overflow in tcpdump.c:get_next_file().",
+          "release": "bookworm",
+          "fixed_version": "4.9.3-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2018-14880",
+          "description": "The OSPFv3 parser in tcpdump before 4.9.3 has a buffer over-read in print-ospf6.c:ospf6_print_lshdr().",
+          "release": "bookworm",
+          "fixed_version": "4.9.3-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2018-14881",
+          "description": "The BGP parser in tcpdump before 4.9.3 has a buffer over-read in print-bgp.c:bgp_capabilities_print() (BGP_CAPCODE_RESTART).",
+          "release": "bookworm",
+          "fixed_version": "4.9.3-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2018-14882",
+          "description": "The ICMPv6 parser in tcpdump before 4.9.3 has a buffer over-read in print-icmp6.c.",
+          "release": "bookworm",
+          "fixed_version": "4.9.3-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2018-16227",
+          "description": "The IEEE 802.11 parser in tcpdump before 4.9.3 has a buffer over-read in print-802_11.c for the Mesh Flags subfield.",
+          "release": "bookworm",
+          "fixed_version": "4.9.3-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2018-16228",
+          "description": "The HNCP parser in tcpdump before 4.9.3 has a buffer over-read in print-hncp.c:print_prefix().",
+          "release": "bookworm",
+          "fixed_version": "4.9.3-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2018-16229",
+          "description": "The DCCP parser in tcpdump before 4.9.3 has a buffer over-read in print-dccp.c:dccp_print_option().",
+          "release": "bookworm",
+          "fixed_version": "4.9.3-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2018-16230",
+          "description": "The BGP parser in tcpdump before 4.9.3 has a buffer over-read in print-bgp.c:bgp_attr_print() (MP_REACH_NLRI).",
+          "release": "bookworm",
+          "fixed_version": "4.9.3-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2018-16300",
+          "description": "The BGP parser in tcpdump before 4.9.3 allows stack consumption in print-bgp.c:bgp_attr_print() because of unlimited recursion.",
+          "release": "bookworm",
+          "fixed_version": "4.9.3-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2018-16301",
+          "description": "The command-line argument parser in tcpdump before 4.99.0 has a buffer overflow in tcpdump.c:read_infile(). To trigger this vulnerability the attacker needs to create a 4GB file on the local filesystem and to specify the file name as the value of the -F command-line argument of tcpdump.",
+          "release": "bookworm",
+          "fixed_version": "4.99.0-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2018-16451",
+          "description": "The SMB parser in tcpdump before 4.9.3 has buffer over-reads in print-smb.c:print_trans() for \\MAILSLOT\\BROWSE and \\PIPE\\LANMAN.",
+          "release": "bookworm",
+          "fixed_version": "4.9.3-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2018-16452",
+          "description": "The SMB parser in tcpdump before 4.9.3 has stack exhaustion in smbutil.c:smb_fdata() via recursion.",
+          "release": "bookworm",
+          "fixed_version": "4.9.3-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2019-15166",
+          "description": "lmp_print_data_link_subobjs() in print-lmp.c in tcpdump before 4.9.3 lacks certain bounds checks.",
+          "release": "bookworm",
+          "fixed_version": "4.9.3-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2019-15167",
+          "description": "The VRRP parser in tcpdump before 4.9.3 has a buffer over-read in print-vrrp.c:vrrp_print() for VRRP version 3, a different vulnerability than CVE-2018-14463.",
+          "release": "bookworm",
+          "fixed_version": "4.9.3-1"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2020-8037",
+          "description": "The ppp decapsulator in tcpdump 4.9.3 can be convinced to allocate a large amount of memory.",
+          "release": "bookworm",
+          "fixed_version": "4.9.3-7"
+        },
+        {
+          "source": "debian",
+          "cve_id": "CVE-2023-1801",
+          "description": "The SMB protocol decoder in tcpdump version 4.99.3 can perform an out-of-bounds write when decoding a crafted network packet.",
+          "release": "forky",
+          "fixed_version": "4.99.4-2"
+        }
+      ]
+    }
+  ]
+}

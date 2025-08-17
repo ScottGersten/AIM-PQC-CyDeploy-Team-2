@@ -59,7 +59,7 @@ ii  dmsetup                               2:1.02.20-2ubuntu2                    
 ii  dnsutils                              1:9.4.2-10                              Clients provided with BIND
 ii  dosfstools                            2.11-2.3ubuntu1                         Utilities to create and check MS-DOS FAT fil
 ii  dpkg                                  1.14.16.6ubuntu3                        package maintenance system for Debian
-ii  dpkg-dev                              1.14.16.6ubuntu4.1                      package building tools for Debian
+ii  dpkg-dev                              1.14.16.6ubuntu4.1                      package building tools for vian
 ii  e2fslibs                              1.40.8-2ubuntu2                         ext2 filesystem libraries
 ii  e2fsprogs                             1.40.8-2ubuntu2                         ext2 file system utilities and libraries
 ii  ecj                                   3.3.0+0728-5                            standalone version of the Eclipse Java compi
