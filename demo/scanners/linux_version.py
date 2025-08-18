@@ -143,9 +143,9 @@ def get_installs(ip, username='msfadmin', password='msfadmin', num_softwares=Non
                 'cves': []
             })
 
-    # with open(r'software_lists/installed_linux_example.json', 'w', encoding='utf-8') as file:
+    # with open(r'demo/software_lists/installed_linux_example.json', 'w', encoding='utf-8') as file:
     #     json.dump(packages, file, indent=2)
-    with open(r'software_lists/installed.json', 'w', encoding='utf-8') as file:
+    with open(r'demo/software_lists/installed.json', 'w', encoding='utf-8') as file:
         json.dump(packages, file, indent=2)
 
     ssh.close()
@@ -178,7 +178,7 @@ def run_linux(connection, filename, num_softwares):
     else:
         installs = []
 
-    with open(r'data/all_cves_by_date_normalized.json', 'r', encoding='utf-8') as file:
+    with open(r'demo/data/all_cves_by_date_normalized.json', 'r', encoding='utf-8') as file:
         all_cves = json.load(file)
 
     vulns = match_cves(installs, all_cves)
@@ -195,7 +195,7 @@ def run_linux(connection, filename, num_softwares):
     print(f"Number of vulnerable packages in run: {successes}")
     print(f"Number of safe packages in run: {fails}")
 
-    with open(r'results/results.json', 'w', encoding='utf-8') as file, open(r'results/results_abridged.json', 'w', encoding='utf-8') as file_abr, open(r'results/vulnerabilities.json', 'w', encoding='utf-8') as file_vulns:
+    with open(r'demo/results/results.json', 'w', encoding='utf-8') as file, open(r'demo/results/results_abridged.json', 'w', encoding='utf-8') as file_abr, open(r'demo/results/vulnerabilities.json', 'w', encoding='utf-8') as file_vulns:
         json.dump(installs, file, indent=2)
         json.dump(found_installs, file_abr, indent=2)
         json.dump(vulns, file_vulns, indent=2)
