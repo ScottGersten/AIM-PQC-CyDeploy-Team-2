@@ -1,0 +1,3 @@
+***enter ip address***
+***enter ssh username***
+***enter ssh password***

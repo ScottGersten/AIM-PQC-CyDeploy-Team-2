@@ -1,0 +1,14 @@
+__pycache__
+
+data/nvd_feeds
+data/all_cves_by_date_normalized.json
+
+results/results.json
+results/results_abridged.json
+results/vulnerabilities.json
+
+software_lists/installed.json
+
+ssh_logins/*
+!ssh_logins/ssh_logins.txt
+!ssh_logins/demo.txt
