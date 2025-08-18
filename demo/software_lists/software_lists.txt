@@ -1,0 +1,2 @@
+Runs from scanners using ssh will generate an installed.json file.
+This file is ignored by git so only a local copy is used.

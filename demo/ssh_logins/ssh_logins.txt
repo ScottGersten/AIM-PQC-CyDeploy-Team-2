@@ -1,0 +1,2 @@
+All files in this directory are gitignored to prevent privacy breaches due to ssh login information.
+To enter ssh information for a scanner run, create a .txt file in this directory and have it look as demo.txt does.

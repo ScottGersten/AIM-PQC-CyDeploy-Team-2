@@ -1,0 +1,2 @@
+Runs from scanners generate results.json, results_abridged.json, and vulnerabilities.json.
+These files are ignored by git so only local copies are used.

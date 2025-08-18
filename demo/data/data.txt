@@ -1,0 +1,2 @@
+Runs using get_data will generate an nvd_feeds directory with nvdcve.json.gz files and an all_cves_by_date_normalized.json file.
+This directory, its contents, and the file are ignored by git as they take up lots of space. Run the get_data to get a local version of the feeds and json.
