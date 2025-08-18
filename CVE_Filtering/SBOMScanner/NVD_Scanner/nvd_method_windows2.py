@@ -38,13 +38,14 @@ def match_cves(installs, data):
     global found_cve_ids
 
     INVALID_CVE = 'Rejected reason: DO NOT USE THIS CANDIDATE NUMBER.'
+    INVALID_CVE_2 = 'rejected reason:'
 
     vulns = []
     seen_cves = set()
 
     for pkg in installs:
         name = pkg['name']
-        #norm_name = pkg['norm_name']
+        norm_name = pkg['norm_name']
         first_year = pkg['first_year']
         last_year = pkg['last_year']
         # if first_year is None or last_year is None:
@@ -59,15 +60,47 @@ def match_cves(installs, data):
             for item in data[year_str]:
                 cve_id = item.get('id')
                 description = item.get('description', '')
+                raw = item.get('raw', {})
+                impact = raw.get('impact', {})
+                base_metric = impact.get('baseMetricV3', {})
+                # if base_metric == {}:
+                #     base_metric = impact.get('baseMetricV2', {})
+                exploitability_score = base_metric.get('exploitabilityScore', None)
+                impact_score = base_metric.get('impactScore', None)
+                cvss = base_metric.get('cvssV3', {})
+                attack_vector = cvss.get('attackVector', None)
+                attack_complexity = cvss.get('attackComplexity', None)
+                privileges_required = cvss.get('privilegesRequired', None)
+                user_interaction = cvss.get('userInteraction', None)
+                scope = cvss.get('scope', None)
+                confidentiality_impact = cvss.get('confidentialityImpact', None)
+                integrity_impact = cvss.get('integrityImpact', None)
+                availability_impact = cvss.get('availabilityImpact', None)
                 #if name.lower() in description.lower():
                 #if INVALID_CVE not in description and normalize_name(name) in normalize_name(description):
                 #if INVALID_CVE not in description and norm_name in normalize_name(description):
-                if INVALID_CVE not in description and name.lower() in description.lower():
+                #if INVALID_CVE not in description and name.lower() in description.lower():
+                if INVALID_CVE not in description and INVALID_CVE_2 not in description and name.lower() in description.lower():
+                    cve_info = {
+                                'id': cve_id, 
+                                'desc': description, 
+                                #'exploitability_score': exploitability_score, 
+                                #'impact_score': impact_score,
+                                'attack_vector': attack_vector,
+                                'attack_complexity': attack_complexity,
+                                'privileges_required': privileges_required,
+                                'user_interaction': user_interaction,
+                                'scope': scope,
+                                'confidentiality_impact': confidentiality_impact,
+                                'integrity_impact': integrity_impact,
+                                'availability_impact': availability_impact
+                                }
                     #pkg['cves'].append(cve_id)
                     pkg['cves'].append({'id': cve_id, 'desc': description})
                     #found_cve_ids += 1
                     if cve_id not in seen_cves:
-                        vulns.append({'id': cve_id, 'desc': description})
+                        #vulns.append({'id': cve_id, 'desc': description})
+                        vulns.append(cve_info)
                         seen_cves.add(cve_id)
                         found_cve_ids += 1
     
