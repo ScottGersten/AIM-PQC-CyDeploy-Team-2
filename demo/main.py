@@ -20,6 +20,9 @@ def main():
     elif args.version == 'linux':
         run_linux(args.connection, args.filename, args.num_softwares)
 
+    elif args.version == 'qubo':
+        run_prioritization()
+
 
 if __name__ == '__main__':
     main()

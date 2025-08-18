@@ -20,3 +20,6 @@ SBOMScanner/NVD_Scanner/vuln_weights.json
 
 SBOMScanner/all_ALBAJSON
 SBOMScanner/all_cves_by_date.json
+
+SBOMScanner/Combined_Scanner/qiskit-env
+SBOMScanner/Combined_Scanner/venv

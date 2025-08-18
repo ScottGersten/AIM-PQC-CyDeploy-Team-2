@@ -85,7 +85,7 @@ def get_numerical(vuln_list):
                 'A': A[item.get('availability_impact')]
             })
 
-    with open('vuln_weights.json', 'w', encoding='utf-8') as file:
+    with open(r'results/vuln_weights.json', 'w', encoding='utf-8') as file:
         json.dump(vuln_weights, file, indent=2)
     
     return vuln_weights
@@ -106,9 +106,11 @@ def build_qubo(vuln_weights, K, penalty):
     for i in range(len(w)):
         Q[(i, i)] += -2 * K * penalty
 
-    bqm = dimod.BinaryQuadraticModel.from_qubo(Q)
+    #bqm = dimod.BinaryQuadraticModel.from_qubo(Q)
 
-    return bqm
+    #return bqm
+
+    return Q
 
 def run_qubo(Q):
     sampler = SimulatedAnnealingSampler()
@@ -116,7 +118,7 @@ def run_qubo(Q):
     return result.first.sample # type: ignore
 
 def run_prioritization():
-    filename = 'vulnerabilities.json'
+    filename = r'results/vulnerabilities.json'
     vuln_list = get_vuln_list(filename)
     vuln_weights = get_numerical(vuln_list)
     K = 5
