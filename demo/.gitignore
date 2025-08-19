@@ -6,6 +6,7 @@ data/all_cves_by_date_normalized.json
 results/results.json
 results/results_abridged.json
 results/vulnerabilities.json
+results/cves_to_prioritize.txt
 
 software_lists/installed.json
 

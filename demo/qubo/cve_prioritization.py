@@ -1,6 +1,7 @@
 import dimod
 from dwave.samplers import SimulatedAnnealingSampler
 import json
+import time
 
 # Attack Vector
 AV = {
@@ -118,6 +119,8 @@ def run_qubo(Q):
     return result.first.sample # type: ignore
 
 def run_prioritization():
+    start_time = time.time()
+
     filename = r'demo/results/vulnerabilities.json'
     vuln_list = get_vuln_list(filename)
     vuln_weights = get_numerical(vuln_list)
@@ -127,7 +130,13 @@ def run_prioritization():
     solution = run_qubo(Q)
     count = 0
     for idx, picked in solution.items():
-        if picked == 1:
-            count += 1
-            print(f"{vuln_weights[idx]['id']} | {vuln_weights[idx]['desc']}")
+        with open(r'demo/results/cves_to_prioritize.txt', 'w') as file:
+            if picked == 1:
+                count += 1
+                str = f"{vuln_weights[idx]['id']} | {vuln_weights[idx]['desc']}"
+                print(str)
+                file.write(f"{str}\n")
     print(f"Count: {count}")
+
+    end_time = time.time() - start_time
+    print(f"Execution Time: {end_time:.4f}")
