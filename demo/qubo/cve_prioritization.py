@@ -129,14 +129,19 @@ def run_prioritization():
     Q = build_qubo(vuln_weights, K, penalty)
     solution = run_qubo(Q)
     count = 0
+
+    cves = []
     for idx, picked in solution.items():
-        with open(r'demo/results/cves_to_prioritize.txt', 'w') as file:
-            if picked == 1:
-                count += 1
-                str = f"{vuln_weights[idx]['id']} | {vuln_weights[idx]['desc']}"
-                print(str)
-                file.write(f"{str}\n")
+        if picked == 1:
+            count += 1
+            str = f"{vuln_weights[idx]['id']} | {vuln_weights[idx]['desc']}"
+            cve = {'id': vuln_weights[idx]['id'], 'desc': vuln_weights[idx]['desc']}
+            cves.append(cve)
+            print(str)
+
     print(f"Count: {count}")
+    with open(r'demo/results/cves_to_prioritize.json', 'w', encoding='utf-8') as file:
+        json.dump(cves, file, indent=2)
 
     end_time = time.time() - start_time
     print(f"Execution Time: {end_time:.4f}")
