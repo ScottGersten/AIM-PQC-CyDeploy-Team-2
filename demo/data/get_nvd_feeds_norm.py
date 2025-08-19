@@ -35,7 +35,7 @@ START_YEAR = 2002
 END_YEAR = datetime.now().year
 BASE_URL = 'https://nvd.nist.gov/feeds/json/cve/1.1'
 
-DATA_DIR = r'data/nvd_feeds'
+DATA_DIR = r'demo/data/nvd_feeds'
 os.makedirs(DATA_DIR, exist_ok=True)
 
 def download_feed(year):
@@ -82,5 +82,5 @@ def get_feeds():
 
     print(f"Total CVEs parsed: {len(all_cves)}")
     
-    with open(r"data/all_cves_by_date_normalized.json", "w", encoding="utf-8") as f:
+    with open(r"demo/data/all_cves_by_date_normalized.json", "w", encoding="utf-8") as f:
         json.dump(all_cves, f, indent=2)

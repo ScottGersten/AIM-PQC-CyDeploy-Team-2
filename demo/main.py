@@ -1,9 +1,9 @@
 import argparse
-from data.get_nvd_feeds_norm import get_feeds
-from scanners.linux_version import run_linux
-from scanners.windows_local_version import run_windows_local
-from scanners.windows_vm_version import run_windows_vm
-from qubo.cve_prioritization import run_prioritization
+from demo.data.get_nvd_feeds_norm import get_feeds
+from demo.scanners.linux_version import run_linux
+from demo.scanners.windows_local_version import run_windows_local
+from demo.scanners.windows_vm_version import run_windows_vm
+from demo.qubo.cve_prioritization import run_prioritization
 
 def main():
     parser = argparse.ArgumentParser(description='QUBO vulnerability detection demo')
@@ -19,6 +19,12 @@ def main():
     
     elif args.version == 'linux':
         run_linux(args.connection, args.filename, args.num_softwares)
+
+    elif args.version == 'windows_local':
+        run_windows_local(args.connection, args.filename, args.num_softwares)
+    
+    elif args.version == 'windows_vm':
+        run_windows_vm(args.connection, args.filename, args.num_softwares)
 
     elif args.version == 'qubo':
         run_prioritization()

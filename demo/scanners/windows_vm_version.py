@@ -49,8 +49,6 @@ def match_cves(installs, data):
         norm_name = pkg['norm_name']
         first_year = pkg['first_year']
         last_year = pkg['last_year']
-        # if first_year is None or last_year is None:
-        #     continue
         if first_year is None:
             first_year = 2025
         
@@ -64,8 +62,6 @@ def match_cves(installs, data):
                 raw = item.get('raw', {})
                 impact = raw.get('impact', {})
                 base_metric = impact.get('baseMetricV3', {})
-                # if base_metric == {}:
-                #     base_metric = impact.get('baseMetricV2', {})
                 exploitability_score = base_metric.get('exploitabilityScore', None)
                 impact_score = base_metric.get('impactScore', None)
                 cvss = base_metric.get('cvssV3', {})
@@ -77,16 +73,10 @@ def match_cves(installs, data):
                 confidentiality_impact = cvss.get('confidentialityImpact', None)
                 integrity_impact = cvss.get('integrityImpact', None)
                 availability_impact = cvss.get('availabilityImpact', None)
-                #if name.lower() in description.lower():
-                #if INVALID_CVE not in description and normalize_name(name) in normalize_name(description):
-                #if INVALID_CVE not in description and norm_name in normalize_name(description):
-                #if INVALID_CVE not in description and name.lower() in description.lower():
                 if INVALID_CVE not in description and INVALID_CVE_2 not in description and norm_name in description:
                     cve_info = {
                                 'id': cve_id, 
                                 'desc': description, 
-                                #'exploitability_score': exploitability_score, 
-                                #'impact_score': impact_score,
                                 'attack_vector': attack_vector,
                                 'attack_complexity': attack_complexity,
                                 'privileges_required': privileges_required,
@@ -96,18 +86,15 @@ def match_cves(installs, data):
                                 'integrity_impact': integrity_impact,
                                 'availability_impact': availability_impact
                                 }
-                    #pkg['cves'].append(cve_id)
                     pkg['cves'].append({'id': cve_id, 'desc': description})
-                    #found_cve_ids += 1
                     if cve_id not in seen_cves:
-                        #vulns.append({'id': cve_id, 'desc': description})
                         vulns.append(cve_info)
                         seen_cves.add(cve_id)
                         found_cve_ids += 1
     
     return vulns
 
-def get_installs(ip, username='msfadmin', password='msfadmin'):
+def get_installs(ip, username='msfadmin', password='msfadmin', num_softwares=None):
     session = winrm.Session(
         ip,
         auth=(username, password)
@@ -118,11 +105,14 @@ def get_installs(ip, username='msfadmin', password='msfadmin'):
 
     softwares = json.loads(output)
 
+    software_count = 0
     packages = []
     for item in softwares:
+        software_count += 1
+        if num_softwares is not None and software_count > num_softwares:
+            break
         name = item.get('DisplayName')
         version = item.get('DisplayVersion')
-        #first_year, last_year = 0, 0 #get_package_years(ssh, name)
         install_date = item.get('InstallDate')
         install_year = datetime.strptime(install_date, "%Y%m%d").year if install_date is not None else None
         packages.append({
@@ -140,6 +130,9 @@ def get_installs(ip, username='msfadmin', password='msfadmin'):
     running = json.loads(output)
 
     for item in running:
+        software_count += 1
+        if num_softwares is not None and software_count > num_softwares:
+            break
         name = item.get('ServiceName')
         packages.append({
             'type': 'running',
@@ -151,30 +144,41 @@ def get_installs(ip, username='msfadmin', password='msfadmin'):
             'cves': []
         })
     
-    with open('installed_windows.json', 'w', encoding='utf-8') as file:
+    # with open(r'demo/software_lists/installed_windows_vm_example.json', 'w', encoding='utf-8') as file:
+    #     json.dump(packages, file, indent=2)
+    with open(r'demo/software_lists/installed.json', 'w', encoding='utf-8') as file:
         json.dump(packages, file, indent=2)
 
     return packages
 
-def run_windows_vm():
+def run_windows_vm(connection, filename, num_softwares):
     start_time = time.time()
 
-    #filename = 'ssh_windows_local.txt'
-    filename = 'ssh_windows_vm.txt'
+    try:
+        num_softwares = int(num_softwares)
+    except Exception:
+        num_softwares = None
     
-    with open(filename, 'r') as f:
-        lines = f.read().splitlines()
-        ip = lines[0]
-        username = lines[1]
-        password = lines[2]
+    if connection == 'ssh':
+        filename = 'demo/ssh_logins/' + filename
+        with open(filename, 'r') as f:
+            lines = f.read().splitlines()
+            ip = lines[0]
+            username = lines[1]
+            password = lines[2]
+        installs = get_installs(ip, username, password, num_softwares)
+    
+    elif connection == 'file':
+        filename = 'demo/software_lists/' + filename
+        with open(filename, 'r', encoding='utf-8') as file:
+            installs = json.load(file)
+        if num_softwares is not None:
+            installs = installs[0:num_softwares]
+    
+    else:
+        installs = []
 
-    #installs = get_installs(ip, username, password)
-    with open('installed_windows.json', 'r', encoding='utf-8') as file:
-        installs = json.load(file)
-
-    # with open('all_cves_by_date.json', 'r', encoding='utf-8') as file:
-    #     all_cves = json.load(file)
-    with open('all_cves_by_date_normalized.json', 'r', encoding='utf-8') as file:
+    with open(r'demo/data/all_cves_by_date_normalized.json', 'r', encoding='utf-8') as file:
         all_cves = json.load(file)
 
     vulns = match_cves(installs, all_cves)
@@ -191,7 +195,7 @@ def run_windows_vm():
     print(f"Number of successful matches in run: {successes}")
     print(f"Number of failed matches in run: {fails}")
 
-    with open('results.json', 'w', encoding='utf-8') as file, open('results_abridged.json', 'w', encoding='utf-8') as file_abr, open('vulnerabilities.json', 'w', encoding='utf-8') as file_vulns:
+    with open(r'demo/results/results.json', 'w', encoding='utf-8') as file, open(r'demo/results/results_abridged.json', 'w', encoding='utf-8') as file_abr, open(r'demo/results/vulnerabilities.json', 'w', encoding='utf-8') as file_vulns:
         json.dump(installs, file, indent=2)
         json.dump(found_installs, file_abr, indent=2)
         json.dump(vulns, file_vulns, indent=2)

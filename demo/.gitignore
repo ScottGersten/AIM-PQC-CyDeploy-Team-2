@@ -11,4 +11,6 @@ software_lists/installed.json
 
 ssh_logins/*
 !ssh_logins/ssh_logins.txt
-!ssh_logins/demo.txt
+!ssh_logins/example.txt
+
+qubo/vuln_weights.json

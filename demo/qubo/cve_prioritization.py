@@ -85,7 +85,7 @@ def get_numerical(vuln_list):
                 'A': A[item.get('availability_impact')]
             })
 
-    with open(r'results/vuln_weights.json', 'w', encoding='utf-8') as file:
+    with open(r'demo/qubo/vuln_weights.json', 'w', encoding='utf-8') as file:
         json.dump(vuln_weights, file, indent=2)
     
     return vuln_weights
@@ -118,7 +118,7 @@ def run_qubo(Q):
     return result.first.sample # type: ignore
 
 def run_prioritization():
-    filename = r'results/vulnerabilities.json'
+    filename = r'demo/results/vulnerabilities.json'
     vuln_list = get_vuln_list(filename)
     vuln_weights = get_numerical(vuln_list)
     K = 5
