@@ -160,16 +160,16 @@ def run_linux(connection, filename, num_softwares):
         num_softwares = None
 
     if connection == 'ssh':
-        filename = 'ssh_logins/' + filename
+        filename = 'demo/ssh_logins/' + filename
         with open(filename, 'r') as f:
             lines = f.read().splitlines()
             ip = lines[0]
             username = lines[1]
             password = lines[2]
-            installs = get_installs(ip, username, password, num_softwares)
+        installs = get_installs(ip, username, password, num_softwares)
 
     elif connection == 'file':
-        filename = 'software_lists/' + filename
+        filename = 'demo/software_lists/' + filename
         with open(filename, 'r', encoding='utf-8') as file:
             installs = json.load(file)
         if num_softwares is not None:

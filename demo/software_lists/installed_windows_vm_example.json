@@ -1,0 +1,704 @@
+[
+  {
+    "type": "installed",
+    "name": "freeSSHd 1.3.1",
+    "norm_name": "freesshd 1.3.",
+    "version": null,
+    "first_year": 2025,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "installed",
+    "name": "WampServer 2.2",
+    "norm_name": "wampserver 2.",
+    "version": null,
+    "first_year": 2023,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "installed",
+    "name": "Java 8 Update 251",
+    "norm_name": "java 8 update ",
+    "version": "8.0.2510.8",
+    "first_year": 2023,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "installed",
+    "name": "Java Auto Updater",
+    "norm_name": "java auto updater",
+    "version": "2.8.251.8",
+    "first_year": 2023,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "installed",
+    "name": "Microsoft Visual C++ 2008 Redistributable - x86 9.0.30729.6161",
+    "norm_name": "microsoft visual c++ 2008 redistributable  x86 9.0.30729.",
+    "version": "9.0.30729.6161",
+    "first_year": 2023,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "installed",
+    "name": "ManageEngine Desktop Central 9 - Server",
+    "norm_name": "manageengine desktop central 9  server",
+    "version": "9.0.0",
+    "first_year": 2023,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "installed",
+    "name": "7-Zip 22.01 (x64)",
+    "norm_name": "7zip 22.01 (x64)",
+    "version": "22.01",
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "installed",
+    "name": "OpenSSH for Windows 7.1p1-1 (remove only)",
+    "norm_name": "openssh for windows 7.1p11 (remove only)",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "installed",
+    "name": "Oracle VM VirtualBox Guest Additions 6.0.8",
+    "norm_name": "oracle vm virtualbox guest additions 6.0.",
+    "version": "6.0.8.0",
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "installed",
+    "name": "Microsoft .NET Framework 4.5.2",
+    "norm_name": "microsoft .net framework 4.5.",
+    "version": "4.5.51209",
+    "first_year": 2023,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "installed",
+    "name": "Java 8 Update 251 (64-bit)",
+    "norm_name": "java 8 update 251 (64bit)",
+    "version": "8.0.2510.8",
+    "first_year": 2023,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "installed",
+    "name": "Microsoft Visual C++ 2008 Redistributable - x64 9.0.30729.6161",
+    "norm_name": "microsoft visual c++ 2008 redistributable  x64 9.0.30729.",
+    "version": "9.0.30729.6161",
+    "first_year": 2023,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "installed",
+    "name": "Java SE Development Kit 8 Update 211 (64-bit)",
+    "norm_name": "java se development kit 8 update 211 (64bit)",
+    "version": "8.0.2110.12",
+    "first_year": 2023,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "installed",
+    "name": "Microsoft .NET Framework 4.5.2",
+    "norm_name": "microsoft .net framework 4.5.",
+    "version": "4.5.51209",
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "AeLookupSvc",
+    "norm_name": "aelookupsvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "AppHostSvc",
+    "norm_name": "apphostsvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "BFE",
+    "norm_name": "bfe",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "BITS",
+    "norm_name": "bits",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "CertPropSvc",
+    "norm_name": "certpropsvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "CryptSvc",
+    "norm_name": "cryptsvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "DcomLaunch",
+    "norm_name": "dcomlaunch",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "DesktopCentralServer",
+    "norm_name": "desktopcentralserver",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "Dhcp",
+    "norm_name": "dhcp",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "Dnscache",
+    "norm_name": "dnscache",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "domain1",
+    "norm_name": "domain",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "DPS",
+    "norm_name": "dps",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "elasticsearch-service-x64",
+    "norm_name": "elasticsearchservicex",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "eventlog",
+    "norm_name": "eventlog",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "EventSystem",
+    "norm_name": "eventsystem",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "FontCache",
+    "norm_name": "fontcache",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "FreeSSHDService",
+    "norm_name": "freesshdservice",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "ftpsvc",
+    "norm_name": "ftpsvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "gpsvc",
+    "norm_name": "gpsvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "IKEEXT",
+    "norm_name": "ikeext",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "iphlpsvc",
+    "norm_name": "iphlpsvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "jenkins",
+    "norm_name": "jenkins",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "jmx",
+    "norm_name": "jmx",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "LanmanServer",
+    "norm_name": "lanmanserver",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "LanmanWorkstation",
+    "norm_name": "lanmanworkstation",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "lmhosts",
+    "norm_name": "lmhosts",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "MEDC Server Component - Notification Server",
+    "norm_name": "medc server component  notification server",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "MEDCServerComponent-Apache",
+    "norm_name": "medcservercomponentapache",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "MpsSvc",
+    "norm_name": "mpssvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "MSDTC",
+    "norm_name": "msdtc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "Netman",
+    "norm_name": "netman",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "netprofm",
+    "norm_name": "netprofm",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "NlaSvc",
+    "norm_name": "nlasvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "nsi",
+    "norm_name": "nsi",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "PlugPlay",
+    "norm_name": "plugplay",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "PolicyAgent",
+    "norm_name": "policyagent",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "Power",
+    "norm_name": "power",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "ProfSvc",
+    "norm_name": "profsvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "RemoteRegistry",
+    "norm_name": "remoteregistry",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "RpcEptMapper",
+    "norm_name": "rpceptmapper",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "RpcSs",
+    "norm_name": "rpcss",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "SamSs",
+    "norm_name": "samss",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "Schedule",
+    "norm_name": "schedule",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "SENS",
+    "norm_name": "sens",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "SessionEnv",
+    "norm_name": "sessionenv",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "ShellHWDetection",
+    "norm_name": "shellhwdetection",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "SNMP",
+    "norm_name": "snmp",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "Spooler",
+    "norm_name": "spooler",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "sppsvc",
+    "norm_name": "sppsvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "TermService",
+    "norm_name": "termservice",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "TrkWks",
+    "norm_name": "trkwks",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "UmRdpService",
+    "norm_name": "umrdpservice",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "UxSms",
+    "norm_name": "uxsms",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "VBoxService",
+    "norm_name": "vboxservice",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "W32Time",
+    "norm_name": "w32time",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "W3SVC",
+    "norm_name": "w3svc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "wampapache",
+    "norm_name": "wampapache",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "WAS",
+    "norm_name": "was",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "WdiSystemHost",
+    "norm_name": "wdisystemhost",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "WinHttpAutoProxySvc",
+    "norm_name": "winhttpautoproxysvc",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "Winmgmt",
+    "norm_name": "winmgmt",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "WinRM",
+    "norm_name": "winrm",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "WLMS",
+    "norm_name": "wlms",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  },
+  {
+    "type": "running",
+    "name": "wuauserv",
+    "norm_name": "wuauserv",
+    "version": null,
+    "first_year": null,
+    "last_year": 2025,
+    "cves": []
+  }
+]

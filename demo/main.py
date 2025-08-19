@@ -20,6 +20,12 @@ def main():
     elif args.version == 'linux':
         run_linux(args.connection, args.filename, args.num_softwares)
 
+    elif args.version == 'windows_local':
+        run_windows_local(args.connection, args.filename, args.num_softwares)
+    
+    elif args.version == 'windows_vm':
+        run_windows_vm(args.connection, args.filename, args.num_softwares)
+
     elif args.version == 'qubo':
         run_prioritization()
 

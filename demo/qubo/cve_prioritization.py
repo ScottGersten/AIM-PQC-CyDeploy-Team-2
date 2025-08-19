@@ -85,7 +85,7 @@ def get_numerical(vuln_list):
                 'A': A[item.get('availability_impact')]
             })
 
-    with open(r'demo/results/vuln_weights.json', 'w', encoding='utf-8') as file:
+    with open(r'demo/qubo/vuln_weights.json', 'w', encoding='utf-8') as file:
         json.dump(vuln_weights, file, indent=2)
     
     return vuln_weights

@@ -1,2 +1,3 @@
 Runs from scanners using ssh will generate an installed.json file.
 This file is ignored by git so only a local copy is used.
+The example json files can be used with a file run of a scanner to mimic what would be found using ssh.
