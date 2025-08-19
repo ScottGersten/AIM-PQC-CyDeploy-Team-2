@@ -15,7 +15,7 @@ INSTALLED_FILE = "installed.txt"
 UBUNTU_JSON = "ubuntu_cves.json"
 NVD_JSON = "all_cves.json"
 DEBIAN_TRACKER_URL = "https://security-tracker.debian.org/tracker/data/json"
-OUTPUT_JSON = "grover_results.json"
+OUTPUT_JSON = "grover_combined_results.json"
 
 MAX_GROVER_CANDIDATES = 256
 GROVER_SHOTS = 1024
