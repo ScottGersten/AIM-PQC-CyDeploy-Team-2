@@ -239,9 +239,7 @@ def verify_and_collect(pkg, ubuntu_index, debian_db, nvd_indexed):
     return deduped
 
 
-from qiskit import QuantumCircuit, transpile
-from qiskit_aer import AerSimulator
-import math
+
 
 def build_oracle(qc, num_qubits, marked_indices):
     """Mark the target indices in the Grover circuit."""
