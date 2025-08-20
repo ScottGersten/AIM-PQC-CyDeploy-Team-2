@@ -323,7 +323,7 @@ def prioritize_with_grover(confirmed_vuln_pkgs):
 def main():
     t0 = time.time()
     packages = parse_installed_packages()
-    print(f"[i] Installed packages parsed: {len(packages)}")
+    print(f"Installed packages parsed: {len(packages)}")
     if not packages: return
 
     ubuntu_raw = load_json(UBUNTU_JSON) or []
@@ -358,8 +358,8 @@ def main():
     with open(OUTPUT_JSON, "w", encoding="utf-8") as fh:
         json.dump(confirmed, fh, indent=2)
 
-    print(f"\n[i] Saved confirmed CVEs to {OUTPUT_JSON}")
-    print(f"[i] Done in {time.time() - t0:.2f}s.")
+    print(f"\n Saved confirmed CVEs to {OUTPUT_JSON}")
+    print(f"Done in {time.time() - t0:.2f}s.")
 
 if __name__ == "__main__":
     main()
