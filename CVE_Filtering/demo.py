@@ -1,28 +1,24 @@
-import subprocess
-import time
-import json
-import platform
-import threading
-import time
+import requests
 
-target_host = ["192.168.1.0"]
+def get_redhat_cves_by_package(package_name):
+    url = "https://access.redhat.com/hydra/rest/securitydata/cve.json?after=2024-07-05&before=2024-07-06"
+    headers = {
+        "User-Agent": "Mozilla/5.0 (compatible; CVE-Scanner/1.0)"
+    }
+    params = {
+        "package": package_name
+    }
 
-
-def target_info():
-    info = platform.platform()
+    try:
+        response = requests.get(url, headers=headers, params=params)
+        response.raise_for_status()
+        return response.json()
     
-    with open ("scan_results.json", 'w') as results:
-        json.dump(info, results, indent=2)
-    
-    return info
+    except requests.exceptions.RequestException as e:
+        print(f"Error fetching CVEs for {package_name}: {e}")
+        return []
 
-def thread():
-
-
-
-def agent_scanner():
-    info = target_info()
-
-
-
-
+# Example usage
+results = get_redhat_cves_by_package("openssl")
+for cve in results[:5]:
+    print(cve["CVE"], "-", cve.get("severity", "N/A"))
