@@ -1,378 +1,365 @@
-import os
-import json
-import re
-import time
-import math
-import requests
+
+import os, json, re, time, math, requests
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor
 from packaging import version as packaging_version
 
+# Quantum (Grover demo) 
+from qiskit import QuantumCircuit, transpile
+from qiskit_aer import AerSimulator
 
-QISKIT_AVAILABLE = False
-AER_AVAILABLE = False
 
-try:
-    from qiskit import QuantumCircuit, transpile
-    QISKIT_AVAILABLE = True
-except Exception:
-    QISKIT_AVAILABLE = False
-
-try:
-    from qiskit_aer import AerSimulator
-    AER_AVAILABLE = True
-except Exception:
-    try:
-        from qiskit import Aer
-        AER_AVAILABLE = True
-    except Exception:
-        AER_AVAILABLE = False
+# CONFIG
 
 INSTALLED_FILE = "installed.txt"
-UBUNTU_CVES_JSON = "ubuntu_cves.json"
+UBUNTU_JSON = "ubuntu_cves.json"
 NVD_JSON = "all_cves.json"
-OUTPUT_JSON = "combined_results.json"
 DEBIAN_TRACKER_URL = "https://security-tracker.debian.org/tracker/data/json"
+OUTPUT_JSON = "grover_combined_results.json"
+
+MAX_GROVER_CANDIDATES = 256
+GROVER_SHOTS = 1024
 
 
-def parse_installed_packages(file_path=INSTALLED_FILE):
-    packages = []
-    if not os.path.exists(file_path):
-        print(f"[!] Installed packages file not found: {file_path}")
-        return packages
-    with open(file_path, 'r', encoding='utf-8') as f:
+# PARSERS / LOADERS
+
+def parse_installed_packages(path=INSTALLED_FILE):
+    pkgs = []
+    if not os.path.exists(path):
+        print(f"[!] {path} not found.")
+        return pkgs
+    with open(path, "r", encoding="utf-8") as f:
         for line in f:
-            if line.startswith('ii'):
+            line = line.strip()
+            if line.startswith("ii"):
                 parts = line.split()
                 if len(parts) >= 3:
-                    name = parts[1].lower()
-                    full_version = parts[2].strip()
-                    packages.append({'name': name, 'version': full_version, 'cves': []})
-    return packages
+                    pkgs.append({
+                        "name": parts[1].lower(),
+                        "version": parts[2].strip(),
+                        "cves": [],
+                    })
+    return pkgs
 
-
-def load_json_file(path):
+def load_json(path):
     if not os.path.exists(path):
         return None
-    try:
-        with open(path, 'r', encoding='utf-8') as f:
-            return json.load(f)
-    except Exception as e:
-        print(f"[!] Error loading {path}: {e}")
-        return None
+    with open(path, "r", encoding="utf-8") as fh:
+        return json.load(fh)
 
-def load_json_url(url, timeout=15):
+def get_debian_tracker():
     try:
-        r = requests.get(url, timeout=timeout)
+        r = requests.get(DEBIAN_TRACKER_URL, timeout=30)
         r.raise_for_status()
         return r.json()
     except Exception as e:
-        print(f"[!] Failed to load JSON from URL {url}: {e}")
-        return None
-
-
-def index_ubuntu_cves_from_file(path=UBUNTU_CVES_JSON):
-    if path.startswith("http://") or path.startswith("https://"):
-        data = load_json_url(path)
-    else:
-        data = load_json_file(path)
-    index = defaultdict(list)
-    if not data:
-        return index
-    for entry in data:
-        pkg_name = entry.get('package_name') or entry.get('name')
-        if not pkg_name:
-            continue
-        pkg_name = pkg_name.lower()
-        index[pkg_name].append({
-            'cve_id': entry.get('cve_id'),
-            'description': entry.get('description', ''),
-            'fixed_version': entry.get('fixed_version'),
-            'release': entry.get('release')
-        })
-    return index
-
-def match_ubuntu_cves(packages, ubuntu_index):
-    for pkg in packages:
-        name = pkg['name']
-        if name in ubuntu_index:
-            for entry in ubuntu_index[name]:
-                try:
-                    if entry.get('fixed_version') and packaging_version.parse(pkg['version']) < packaging_version.parse(entry['fixed_version']):
-                        pkg['cves'].append({
-                            'source': 'ubuntu',
-                            'cve_id': entry.get('cve_id'),
-                            'description': entry.get('description', ''),
-                            'release': entry.get('release'),
-                            'fixed_version': entry.get('fixed_version')
-                        })
-                except Exception:
-                    pkg['cves'].append({
-                        'source': 'ubuntu',
-                        'cve_id': entry.get('cve_id'),
-                        'description': entry.get('description', ''),
-                        'release': entry.get('release'),
-                        'fixed_version': entry.get('fixed_version')
-                    })
-
-
-def get_debian_tracker(timeout=20):
-    try:
-        r = requests.get(DEBIAN_TRACKER_URL, timeout=timeout)
-        r.raise_for_status()
-        return r.json()
-    except Exception as e:
-        print(f"[!] Could not fetch Debian tracker: {e}")
+        print(f"[!] Debian tracker fetch failed: {e}")
         return {}
 
-def get_debian_cves_for_package(pkg_data, installed_version):
-    cves = []
-    seen = set()
-    if not installed_version:
-        return cves
-    for cve_id, cve_info in pkg_data.items():
-        if cve_id.startswith("TEMP"):
-            continue
-        for release, release_data in cve_info.get('releases', {}).items():
-            fixed_version = release_data.get('fixed_version')
-            status = release_data.get('status')
-            if not fixed_version:
-                continue
-            if status not in ('open', 'resolved', 'not-fixed', 'vulnerable'):
-                continue
-            try:
-                if packaging_version.parse(installed_version) < packaging_version.parse(fixed_version):
-                    if cve_id not in seen:
-                        cves.append({
-                            'source': 'debian',
-                            'cve_id': cve_id,
-                            'description': cve_info.get('description', ''),
-                            'release': release,
-                            'fixed_version': fixed_version
-                        })
-                        seen.add(cve_id)
-            except Exception:
-                continue
-    return cves
+def _parse(v):
+    try:
+        return packaging_version.parse(v)
+    except Exception:
+        return None
+
+def is_version_in_range(installed, start_incl=None, start_excl=None, end_incl=None, end_excl=None):
+    v = _parse(installed)
+    if v is None:
+        return False
+
+    start_incl_v = _parse(start_incl) if start_incl else None
+    start_excl_v = _parse(start_excl) if start_excl else None
+    end_incl_v   = _parse(end_incl)   if end_incl else None
+    end_excl_v   = _parse(end_excl)   if end_excl else None
+
+    if start_incl_v and v < start_incl_v: return False
+    if start_excl_v and v <= start_excl_v: return False
+    if end_incl_v   and v > end_incl_v:   return False
+    if end_excl_v   and v >= end_excl_v:  return False
+
+    return True
 
 
-def index_nvd_by_keywords(cve_data):
-    index = defaultdict(list)
-    if not cve_data:
-        return index
+# UBUNTU: Build heuristic index
+
+_AFFECT_PATTERNS = [
+    r'(\b[\w\-\+\.]+)\s+(?:before|prior to|<|<=|less than)\s+([\w\d\.\-\:\+~]+)',
+    r'(\b[\w\-\+\.]+)\s+(?:is\s+)?fixed in version\s+([\w\d\.\-\:\+~]+)',
+    r'^(\S+)\s+-\s+([\w\d\.\-\:\+~]+)',
+]
+
+def normalize_affected(desc):
+    matches = []
+    for pat in _AFFECT_PATTERNS:
+        matches += re.findall(pat, desc, flags=re.IGNORECASE | re.MULTILINE)
+    return matches
+
+def index_ubuntu_by_pkg(ubuntu_entries):
+    idx = defaultdict(list)
+    if not ubuntu_entries:
+        return idx
+    for entry in (ubuntu_entries if isinstance(ubuntu_entries, list) else []):
+        desc_raw = entry.get("description", "")
+        if isinstance(desc_raw, list):
+            desc = " ".join(d.get("value", "") for d in desc_raw if isinstance(d, dict))
+        else:
+            desc = str(desc_raw)
+        desc = desc.lower()
+        for name, fixed in normalize_affected(desc):
+            idx[name].append((fixed, entry))
+    return idx
+
+
+# NVD keyword index by package name
+
+def index_nvd_by_pkg(nvd):
+    idx = defaultdict(list)
     items = []
-    if isinstance(cve_data, dict):
-        if 'CVE_Items' in cve_data:
-            items = cve_data['CVE_Items']
-        elif 'vulnerabilities' in cve_data:
-            items = cve_data['vulnerabilities']
-        else:
-            items = cve_data.get('items', [])
-    elif isinstance(cve_data, list):
-        items = cve_data
-    for entry in items:
-        desc = ""
-        cid = None
-        if isinstance(entry, dict):
-            if 'cve' in entry and isinstance(entry['cve'], dict):
-                cid = entry['cve'].get('CVE_data_meta', {}).get('ID') or entry.get('id')
-                desc_parts = entry['cve'].get('description', {}).get('description_data', [])
-                if isinstance(desc_parts, list):
-                    desc = " ".join(d.get('value', '') for d in desc_parts if isinstance(d, dict))
-                else:
-                    desc = str(entry.get('cve', {}).get('description', ''))
-            else:
-                cid = entry.get('id') or entry.get('cve')
-                desc = str(entry.get('description', ''))
-        desc = (desc or "").lower()
-        for word in re.findall(r'\b[a-z0-9\-\+\.]{3,}\b', desc):
-            index[word].append({'id': cid, 'description': desc, 'raw': entry})
-    return index
-
-def match_nvd_cves(packages, nvd_index_or_list):
-    is_index = isinstance(nvd_index_or_list, dict)
-    cve_list = None
-    if not is_index:
-        cve_list = nvd_index_or_list
-    def match(pkg):
-        matched = []
-        name = pkg['name'].lower()
-        full_ver = pkg['version']
+    if isinstance(nvd, dict) and "CVE_Items" in nvd:
+        items = nvd["CVE_Items"]
+    elif isinstance(nvd, list):
+        items = nvd
+    for it in items:
         try:
-            parsed_installed = packaging_version.parse(full_ver)
+            cve_id = it["cve"]["CVE_data_meta"]["ID"]
+            desc = " ".join(d.get("value", "") for d in it["cve"]["description"]["description_data"])
+            desc = desc.lower()
+            nodes = it.get("configurations", {}).get("nodes", [])
+            for node in nodes:
+                for cpe in node.get("cpe_match", []):
+                    cpe_uri = cpe.get("cpe23Uri", "").lower()
+                    if cpe.get("vulnerable", False):
+                        # extract package name from cpe_uri
+                        m = re.match(r"cpe:2\.3:[aho]:[^:]*:([^:]+):", cpe_uri)
+                        if m:
+                            pkg_name = m.group(1)
+                            idx[pkg_name].append(it)
         except Exception:
-            parsed_installed = None
-        candidates = []
-        if is_index:
-            aliases = set(re.findall(r'\b[a-z0-9\-\+\.]{3,}\b', name))
-            for alias in aliases:
-                candidates.extend(nvd_index_or_list.get(alias, []))
-        else:
-            candidates = cve_list or []
-        seen = set()
-        for entry in candidates:
-            if isinstance(entry, dict) and 'raw' in entry:
-                cve_id = entry.get('id')
-                desc = entry.get('description', '')
-            elif isinstance(entry, dict):
-                cve_id = entry.get('id') or entry.get('cve')
-                desc = str(entry.get('description', ''))
-            else:
-                continue
-            if not cve_id or cve_id in seen:
-                continue
-            if name not in desc:
-                continue
-            matched_cve = False
-            before_match = re.search(rf"{re.escape(name)}.*before\s+(\d+(?:\.\d+)+)", desc)
-            if before_match and parsed_installed:
-                try:
-                    if parsed_installed < packaging_version.parse(before_match.group(1)):
-                        matched_cve = True
-                except Exception:
-                    pass
-            if matched_cve:
-                seen.add(cve_id)
-                matched.append({
-                    'source': 'nvd',
-                    'cve_id': cve_id,
-                    'description': desc
+            continue
+    return idx
+
+
+# MATCHERS (strict version-aware)
+
+def match_ubuntu(pkg, ubuntu_index):
+    out = []
+    name, ver = pkg["name"], pkg["version"]
+    for fixed, entry in ubuntu_index.get(name, []):
+        v_inst, v_fix = _parse(ver), _parse(fixed)
+        if v_inst and v_fix and v_inst < v_fix:
+            desc = entry.get("description") or entry.get("title")
+            if desc:
+                out.append({
+                    "source": "ubuntu",
+                    "cve_id": entry.get("id") or entry.get("cve_id"),
+                    "title": entry.get("title"),
+                    "description": desc,
                 })
-        pkg['cves'].extend(matched)
-    with ThreadPoolExecutor() as executor:
-        list(executor.map(match, packages))
+    return out
+
+def match_debian(pkg, debian_db):
+    out = []
+    name, ver = pkg["name"], pkg["version"]
+    if name not in debian_db:
+        return out
+    seen_cve = set()
+    for cve_id, cve_info in debian_db[name].items():
+        if str(cve_id).startswith("TEMP") or cve_id in seen_cve:
+            continue
+        releases = cve_info.get("releases", {})
+        for rel, rdata in releases.items():
+            fixed = rdata.get("fixed_version")
+            status = (rdata.get("status") or "").lower()
+            if not fixed:
+                continue
+            if status in ("open", "resolved", "not-fixed", "vulnerable", "undetermined"):
+                v_inst, v_fix = _parse(ver), _parse(fixed)
+                if v_inst and v_fix and v_inst < v_fix:
+                    if cve_info.get("description"):
+                        out.append({
+                            "source": "debian",
+                            "cve_id": cve_id,
+                            "description": cve_info.get("description"),
+                            "release": rel,
+                            "fixed_version": fixed
+                        })
+                        seen_cve.add(cve_id)
+    return out
+
+def match_nvd(pkg, nvd_indexed):
+    out = []
+    name, ver = pkg["name"], pkg["version"]
+    for it in nvd_indexed.get(name, []):
+        try:
+            cve_id = it["cve"]["CVE_data_meta"]["ID"]
+            conf = it.get("configurations", {})
+            nodes = conf.get("nodes", [])
+            matched = False
+            for node in nodes:
+                for cpe in node.get("cpe_match", []):
+                    cpe_uri = cpe.get("cpe23Uri", "").lower()
+                    if name in cpe_uri and cpe.get("vulnerable", False):
+                        if is_version_in_range(
+                            ver,
+                            cpe.get("versionStartIncluding"),
+                            cpe.get("versionStartExcluding"),
+                            cpe.get("versionEndIncluding"),
+                            cpe.get("versionEndExcluding"),
+                        ):
+                            matched = True
+                            break
+                if matched: break
+            if matched:
+                desc = " ".join(d.get("value", "") for d in it["cve"]["description"]["description_data"])
+                if desc.strip():
+                    out.append({
+                        "source": "nvd",
+                        "cve_id": cve_id,
+                        "description": desc
+                    })
+        except Exception:
+            continue
+    return out
+
+def verify_and_collect(pkg, ubuntu_index, debian_db, nvd_indexed):
+    confirmed = []
+    confirmed.extend(match_ubuntu(pkg, ubuntu_index))
+    confirmed.extend(match_debian(pkg, debian_db))
+    confirmed.extend(match_nvd(pkg, nvd_indexed))
+    confirmed = [c for c in confirmed if c.get("description") and c["description"].strip()]
+
+    seen = set()
+    deduped = []
+    for c in confirmed:
+        cid = c.get("cve_id") or ("ubuntu-" + (c.get("title") or ""))
+        if cid and cid not in seen:
+            seen.add(cid)
+            deduped.append(c)
+    pkg["cves"] = deduped
+    return deduped
 
 
-def grover_oracle_for_index(num_qubits, target_index):
-    qc = QuantumCircuit(num_qubits)
-    target_bits = format(target_index, f'0{num_qubits}b')[::-1]
-    zero_inds = [i for i, b in enumerate(target_bits) if b == '0']
-    if zero_inds:
-        qc.x(zero_inds)
-    if num_qubits > 1:
-        qc.h(num_qubits - 1)
-        qc.mcx(list(range(num_qubits - 1)), num_qubits - 1)
-        qc.h(num_qubits - 1)
-    else:
-        qc.z(0)
-    if zero_inds:
-        qc.x(zero_inds)
-    return qc
+from qiskit import QuantumCircuit, transpile
+from qiskit_aer import AerSimulator
+import math
 
-def grover_diffuser(num_qubits):
-    qc = QuantumCircuit(num_qubits)
-    qc.h(range(num_qubits))
-    qc.x(range(num_qubits))
-    if num_qubits > 1:
-        qc.h(num_qubits - 1)
-        qc.mcx(list(range(num_qubits - 1)), num_qubits - 1)
-        qc.h(num_qubits - 1)
-    else:
-        qc.z(0)
-    qc.x(range(num_qubits))
-    qc.h(range(num_qubits))
-    return qc
+def build_oracle(qc, num_qubits, marked_indices):
+    """Mark the target indices in the Grover circuit."""
+    for idx in marked_indices:
+        bits = format(idx, f'0{num_qubits}b')[::-1]
+        zeros = [i for i, b in enumerate(bits) if b == '0']
+        if zeros: qc.x(zeros)
+        if num_qubits == 1:
+            qc.z(0)
+        else:
+            qc.h(num_qubits - 1)
+            qc.mcx(list(range(num_qubits - 1)), num_qubits - 1)
+            qc.h(num_qubits - 1)
+        if zeros: qc.x(zeros)
 
-def grover_search_simulator(num_items, target_index, shots=1024):
-    if not QISKIT_AVAILABLE or not AER_AVAILABLE or num_items == 0:
-        return None, {}
-    num_qubits = 0
-    while 2 ** num_qubits < num_items:
-        num_qubits += 1
-    if num_qubits == 0:
-        return 0, {'0': shots}
+def grover_simulate_order(packages, marked_mask, shots=1024, seed=12345):
+    n = len(packages)
+    if n == 0 or not any(marked_mask):
+        return packages[:]
 
-    r = max(1, int(math.floor(math.pi / (4 * math.asin(math.sqrt(1 / (2 ** num_qubits)))))))
+    if n > 256:
+        first = [p for p, m in zip(packages, marked_mask) if m]
+        rest  = [p for p, m in zip(packages, marked_mask) if not m]
+        return first + rest
+
+    num_qubits = math.ceil(math.log2(n))
+    marked_indices = [i for i, m in enumerate(marked_mask) if m]
+
     qc = QuantumCircuit(num_qubits, num_qubits)
     qc.h(range(num_qubits))
+    build_oracle(qc, num_qubits, marked_indices)
+    qc.h(range(num_qubits))
+    qc.x(range(num_qubits))
+    if num_qubits == 1:
+        qc.z(0)
+    else:
+        qc.h(num_qubits - 1)
+        qc.mcx(list(range(num_qubits - 1)), num_qubits - 1)
+        qc.h(num_qubits - 1)
+    qc.x(range(num_qubits))
+    qc.h(range(num_qubits))
+    qc.measure(range(num_qubits), range(num_qubits))
 
-    oracle = grover_oracle_for_index(num_qubits, target_index)
-    diffuser = grover_diffuser(num_qubits)
+    # Only seed_simulator is valid now
+    backend = AerSimulator(seed_simulator=seed)
+    tqc = transpile(qc, backend)
+    res = backend.run(tqc, shots=shots).result().get_counts()
 
-    for _ in range(r):
-        qc = qc.compose(oracle)
-        qc = qc.compose(diffuser)
+    best_state = max(sorted(res), key=res.get)
+    top_idx = int(best_state, 2) % n
 
-    qc.measure_all()
+    top = packages[top_idx]
+    rest = [packages[i] for i in range(n) if i != top_idx]
+    return [top] + rest
 
-    try:
-        simulator = AerSimulator()
-        t_qc = transpile(qc, simulator)
-        job = simulator.run(t_qc, shots=shots)
-        result = job.result()
-        counts = result.get_counts()
-        found_state = max(counts, key=counts.get)
-        found_index = int(found_state.replace(" ", ""), 2)        
-        return found_index, counts
-    except Exception as e:
-        print(f"Grover simulation failed: {e}")
-    return target_index, {format(target_index, f'0{num_qubits}b'): shots}
+
+def prioritize_with_grover(confirmed_vuln_pkgs):
+    if not confirmed_vuln_pkgs:
+        return []
+
+    # Score = number of CVEs for each package
+    scores = [len(p["cves"]) for p in confirmed_vuln_pkgs]
+    max_score = max(scores) if scores else 0
+    mask = [1 if s == max_score else 0 for s in scores]
+
+    # Grover picks the top candidate by the highest CVE count
+    top = grover_simulate_order(confirmed_vuln_pkgs, mask, seed=12345)[0]
+
+    # Sort the rest by CVE count (descending)
+    rest = sorted(
+        [p for p in confirmed_vuln_pkgs if p != top],
+        key=lambda p: len(p["cves"]),
+        reverse=True
+    )
+
+    return [top] + rest
 
 
 def main():
-    start = time.time()
+    t0 = time.time()
+    packages = parse_installed_packages()
+    print(f"[i] Installed packages parsed: {len(packages)}")
+    if not packages: return
+
+    ubuntu_raw = load_json(UBUNTU_JSON) or []
+    nvd_raw = load_json(NVD_JSON) or {}
+    debian_db = get_debian_tracker() or {}
+    ubuntu_index = index_ubuntu_by_pkg(ubuntu_raw)
+    nvd_indexed = index_nvd_by_pkg(nvd_raw)
+
+    print("Verifying packages against Ubuntu/Debian/NVD (version-aware)...")
+    with ThreadPoolExecutor(max_workers=8) as ex:
+        list(ex.map(lambda p: verify_and_collect(p, ubuntu_index, debian_db, nvd_indexed), packages))
+
+    confirmed = [p for p in packages if p.get("cves")]
+    print(f"Confirmed vulnerable packages: {len(confirmed)}")
+
 
    
-    packages = parse_installed_packages()
+    ordered = prioritize_with_grover(confirmed)
 
+    print("\n[Grover Prioritization Results]")
+    if ordered:
+        top = ordered[0]
+        top_cves = ", ".join(m.get("cve_id") or (m.get("title") or "unknown") for m in top["cves"])
+        print(f" Top candidate (Grover-selected): {top['name']} {top['version']}")
+        print(" Full prioritized order (confirmed vulnerable only):")
+        for i, pkg in enumerate(ordered, 1):
+            cves = ", ".join(m.get("cve_id") or (m.get("title") or "unknown") for m in pkg["cves"])
+            print(f"  {i}. {pkg['name']} {pkg['version']} -> {len(pkg['cves'])}") 
+    else:
+        print(" No confirmed vulnerable packages to prioritize.")
 
-    ubuntu_pkgs = [p for p in packages if 'ubuntu' in (p['version'] or '').lower()]
-    ubuntu_index = index_ubuntu_cves_from_file(UBUNTU_CVES_JSON)
-    match_ubuntu_cves(ubuntu_pkgs, ubuntu_index)
+    with open(OUTPUT_JSON, "w", encoding="utf-8") as fh:
+        json.dump(confirmed, fh, indent=2)
 
-    
-    non_ubuntu_pkgs = [p for p in packages if p not in ubuntu_pkgs]
-    debian_data = {}
-    if non_ubuntu_pkgs:
-        debian_data = get_debian_tracker()
-        for pkg in non_ubuntu_pkgs:
-            pkg_name = pkg['name']
-            if pkg_name in debian_data:
-                pkg['cves'] = get_debian_cves_for_package(
-                    debian_data[pkg_name], pkg['version']
-                )
-
-  
-    nvd_raw = load_json_file(NVD_JSON)
-    nvd_index = index_nvd_by_keywords(nvd_raw) if nvd_raw else {}
-    if nvd_raw:
-        match_nvd_cves(packages, nvd_index)
-
-    
-    ubuntu_matches = sum(1 for p in ubuntu_pkgs if p.get('cves'))
-    debian_matches = sum(1 for p in non_ubuntu_pkgs if p.get('cves'))
-    nvd_matches = sum(1 for p in packages if p.get('cves') and any(
-        cve.get('source') == 'nvd' for cve in p.get('cves', [])
-    ))
-
-    vulnerable = [p for p in packages if p.get('cves')]
-
-  
-    with open(OUTPUT_JSON, 'w', encoding='utf-8') as f:
-        json.dump(vulnerable, f, indent=2)
-
-    
-    print(f"Total packages: {len(packages)}")
-    print(f"Ubuntu CVE matches: {ubuntu_matches}")
-    print(f"Debian CVE matches: {debian_matches}")
-    print(f"NVD CVE matches: {nvd_matches}")
-    print(f"Total unique vulnerable packages: {len(vulnerable)}") # Packages with more than one CVE match.
-    total = ubuntu_matches + debian_matches + nvd_matches
-
-  
-    if vulnerable and QISKIT_AVAILABLE and AER_AVAILABLE:
-        demo_n = min(8, len(vulnerable)) # Grover runs on the first 8 vulerable packages (doesn't do it based off of the severity of the package yet).
-        demo_candidates = vulnerable[:demo_n]
-        print(f"\n[Grover Demo] Running local Grover simulator on {demo_n} candidates...")
-        found_idx, counts = grover_search_simulator(demo_n, 0, shots=1024)
-        if found_idx is not None:
-            print(f"[Grover Demo] Most likely index {found_idx} -> {demo_candidates[found_idx]['name']}") # Choses the first vulnerable package found.
-            print("[Grover Demo] Counts:", counts)
-
-    elapsed = time.time() - start
-    print(f"\nSummary: total vulnerable packages = {total}")
-    print(f"Time elapsed: {elapsed:.2f} seconds")
-
+    print(f"\n[i] Saved confirmed CVEs to {OUTPUT_JSON}")
+    print(f"[i] Done in {time.time() - t0:.2f}s.")
 
 if __name__ == "__main__":
     main()
