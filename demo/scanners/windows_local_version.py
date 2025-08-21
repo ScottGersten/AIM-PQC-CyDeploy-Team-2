@@ -1,10 +1,8 @@
 import paramiko
 import json
-from concurrent.futures import ThreadPoolExecutor, as_completed
 import time
 from datetime import datetime
 import re
-import threading
 
 found_cve_ids = 0
 

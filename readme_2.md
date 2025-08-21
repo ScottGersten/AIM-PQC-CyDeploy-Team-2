@@ -24,19 +24,30 @@ This project demonstrates using information from the NVD Vulnerability feeds to 
 - Creates a set of potentially vulnerabilities that contains the CVE ID, description, and CVSS v3 information.
 - Writes to `demo/results/results.json` with the full dictionary, to `demo/results/results_abridged.json` with only dictionary entries that have a potential vulnerability, and to `demo/results/vulnerabilities.json` with the set of potential vulnerability CVE IDs, descriptions, and the CVSS v3 information.
 
+#### Linux (Debian) Based Scanner
+- **Path:** `demo/scanners/linux_version.py`
+- Gets a package list using a Debian command and creates a dictionary with entries for each package storing the package name, the normalized name, and the version.
+- Uses another command to access the Debian changelog and determine the first and last years each package was active. Adds this information to the dictionary.
+- Creates the `demo/software_lists/installed.json` file with this dictionary.
+- Searches through the dicionary of NVD information at only the years each package is active, for each package.
+- Adds CVEs whos description has a match for a package's name to that package's information in the dictionary.
+- Writes to `demo/results/results.json` with the full dictionary, to `demo/results/results_abridged.json` with only dictionary entries that have a potential vulnerability, and to `demo/results/vulnerabilities.json` with a set of potential vulnerability CVE IDs and descriptions.
+- Designed and tested using Metasploitable 2 Debian VM, uses Paramiko to connect to the machine.
+
+#### Windows (Local and VM) Based Scanner
+- **Path:** `demo/scanners/windows_local_version.py`, `demo/scanners/windows_vm_version.py`
+- Gets a package list of installed softwares and currently running softwares using Powershell commands and creates a dictionary with entries for each package storing the package name, the normalized name, the version, and the installation date.
+- Sets the first year to the installation date (if the package has one, defaults to 2025 if not), and the last year to 2025.
+- Creates the `demo/software_lists/installed.json` file with this dictionary.
+- Searches through the dicionary of NVD information at only the years each package is active, for each package.
+- Adds CVEs whos description has a match for a package's name to that package's information in the dictionary.
+- Writes to `demo/results/results.json` with the full dictionary, to `demo/results/results_abridged.json` with only dictionary entries that have a potential vulnerability, and to `demo/results/vulnerabilities.json` with a set of potential vulnerability CVE IDs and descriptions.
+- Designed and tested on a local Windows 11 machine for the local version, uses Paramiko to connect to the machine.
+- Designed and tested on Metasploitable 3 Windows 2008 VM for the VM version, uses WinRm to connect to the machine.
+
 ### Vulnerability Prioritization
 - **Path:** `demo/qubo/cve_prioritization.py`
-- Reads from `demo/results/vulnerabilities.json` to get a dictionary of CVE IDs, descriptions, and CVSS v3 information.
-- Creates maps of the CVSS v3 string metric to a numerical weight given by CVSS v3.
-- Goes through the set of vulnerabilities and creates a new dictionary that replaces each string metric with its numerical weight.
-- Creates a list of the weight of each vulnerability using each of the CVSS v3 metrics.
-- Creates a QUBO matrix where each diagonal is the negative weight of a vulnerability offset with the penalty to encourage vulnerabilities with high weights.
-- Sets the off diagonals to double the penalty to discourage picking multiple items.
-- Modifies the diagonal to limit the number of vulnerabilites that are selected.
-- Uses D-WAVE's Simulated Annealing Sampler to mimic running the QUBO through a Quantum Annealer.
-- Based on the binary results, determines which vulnerabilities are the most important and writes them to `demo/results/cves_to_prioritize.json`.
+- Reads from `demo/results/vulnerabilities.json` to get a dictionary o
 
-## How to Run
 
-### Prerequisites
 
