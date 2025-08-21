@@ -37,6 +37,45 @@ This project demonstrates using information from the NVD Vulnerability feeds to 
 - Based on the binary results, determines which vulnerabilities are the most important and writes them to `demo/results/cves_to_prioritize.json`.
 
 ## How to Run
+Be in the root directory
 
 ### Prerequisites
+```bash
+git clone https://github.com/ScottGersten/AIM-PQC-CyDeploy-Team-2.git
+```
+```bash
+pip install requests dwave-ocean-sdk paramiko pywinrm
+```
 
+### Creating the NVD Feeds and JSON
+```bash
+python -m demo.main --version get_data --connection get_data --filename none
+```
+
+### Running the Scanners
+Use the --num_softwares flag to specify an integer if you wish to limit the amount of softwares that will be scanned. The default is to scan all softwares found on a machine.
+
+#### Running from SSH
+
+##### Linux
+- Create `demo/ssh_logins/linux.txt` with SSH information.
+- Ensure Debian-based machine can be logged into (modeled with Metasploitable 2 VM).
+```bash
+python -m demo.main --version linux --connection ssh --filename linux.txt --num_softwares all
+```
+
+##### Windows Local
+- Create `demo/ssh_logins/windows_local.txt` with SSH information.
+- Ensure OpenSSH.Server is installed and running on your Windows machine.
+```bash
+python -m demo.main --version windows_local --connection ssh --filename windows_local.txt --num_softwares all
+```
+
+##### Windows VM
+- Create `demo/ssh_logins/windows_vm.txt` with SSH information.
+- Ensure Windows-based machine can be logged into (modeled with Metasploitable 3).
+```bash
+python -m demo.main --version windows_vm --connection ssh --filename windows_vm.txt --num_softwares all
+```
+
+#### Running from File
