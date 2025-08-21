@@ -99,3 +99,7 @@ python -m demo.main --version windows_vm --connection file --filename installed_
 ```bash
 python -m demo.main --version qubo --connection qubo --filename none
 ```
+
+## Future Work
+- The QUBO can be made more sophisticated by adding weights to each variable when finding the total weight of each vulnerability. Currently, all variables from CVSS v3 equally make up the total weight score. This can be adjusted by weighting each variable in the summation in terms of it should matter more or less to the vulnerability's overall prevalence.
+- The Windows Local and Windows VM method do not have the sophisticated date ranges that the Debian method does. There are no changelogs available through Powershell in the same way there is for Debian. These changelogs based on the first and most recent updates to a package gave a good estimate to the active dates of the package. Without the ability to do this on Windows, we were left defaulting to either the package's installation date on the computer (which is not accurate to its beginning date) or 2025 to safeguard the scanner from scanning every single NVD feed.
