@@ -1,2 +1,3 @@
 Runs from scanners generate results.json, results_abridged.json, and vulnerabilities.json.
+Runs from the qubo will generate cves_to_prioritize.json.
 These files are ignored by git so only local copies are used.
