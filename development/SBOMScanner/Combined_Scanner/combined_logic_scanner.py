@@ -108,6 +108,47 @@ def index_nvd_by_keywords(cve_data):
             index[word].append(entry)
     return index
 
+def extract_version_constraints(desc):
+    """
+    Look for version constraints in a CVE description.
+    Returns a list of (operator, version) tuples, e.g. [("<", "2.4.51")]
+    """
+    patterns = [
+        r"(?:before|prior to|<)\s*([\w\.\-\+~:]+)",
+        r"(?:through|<=)\s*([\w\.\-\+~:]+)",
+        r"(?:fixed in|>=)\s*([\w\.\-\+~:]+)"
+    ]
+    constraints = []
+    for pat in patterns:
+        for match in re.findall(pat, desc, re.IGNORECASE):
+            if "before" in pat or "<" in pat or "prior" in pat:
+                constraints.append(("<", match))
+            elif "through" in pat or "<=" in pat:
+                constraints.append(("<= ", match))
+            elif "fixed in" in pat or ">=" in pat:
+                constraints.append((">=", match))
+    return constraints
+
+
+def version_is_vulnerable(installed_version, constraints):
+    """
+    Return True if the installed_version is within the vulnerable constraints.
+    """
+    try:
+        inst_ver = packaging_version.parse(installed_version)
+        for op, v in constraints:
+            cmp_ver = packaging_version.parse(v)
+            if op == "<" and not (inst_ver < cmp_ver):
+                return False
+            if op == "<=" and not (inst_ver <= cmp_ver):
+                return False
+            if op == ">=" and not (inst_ver >= cmp_ver):
+                return False
+        return True if constraints else False
+    except Exception:
+        return False
+
+
 def match_nvd_cves(packages, nvd_index):
     def match(pkg):
         matched = []
@@ -120,30 +161,27 @@ def match_nvd_cves(packages, nvd_index):
             related_entries.extend(nvd_index.get(alias, []))
 
         seen_ids = set()
-
-        
-            
         for entry in related_entries:
-            
-
             cve_id = entry.get('id')
-            desc = entry.get('description', '').lower()                      
+            desc = entry.get('description', '').lower()
+
+            if cve_id in seen_ids or cve_id.startswith("TEMP"):
+                continue
             seen_ids.add(cve_id)
 
-            if name in desc and ('version') in desc or full_ver in desc:
-                if cve_id.startswith("TEMP"):
-                    continue
-                matched.append({
-                    'source': 'nvd',
-                    'cve_id': cve_id,
-                    'description': desc
-                })
+            if name in desc:  # package name must appear
+                constraints = extract_version_constraints(desc)
+                if version_is_vulnerable(full_ver, constraints):
+                    matched.append({
+                        'source': 'nvd',
+                        'cve_id': cve_id,
+                        'description': entry.get('description', ''),
+                        'constraints': constraints
+                    })
 
         if 'cves' not in pkg:
             pkg['cves'] = []
-
         pkg['cves'].extend(matched)
-
 
     with ThreadPoolExecutor() as executor:
         list(executor.map(match, packages))
@@ -171,39 +209,46 @@ def get_debian_cves(data, pkg_name, installed_version):
     return get_debian_cves_for_package(pkg_data, installed_version, seen)
 
 def get_debian_cves_for_package(pkg_data, installed_version, seen):
+    """
+    Strict Debian version-based CVE matching.
+    Only include CVEs with a valid fixed_version.
+    """
     cves = []
-    installed_major = installed_version.split('.')[0:2]  
-    installed_major_str = ".".join(installed_major)
-
     for cve_id, cve_info in pkg_data.items():
         if cve_id.startswith("TEMP"):
             continue
 
-        description = cve_info.get('description', '').lower()
+        for release, release_data in cve_info.get("releases", {}).items():
+            status = release_data.get("status")
+            fixed_version = release_data.get("fixed_version")
 
-        if installed_major_str not in description:
-            continue  
-
-        for release, release_data in cve_info.get('releases', {}).items():
-            fixed_version = release_data.get('fixed_version')
-            status = release_data.get('status')
-
-            if not fixed_version or not installed_version:
+            # Skip if no fixed_version (null/None)
+            if not fixed_version:
                 continue
 
-            if status in ('open', 'resolved', 'not-fixed', 'vulnerable'):
-                try:
-                    if packaging_version.parse(installed_version) < packaging_version.parse(fixed_version):
-                        if cve_id not in seen:
-                            cves.append({
-                                'source': 'debian',
-                                'cve_id': cve_id,
-                                'description': cve_info.get('description', ''),
-                                'release': release,
-                            })
-                            seen.add(cve_id)
-                except Exception:
-                    continue
+            # Skip unaffected/ignored/end-of-life cases
+            if status in ("not affected", "end-of-life", "ignored", "undetermined"):
+                continue
+
+            try:
+                inst_ver = packaging_version.parse(installed_version)
+                fix_ver = packaging_version.parse(fixed_version)
+
+                # Vulnerable if installed < fixed
+                if inst_ver < fix_ver and cve_id not in seen:
+                    cves.append({
+                        "source": "debian",
+                        "cve_id": cve_id,
+                        "description": cve_info.get("description", ""),
+                        "release": release,
+                        "status": status,
+                        "fixed_version": fixed_version,
+                        "installed_version": installed_version
+                    })
+                    seen.add(cve_id)
+
+            except Exception:
+                continue
 
     return cves
 
