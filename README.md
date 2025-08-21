@@ -79,3 +79,23 @@ python -m demo.main --version windows_vm --connection ssh --filename windows_vm.
 ```
 
 #### Running from File
+
+##### Linux
+```bash
+python -m demo.main --version linux --connection file --filename installed_linux_example.json --num_softwares all
+```
+
+##### Windows Local
+```bash
+python -m demo.main --version windows_local --connection file --filename installed_windows_local_example.json --num_softwares all
+```
+
+##### Windows VM
+```bash
+python -m demo.main --version windows_vm --connection file --filename installed_windows_vm_example.json --num_softwares all
+```
+
+### Running the Prioritization
+```bash
+python -m demo.main --version qubo --connection qubo --filename none
+```
