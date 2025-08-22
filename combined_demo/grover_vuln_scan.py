@@ -14,21 +14,28 @@ from qiskit_aer import AerSimulator
 
 # CONFIG
 
-INSTALLED_FILE = "installed.txt"
-UBUNTU_JSON = "ubuntu_cves.json"
-NVD_JSON = "all_cves.json"
-OUTPUT_JSON = "grover_combined_results.json"
+INSTALLED_FILE = "installed.txt"  # File containing installed packages
+UBUNTU_JSON = "ubuntu_cves.json"  # Ubuntu CVE database
+NVD_JSON = "all_cves.json"        # NVD CVE database 
+OUTPUT_JSON = "grover_combined_results.json"  # Output file
 
 # Grover parameters
 MAX_GROVER_CANDIDATES = 256
 GROVER_SHOTS = 1024
 
+
 def simplify_version(version_str):
+    """Removes any suffixes (-, +, ~) to get the base version for comparison."""
     return re.split(r'[-+~]', version_str)[0]
+
 
 # PARSERS / LOADERS
 
 def parse_installed_packages(file_path=INSTALLED_FILE):
+    """
+    Parse 'dpkg -l' style installed packages file.
+    Returns a list of dicts: {name, version, base_version, cves}.
+    """
     packages = []
     if not os.path.exists(file_path):
         print(f"[!] {file_path} not found.")
@@ -65,6 +72,10 @@ def _parse_version(v):
 
 
 def is_version_vulnerable(installed_version, constraints):
+    """
+    Check if installed_version satisfies any version constraints.
+    Parses unstructured NVD CVE description to extract version constraints.
+    """
     try:
         inst_ver = packaging_version.parse(installed_version)
         for op, ver in constraints:
@@ -122,6 +133,7 @@ def index_cves_by_package(cve_entries):
     return index
 
 def match_package(pkg, cve_index):
+    """ Match a single installed package against indexed Ubuntu CVEs. """
     pkg_name = pkg['name']
     base_version = pkg['base_version']
     matched = []
@@ -141,7 +153,7 @@ def match_package(pkg, cve_index):
                         'affected_version': affected_version,
                         'title': cve.get('title', ''),
                         'description': cve.get('description', ''),
-                        'severity': cve.get('priority', 'unknown')
+                        
                     })
         except Exception:
             continue
@@ -178,6 +190,7 @@ def get_debian_tracker():
 
 
 def get_debian_cves(data, pkg_name, installed_version):
+    """Get CVEs for a specific package from Debian tracker."""
     global debian_fails, debian_successes
     if pkg_name not in data:
         debian_fails += 1
@@ -189,6 +202,10 @@ def get_debian_cves(data, pkg_name, installed_version):
 
 
 def get_debian_cves_for_package(pkg_data, installed_version, seen):
+    """
+    Extract CVEs from Debian tracker per package version.
+    Checks if installed version < fixed_version and description exists.
+    """
     cves = []
     for cve_id, cve_info in pkg_data.items():
         if cve_id.startswith("TEMP"):
@@ -223,6 +240,7 @@ def get_debian_cves_for_package(pkg_data, installed_version, seen):
 # NVD CVE SCANNER
 
 def index_nvd_by_keywords(cve_data):
+    """Index NVD entries by keywords from their descriptions for quick search."""
     index = defaultdict(list)
     for entry in cve_data:
         desc = entry.get('description', '').lower()
@@ -232,6 +250,7 @@ def index_nvd_by_keywords(cve_data):
 
 
 def extract_version_constraints(desc):
+    """ Parse unstructured NVD CVE description to extract version constraints. """
     patterns = [
         r"(?:before|prior to|<)\s*([\w\.\-\+~:]+)",
         r"(?:through|<=)\s*([\w\.\-\+~:]+)",
@@ -282,6 +301,12 @@ def match_nvd_cves(packages, nvd_index):
 # GROVER PRIORITIZATION
 
 def build_oracle(qc, num_qubits, marked_indices):
+    """
+    Construct a Grover oracle that highlights the important items so the algorithm can focus on them.
+    qc: QuantumCircuit
+    num_qubits: number of qubits in the circuit
+    marked_indices: indices of packages to prioritize
+    """
     for idx in marked_indices:
         bits = format(idx, f'0{num_qubits}b')[::-1]
         zeros = [i for i, b in enumerate(bits) if b == '0']
@@ -296,6 +321,12 @@ def build_oracle(qc, num_qubits, marked_indices):
 
 
 def grover_simulate_order(packages, marked_mask, shots=1024, seed=12345):
+    """
+    Simulate Grover search to find the top-priority vulnerable package.
+    packages: list of vulnerable packages
+    marked_mask: list of 1s and 0s indicating which packages are top-priority (1 = top priority and 0 = not top priority)
+    Returns a reordered list of packages with the top-priority first.
+    """
     n = len(packages)
     if n == 0 or not any(marked_mask):
         return packages[:]
@@ -330,18 +361,27 @@ def grover_simulate_order(packages, marked_mask, shots=1024, seed=12345):
 
 
 def prioritize_with_grover(vulnerable_packages):
+    """
+    Prioritize vulnerable packages using Grover-inspired simulation.
+    Returns a reordered list: top-priority package first.
+    Packages with the highest CVE count are at the top of the list.
+    """
     if not vulnerable_packages:
         return []
+    
+    # Score packages by number of CVEs
     scores = [len(p['cves']) for p in vulnerable_packages]
     max_score = max(scores)
     mask = [1 if s == max_score else 0 for s in scores]
+    
     top = grover_simulate_order(vulnerable_packages, mask)[0]
+    # Sort the rest in descending order of CVE count
     rest = sorted([p for p in vulnerable_packages if p != top],
                   key=lambda p: len(p['cves']), reverse=True)
     return [top] + rest
 
 
-
+# MAIN FUNCTION
 
 def main():
     start_time = time.time()
@@ -349,6 +389,7 @@ def main():
     packages = parse_installed_packages()
     print(f"{len(packages)} packages found.")
 
+    # Separate Ubuntu and non-Ubuntu packages
     ubuntu_pkgs = [p for p in packages if "ubuntu" in p['version'].lower()]
     non_ubuntu_pkgs = [p for p in packages if "ubuntu" not in p['version'].lower()]
 
@@ -374,7 +415,7 @@ def main():
                 debian_matches += 1
 
 
-    # NVD fallback
+    # NVD fallback for packages not matched by Ubuntu/Debian
     fallback_pkgs = [p for p in packages if not p['cves']]
     if fallback_pkgs:
         print("Fallback: scanning NVD...")
