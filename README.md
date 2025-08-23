@@ -1,5 +1,5 @@
 # Vulnerability Scanner Using NVD Feeds and Quantum Computing Methods
-This project demonstrates using information from the NVD Vulnerability feeds to detect potentially vulnerable packages on a Linux (Debian-based) or Windows machine and then determining the most prevalent vulnerabilities using quantum computing methods such as Quantum Annealing and Grover's Search.
+This project demonstrates using information from the NVD Vulnerability feeds to detect potentially vulnerable packages on a Linux (Debian-based) or Windows machine and then determining the most prevalent vulnerabilities using quantum computing methods such as Quantum Annealing and Grover's Search. This documentation references the demo folder. Navigate to the combined_demo folder for the other aspect of this project.
 
 ## Project Overview
 - Implements a script that parses all NVD feeds from 2002 to present and generates a combined JSON file with all necessary information about every vulnerability, using a method to normalize each CVE description for better matching.
