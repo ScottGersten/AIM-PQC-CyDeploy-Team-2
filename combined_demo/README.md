@@ -62,7 +62,7 @@ pip install qiskit_aer
 - Add all the packages discovered in the environment to the installed.txt file in `dpkg -l` format. 
 - Run scanner to analyze the software packages and prioritize results.
 ```bash
-python combined_demo\grover_vuln_scan.py 
+python grover_vuln_scan.py 
 ```
 
 ## Future Work
