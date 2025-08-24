@@ -21,7 +21,7 @@ OUTPUT_JSON = "grover_combined_results.json"  # Output file
 
 # Grover parameters
 MAX_GROVER_CANDIDATES = 256
-GROVER_SHOTS = 1024
+GROVER_SHOTS = 1024 # The number of times the circuit on the AERSimulator is executed.
 
 
 def simplify_version(version_str):
@@ -323,9 +323,9 @@ def build_oracle(qc, num_qubits, marked_indices):
 def grover_simulate_order(packages, marked_mask, shots=1024, seed=12345):
     """
     Simulate Grover search to find the top-priority vulnerable package.
-    packages: list of vulnerable packages
     marked_mask: list of 1s and 0s indicating which packages are top-priority (1 = top priority and 0 = not top priority)
     Returns a reordered list of packages with the top-priority first.
+    Runs the circuit 1024 times on the AERSimulator and records the vulnerable package that is frequently picked as the top vulnerable package.
     """
     n = len(packages)
     if n == 0 or not any(marked_mask):
@@ -437,10 +437,10 @@ def main():
     print("\n[Grover Prioritization]")
     for i, pkg in enumerate(ordered, 1):
         print(f"{i}. {pkg['name']} {pkg['version']} -> {len(pkg['cves'])} CVEs")
-
+    
     # Save results
     with open(OUTPUT_JSON, 'w', encoding='utf-8') as f:
-        json.dump(vulnerable, f, indent=2)
+        json.dump(ordered, f, indent=2)
 
     print(f"\nScan complete in {time.time() - start_time:.2f} seconds. Results saved to {OUTPUT_JSON}")
 
