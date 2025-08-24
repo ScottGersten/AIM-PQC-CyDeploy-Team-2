@@ -1,5 +1,5 @@
 # Quantum-Inspired Hybrid Vulnerability Scanner
-This scanner utilizes information from Ubuntu, NVD, and Debian databases to identify vulnerable packages on a Linux machine. Then it orders all the detected vulnerable packages in a list using Grover's Search. At the top of the list is the package with the most CVE matches, followed by others in descending order of severity. The number of CVE matches for each vulnerable package is displayed.
+This scanner utilizes information from Ubuntu, NVD, and Debian CVE databases to identify vulnerable packages on a Linux machine. Then it orders all the detected vulnerable packages in a list using Grover's Search. At the top of the list is the package with the most CVE matches, followed by others in descending order of severity. The number of CVE matches for each vulnerable package is displayed.
 
 ## Project Overview
 - Parses a list of software packages in the `dpkg -l` format from the installed.txt file.
