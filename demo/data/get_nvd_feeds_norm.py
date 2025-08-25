@@ -5,6 +5,7 @@ import os
 from datetime import datetime
 import re
 
+# Common prefixes to extract for normalization logic
 COMMON_PREFIXES = [
     'lib', 'python-', 'perl-', 'golang-', 'nodejs-', 
     'ms-', 'microsoft-', 'windows-', 'win-', 'vc-', 'vs-', 'vcredist-', 'dotnet-', 
@@ -14,15 +15,18 @@ COMMON_PREFIXES = [
     'vmware-', 'virtualbox-', 'cygwin-', 'mingw-'
 ]
 
+# Get rid of common prefixes for better matching
 def strip_prefix(name):
     for prefix in COMMON_PREFIXES:
         if name.startswith(prefix):
             return name[len(prefix):]
     return name
 
+# Get rid of suffixes that will affect matching
 def strip_trailing_version_suffix(name):
     return re.sub(r'\d+(off)?$', '', name)
 
+# Fully normalize the string (the descriptions in this case)
 def normalize_name(name):
     name = name.lower()
     name = name.replace('-', '')
@@ -31,13 +35,14 @@ def normalize_name(name):
     name = strip_trailing_version_suffix(name)
     return name
 
-START_YEAR = 2002
-END_YEAR = datetime.now().year
-BASE_URL = 'https://nvd.nist.gov/feeds/json/cve/1.1'
+START_YEAR = 2002                                       # First NVD year
+END_YEAR = datetime.now().year                          # Last NVD year
+BASE_URL = 'https://nvd.nist.gov/feeds/json/cve/1.1'    # URL to access json.gz files
 
-DATA_DIR = r'demo/data/nvd_feeds'
+DATA_DIR = r'demo/data/nvd_feeds'                       # Path directory
 os.makedirs(DATA_DIR, exist_ok=True)
 
+# Download each of the NVD feeds from each year
 def download_feed(year):
     url = f"{BASE_URL}/nvdcve-1.1-{year}.json.gz"
     local_path = os.path.join(DATA_DIR, f"nvdcve-1.1-{year}.json.gz")
@@ -52,6 +57,7 @@ def download_feed(year):
         print(f"Feed for {year} already downloaded.")
     return local_path
 
+# Parse each JSON file for the necessary information
 def parse_feed(filepath):
     INVALID_CVE = 'Rejected reason: DO NOT USE THIS CANDIDATE NUMBER.'
 
@@ -60,6 +66,7 @@ def parse_feed(filepath):
         data = json.load(f)
     cve_items = data.get("CVE_Items", [])
     parsed_cves = []
+    # Create dictionary with necessary information
     for item in cve_items:
         cve_id = item.get("cve", {}).get("CVE_data_meta", {}).get("ID", "")
         description_data = item.get("cve", {}).get("description", {}).get("description_data", [])
@@ -73,6 +80,7 @@ def parse_feed(filepath):
         })
     return parsed_cves
 
+# Use the created dictionary to write all content to a single JSON file
 def get_feeds():
     all_cves = {}
     for year in range(START_YEAR, END_YEAR + 1):

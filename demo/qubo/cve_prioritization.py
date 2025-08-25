@@ -3,6 +3,8 @@ from dwave.samplers import SimulatedAnnealingSampler
 import json
 import time
 
+# Weight maps
+
 # Attack Vector
 AV = {
     'NETWORK': 0.85,
@@ -64,14 +66,17 @@ A = {
     'HIGH': 0.56
 }
 
+# Get the list of potential vulnerabilities from the scanner
 def get_vuln_list(filename):
     with open(filename, 'r', encoding='utf-8') as file:
         vuln_list = json.load(file)
         return vuln_list
-    
+
+# Replace the string values with numerical weights
 def get_numerical(vuln_list):
     vuln_weights = []
     for item in vuln_list:
+        # Parse the list at each weight category
         if item['attack_vector'] is not None:
             vuln_weights.append({
                 'id': item.get('id'),
@@ -91,31 +96,39 @@ def get_numerical(vuln_list):
     
     return vuln_weights
 
+# Compute the overall weight of a vulnerability for the QUBO
 def compute_weight(vuln):
     return vuln['AV'] + vuln['AC'] + vuln['PR'] + vuln['UI'] + vuln['S'] + vuln['C'] + vuln['I'] + vuln['A']
 
+# Build the QUBO matrix based on the weights of each vulnerability
 def build_qubo(vuln_weights, K, penalty):
+    # Initialize matrix
     Q = {}
 
+    # Compute weights
     w = [compute_weight(vuln) for vuln in vuln_weights]
 
+    # Set diagonals to the negative of the weight and the penalty
     for i in range(len(w)):
         Q[(i, i)] = -w[i] + penalty
+        # Set other entries to a high penalty value to discourage multiple selections
         for j in range(i + 1, len(w)):
             Q[(i, j)] = 2 * penalty
 
+    # Limit the number of chosen vulnerabilities to K
     for i in range(len(w)):
         Q[(i, i)] += -2 * K * penalty
 
-    #bqm = dimod.BinaryQuadraticModel.from_qubo(Q)
+    # Convert Q matrix to a Binary Quadratic Model
+    bqm = dimod.BinaryQuadraticModel.from_qubo(Q)
 
-    #return bqm
+    return bqm
 
-    return Q
-
-def run_qubo(Q):
+# Solve the QUBO using an annealing sampler
+def run_qubo(bqm):
     sampler = SimulatedAnnealingSampler()
-    result = sampler.sample_qubo(Q, num_reads=1000)
+    #result = sampler.sample_qubo(Q, num_reads=1000)
+    result = sampler.sample(bqm, num_reads=100)
     return result.first.sample # type: ignore
 
 def run_prioritization():
@@ -124,12 +137,13 @@ def run_prioritization():
     filename = r'demo/results/vulnerabilities.json'
     vuln_list = get_vuln_list(filename)
     vuln_weights = get_numerical(vuln_list)
-    K = 5
-    penalty = 6.5
+    K = 5           # Number of vulnerabilities to choose
+    penalty = 6.5   # Penalty value
     Q = build_qubo(vuln_weights, K, penalty)
     solution = run_qubo(Q)
     count = 0
 
+    # Print out the chosen vulnerabilities
     cves = []
     for idx, picked in solution.items():
         if picked == 1:

@@ -4,8 +4,9 @@ from datetime import datetime
 import re
 import winrm
 
-found_cve_ids = 0
+found_cve_ids = 0               # Number of unqiue vulnerabilities found
 
+# Common prefixes to extract for normalization logic
 COMMON_PREFIXES = [
     'lib', 'python-', 'perl-', 'golang-', 'nodejs-', 
     'ms-', 'microsoft-', 'windows-', 'win-', 'vc-', 'vs-', 'vcredist-', 'dotnet-', 
@@ -15,15 +16,18 @@ COMMON_PREFIXES = [
     'vmware-', 'virtualbox-', 'cygwin-', 'mingw-'
 ]
 
+# Get rid of common prefixes for better matching
 def strip_prefix(name):
     for prefix in COMMON_PREFIXES:
         if name.startswith(prefix):
             return name[len(prefix):]
     return name
 
+# Get rid of suffixes that will affect matching
 def strip_trailing_version_suffix(name):
     return re.sub(r'\d+(off)?$', '', name)
 
+# Fully normalize the string
 def normalize_name(name):
     name = name.lower()
     name = name.replace('-', '')
@@ -32,9 +36,11 @@ def normalize_name(name):
     name = strip_trailing_version_suffix(name)
     return name
 
+# Find vulnerable packages based on a matching name in a CVE description
 def match_cves(installs, data):
     global found_cve_ids
 
+    # Keys for CVEs that are no longer used
     INVALID_CVE = 'Rejected reason: DO NOT USE THIS CANDIDATE NUMBER.'
     INVALID_CVE_2 = 'rejected reason:'
 
@@ -46,13 +52,16 @@ def match_cves(installs, data):
         norm_name = pkg['norm_name']
         first_year = pkg['first_year']
         last_year = pkg['last_year']
+        # Set start year to 2025 if package has no date information
         if first_year is None:
             first_year = 2025
         
+        # Only scan the necessary years
         for year in range(first_year, last_year + 1):
             year_str = str(year)
             if year_str not in data:
                 continue
+            # Parse out all the important data from the NVD JSON
             for item in data[year_str]:
                 cve_id = item.get('id')
                 description = item.get('description', '')
@@ -70,6 +79,7 @@ def match_cves(installs, data):
                 confidentiality_impact = cvss.get('confidentialityImpact', None)
                 integrity_impact = cvss.get('integrityImpact', None)
                 availability_impact = cvss.get('availabilityImpact', None)
+                # Save CVE and CVSS data for CVEs that match a package
                 if INVALID_CVE not in description and INVALID_CVE_2 not in description and norm_name in description:
                     cve_info = {
                                 'id': cve_id, 
@@ -91,12 +101,14 @@ def match_cves(installs, data):
     
     return vulns
 
+# Get the list of softwares from machine
 def get_installs(ip, username='msfadmin', password='msfadmin', num_softwares=None):
     session = winrm.Session(
         ip,
         auth=(username, password)
     )
 
+    # Powershell command to get installed softwares list from the machine
     cmd = r'''powershell -Command "Get-ItemProperty 'HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*', 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*' | Where-Object { $_.DisplayName } | Select-Object DisplayName, DisplayVersion, Publisher, InstallDate | ConvertTo-Json"'''
     output = session.run_cmd(cmd).std_out.decode('cp1252').strip()
 
@@ -106,8 +118,10 @@ def get_installs(ip, username='msfadmin', password='msfadmin', num_softwares=Non
     packages = []
     for item in softwares:
         software_count += 1
+        # Keep constraints for number of softwares
         if num_softwares is not None and software_count > num_softwares:
             break
+        # Get the years and name and description information from each line
         name = item.get('DisplayName')
         version = item.get('DisplayVersion')
         install_date = item.get('InstallDate')
@@ -122,14 +136,17 @@ def get_installs(ip, username='msfadmin', password='msfadmin', num_softwares=Non
             'cves': []
         })
 
+    # Powershell command to get running softwares list from the machine
     cmd = r'''powershell -Command "Get-Service | Where-Object { $_.Status -eq 'Running' } | ConvertTo-Json"'''
     output = session.run_cmd(cmd).std_out.decode('cp1252').strip()
     running = json.loads(output)
 
     for item in running:
         software_count += 1
+        # Keep constraints for number of softwares
         if num_softwares is not None and software_count > num_softwares:
             break
+        # Get the years and name and description information from each line
         name = item.get('ServiceName')
         packages.append({
             'type': 'running',
@@ -148,14 +165,17 @@ def get_installs(ip, username='msfadmin', password='msfadmin', num_softwares=Non
 
     return packages
 
+# Run the Windows-VM-Based scanner
 def run_windows_vm(connection, filename, num_softwares):
     start_time = time.time()
 
+    # Check for software numbers constraint
     try:
         num_softwares = int(num_softwares)
     except Exception:
         num_softwares = None
     
+    # Run the scanner using an SSH connection
     if connection == 'ssh':
         filename = 'demo/ssh_logins/' + filename
         with open(filename, 'r') as f:
@@ -165,6 +185,7 @@ def run_windows_vm(connection, filename, num_softwares):
             password = lines[2]
         installs = get_installs(ip, username, password, num_softwares)
     
+    # Run the scanner by reading from a file
     elif connection == 'file':
         filename = 'demo/software_lists/' + filename
         with open(filename, 'r', encoding='utf-8') as file:
@@ -181,6 +202,7 @@ def run_windows_vm(connection, filename, num_softwares):
     vulns = match_cves(installs, all_cves)
     #vulns = []
 
+    # Check and output number of vulnerable package
     fails = successes = 0
     found_installs = []
     for pkg in installs:
@@ -192,6 +214,7 @@ def run_windows_vm(connection, filename, num_softwares):
     print(f"Number of successful matches in run: {successes}")
     print(f"Number of failed matches in run: {fails}")
 
+    # Write results dictionaries to files
     with open(r'demo/results/results.json', 'w', encoding='utf-8') as file, open(r'demo/results/results_abridged.json', 'w', encoding='utf-8') as file_abr, open(r'demo/results/vulnerabilities.json', 'w', encoding='utf-8') as file_vulns:
         json.dump(installs, file, indent=2)
         json.dump(found_installs, file_abr, indent=2)
